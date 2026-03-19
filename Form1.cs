@@ -13,6 +13,8 @@ namespace Proyecto_Semillero
 {
     public partial class Form1 : Form
     {
+        Consulta consulta = new Consulta(); // creamos una instancia de la clase Consultas para ejecutar las consultas a la base de datos
+
         public Form1()
         {
             InitializeComponent();
@@ -46,6 +48,19 @@ namespace Proyecto_Semillero
         private void guna2GroupBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btningresar_Click(object sender, EventArgs e)
+        {
+            if (txtId.Text == "" || txtcontraseña.Text == "") // verificamos si los campos de usuario y contraseña estan vacios
+            {
+                MessageBox.Show("Es obligatorio ingresar toda la información del login"); // si los campos de usuario y contraseña estan vacios, se muestra un mensaje de error al usuario
+            }
+            else
+            {
+                consulta.Iniciar_sesion(int.Parse(txtId.Text), txtcontraseña.Text); // si los campos de usuario y contraseña no estan vacios, se ejecuta el metodo Iniciar_sesion para verificar si el usuario y la contraseña ingresados por el usuario coinciden con los resultados de la consulta a la base de datos)
+                this.Hide(); // ocultamos el formulario Form1 al usuario
+            }
         }
     }
 }

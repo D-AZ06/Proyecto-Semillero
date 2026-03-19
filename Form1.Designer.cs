@@ -30,13 +30,13 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btningresar = new Guna.UI2.WinForms.Guna2Button();
+            this.txtId = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtcontraseña = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtcontraseña = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtId = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btningresar = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -47,9 +47,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Proyecto_Semillero.Properties.Resources.Sin_título__5_;
-            this.pictureBox1.Location = new System.Drawing.Point(355, 39);
+            this.pictureBox1.Location = new System.Drawing.Point(473, 48);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 108);
+            this.pictureBox1.Size = new System.Drawing.Size(187, 133);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -63,75 +64,30 @@
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(277, 153);
+            this.panel1.Location = new System.Drawing.Point(369, 188);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(303, 275);
+            this.panel1.Size = new System.Drawing.Size(404, 338);
             this.panel1.TabIndex = 1;
             // 
-            // pictureBox3
+            // btningresar
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::Proyecto_Semillero.Properties.Resources.contrasena;
-            this.pictureBox3.Location = new System.Drawing.Point(59, 168);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(23, 24);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::Proyecto_Semillero.Properties.Resources.usuario;
-            this.pictureBox2.Location = new System.Drawing.Point(59, 74);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(23, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(124, 140);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Contraseña";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(128, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID Usuario";
-            // 
-            // txtcontraseña
-            // 
-            this.txtcontraseña.BackColor = System.Drawing.Color.Transparent;
-            this.txtcontraseña.BorderColor = System.Drawing.Color.Transparent;
-            this.txtcontraseña.BorderRadius = 15;
-            this.txtcontraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtcontraseña.DefaultText = "";
-            this.txtcontraseña.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtcontraseña.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtcontraseña.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtcontraseña.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtcontraseña.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtcontraseña.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtcontraseña.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtcontraseña.Location = new System.Drawing.Point(98, 168);
-            this.txtcontraseña.Name = "txtcontraseña";
-            this.txtcontraseña.PlaceholderText = "";
-            this.txtcontraseña.SelectedText = "";
-            this.txtcontraseña.Size = new System.Drawing.Size(120, 25);
-            this.txtcontraseña.TabIndex = 7;
+            this.btningresar.BackColor = System.Drawing.Color.Transparent;
+            this.btningresar.BorderColor = System.Drawing.Color.Transparent;
+            this.btningresar.BorderRadius = 15;
+            this.btningresar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btningresar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btningresar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btningresar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btningresar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btningresar.ForeColor = System.Drawing.Color.White;
+            this.btningresar.Location = new System.Drawing.Point(132, 277);
+            this.btningresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btningresar.Name = "btningresar";
+            this.btningresar.Size = new System.Drawing.Size(144, 36);
+            this.btningresar.TabIndex = 9;
+            this.btningresar.Text = "Ingresar";
+            this.btningresar.Click += new System.EventHandler(this.btningresar_Click);
             // 
             // txtId
             // 
@@ -147,39 +103,94 @@
             this.txtId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtId.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtId.Location = new System.Drawing.Point(98, 73);
+            this.txtId.Location = new System.Drawing.Point(131, 90);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtId.Name = "txtId";
             this.txtId.PlaceholderText = "";
             this.txtId.SelectedText = "";
-            this.txtId.Size = new System.Drawing.Size(120, 25);
+            this.txtId.Size = new System.Drawing.Size(160, 31);
             this.txtId.TabIndex = 8;
             // 
-            // btningresar
+            // txtcontraseña
             // 
-            this.btningresar.BackColor = System.Drawing.Color.Transparent;
-            this.btningresar.BorderColor = System.Drawing.Color.Transparent;
-            this.btningresar.BorderRadius = 15;
-            this.btningresar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btningresar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btningresar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btningresar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btningresar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btningresar.ForeColor = System.Drawing.Color.White;
-            this.btningresar.Location = new System.Drawing.Point(99, 225);
-            this.btningresar.Name = "btningresar";
-            this.btningresar.Size = new System.Drawing.Size(108, 29);
-            this.btningresar.TabIndex = 9;
-            this.btningresar.Text = "Ingresar";
+            this.txtcontraseña.BackColor = System.Drawing.Color.Transparent;
+            this.txtcontraseña.BorderColor = System.Drawing.Color.Transparent;
+            this.txtcontraseña.BorderRadius = 15;
+            this.txtcontraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtcontraseña.DefaultText = "";
+            this.txtcontraseña.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtcontraseña.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtcontraseña.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtcontraseña.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtcontraseña.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtcontraseña.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtcontraseña.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtcontraseña.Location = new System.Drawing.Point(131, 207);
+            this.txtcontraseña.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtcontraseña.Name = "txtcontraseña";
+            this.txtcontraseña.PlaceholderText = "";
+            this.txtcontraseña.SelectedText = "";
+            this.txtcontraseña.Size = new System.Drawing.Size(160, 31);
+            this.txtcontraseña.TabIndex = 7;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::Proyecto_Semillero.Properties.Resources.contrasena;
+            this.pictureBox3.Location = new System.Drawing.Point(79, 207);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(31, 30);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::Proyecto_Semillero.Properties.Resources.usuario;
+            this.pictureBox2.Location = new System.Drawing.Point(79, 91);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(31, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
+            this.label2.Location = new System.Drawing.Point(165, 172);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 16);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Contraseña";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Location = new System.Drawing.Point(171, 58);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ID Usuario";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Proyecto_Semillero.Properties.Resources._592593667718;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(880, 562);
+            this.ClientSize = new System.Drawing.Size(1173, 692);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
