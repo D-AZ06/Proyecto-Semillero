@@ -32,11 +32,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtcontraseña = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtId = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btningresar = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -56,12 +56,12 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btningresar);
+            this.panel1.Controls.Add(this.txtId);
+            this.panel1.Controls.Add(this.txtcontraseña);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(277, 153);
             this.panel1.Name = "panel1";
@@ -90,53 +90,86 @@
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
-            // textBox2
-            // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(100, 172);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 13);
-            this.textBox2.TabIndex = 4;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(100, 78);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 13);
-            this.textBox1.TabIndex = 3;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(118, 136);
+            this.label2.Location = new System.Drawing.Point(124, 140);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Contraseña";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(115, 219);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Ingresar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(122, 47);
+            this.label1.Location = new System.Drawing.Point(128, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID Usuario";
+            // 
+            // txtcontraseña
+            // 
+            this.txtcontraseña.BackColor = System.Drawing.Color.Transparent;
+            this.txtcontraseña.BorderColor = System.Drawing.Color.Transparent;
+            this.txtcontraseña.BorderRadius = 15;
+            this.txtcontraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtcontraseña.DefaultText = "";
+            this.txtcontraseña.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtcontraseña.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtcontraseña.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtcontraseña.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtcontraseña.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtcontraseña.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtcontraseña.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtcontraseña.Location = new System.Drawing.Point(98, 168);
+            this.txtcontraseña.Name = "txtcontraseña";
+            this.txtcontraseña.PlaceholderText = "";
+            this.txtcontraseña.SelectedText = "";
+            this.txtcontraseña.Size = new System.Drawing.Size(120, 25);
+            this.txtcontraseña.TabIndex = 7;
+            // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.Transparent;
+            this.txtId.BorderColor = System.Drawing.Color.Transparent;
+            this.txtId.BorderRadius = 15;
+            this.txtId.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtId.DefaultText = "";
+            this.txtId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtId.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtId.Location = new System.Drawing.Point(98, 73);
+            this.txtId.Name = "txtId";
+            this.txtId.PlaceholderText = "";
+            this.txtId.SelectedText = "";
+            this.txtId.Size = new System.Drawing.Size(120, 25);
+            this.txtId.TabIndex = 8;
+            // 
+            // btningresar
+            // 
+            this.btningresar.BackColor = System.Drawing.Color.Transparent;
+            this.btningresar.BorderColor = System.Drawing.Color.Transparent;
+            this.btningresar.BorderRadius = 15;
+            this.btningresar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btningresar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btningresar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btningresar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btningresar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btningresar.ForeColor = System.Drawing.Color.White;
+            this.btningresar.Location = new System.Drawing.Point(99, 225);
+            this.btningresar.Name = "btningresar";
+            this.btningresar.Size = new System.Drawing.Size(108, 29);
+            this.btningresar.TabIndex = 9;
+            this.btningresar.Text = "Ingresar";
             // 
             // Form1
             // 
@@ -163,13 +196,13 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txtId;
+        private Guna.UI2.WinForms.Guna2TextBox txtcontraseña;
+        private Guna.UI2.WinForms.Guna2Button btningresar;
     }
 }
 

@@ -43,6 +43,9 @@ namespace Proyecto_Semillero
             panel.Region = new Region(path);
         }
 
-      
+        private void guna2GroupBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

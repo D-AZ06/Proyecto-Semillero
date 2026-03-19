@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\",
+  "WorkspaceRootPath": "C:\\Users\\USER\\source\\repos\\Proyecto-Semillero\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|c:\\users\\reverie pink\\proyecto-semillero\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|c:\\users\\user\\source\\repos\\proyecto-semillero\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|C:\\Users\\Reverie Pink\\Proyecto-Semillero\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|C:\\Users\\USER\\source\\repos\\Proyecto-Semillero\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,23 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 212,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -57,14 +45,22 @@
               "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Proyecto-Semillero\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\Form1.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\Proyecto-Semillero\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAmwBYAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAMwC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-19T04:37:11.357Z",
               "EditorCaption": ""
@@ -73,9 +69,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Proyecto-Semillero\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\Form1.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\Proyecto-Semillero\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-19T04:33:18.35Z",
