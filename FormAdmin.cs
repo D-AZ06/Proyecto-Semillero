@@ -16,6 +16,8 @@ namespace Proyecto_Semillero
         Conexion conexion = new Conexion(); // creamos una instancia de la clase Conexion para establecer la conexion a la base de datos
         DataSet dataset = new DataSet(); // (conjunto de datos) creamos la variable dt con tipo DataTable para almacenar los resultados de las consultas a la base de datos
 
+        string formularioActual = ""; // variable para almacenar el nombre del formulario actual que se esta mostrando en el DataGridView
+
         public FormAdmin()
         {
             InitializeComponent();
@@ -28,6 +30,27 @@ namespace Proyecto_Semillero
             Panel3.BackColor = Color.FromArgb(20, 255, 255, 255);
         }
 
+        public void Gestionar(string tabla)
+        {
+            SqlCommand consulta2;
+            consulta2 = new SqlCommand($"select * from {tabla}", conexion.Conectar());//establecemos la consulta SQL para obtener todos los datos de la tabla Usuario
+            consulta2.CommandType = CommandType.Text;//establecemos el tipo de comando como texto
+                                                     //consulta2.ExecuteNonQuery();//ejecutamos la consulta SQL
+            dataset.Clear();//limpiamos el DataSet para evitar que se acumulen los datos obtenidos de la consulta SQL
+            SqlDataAdapter da = new SqlDataAdapter(consulta2);//creamos un objeto de tipo SqlDataAdapter para ejecutar la consulta SQL y almacenar los datos obtenidos en el DataSet
+            da.Fill(dataset, tabla);//llenamos el DataSet con los datos obtenidos de la consulta SQL
+            try
+            {
+                dataGridView1.DataMember = tabla;//establecemos el miembro de datos del DataGridView para mostrar los datos de la tabla "Usuario" del DataSet
+                dataGridView1.DataSource = dataset;//establecemos la fuente de datos del DataGridView como el DataSet para mostrar los datos obtenidos de la consulta SQL
+            }
+
+            catch (Exception ex)//capturamos cualquier excepción que pueda ocurrir al mostrar los datos en el DataGridView y mostramos un mensaje de error
+            {
+                MessageBox.Show(ex.Message);//mostramos el mensaje de error de la excepción
+            }
+        }
+
         private void btn_gestionar_reportes_Click(object sender, EventArgs e)
         {
 
@@ -35,86 +58,26 @@ namespace Proyecto_Semillero
 
         private void btn_gestionar_usuarios_Click(object sender, EventArgs e)
         {
-            SqlCommand consulta2;
-            consulta2 = new SqlCommand("select * from Usuario", conexion.Conectar());//establecemos la consulta SQL para obtener todos los datos de la tabla Usuario
-            consulta2.CommandType = CommandType.Text;//establecemos el tipo de comando como texto
-            consulta2.ExecuteNonQuery();//ejecutamos la consulta SQL
-            dataset.Clear();//limpiamos el DataSet para evitar que se acumulen los datos obtenidos de la consulta SQL
-            SqlDataAdapter da = new SqlDataAdapter(consulta2);//creamos un objeto de tipo SqlDataAdapter para ejecutar la consulta SQL y almacenar los datos obtenidos en el DataSet
-            da.Fill(dataset, "Usuario");//llenamos el DataSet con los datos obtenidos de la consulta SQL
-            try
-            {
-                dataGridView1.DataMember = ("Usuario");//establecemos el miembro de datos del DataGridView para mostrar los datos de la tabla "Usuario" del DataSet
-                dataGridView1.DataSource = dataset;//establecemos la fuente de datos del DataGridView como el DataSet para mostrar los datos obtenidos de la consulta SQL
-            }
-
-            catch (Exception ex)//capturamos cualquier excepción que pueda ocurrir al mostrar los datos en el DataGridView y mostramos un mensaje de error
-            {
-                MessageBox.Show(ex.Message);//mostramos el mensaje de error de la excepción
-            }
+            Gestionar("Usuario");
+            formularioActual = "Usuario";
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            SqlCommand consulta2;
-            consulta2 = new SqlCommand("select * from Semillero", conexion.Conectar());//establecemos la consulta SQL para obtener todos los datos de la tabla Usuario
-            consulta2.CommandType = CommandType.Text;//establecemos el tipo de comando como texto
-            consulta2.ExecuteNonQuery();//ejecutamos la consulta SQL
-            dataset.Clear();//limpiamos el DataSet para evitar que se acumulen los datos obtenidos de la consulta SQL
-            SqlDataAdapter da = new SqlDataAdapter(consulta2);//creamos un objeto de tipo SqlDataAdapter para ejecutar la consulta SQL y almacenar los datos obtenidos en el DataSet
-            da.Fill(dataset, "Semillero");//llenamos el DataSet con los datos obtenidos de la consulta SQL
-            try
-            {
-                dataGridView1.DataMember = ("Semillero");//establecemos el miembro de datos del DataGridView para mostrar los datos de la tabla "Usuario" del DataSet
-                dataGridView1.DataSource = dataset;//establecemos la fuente de datos del DataGridView como el DataSet para mostrar los datos obtenidos de la consulta SQL
-            }
-
-            catch (Exception ex)//capturamos cualquier excepción que pueda ocurrir al mostrar los datos en el DataGridView y mostramos un mensaje de error
-            {
-                MessageBox.Show(ex.Message);//mostramos el mensaje de error de la excepción
-            }
+            Gestionar("Semillero");
+            formularioActual = "Semillero";
         }
 
         private void btn_proyecto_Click(object sender, EventArgs e)
         {
-            SqlCommand consulta2;
-            consulta2 = new SqlCommand("select * from Proyectos", conexion.Conectar());//establecemos la consulta SQL para obtener todos los datos de la tabla Usuario
-            consulta2.CommandType = CommandType.Text;//establecemos el tipo de comando como texto
-            consulta2.ExecuteNonQuery();//ejecutamos la consulta SQL
-            dataset.Clear();//limpiamos el DataSet para evitar que se acumulen los datos obtenidos de la consulta SQL
-            SqlDataAdapter da = new SqlDataAdapter(consulta2);//creamos un objeto de tipo SqlDataAdapter para ejecutar la consulta SQL y almacenar los datos obtenidos en el DataSet
-            da.Fill(dataset, "Proyectos");//llenamos el DataSet con los datos obtenidos de la consulta SQL
-            try
-            {
-                dataGridView1.DataMember = ("Proyectos");//establecemos el miembro de datos del DataGridView para mostrar los datos de la tabla "Usuario" del DataSet
-                dataGridView1.DataSource = dataset;//establecemos la fuente de datos del DataGridView como el DataSet para mostrar los datos obtenidos de la consulta SQL
-            }
-
-            catch (Exception ex)//capturamos cualquier excepción que pueda ocurrir al mostrar los datos en el DataGridView y mostramos un mensaje de error
-            {
-                MessageBox.Show(ex.Message);//mostramos el mensaje de error de la excepción
-            }
+            Gestionar("Proyectos");
+            formularioActual = "Proyectos";
         }
 
         private void btn_eventos_Click(object sender, EventArgs e)
         {
-            SqlCommand consulta2;
-            consulta2 = new SqlCommand("select * from Eventos", conexion.Conectar());//establecemos la consulta SQL para obtener todos los datos de la tabla Usuario
-            consulta2.CommandType = CommandType.Text;//establecemos el tipo de comando como texto
-            consulta2.ExecuteNonQuery();//ejecutamos la consulta SQL
-            dataset.Clear();//limpiamos el DataSet para evitar que se acumulen los datos obtenidos de la consulta SQL
-            SqlDataAdapter da = new SqlDataAdapter(consulta2);//creamos un objeto de tipo SqlDataAdapter para ejecutar la consulta SQL y almacenar los datos obtenidos en el DataSet
-            da.Fill(dataset, "Eventos");//llenamos el DataSet con los datos obtenidos de la consulta SQL
-            try
-            {
-                dataGridView1.DataMember = ("Eventos");//establecemos el miembro de datos del DataGridView para mostrar los datos de la tabla "Usuario" del DataSet
-                dataGridView1.DataSource = dataset;//establecemos la fuente de datos del DataGridView como el DataSet para mostrar los datos obtenidos de la consulta SQL
-            }
-
-            catch (Exception ex)//capturamos cualquier excepción que pueda ocurrir al mostrar los datos en el DataGridView y mostramos un mensaje de error
-            {
-                MessageBox.Show(ex.Message);//mostramos el mensaje de error de la excepción
-            }
+            Gestionar("Eventos");
+            formularioActual = "Eventos";
         }
 
         private void btbsalir_Click(object sender, EventArgs e)
@@ -212,79 +175,9 @@ namespace Proyecto_Semillero
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            int filasReales = dataGridView1.Rows.Count - 1;
-            int ultimaFila;
-
-            if (filasReales <= 0)
-            {
-                MessageBox.Show("Para registrar usuarios primero debes habilitar el datagrid", "CRUD", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (dataGridView1.CurrentRow == null) return;
-
-            ultimaFila = dataGridView1.Rows.Count - 2;
-
-            if (dataGridView1.CurrentRow.Index == ultimaFila)
-            {
-                bool tieneDatosVacios = false;
-
-                foreach (DataGridViewCell cell in dataGridView1.CurrentRow.Cells)
-                {
-                    if (string.IsNullOrWhiteSpace(cell.Value?.ToString()))
-                    {
-                        tieneDatosVacios = true;
-                    }
-                }
-
-                if (tieneDatosVacios)
-                {
-                    MessageBox.Show("Todos los campos son obligatorios", "CRUD", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    //VALIDACIONES 
-                    int idUsuario;
-                    long telefonoUsuario;
-                    int edadUsuario;
-
-                    if (!int.TryParse(dataGridView1.CurrentRow.Cells[0].Value.ToString(), out idUsuario))
-                    {
-                        MessageBox.Show("ID inválido");
-                        return;
-                    }
-
-                    if (!long.TryParse(dataGridView1.CurrentRow.Cells[4].Value.ToString(), out telefonoUsuario))
-                    {
-                        MessageBox.Show("Teléfono inválido");
-                        return;
-                    }
-
-                    if (!int.TryParse(dataGridView1.CurrentRow.Cells[6].Value.ToString(), out edadUsuario))
-                    {
-                        MessageBox.Show("Edad inválida");
-                        return;
-                    }
-
-                    //DATOS
-                    string contraseña = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                    string rol = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                    string nombre = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                    string correo = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-                    string genero = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-                    string estado = dataGridView1.CurrentRow.Cells[8].Value.ToString();
-
-                    //INSERTAR
-                    insertarRegistro(idUsuario, contraseña, rol, nombre, telefonoUsuario, correo, edadUsuario, genero, estado);
-
-                    dataGridView1.Focus();
-                    dataGridView1.CurrentCell = dataGridView1.Rows[ultimaFila + 1].Cells[0];
-                }
-            }
-            else
-            {
-                MessageBox.Show("Debes ubicarse en la última fila del datagrid", "CRUD", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
+            FormAgregar frm = new FormAgregar();
+            frm.tipo = formularioActual; // asignamos el valor del formulario actual a la propiedad tipo del formulario FormAgregar para que sepa qué tipo de registro se va a agregar
+            frm.ShowDialog();
         }
     }
 }
