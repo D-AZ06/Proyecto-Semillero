@@ -87,6 +87,10 @@ namespace Proyecto_Semillero
 
         private void FormAgregar_Load(object sender, EventArgs e)
         {
+            tabAgregar.Appearance = TabAppearance.FlatButtons;
+            tabAgregar.ItemSize = new Size(0, 1);
+            tabAgregar.SizeMode = TabSizeMode.Fixed; 
+
             if (tipo == "Usuario")
             {
                 tabAgregar.SelectedTab = tabUsuario;
@@ -95,6 +99,11 @@ namespace Proyecto_Semillero
             {
                 tabAgregar.SelectedTab = tabSemillero;
             }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
