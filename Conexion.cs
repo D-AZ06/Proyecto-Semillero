@@ -15,9 +15,11 @@ namespace Proyecto_Semillero
 
         public SqlConnection Conectar() // creamos el metodo Conectar para establecer la conexion a la base de datos
         {
+            //
+
             try // utilizamos un bloque try-catch para manejar cualquier error que pueda ocurrir al establecer la conexion
             {
-                conexion = new SqlConnection("Data Source=DESKTOP-N1N64BR\\SQLEXPRESS;Initial Catalog=BD-ProyectoSemillero;Integrated Security=True"); // establecemos la conexion a la base de datos utilizando la cadena de conexion
+                conexion = new SqlConnection("Data Source=DESKTOP-N1N64BR\\SQLEXPRESS\\SQLEXPRESS;Initial Catalog=BD-ProyectoSemillero;Integrated Security=True"); // establecemos la conexion a la base de datos utilizando la cadena de conexion
                 conexion.Open(); // abrimos la conexion a la base de datos
             }
             catch (Exception e) // si ocurre un error al establecer la conexion, se muestra un mensaje de error

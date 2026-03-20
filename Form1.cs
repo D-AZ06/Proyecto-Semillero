@@ -62,5 +62,13 @@ namespace Proyecto_Semillero
                 this.Hide(); // ocultamos el formulario Form1 al usuario
             }
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Deseas salir del programa?", "salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button3) == System.Windows.Forms.DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
