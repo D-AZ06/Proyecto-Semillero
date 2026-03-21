@@ -53,7 +53,8 @@ namespace Proyecto_Semillero
 
         private void btn_gestionar_reportes_Click(object sender, EventArgs e)
         {
-
+            Gestionar("Reportes");
+            formularioActual = "Reportes";
         }
 
         private void btn_gestionar_usuarios_Click(object sender, EventArgs e)
@@ -79,6 +80,19 @@ namespace Proyecto_Semillero
             Gestionar("Eventos");
             formularioActual = "Eventos";
         }
+
+        private void btn_patrocinadores_Click(object sender, EventArgs e)
+        {
+            Gestionar("Patrocinadores");
+            formularioActual = "Patrocinadores";
+        }
+
+        private void btn_actividades_Click(object sender, EventArgs e)
+        {
+            Gestionar("Actividad");
+            formularioActual = "Actividad";
+        }
+
 
         private void btbsalir_Click(object sender, EventArgs e)
         {
@@ -179,5 +193,7 @@ namespace Proyecto_Semillero
             frm.tipo = formularioActual; // asignamos el valor del formulario actual a la propiedad tipo del formulario FormAgregar para que sepa qué tipo de registro se va a agregar
             frm.ShowDialog();
         }
+
+        
     }
 }

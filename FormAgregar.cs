@@ -90,6 +90,7 @@ namespace Proyecto_Semillero
             tabAgregar.Appearance = TabAppearance.FlatButtons;
             tabAgregar.ItemSize = new Size(0, 1);
             tabAgregar.SizeMode = TabSizeMode.Fixed; 
+            
 
             if (tipo == "Usuario")
             {
@@ -98,6 +99,30 @@ namespace Proyecto_Semillero
              else if (tipo == "Semillero")
             {
                 tabAgregar.SelectedTab = tabSemillero;
+            }
+
+            else if (tipo == "Proyectos")
+            {
+                tabAgregar.SelectedTab = tabProyectos;
+            }
+
+            else if (tipo == "Reportes")
+            {
+                tabAgregar.SelectedTab = tabReportes;
+            }
+
+            else if (tipo == "Actividad")
+            {
+                tabAgregar.SelectedTab = tabActividades;
+            }
+            else if (tipo == "Patrocinadores")
+            {
+                tabAgregar.SelectedTab = tabPatroc;
+            }
+
+            else if (tipo == "Eventos")
+            {
+                tabAgregar.SelectedTab = tabEventos;
             }
         }
 

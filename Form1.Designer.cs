@@ -38,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnsalir_programa = new Guna.UI2.WinForms.Guna2Button();
+            this.lblGesSi = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -48,7 +49,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Proyecto_Semillero.Properties.Resources.Sin_título__5_;
-            this.pictureBox1.Location = new System.Drawing.Point(355, 39);
+            this.pictureBox1.Location = new System.Drawing.Point(360, 10);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(140, 108);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -194,6 +195,18 @@
             this.btnsalir_programa.Text = "Salir";
             this.btnsalir_programa.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
+            // lblGesSi
+            // 
+            this.lblGesSi.AutoSize = true;
+            this.lblGesSi.BackColor = System.Drawing.Color.Transparent;
+            this.lblGesSi.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGesSi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblGesSi.Location = new System.Drawing.Point(389, 117);
+            this.lblGesSi.Name = "lblGesSi";
+            this.lblGesSi.Size = new System.Drawing.Size(84, 33);
+            this.lblGesSi.TabIndex = 10;
+            this.lblGesSi.Text = "GesSi";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -201,6 +214,7 @@
             this.BackgroundImage = global::Proyecto_Semillero.Properties.Resources._592593667718;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(880, 562);
+            this.Controls.Add(this.lblGesSi);
             this.Controls.Add(this.btnsalir_programa);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
@@ -213,6 +227,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -228,6 +243,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtcontraseña;
         private Guna.UI2.WinForms.Guna2Button btningresar;
         private Guna.UI2.WinForms.Guna2Button btnsalir_programa;
+        private System.Windows.Forms.Label lblGesSi;
     }
 }
 
