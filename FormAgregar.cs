@@ -89,8 +89,9 @@ namespace Proyecto_Semillero
         {
             tabAgregar.Appearance = TabAppearance.FlatButtons;
             tabAgregar.ItemSize = new Size(0, 1);
-            tabAgregar.SizeMode = TabSizeMode.Fixed; 
-            
+            tabAgregar.SizeMode = TabSizeMode.Fixed;
+            tabAgregar.BackColor = Color.FromArgb(200, Color.White);
+
 
             if (tipo == "Usuario")
             {
@@ -129,6 +130,16 @@ namespace Proyecto_Semillero
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtIdUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2DateTimePicker3_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

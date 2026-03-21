@@ -32,6 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_actividades = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_patrocinadores = new Guna.UI2.WinForms.Guna2Button();
             this.btn_eventos = new Guna.UI2.WinForms.Guna2Button();
             this.btn_proyecto = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,19 +52,10 @@
             this.lbl_gestionar = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnconsultalp = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnconsultalp = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnactulizar = new System.Windows.Forms.Button();
-            this.btneliminar = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtactualizarcon = new System.Windows.Forms.TextBox();
-            this.txtactualizarid = new System.Windows.Forms.TextBox();
-            this.btn_patrocinadores = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_actividades = new Guna.UI2.WinForms.Guna2Button();
+            this.TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.comboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Panel1.SuspendLayout();
             this.Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -70,7 +63,6 @@
             this.Panel3.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel1
@@ -89,6 +81,42 @@
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(257, 568);
             this.Panel1.TabIndex = 0;
+            // 
+            // btn_actividades
+            // 
+            this.btn_actividades.BackColor = System.Drawing.Color.Transparent;
+            this.btn_actividades.BorderRadius = 15;
+            this.btn_actividades.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_actividades.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_actividades.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_actividades.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_actividades.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(72)))), ((int)(((byte)(153)))));
+            this.btn_actividades.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_actividades.ForeColor = System.Drawing.Color.White;
+            this.btn_actividades.Location = new System.Drawing.Point(27, 508);
+            this.btn_actividades.Name = "btn_actividades";
+            this.btn_actividades.Size = new System.Drawing.Size(192, 34);
+            this.btn_actividades.TabIndex = 10;
+            this.btn_actividades.Text = "🎯 Actividades";
+            this.btn_actividades.Click += new System.EventHandler(this.btn_actividades_Click);
+            // 
+            // btn_patrocinadores
+            // 
+            this.btn_patrocinadores.BackColor = System.Drawing.Color.Transparent;
+            this.btn_patrocinadores.BorderRadius = 15;
+            this.btn_patrocinadores.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_patrocinadores.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_patrocinadores.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_patrocinadores.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_patrocinadores.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(158)))), ((int)(((byte)(11)))));
+            this.btn_patrocinadores.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_patrocinadores.ForeColor = System.Drawing.Color.White;
+            this.btn_patrocinadores.Location = new System.Drawing.Point(27, 440);
+            this.btn_patrocinadores.Name = "btn_patrocinadores";
+            this.btn_patrocinadores.Size = new System.Drawing.Size(192, 34);
+            this.btn_patrocinadores.TabIndex = 9;
+            this.btn_patrocinadores.Text = "🤝 Patrocinadores";
+            this.btn_patrocinadores.Click += new System.EventHandler(this.btn_patrocinadores_Click);
             // 
             // btn_eventos
             // 
@@ -370,7 +398,6 @@
             // guna2Panel1
             // 
             this.guna2Panel1.Controls.Add(this.groupBox1);
-            this.guna2Panel1.Controls.Add(this.groupBox3);
             this.guna2Panel1.Location = new System.Drawing.Point(290, 421);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(803, 222);
@@ -380,158 +407,83 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.TextBox1);
             this.groupBox1.Controls.Add(this.btnconsultalp);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(353, 22);
+            this.groupBox1.Location = new System.Drawing.Point(147, 25);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(388, 160);
+            this.groupBox1.Size = new System.Drawing.Size(498, 160);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Consultar por parametros";
             // 
             // btnconsultalp
             // 
-            this.btnconsultalp.Location = new System.Drawing.Point(38, 92);
+            this.btnconsultalp.BorderRadius = 15;
+            this.btnconsultalp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnconsultalp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnconsultalp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnconsultalp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnconsultalp.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnconsultalp.ForeColor = System.Drawing.Color.White;
+            this.btnconsultalp.Location = new System.Drawing.Point(214, 71);
             this.btnconsultalp.Name = "btnconsultalp";
-            this.btnconsultalp.Size = new System.Drawing.Size(75, 23);
-            this.btnconsultalp.TabIndex = 6;
+            this.btnconsultalp.Size = new System.Drawing.Size(149, 45);
+            this.btnconsultalp.TabIndex = 7;
             this.btnconsultalp.Text = "ConsultarP";
-            this.btnconsultalp.UseVisualStyleBackColor = true;
-            this.btnconsultalp.Click += new System.EventHandler(this.btnconsultalp_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(271, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "idUsuario",
-            "rolUsuario"});
-            this.comboBox1.Location = new System.Drawing.Point(132, 31);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
+            this.btnconsultalp.Click += new System.EventHandler(this.btnconsultalp_Click_1);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(7, 31);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 13);
+            this.label3.Size = new System.Drawing.Size(133, 16);
             this.label3.TabIndex = 0;
             this.label3.Text = "Selecciona la opcion";
             // 
-            // groupBox3
+            // TextBox1
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.btnactulizar);
-            this.groupBox3.Controls.Add(this.btneliminar);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.txtactualizarcon);
-            this.groupBox3.Controls.Add(this.txtactualizarid);
-            this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(20, 22);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(280, 159);
-            this.groupBox3.TabIndex = 9;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Actulización";
+            this.TextBox1.BorderRadius = 15;
+            this.TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBox1.DefaultText = "";
+            this.TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TextBox1.ForeColor = System.Drawing.Color.Black;
+            this.TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TextBox1.Location = new System.Drawing.Point(324, 24);
+            this.TextBox1.Name = "TextBox1";
+            this.TextBox1.PlaceholderText = "";
+            this.TextBox1.SelectedText = "";
+            this.TextBox1.Size = new System.Drawing.Size(140, 36);
+            this.TextBox1.TabIndex = 8;
             // 
-            // btnactulizar
+            // comboBox2
             // 
-            this.btnactulizar.Location = new System.Drawing.Point(42, 108);
-            this.btnactulizar.Name = "btnactulizar";
-            this.btnactulizar.Size = new System.Drawing.Size(75, 23);
-            this.btnactulizar.TabIndex = 13;
-            this.btnactulizar.Text = "Actualizar";
-            this.btnactulizar.UseVisualStyleBackColor = true;
-            // 
-            // btneliminar
-            // 
-            this.btneliminar.Location = new System.Drawing.Point(154, 108);
-            this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(75, 23);
-            this.btneliminar.TabIndex = 7;
-            this.btneliminar.Text = "Eliminar";
-            this.btneliminar.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 23);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Id Usuario";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 66);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 13);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Contraseña";
-            // 
-            // txtactualizarcon
-            // 
-            this.txtactualizarcon.Location = new System.Drawing.Point(108, 66);
-            this.txtactualizarcon.Name = "txtactualizarcon";
-            this.txtactualizarcon.Size = new System.Drawing.Size(121, 20);
-            this.txtactualizarcon.TabIndex = 14;
-            // 
-            // txtactualizarid
-            // 
-            this.txtactualizarid.Location = new System.Drawing.Point(108, 20);
-            this.txtactualizarid.Name = "txtactualizarid";
-            this.txtactualizarid.ReadOnly = true;
-            this.txtactualizarid.Size = new System.Drawing.Size(121, 20);
-            this.txtactualizarid.TabIndex = 12;
-            // 
-            // btn_patrocinadores
-            // 
-            this.btn_patrocinadores.BackColor = System.Drawing.Color.Transparent;
-            this.btn_patrocinadores.BorderRadius = 15;
-            this.btn_patrocinadores.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_patrocinadores.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_patrocinadores.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_patrocinadores.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_patrocinadores.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(158)))), ((int)(((byte)(11)))));
-            this.btn_patrocinadores.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_patrocinadores.ForeColor = System.Drawing.Color.White;
-            this.btn_patrocinadores.Location = new System.Drawing.Point(27, 440);
-            this.btn_patrocinadores.Name = "btn_patrocinadores";
-            this.btn_patrocinadores.Size = new System.Drawing.Size(192, 34);
-            this.btn_patrocinadores.TabIndex = 9;
-            this.btn_patrocinadores.Text = "🤝 Patrocinadores";
-            this.btn_patrocinadores.Click += new System.EventHandler(this.btn_patrocinadores_Click);
-            // 
-            // btn_actividades
-            // 
-            this.btn_actividades.BackColor = System.Drawing.Color.Transparent;
-            this.btn_actividades.BorderRadius = 15;
-            this.btn_actividades.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_actividades.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_actividades.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_actividades.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_actividades.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(72)))), ((int)(((byte)(153)))));
-            this.btn_actividades.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_actividades.ForeColor = System.Drawing.Color.White;
-            this.btn_actividades.Location = new System.Drawing.Point(27, 508);
-            this.btn_actividades.Name = "btn_actividades";
-            this.btn_actividades.Size = new System.Drawing.Size(192, 34);
-            this.btn_actividades.TabIndex = 10;
-            this.btn_actividades.Text = "🎯 Actividades";
-            this.btn_actividades.Click += new System.EventHandler(this.btn_actividades_Click);
+            this.comboBox2.BackColor = System.Drawing.Color.Transparent;
+            this.comboBox2.BorderRadius = 15;
+            this.comboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBox2.ItemHeight = 30;
+            this.comboBox2.Items.AddRange(new object[] {
+            "idUsuario",
+            "rolUsuario"});
+            this.comboBox2.Location = new System.Drawing.Point(157, 24);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(140, 36);
+            this.comboBox2.TabIndex = 9;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // FormAdmin
             // 
@@ -558,8 +510,6 @@
             this.guna2Panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -582,21 +532,14 @@
         private Guna.UI2.WinForms.Guna2Button btbsalir;
         private System.Windows.Forms.Label lblGesSi;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btneliminar;
-        private System.Windows.Forms.Button btnactulizar;
-        private System.Windows.Forms.TextBox txtactualizarcon;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtactualizarid;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnconsultalp;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Button btnRegistrar;
         private Guna.UI2.WinForms.Guna2Button btnModificar;
         private Guna.UI2.WinForms.Guna2Button btn_actividades;
         private Guna.UI2.WinForms.Guna2Button btn_patrocinadores;
+        private Guna.UI2.WinForms.Guna2Button btnconsultalp;
+        private Guna.UI2.WinForms.Guna2TextBox TextBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox comboBox2;
     }
 }

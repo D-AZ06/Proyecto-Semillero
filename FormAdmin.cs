@@ -110,11 +110,11 @@ namespace Proyecto_Semillero
         {
             guna2Panel1.BackColor = Color.FromArgb(20, 255, 255, 255);
         }
-
-        private void btnconsultalp_Click(object sender, EventArgs e)
-        {
-            buscar_usuario(comboBox1.SelectedItem.ToString(), textBox1.Text);
+         private void btnconsultalp_Click_1(object sender, EventArgs e)
+         {
+            buscar_usuario(comboBox2.SelectedItem.ToString(), TextBox1.Text);
         }
+      
 
         public void buscar_usuario(string criterio, string valor)
         {
@@ -194,6 +194,14 @@ namespace Proyecto_Semillero
             frm.ShowDialog();
         }
 
-        
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

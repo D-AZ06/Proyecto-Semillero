@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|C:\\Users\\Reverie Pink\\Proyecto-Semillero\\formagregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|solutionrelative:formagregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|C:\\Users\\Reverie Pink\\Proyecto-Semillero\\formagregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|solutionrelative:formagregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,15 +15,11 @@
       "RelativeMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|solutionrelative:conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|c:\\users\\reverie pink\\proyecto-semillero\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|C:\\Users\\Reverie Pink\\Proyecto-Semillero\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|C:\\Users\\Reverie Pink\\Proyecto-Semillero\\formagregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|solutionrelative:formagregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|c:\\users\\reverie pink\\proyecto-semillero\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|C:\\Users\\Reverie Pink\\Proyecto-Semillero\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|solutionrelative:formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,7 +74,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -86,38 +86,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Conexion.cs",
               "DocumentMoniker": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\Conexion.cs",
               "RelativeDocumentMoniker": "Conexion.cs",
               "ToolTip": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\Conexion.cs",
               "RelativeToolTip": "Conexion.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBYAAABoAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAwCAAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-21T02:19:45.802Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "FormAgregar.cs",
               "DocumentMoniker": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\FormAgregar.cs",
               "RelativeDocumentMoniker": "FormAgregar.cs",
-              "ToolTip": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\FormAgregar.cs",
-              "RelativeToolTip": "FormAgregar.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAIwH0AAAANAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\FormAgregar.cs*",
+              "RelativeToolTip": "FormAgregar.cs*",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAYwBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-20T19:44:21.859Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "FormAgregar.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\FormAgregar.cs",
               "RelativeDocumentMoniker": "FormAgregar.cs",
-              "ToolTip": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\FormAgregar.cs [Dise\u00F1o]",
-              "RelativeToolTip": "FormAgregar.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\FormAgregar.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "FormAgregar.cs [Dise\u00F1o]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-20T19:43:31.335Z",
               "EditorCaption": " [Dise\u00F1o]"
@@ -130,7 +130,7 @@
               "RelativeDocumentMoniker": "FormAdmin.cs",
               "ToolTip": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\FormAdmin.cs",
               "RelativeToolTip": "FormAdmin.cs",
-              "ViewState": "AgIAAKkAAAAAAAAAAAAqwL8AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAYwHIAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-20T19:42:58.467Z",
               "EditorCaption": ""

@@ -121,6 +121,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <None Include="Resources\enfoque.png" />
+    <None Include="Resources\linea-de-tiempo.png" />
+    <None Include="Resources\etiqueta.png" />
+    <None Include="Resources\agregar-usuario1.png" />
+    <None Include="Resources\planta-de-semillero.png" />
+    <None Include="Resources\6600337_3298668.jpg" />
+    <None Include="Resources\usuario %281%29.png" />
+    <None Include="Resources\simbolos-de-genero.png" />
+    <None Include="Resources\control-parental.png" />
+    <None Include="Resources\correo.png" />
+    <None Include="Resources\telefono-inteligente.png" />
+    <None Include="Resources\empresario.png" />
+    <None Include="Resources\agregar-usuario.png" />
+    <None Include="Resources\contrasena %281%29.png" />
+    <None Include="Resources\id-facial.png" />
     <None Include="Resources\contrasena.png" />
     <None Include="Resources\usuario.png" />
     <None Include="Resources\Sin título %285%29.png" />
