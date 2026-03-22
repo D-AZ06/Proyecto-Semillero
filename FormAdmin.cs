@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Proyecto_Semillero
 {
@@ -17,6 +18,7 @@ namespace Proyecto_Semillero
         DataSet dataset = new DataSet(); // (conjunto de datos) creamos la variable dt con tipo DataTable para almacenar los resultados de las consultas a la base de datos
 
         string formularioActual = ""; // variable para almacenar el nombre del formulario actual que se esta mostrando en el DataGridView
+        ConsultarConParametro consultarConParametro = new ConsultarConParametro(); // creamos una instancia de la clase ConsultarConParametro para utilizar sus métodos de consulta con parámetros
 
         public FormAdmin()
         {
@@ -55,42 +57,49 @@ namespace Proyecto_Semillero
         {
             Gestionar("Reportes");
             formularioActual = "Reportes";
+            ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
         }
 
         private void btn_gestionar_usuarios_Click(object sender, EventArgs e)
         {
             Gestionar("Usuario");
             formularioActual = "Usuario";
+            ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             Gestionar("Semillero");
             formularioActual = "Semillero";
+            ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
         }
 
         private void btn_proyecto_Click(object sender, EventArgs e)
         {
             Gestionar("Proyectos");
             formularioActual = "Proyectos";
+            ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
         }
 
         private void btn_eventos_Click(object sender, EventArgs e)
         {
             Gestionar("Eventos");
             formularioActual = "Eventos";
+                ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
         }
 
         private void btn_patrocinadores_Click(object sender, EventArgs e)
         {
             Gestionar("Patrocinadores");
             formularioActual = "Patrocinadores";
+            ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
         }
 
         private void btn_actividades_Click(object sender, EventArgs e)
         {
             Gestionar("Actividad");
             formularioActual = "Actividad";
+            ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
         }
 
 
@@ -112,80 +121,20 @@ namespace Proyecto_Semillero
         }
          private void btnconsultalp_Click_1(object sender, EventArgs e)
          {
-            buscar_usuario(comboBox2.SelectedItem.ToString(), TextBox1.Text);
-        }
+            string columna = cboConsultarParametro.SelectedItem?.ToString();
+            string valor = TextBox1.Text;
+
+            if (string.IsNullOrEmpty(columna) || string.IsNullOrEmpty(valor))
+            {
+                MessageBox.Show("Seleccione un parámetro y escriba un valor.");
+                return;
+            }
+
+            DataTable resultados = ConsultarConParametro.ConsultarParametro(formularioActual, columna, valor, conexion);
+
+            dataGridView1.DataSource = resultados;
+         }
       
-
-        public void buscar_usuario(string criterio, string valor)
-        {
-            SqlCommand consulta = new SqlCommand();//creamos un objeto de tipo SqlCommand para ejecutar la consulta SQL
-
-            if (criterio == "idUsuario")
-            {
-                consulta = new SqlCommand("select * from Usuario where idUsuario = @valor", conexion.Conectar());//establecemos la consulta SQL para buscar por idUsuario
-                consulta.CommandType = CommandType.Text;
-            }
-            else
-            {
-                consulta = new SqlCommand("select * from Usuario where rolUsuario  LIKE '%' + @valor + '%'", conexion.Conectar());//establecemos la consulta SQL para buscar por tipoUsuario utilizando el operador LIKE para permitir búsquedas parciales
-                consulta.CommandType = CommandType.Text;
-            }
-
-            consulta.Parameters.AddWithValue("@valor", valor);//agregamos el parametro valor a la consulta SQL
-            consulta.ExecuteNonQuery();
-            dataset.Clear();//limpiamos el DataSet para evitar que se acumulen los datos obtenidos de la consulta SQL
-            SqlDataAdapter da = new SqlDataAdapter(consulta);//creamos un objeto de tipo SqlDataAdapter para ejecutar la consulta SQL y almacenar los datos obtenidos en el DataSet
-            da.Fill(dataset, "Usuario");//llenamos el DataSet con los datos obtenidos de la consulta SQL
-
-            try
-            {
-                dataGridView1.DataMember = "Usuario";//establecemos el miembro de datos del DataGridView para mostrar los datos de la tabla "usuario" del DataSet
-                dataGridView1.DataSource = dataset;//establecemos la fuente de datos del DataGridView como el DataSet para mostrar los datos obtenidos de la consulta SQL
-            }
-            catch (Exception e)//capturamos cualquier excepción que pueda ocurrir al mostrar los datos en el DataGridView y mostramos un mensaje de error
-            {
-                MessageBox.Show(e.Message);//mostramos el mensaje de error de la excepción
-            }
-
-
-
-
-        }
-        public void insertarRegistro(int idUsuario, string contraseñaUsuario, string rolUsuario, string nombresUsuario  ,long telefonoUsuario, string correoUsuario, int edadUsuario, string generoUsuario, string estadoUsuario)
-        {
-            try
-            {
-                SqlCommand insert = new SqlCommand(
-                    "INSERT INTO Usuario (idUsuario, contraseñaUsuario, rolUsuario, nombresUsuario, telefonoUsuario, correoUsuario, edadUsuario, generoUsuario, estadoUsuario) " +
-                    "VALUES (@idUsuario, @contraseñaUsuario, @rolUsuario, @nombresUsuario, @telefonoUsuario, @correoUsuario, @edadUsuario, @generoUsuario, @estadoUsuario)",
-                    conexion.Conectar()
-                );
-
-                insert.CommandType = CommandType.Text;
-
-                insert.Parameters.AddWithValue("@idUsuario", idUsuario);
-                insert.Parameters.AddWithValue("@contraseñaUsuario", contraseñaUsuario);
-                insert.Parameters.AddWithValue("@rolUsuario", rolUsuario);
-                insert.Parameters.AddWithValue("@nombresUsuario", nombresUsuario);
-                insert.Parameters.AddWithValue("@telefonoUsuario", telefonoUsuario);
-                insert.Parameters.AddWithValue("@correoUsuario", correoUsuario);
-                insert.Parameters.AddWithValue("@edadUsuario", edadUsuario);
-                insert.Parameters.AddWithValue("@generoUsuario", generoUsuario);
-                insert.Parameters.AddWithValue("@estadoUsuario", estadoUsuario);
-
-                insert.ExecuteNonQuery();
-
-                MessageBox.Show("Registro insertado correctamente", "CRUD", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                conexion.cerrar();
-            }
-        }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {

@@ -1,30 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\",
+  "WorkspaceRootPath": "C:\\Proyecto Semillero\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|C:\\Users\\Reverie Pink\\Proyecto-Semillero\\formagregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|solutionrelative:formagregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|C:\\Proyecto Semillero\\Conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|solutionrelative:Conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|C:\\Users\\Reverie Pink\\Proyecto-Semillero\\formagregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|solutionrelative:formagregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|C:\\Proyecto Semillero\\FormAdmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|solutionrelative:FormAdmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|c:\\users\\reverie pink\\proyecto-semillero\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|solutionrelative:conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|C:\\Users\\Reverie Pink\\Proyecto-Semillero\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|C:\\Users\\Reverie Pink\\Proyecto-Semillero\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|C:\\Proyecto Semillero\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|solutionrelative:formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|C:\\Users\\Reverie Pink\\Proyecto-Semillero\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|solutionrelative:formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|c:\\proyecto semillero\\consultarconparametro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|solutionrelative:consultarconparametro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|C:\\Proyecto Semillero\\consulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|solutionrelative:consulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|C:\\Proyecto Semillero\\FormAgregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|solutionrelative:FormAgregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|C:\\Proyecto Semillero\\FormAgregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FC1CB9D8-17C0-49B7-9A53-D2F2612CD8BF}|Proyecto Semillero.csproj|solutionrelative:FormAgregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,23 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -73,79 +65,103 @@
               "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\Form1.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
+              "Title": "ConsultarConParametro.cs",
+              "DocumentMoniker": "C:\\Proyecto Semillero\\ConsultarConParametro.cs",
+              "RelativeDocumentMoniker": "ConsultarConParametro.cs",
+              "ToolTip": "C:\\Proyecto Semillero\\ConsultarConParametro.cs",
+              "RelativeToolTip": "ConsultarConParametro.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAswEIAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T02:26:24.657Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Conexion.cs",
-              "DocumentMoniker": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\Conexion.cs",
-              "RelativeDocumentMoniker": "Conexion.cs",
-              "ToolTip": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\Conexion.cs",
-              "RelativeToolTip": "Conexion.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAwCAAAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T02:19:45.802Z",
+              "WhenOpened": "2026-03-22T00:44:21.752Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormAgregar.cs",
-              "DocumentMoniker": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\FormAgregar.cs",
-              "RelativeDocumentMoniker": "FormAgregar.cs",
-              "ToolTip": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\FormAgregar.cs",
-              "RelativeToolTip": "FormAgregar.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Consulta.cs",
+              "DocumentMoniker": "C:\\Proyecto Semillero\\Consulta.cs",
+              "RelativeDocumentMoniker": "Consulta.cs",
+              "ToolTip": "C:\\Proyecto Semillero\\Consulta.cs",
+              "RelativeToolTip": "Consulta.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T19:44:21.859Z",
+              "WhenOpened": "2026-03-22T00:29:26.253Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormAgregar.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\FormAgregar.cs",
-              "RelativeDocumentMoniker": "FormAgregar.cs",
-              "ToolTip": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\FormAgregar.cs [Dise\u00F1o]",
-              "RelativeToolTip": "FormAgregar.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T19:43:31.335Z",
-              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "FormAdmin.cs",
-              "DocumentMoniker": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\FormAdmin.cs",
+              "Title": "FormAgregar.cs",
+              "DocumentMoniker": "C:\\Proyecto Semillero\\FormAgregar.cs",
+              "RelativeDocumentMoniker": "FormAgregar.cs",
+              "ToolTip": "C:\\Proyecto Semillero\\FormAgregar.cs*",
+              "RelativeToolTip": "FormAgregar.cs*",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwBAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T19:44:21.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormAdmin.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Proyecto Semillero\\FormAdmin.cs",
               "RelativeDocumentMoniker": "FormAdmin.cs",
-              "ToolTip": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\FormAdmin.cs",
+              "ToolTip": "C:\\Proyecto Semillero\\FormAdmin.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FormAdmin.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T19:42:31.819Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormAdmin.cs",
+              "DocumentMoniker": "C:\\Proyecto Semillero\\FormAdmin.cs",
+              "RelativeDocumentMoniker": "FormAdmin.cs",
+              "ToolTip": "C:\\Proyecto Semillero\\FormAdmin.cs",
               "RelativeToolTip": "FormAdmin.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAYwHIAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAADgv4IAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-20T19:42:58.467Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormAdmin.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\FormAdmin.cs",
-              "RelativeDocumentMoniker": "FormAdmin.cs",
-              "ToolTip": "C:\\Users\\Reverie Pink\\Proyecto-Semillero\\FormAdmin.cs [Dise\u00F1o]",
-              "RelativeToolTip": "FormAdmin.cs [Dise\u00F1o]",
+              "DocumentIndex": 0,
+              "Title": "Conexion.cs",
+              "DocumentMoniker": "C:\\Proyecto Semillero\\Conexion.cs",
+              "RelativeDocumentMoniker": "Conexion.cs",
+              "ToolTip": "C:\\Proyecto Semillero\\Conexion.cs",
+              "RelativeToolTip": "Conexion.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAgwBYAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T19:42:31.819Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-03-21T02:19:45.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormAgregar.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Proyecto Semillero\\FormAgregar.cs",
+              "RelativeDocumentMoniker": "FormAgregar.cs",
+              "ToolTip": "C:\\Proyecto Semillero\\FormAgregar.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "FormAgregar.cs [Dise\u00F1o]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T19:43:31.335Z"
             }
           ]
         }
