@@ -32,23 +32,78 @@
             this.tabActividades = new System.Windows.Forms.TabPage();
             this.lblactividades = new System.Windows.Forms.Label();
             this.tabPatroc = new System.Windows.Forms.TabPage();
+            this.btnModificarPatr = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAgregarPatro = new Guna.UI2.WinForms.Guna2Button();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.txtTelefonoPatro = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTelefonoPatr = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTipoPatro = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtNombrePatro = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtIdpatro = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblpatroc = new System.Windows.Forms.Label();
             this.tabReportes = new System.Windows.Forms.TabPage();
+            this.btnModificarRep = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAgregarReporte = new Guna.UI2.WinForms.Guna2Button();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.TxtIdUsuario2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMotivo = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtHoraReporte = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtFechaReporte = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtIdReporte = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblreporte = new System.Windows.Forms.Label();
             this.tabProyectos = new System.Windows.Forms.TabPage();
+            this.btnModificarProyec = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAgregarProyec = new Guna.UI2.WinForms.Guna2Button();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.txtFechaFin = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtFechaInicio = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtDescripcion = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtObjetivo = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTitulo = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtIdSemillero1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtProyecto = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblproyecto = new System.Windows.Forms.Label();
             this.tabEventos = new System.Windows.Forms.TabPage();
+            this.btnModificarEvent = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAgregarEvent = new Guna.UI2.WinForms.Guna2Button();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtNombreEven = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtOrgEvento = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTipoEven = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtLugarEven = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtIdEvento = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbleventos = new System.Windows.Forms.Label();
             this.tabSemillero = new System.Windows.Forms.TabPage();
+            this.btnModidficarSem = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAgregarSem = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.txtEnfoqueSe = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtLineaSe = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtNombreSe = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtIdUsuario1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtEnfoqueSem = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtLineaSem = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtNombreSem = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtIdUsuarioSem = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtIdSemillero = new Guna.UI2.WinForms.Guna2TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -88,62 +143,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabAgregar = new System.Windows.Forms.TabControl();
-            this.txtIdEvento = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtLugarEven = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTipoEven = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtOrgEvento = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtNombreEven = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.txtProyecto = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtIdSemillero1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTitulo = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtObjetivo = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtDescripcion = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtfechaEvent = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtFechaInicio = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtFechaFin = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.txtIdReporte = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtFechaReporte = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtHoraReporte = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtMotivo = new Guna.UI2.WinForms.Guna2TextBox();
-            this.TxtIdUsuario2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.txtIdpatro = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtNombrePatro = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTipoPatro = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTelefonoPatr = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTelefonoPatro = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.btnAgregarSem = new Guna.UI2.WinForms.Guna2Button();
-            this.btnModidficarSem = new Guna.UI2.WinForms.Guna2Button();
-            this.btnModificarEvent = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAgregarEvent = new Guna.UI2.WinForms.Guna2Button();
-            this.btnModificarProyec = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAgregarProyec = new Guna.UI2.WinForms.Guna2Button();
-            this.btnModificarRep = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAgregarReporte = new Guna.UI2.WinForms.Guna2Button();
-            this.btnModificarPatr = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAgregarPatro = new Guna.UI2.WinForms.Guna2Button();
+            this.txtFechaEven = new Guna.UI2.WinForms.Guna2TextBox();
             this.tabActividades.SuspendLayout();
             this.tabPatroc.SuspendLayout();
             this.tabReportes.SuspendLayout();
@@ -170,10 +170,10 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(319, 459);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCerrar.Location = new System.Drawing.Point(425, 565);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(62, 23);
+            this.btnCerrar.Size = new System.Drawing.Size(83, 28);
             this.btnCerrar.TabIndex = 1;
             this.btnCerrar.Text = "Cancelar";
             this.btnCerrar.UseVisualStyleBackColor = true;
@@ -182,11 +182,11 @@
             // tabActividades
             // 
             this.tabActividades.Controls.Add(this.lblactividades);
-            this.tabActividades.Location = new System.Drawing.Point(4, 22);
-            this.tabActividades.Margin = new System.Windows.Forms.Padding(2);
+            this.tabActividades.Location = new System.Drawing.Point(4, 25);
+            this.tabActividades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabActividades.Name = "tabActividades";
-            this.tabActividades.Padding = new System.Windows.Forms.Padding(2);
-            this.tabActividades.Size = new System.Drawing.Size(386, 381);
+            this.tabActividades.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabActividades.Size = new System.Drawing.Size(517, 509);
             this.tabActividades.TabIndex = 6;
             this.tabActividades.Text = "Actividades";
             this.tabActividades.UseVisualStyleBackColor = true;
@@ -194,10 +194,9 @@
             // lblactividades
             // 
             this.lblactividades.AutoSize = true;
-            this.lblactividades.Location = new System.Drawing.Point(143, 20);
-            this.lblactividades.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblactividades.Location = new System.Drawing.Point(191, 25);
             this.lblactividades.Name = "lblactividades";
-            this.lblactividades.Size = new System.Drawing.Size(62, 13);
+            this.lblactividades.Size = new System.Drawing.Size(78, 16);
             this.lblactividades.TabIndex = 22;
             this.lblactividades.Text = "Actividades";
             // 
@@ -216,22 +215,204 @@
             this.tabPatroc.Controls.Add(this.txtNombrePatro);
             this.tabPatroc.Controls.Add(this.txtIdpatro);
             this.tabPatroc.Controls.Add(this.lblpatroc);
-            this.tabPatroc.Location = new System.Drawing.Point(4, 22);
-            this.tabPatroc.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPatroc.Location = new System.Drawing.Point(4, 25);
+            this.tabPatroc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPatroc.Name = "tabPatroc";
-            this.tabPatroc.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPatroc.Size = new System.Drawing.Size(386, 411);
+            this.tabPatroc.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPatroc.Size = new System.Drawing.Size(517, 509);
             this.tabPatroc.TabIndex = 5;
             this.tabPatroc.Text = "Patrocinadores";
             this.tabPatroc.UseVisualStyleBackColor = true;
             // 
+            // btnModificarPatr
+            // 
+            this.btnModificarPatr.BorderRadius = 15;
+            this.btnModificarPatr.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnModificarPatr.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnModificarPatr.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnModificarPatr.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnModificarPatr.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnModificarPatr.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnModificarPatr.ForeColor = System.Drawing.Color.White;
+            this.btnModificarPatr.Location = new System.Drawing.Point(320, 416);
+            this.btnModificarPatr.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificarPatr.Name = "btnModificarPatr";
+            this.btnModificarPatr.Size = new System.Drawing.Size(125, 43);
+            this.btnModificarPatr.TabIndex = 43;
+            this.btnModificarPatr.Text = "Modificar";
+            // 
+            // btnAgregarPatro
+            // 
+            this.btnAgregarPatro.BorderRadius = 15;
+            this.btnAgregarPatro.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAgregarPatro.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAgregarPatro.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAgregarPatro.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAgregarPatro.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAgregarPatro.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarPatro.Location = new System.Drawing.Point(67, 416);
+            this.btnAgregarPatro.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregarPatro.Name = "btnAgregarPatro";
+            this.btnAgregarPatro.Size = new System.Drawing.Size(125, 43);
+            this.btnAgregarPatro.TabIndex = 42;
+            this.btnAgregarPatro.Text = "Agregar";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(63, 346);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(128, 16);
+            this.label38.TabIndex = 41;
+            this.label38.Text = "Correo Patrocinador";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(63, 286);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(141, 16);
+            this.label37.TabIndex = 40;
+            this.label37.Text = "Telefono Patrocinador";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(91, 213);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(115, 16);
+            this.label36.TabIndex = 39;
+            this.label36.Text = "Tipo Patrocinador";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(69, 144);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(136, 16);
+            this.label35.TabIndex = 38;
+            this.label35.Text = "Nombre Patrocinador";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(107, 69);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(98, 16);
+            this.label34.TabIndex = 37;
+            this.label34.Text = "Id Patrocinador";
+            // 
+            // txtTelefonoPatro
+            // 
+            this.txtTelefonoPatro.BorderRadius = 10;
+            this.txtTelefonoPatro.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTelefonoPatro.DefaultText = "";
+            this.txtTelefonoPatro.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTelefonoPatro.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTelefonoPatro.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTelefonoPatro.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTelefonoPatro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTelefonoPatro.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTelefonoPatro.ForeColor = System.Drawing.Color.Black;
+            this.txtTelefonoPatro.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTelefonoPatro.Location = new System.Drawing.Point(244, 337);
+            this.txtTelefonoPatro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTelefonoPatro.Name = "txtTelefonoPatro";
+            this.txtTelefonoPatro.PlaceholderText = "";
+            this.txtTelefonoPatro.SelectedText = "";
+            this.txtTelefonoPatro.Size = new System.Drawing.Size(120, 25);
+            this.txtTelefonoPatro.TabIndex = 36;
+            // 
+            // txtTelefonoPatr
+            // 
+            this.txtTelefonoPatr.BorderRadius = 10;
+            this.txtTelefonoPatr.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTelefonoPatr.DefaultText = "";
+            this.txtTelefonoPatr.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTelefonoPatr.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTelefonoPatr.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTelefonoPatr.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTelefonoPatr.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTelefonoPatr.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTelefonoPatr.ForeColor = System.Drawing.Color.Black;
+            this.txtTelefonoPatr.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTelefonoPatr.Location = new System.Drawing.Point(244, 277);
+            this.txtTelefonoPatr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTelefonoPatr.Name = "txtTelefonoPatr";
+            this.txtTelefonoPatr.PlaceholderText = "";
+            this.txtTelefonoPatr.SelectedText = "";
+            this.txtTelefonoPatr.Size = new System.Drawing.Size(120, 25);
+            this.txtTelefonoPatr.TabIndex = 35;
+            // 
+            // txtTipoPatro
+            // 
+            this.txtTipoPatro.BorderRadius = 10;
+            this.txtTipoPatro.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTipoPatro.DefaultText = "";
+            this.txtTipoPatro.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTipoPatro.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTipoPatro.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTipoPatro.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTipoPatro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTipoPatro.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTipoPatro.ForeColor = System.Drawing.Color.Black;
+            this.txtTipoPatro.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTipoPatro.Location = new System.Drawing.Point(244, 204);
+            this.txtTipoPatro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTipoPatro.Name = "txtTipoPatro";
+            this.txtTipoPatro.PlaceholderText = "";
+            this.txtTipoPatro.SelectedText = "";
+            this.txtTipoPatro.Size = new System.Drawing.Size(120, 25);
+            this.txtTipoPatro.TabIndex = 34;
+            // 
+            // txtNombrePatro
+            // 
+            this.txtNombrePatro.BorderRadius = 10;
+            this.txtNombrePatro.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNombrePatro.DefaultText = "";
+            this.txtNombrePatro.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNombrePatro.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNombrePatro.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNombrePatro.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNombrePatro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNombrePatro.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNombrePatro.ForeColor = System.Drawing.Color.Black;
+            this.txtNombrePatro.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNombrePatro.Location = new System.Drawing.Point(244, 135);
+            this.txtNombrePatro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNombrePatro.Name = "txtNombrePatro";
+            this.txtNombrePatro.PlaceholderText = "";
+            this.txtNombrePatro.SelectedText = "";
+            this.txtNombrePatro.Size = new System.Drawing.Size(120, 25);
+            this.txtNombrePatro.TabIndex = 33;
+            // 
+            // txtIdpatro
+            // 
+            this.txtIdpatro.BorderRadius = 10;
+            this.txtIdpatro.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIdpatro.DefaultText = "";
+            this.txtIdpatro.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtIdpatro.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtIdpatro.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdpatro.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdpatro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdpatro.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtIdpatro.ForeColor = System.Drawing.Color.Black;
+            this.txtIdpatro.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdpatro.Location = new System.Drawing.Point(244, 69);
+            this.txtIdpatro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtIdpatro.Name = "txtIdpatro";
+            this.txtIdpatro.PlaceholderText = "";
+            this.txtIdpatro.SelectedText = "";
+            this.txtIdpatro.Size = new System.Drawing.Size(120, 25);
+            this.txtIdpatro.TabIndex = 32;
+            // 
             // lblpatroc
             // 
             this.lblpatroc.AutoSize = true;
-            this.lblpatroc.Location = new System.Drawing.Point(141, 13);
-            this.lblpatroc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblpatroc.Location = new System.Drawing.Point(188, 16);
             this.lblpatroc.Name = "lblpatroc";
-            this.lblpatroc.Size = new System.Drawing.Size(78, 13);
+            this.lblpatroc.Size = new System.Drawing.Size(99, 16);
             this.lblpatroc.TabIndex = 22;
             this.lblpatroc.Text = "Patrocinadores";
             // 
@@ -250,22 +431,205 @@
             this.tabReportes.Controls.Add(this.txtFechaReporte);
             this.tabReportes.Controls.Add(this.txtIdReporte);
             this.tabReportes.Controls.Add(this.lblreporte);
-            this.tabReportes.Location = new System.Drawing.Point(4, 22);
-            this.tabReportes.Margin = new System.Windows.Forms.Padding(2);
+            this.tabReportes.Location = new System.Drawing.Point(4, 25);
+            this.tabReportes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabReportes.Name = "tabReportes";
-            this.tabReportes.Padding = new System.Windows.Forms.Padding(2);
-            this.tabReportes.Size = new System.Drawing.Size(386, 411);
+            this.tabReportes.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabReportes.Size = new System.Drawing.Size(517, 509);
             this.tabReportes.TabIndex = 4;
             this.tabReportes.Text = "Reportes";
             this.tabReportes.UseVisualStyleBackColor = true;
             // 
+            // btnModificarRep
+            // 
+            this.btnModificarRep.BorderRadius = 15;
+            this.btnModificarRep.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnModificarRep.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnModificarRep.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnModificarRep.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnModificarRep.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnModificarRep.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnModificarRep.ForeColor = System.Drawing.Color.White;
+            this.btnModificarRep.Location = new System.Drawing.Point(319, 416);
+            this.btnModificarRep.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificarRep.Name = "btnModificarRep";
+            this.btnModificarRep.Size = new System.Drawing.Size(125, 43);
+            this.btnModificarRep.TabIndex = 42;
+            this.btnModificarRep.Text = "Modificar";
+            // 
+            // btnAgregarReporte
+            // 
+            this.btnAgregarReporte.BorderRadius = 15;
+            this.btnAgregarReporte.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAgregarReporte.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAgregarReporte.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAgregarReporte.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAgregarReporte.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAgregarReporte.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarReporte.Location = new System.Drawing.Point(65, 416);
+            this.btnAgregarReporte.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregarReporte.Name = "btnAgregarReporte";
+            this.btnAgregarReporte.Size = new System.Drawing.Size(125, 43);
+            this.btnAgregarReporte.TabIndex = 41;
+            this.btnAgregarReporte.Text = "Agregar";
+            this.btnAgregarReporte.Click += new System.EventHandler(this.btnAgregarReporte_Click);
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(117, 351);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(68, 16);
+            this.label33.TabIndex = 40;
+            this.label33.Text = "Id Usuario";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(84, 281);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(99, 16);
+            this.label32.TabIndex = 39;
+            this.label32.Text = "Motivo Reporte";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(96, 210);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(89, 16);
+            this.label31.TabIndex = 38;
+            this.label31.Text = "Hora Reporte";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(87, 145);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(97, 16);
+            this.label30.TabIndex = 37;
+            this.label30.Text = "Fecha Reporte";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(115, 68);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(70, 16);
+            this.label29.TabIndex = 36;
+            this.label29.Text = "Id Reporte";
+            // 
+            // TxtIdUsuario2
+            // 
+            this.TxtIdUsuario2.BorderRadius = 10;
+            this.TxtIdUsuario2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxtIdUsuario2.DefaultText = "";
+            this.TxtIdUsuario2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TxtIdUsuario2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TxtIdUsuario2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtIdUsuario2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtIdUsuario2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtIdUsuario2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TxtIdUsuario2.ForeColor = System.Drawing.Color.Black;
+            this.TxtIdUsuario2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtIdUsuario2.Location = new System.Drawing.Point(216, 342);
+            this.TxtIdUsuario2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtIdUsuario2.Name = "TxtIdUsuario2";
+            this.TxtIdUsuario2.PlaceholderText = "";
+            this.TxtIdUsuario2.SelectedText = "";
+            this.TxtIdUsuario2.Size = new System.Drawing.Size(120, 25);
+            this.TxtIdUsuario2.TabIndex = 35;
+            // 
+            // txtMotivo
+            // 
+            this.txtMotivo.BorderRadius = 10;
+            this.txtMotivo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMotivo.DefaultText = "";
+            this.txtMotivo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMotivo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMotivo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMotivo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMotivo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMotivo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMotivo.ForeColor = System.Drawing.Color.Black;
+            this.txtMotivo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMotivo.Location = new System.Drawing.Point(216, 272);
+            this.txtMotivo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMotivo.Name = "txtMotivo";
+            this.txtMotivo.PlaceholderText = "";
+            this.txtMotivo.SelectedText = "";
+            this.txtMotivo.Size = new System.Drawing.Size(120, 25);
+            this.txtMotivo.TabIndex = 34;
+            // 
+            // txtHoraReporte
+            // 
+            this.txtHoraReporte.BorderRadius = 10;
+            this.txtHoraReporte.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtHoraReporte.DefaultText = "";
+            this.txtHoraReporte.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtHoraReporte.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtHoraReporte.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHoraReporte.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHoraReporte.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtHoraReporte.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtHoraReporte.ForeColor = System.Drawing.Color.Black;
+            this.txtHoraReporte.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtHoraReporte.Location = new System.Drawing.Point(216, 202);
+            this.txtHoraReporte.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtHoraReporte.Name = "txtHoraReporte";
+            this.txtHoraReporte.PlaceholderText = "";
+            this.txtHoraReporte.SelectedText = "";
+            this.txtHoraReporte.Size = new System.Drawing.Size(120, 25);
+            this.txtHoraReporte.TabIndex = 33;
+            // 
+            // txtFechaReporte
+            // 
+            this.txtFechaReporte.BorderRadius = 10;
+            this.txtFechaReporte.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFechaReporte.DefaultText = "";
+            this.txtFechaReporte.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFechaReporte.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFechaReporte.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFechaReporte.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFechaReporte.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFechaReporte.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtFechaReporte.ForeColor = System.Drawing.Color.Black;
+            this.txtFechaReporte.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFechaReporte.Location = new System.Drawing.Point(216, 137);
+            this.txtFechaReporte.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtFechaReporte.Name = "txtFechaReporte";
+            this.txtFechaReporte.PlaceholderText = "";
+            this.txtFechaReporte.SelectedText = "";
+            this.txtFechaReporte.Size = new System.Drawing.Size(120, 25);
+            this.txtFechaReporte.TabIndex = 32;
+            // 
+            // txtIdReporte
+            // 
+            this.txtIdReporte.BorderRadius = 10;
+            this.txtIdReporte.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIdReporte.DefaultText = "";
+            this.txtIdReporte.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtIdReporte.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtIdReporte.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdReporte.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdReporte.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdReporte.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtIdReporte.ForeColor = System.Drawing.Color.Black;
+            this.txtIdReporte.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdReporte.Location = new System.Drawing.Point(216, 68);
+            this.txtIdReporte.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtIdReporte.Name = "txtIdReporte";
+            this.txtIdReporte.PlaceholderText = "";
+            this.txtIdReporte.SelectedText = "";
+            this.txtIdReporte.Size = new System.Drawing.Size(120, 25);
+            this.txtIdReporte.TabIndex = 31;
+            // 
             // lblreporte
             // 
             this.lblreporte.AutoSize = true;
-            this.lblreporte.Location = new System.Drawing.Point(154, 20);
-            this.lblreporte.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblreporte.Location = new System.Drawing.Point(205, 25);
             this.lblreporte.Name = "lblreporte";
-            this.lblreporte.Size = new System.Drawing.Size(50, 13);
+            this.lblreporte.Size = new System.Drawing.Size(63, 16);
             this.lblreporte.TabIndex = 22;
             this.lblreporte.Text = "Reportes";
             // 
@@ -288,27 +652,271 @@
             this.tabProyectos.Controls.Add(this.txtIdSemillero1);
             this.tabProyectos.Controls.Add(this.txtProyecto);
             this.tabProyectos.Controls.Add(this.lblproyecto);
-            this.tabProyectos.Location = new System.Drawing.Point(4, 22);
-            this.tabProyectos.Margin = new System.Windows.Forms.Padding(2);
+            this.tabProyectos.Location = new System.Drawing.Point(4, 25);
+            this.tabProyectos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabProyectos.Name = "tabProyectos";
-            this.tabProyectos.Padding = new System.Windows.Forms.Padding(2);
-            this.tabProyectos.Size = new System.Drawing.Size(386, 411);
+            this.tabProyectos.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabProyectos.Size = new System.Drawing.Size(517, 509);
             this.tabProyectos.TabIndex = 3;
             this.tabProyectos.Text = "Proyectos";
             this.tabProyectos.UseVisualStyleBackColor = true;
             // 
+            // btnModificarProyec
+            // 
+            this.btnModificarProyec.BorderRadius = 15;
+            this.btnModificarProyec.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnModificarProyec.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnModificarProyec.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnModificarProyec.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnModificarProyec.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnModificarProyec.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnModificarProyec.ForeColor = System.Drawing.Color.White;
+            this.btnModificarProyec.Location = new System.Drawing.Point(311, 420);
+            this.btnModificarProyec.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificarProyec.Name = "btnModificarProyec";
+            this.btnModificarProyec.Size = new System.Drawing.Size(125, 43);
+            this.btnModificarProyec.TabIndex = 45;
+            this.btnModificarProyec.Text = "Modificar";
+            // 
+            // btnAgregarProyec
+            // 
+            this.btnAgregarProyec.BorderRadius = 15;
+            this.btnAgregarProyec.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAgregarProyec.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAgregarProyec.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAgregarProyec.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAgregarProyec.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAgregarProyec.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarProyec.Location = new System.Drawing.Point(57, 420);
+            this.btnAgregarProyec.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregarProyec.Name = "btnAgregarProyec";
+            this.btnAgregarProyec.Size = new System.Drawing.Size(125, 43);
+            this.btnAgregarProyec.TabIndex = 44;
+            this.btnAgregarProyec.Text = "Agregar";
+            this.btnAgregarProyec.Click += new System.EventHandler(this.btnAgregarProyec_Click);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(100, 384);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(77, 16);
+            this.label28.TabIndex = 43;
+            this.label28.Text = "Fecha Final";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(76, 325);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(98, 16);
+            this.label27.TabIndex = 42;
+            this.label27.Text = "Fecha de Inicio";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(99, 267);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(79, 16);
+            this.label26.TabIndex = 41;
+            this.label26.Text = "Descripción";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(121, 217);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(57, 16);
+            this.label25.TabIndex = 40;
+            this.label25.Text = "Objetivo";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(139, 169);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(40, 16);
+            this.label24.TabIndex = 39;
+            this.label24.Text = "Titulo";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(101, 118);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(78, 16);
+            this.label23.TabIndex = 38;
+            this.label23.Text = "Id Semillero";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(95, 62);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(75, 16);
+            this.label22.TabIndex = 37;
+            this.label22.Text = "Id Proyecto";
+            // 
+            // txtFechaFin
+            // 
+            this.txtFechaFin.BorderRadius = 10;
+            this.txtFechaFin.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFechaFin.DefaultText = "AAAA/MM/DD";
+            this.txtFechaFin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFechaFin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFechaFin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFechaFin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFechaFin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFechaFin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtFechaFin.ForeColor = System.Drawing.Color.Black;
+            this.txtFechaFin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFechaFin.Location = new System.Drawing.Point(209, 375);
+            this.txtFechaFin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtFechaFin.Name = "txtFechaFin";
+            this.txtFechaFin.PlaceholderText = "";
+            this.txtFechaFin.SelectedText = "";
+            this.txtFechaFin.Size = new System.Drawing.Size(120, 25);
+            this.txtFechaFin.TabIndex = 36;
+            // 
+            // txtFechaInicio
+            // 
+            this.txtFechaInicio.BorderRadius = 10;
+            this.txtFechaInicio.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFechaInicio.DefaultText = "AAAA/MM/DD";
+            this.txtFechaInicio.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFechaInicio.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFechaInicio.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFechaInicio.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFechaInicio.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFechaInicio.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtFechaInicio.ForeColor = System.Drawing.Color.Black;
+            this.txtFechaInicio.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFechaInicio.Location = new System.Drawing.Point(209, 316);
+            this.txtFechaInicio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtFechaInicio.Name = "txtFechaInicio";
+            this.txtFechaInicio.PlaceholderText = "";
+            this.txtFechaInicio.SelectedText = "";
+            this.txtFechaInicio.Size = new System.Drawing.Size(120, 25);
+            this.txtFechaInicio.TabIndex = 35;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.BorderRadius = 10;
+            this.txtDescripcion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDescripcion.DefaultText = "";
+            this.txtDescripcion.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDescripcion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDescripcion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDescripcion.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDescripcion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDescripcion.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtDescripcion.ForeColor = System.Drawing.Color.Black;
+            this.txtDescripcion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDescripcion.Location = new System.Drawing.Point(209, 258);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.PlaceholderText = "";
+            this.txtDescripcion.SelectedText = "";
+            this.txtDescripcion.Size = new System.Drawing.Size(120, 25);
+            this.txtDescripcion.TabIndex = 34;
+            // 
+            // txtObjetivo
+            // 
+            this.txtObjetivo.BorderRadius = 10;
+            this.txtObjetivo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtObjetivo.DefaultText = "";
+            this.txtObjetivo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtObjetivo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtObjetivo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtObjetivo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtObjetivo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtObjetivo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtObjetivo.ForeColor = System.Drawing.Color.Black;
+            this.txtObjetivo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtObjetivo.Location = new System.Drawing.Point(209, 208);
+            this.txtObjetivo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtObjetivo.Name = "txtObjetivo";
+            this.txtObjetivo.PlaceholderText = "";
+            this.txtObjetivo.SelectedText = "";
+            this.txtObjetivo.Size = new System.Drawing.Size(120, 25);
+            this.txtObjetivo.TabIndex = 33;
+            // 
+            // txtTitulo
+            // 
+            this.txtTitulo.BorderRadius = 10;
+            this.txtTitulo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTitulo.DefaultText = "";
+            this.txtTitulo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTitulo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTitulo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTitulo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTitulo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTitulo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTitulo.ForeColor = System.Drawing.Color.Black;
+            this.txtTitulo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTitulo.Location = new System.Drawing.Point(209, 160);
+            this.txtTitulo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTitulo.Name = "txtTitulo";
+            this.txtTitulo.PlaceholderText = "";
+            this.txtTitulo.SelectedText = "";
+            this.txtTitulo.Size = new System.Drawing.Size(120, 25);
+            this.txtTitulo.TabIndex = 32;
+            // 
+            // txtIdSemillero1
+            // 
+            this.txtIdSemillero1.BorderRadius = 10;
+            this.txtIdSemillero1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIdSemillero1.DefaultText = "";
+            this.txtIdSemillero1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtIdSemillero1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtIdSemillero1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdSemillero1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdSemillero1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdSemillero1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtIdSemillero1.ForeColor = System.Drawing.Color.Black;
+            this.txtIdSemillero1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdSemillero1.Location = new System.Drawing.Point(209, 110);
+            this.txtIdSemillero1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtIdSemillero1.Name = "txtIdSemillero1";
+            this.txtIdSemillero1.PlaceholderText = "";
+            this.txtIdSemillero1.SelectedText = "";
+            this.txtIdSemillero1.Size = new System.Drawing.Size(120, 25);
+            this.txtIdSemillero1.TabIndex = 31;
+            // 
+            // txtProyecto
+            // 
+            this.txtProyecto.BorderRadius = 10;
+            this.txtProyecto.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtProyecto.DefaultText = "";
+            this.txtProyecto.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtProyecto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtProyecto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtProyecto.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtProyecto.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtProyecto.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtProyecto.ForeColor = System.Drawing.Color.Black;
+            this.txtProyecto.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtProyecto.Location = new System.Drawing.Point(209, 58);
+            this.txtProyecto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtProyecto.Name = "txtProyecto";
+            this.txtProyecto.PlaceholderText = "";
+            this.txtProyecto.SelectedText = "";
+            this.txtProyecto.Size = new System.Drawing.Size(120, 25);
+            this.txtProyecto.TabIndex = 30;
+            // 
             // lblproyecto
             // 
             this.lblproyecto.AutoSize = true;
-            this.lblproyecto.Location = new System.Drawing.Point(154, 16);
-            this.lblproyecto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblproyecto.Location = new System.Drawing.Point(205, 20);
             this.lblproyecto.Name = "lblproyecto";
-            this.lblproyecto.Size = new System.Drawing.Size(54, 13);
+            this.lblproyecto.Size = new System.Drawing.Size(68, 16);
             this.lblproyecto.TabIndex = 22;
             this.lblproyecto.Text = "Proyectos";
             // 
             // tabEventos
             // 
+            this.tabEventos.Controls.Add(this.txtFechaEven);
             this.tabEventos.Controls.Add(this.btnModificarEvent);
             this.tabEventos.Controls.Add(this.btnAgregarEvent);
             this.tabEventos.Controls.Add(this.label21);
@@ -318,28 +926,219 @@
             this.tabEventos.Controls.Add(this.label17);
             this.tabEventos.Controls.Add(this.label16);
             this.tabEventos.Controls.Add(this.txtNombreEven);
-            this.tabEventos.Controls.Add(this.txtfechaEvent);
             this.tabEventos.Controls.Add(this.txtOrgEvento);
             this.tabEventos.Controls.Add(this.txtTipoEven);
             this.tabEventos.Controls.Add(this.txtLugarEven);
             this.tabEventos.Controls.Add(this.txtIdEvento);
             this.tabEventos.Controls.Add(this.lbleventos);
-            this.tabEventos.Location = new System.Drawing.Point(4, 22);
-            this.tabEventos.Margin = new System.Windows.Forms.Padding(2);
+            this.tabEventos.Location = new System.Drawing.Point(4, 25);
+            this.tabEventos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabEventos.Name = "tabEventos";
-            this.tabEventos.Padding = new System.Windows.Forms.Padding(2);
-            this.tabEventos.Size = new System.Drawing.Size(386, 381);
+            this.tabEventos.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabEventos.Size = new System.Drawing.Size(517, 509);
             this.tabEventos.TabIndex = 2;
             this.tabEventos.Text = "Eventos";
             this.tabEventos.UseVisualStyleBackColor = true;
             // 
+            // btnModificarEvent
+            // 
+            this.btnModificarEvent.BorderRadius = 15;
+            this.btnModificarEvent.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnModificarEvent.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnModificarEvent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnModificarEvent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnModificarEvent.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnModificarEvent.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnModificarEvent.ForeColor = System.Drawing.Color.White;
+            this.btnModificarEvent.Location = new System.Drawing.Point(323, 400);
+            this.btnModificarEvent.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificarEvent.Name = "btnModificarEvent";
+            this.btnModificarEvent.Size = new System.Drawing.Size(125, 43);
+            this.btnModificarEvent.TabIndex = 42;
+            this.btnModificarEvent.Text = "Modificar";
+            // 
+            // btnAgregarEvent
+            // 
+            this.btnAgregarEvent.BorderRadius = 15;
+            this.btnAgregarEvent.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAgregarEvent.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAgregarEvent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAgregarEvent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAgregarEvent.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAgregarEvent.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarEvent.Location = new System.Drawing.Point(69, 400);
+            this.btnAgregarEvent.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregarEvent.Name = "btnAgregarEvent";
+            this.btnAgregarEvent.Size = new System.Drawing.Size(125, 43);
+            this.btnAgregarEvent.TabIndex = 41;
+            this.btnAgregarEvent.Text = "Agregar";
+            this.btnAgregarEvent.Click += new System.EventHandler(this.btnAgregarEvent_Click);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(109, 350);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(81, 16);
+            this.label21.TabIndex = 40;
+            this.label21.Text = "Organizador";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(141, 303);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(48, 16);
+            this.label20.TabIndex = 39;
+            this.label20.Text = "Fecha ";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(108, 241);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(80, 16);
+            this.label19.TabIndex = 38;
+            this.label19.Text = "Tipo Evento";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(87, 186);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(101, 16);
+            this.label18.TabIndex = 37;
+            this.label18.Text = "Nombre Evento";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(100, 126);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(86, 16);
+            this.label17.TabIndex = 36;
+            this.label17.Text = "Lugar Evento";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(124, 70);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(63, 16);
+            this.label16.TabIndex = 35;
+            this.label16.Text = "Id Evento";
+            // 
+            // txtNombreEven
+            // 
+            this.txtNombreEven.BorderRadius = 10;
+            this.txtNombreEven.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNombreEven.DefaultText = "";
+            this.txtNombreEven.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNombreEven.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNombreEven.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNombreEven.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNombreEven.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNombreEven.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNombreEven.ForeColor = System.Drawing.Color.Black;
+            this.txtNombreEven.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNombreEven.Location = new System.Drawing.Point(219, 182);
+            this.txtNombreEven.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNombreEven.Name = "txtNombreEven";
+            this.txtNombreEven.PlaceholderText = "";
+            this.txtNombreEven.SelectedText = "";
+            this.txtNombreEven.Size = new System.Drawing.Size(120, 25);
+            this.txtNombreEven.TabIndex = 34;
+            // 
+            // txtOrgEvento
+            // 
+            this.txtOrgEvento.BorderRadius = 10;
+            this.txtOrgEvento.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtOrgEvento.DefaultText = "";
+            this.txtOrgEvento.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtOrgEvento.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtOrgEvento.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtOrgEvento.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtOrgEvento.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtOrgEvento.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtOrgEvento.ForeColor = System.Drawing.Color.Black;
+            this.txtOrgEvento.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtOrgEvento.Location = new System.Drawing.Point(219, 347);
+            this.txtOrgEvento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtOrgEvento.Name = "txtOrgEvento";
+            this.txtOrgEvento.PlaceholderText = "";
+            this.txtOrgEvento.SelectedText = "";
+            this.txtOrgEvento.Size = new System.Drawing.Size(120, 25);
+            this.txtOrgEvento.TabIndex = 32;
+            // 
+            // txtTipoEven
+            // 
+            this.txtTipoEven.BorderRadius = 10;
+            this.txtTipoEven.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTipoEven.DefaultText = "";
+            this.txtTipoEven.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTipoEven.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTipoEven.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTipoEven.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTipoEven.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTipoEven.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTipoEven.ForeColor = System.Drawing.Color.Black;
+            this.txtTipoEven.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTipoEven.Location = new System.Drawing.Point(219, 238);
+            this.txtTipoEven.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTipoEven.Name = "txtTipoEven";
+            this.txtTipoEven.PlaceholderText = "";
+            this.txtTipoEven.SelectedText = "";
+            this.txtTipoEven.Size = new System.Drawing.Size(120, 25);
+            this.txtTipoEven.TabIndex = 31;
+            // 
+            // txtLugarEven
+            // 
+            this.txtLugarEven.BorderRadius = 10;
+            this.txtLugarEven.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLugarEven.DefaultText = "";
+            this.txtLugarEven.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtLugarEven.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtLugarEven.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLugarEven.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLugarEven.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLugarEven.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtLugarEven.ForeColor = System.Drawing.Color.Black;
+            this.txtLugarEven.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLugarEven.Location = new System.Drawing.Point(219, 126);
+            this.txtLugarEven.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtLugarEven.Name = "txtLugarEven";
+            this.txtLugarEven.PlaceholderText = "";
+            this.txtLugarEven.SelectedText = "";
+            this.txtLugarEven.Size = new System.Drawing.Size(120, 25);
+            this.txtLugarEven.TabIndex = 30;
+            // 
+            // txtIdEvento
+            // 
+            this.txtIdEvento.BorderRadius = 10;
+            this.txtIdEvento.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIdEvento.DefaultText = "";
+            this.txtIdEvento.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtIdEvento.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtIdEvento.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdEvento.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdEvento.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdEvento.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtIdEvento.ForeColor = System.Drawing.Color.Black;
+            this.txtIdEvento.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdEvento.Location = new System.Drawing.Point(219, 68);
+            this.txtIdEvento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtIdEvento.Name = "txtIdEvento";
+            this.txtIdEvento.PlaceholderText = "";
+            this.txtIdEvento.SelectedText = "";
+            this.txtIdEvento.Size = new System.Drawing.Size(120, 25);
+            this.txtIdEvento.TabIndex = 29;
+            // 
             // lbleventos
             // 
             this.lbleventos.AutoSize = true;
-            this.lbleventos.Location = new System.Drawing.Point(145, 18);
-            this.lbleventos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleventos.Location = new System.Drawing.Point(193, 22);
             this.lbleventos.Name = "lbleventos";
-            this.lbleventos.Size = new System.Drawing.Size(46, 13);
+            this.lbleventos.Size = new System.Drawing.Size(56, 16);
             this.lbleventos.TabIndex = 22;
             this.lbleventos.Text = "Eventos";
             // 
@@ -352,10 +1151,10 @@
             this.tabSemillero.Controls.Add(this.pictureBox12);
             this.tabSemillero.Controls.Add(this.pictureBox11);
             this.tabSemillero.Controls.Add(this.pictureBox10);
-            this.tabSemillero.Controls.Add(this.txtEnfoqueSe);
-            this.tabSemillero.Controls.Add(this.txtLineaSe);
-            this.tabSemillero.Controls.Add(this.txtNombreSe);
-            this.tabSemillero.Controls.Add(this.txtIdUsuario1);
+            this.tabSemillero.Controls.Add(this.txtEnfoqueSem);
+            this.tabSemillero.Controls.Add(this.txtLineaSem);
+            this.tabSemillero.Controls.Add(this.txtNombreSem);
+            this.tabSemillero.Controls.Add(this.txtIdUsuarioSem);
             this.tabSemillero.Controls.Add(this.txtIdSemillero);
             this.tabSemillero.Controls.Add(this.label15);
             this.tabSemillero.Controls.Add(this.label14);
@@ -363,21 +1162,56 @@
             this.tabSemillero.Controls.Add(this.label12);
             this.tabSemillero.Controls.Add(this.label11);
             this.tabSemillero.Controls.Add(this.lblsemillero);
-            this.tabSemillero.Location = new System.Drawing.Point(4, 22);
-            this.tabSemillero.Margin = new System.Windows.Forms.Padding(2);
+            this.tabSemillero.Location = new System.Drawing.Point(4, 25);
+            this.tabSemillero.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabSemillero.Name = "tabSemillero";
-            this.tabSemillero.Padding = new System.Windows.Forms.Padding(2);
-            this.tabSemillero.Size = new System.Drawing.Size(386, 381);
+            this.tabSemillero.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabSemillero.Size = new System.Drawing.Size(517, 509);
             this.tabSemillero.TabIndex = 1;
             this.tabSemillero.Text = "Semillero";
             this.tabSemillero.UseVisualStyleBackColor = true;
             // 
+            // btnModidficarSem
+            // 
+            this.btnModidficarSem.BorderRadius = 15;
+            this.btnModidficarSem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnModidficarSem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnModidficarSem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnModidficarSem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnModidficarSem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnModidficarSem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnModidficarSem.ForeColor = System.Drawing.Color.White;
+            this.btnModidficarSem.Location = new System.Drawing.Point(316, 372);
+            this.btnModidficarSem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModidficarSem.Name = "btnModidficarSem";
+            this.btnModidficarSem.Size = new System.Drawing.Size(125, 43);
+            this.btnModidficarSem.TabIndex = 39;
+            this.btnModidficarSem.Text = "Modificar";
+            // 
+            // btnAgregarSem
+            // 
+            this.btnAgregarSem.BorderRadius = 15;
+            this.btnAgregarSem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAgregarSem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAgregarSem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAgregarSem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAgregarSem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAgregarSem.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarSem.Location = new System.Drawing.Point(63, 372);
+            this.btnAgregarSem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregarSem.Name = "btnAgregarSem";
+            this.btnAgregarSem.Size = new System.Drawing.Size(125, 43);
+            this.btnAgregarSem.TabIndex = 38;
+            this.btnAgregarSem.Text = "Agregar";
+            this.btnAgregarSem.Click += new System.EventHandler(this.btnAgregarSem_Click);
+            // 
             // pictureBox14
             // 
             this.pictureBox14.Image = global::Proyecto_Semillero.Properties.Resources.enfoque;
-            this.pictureBox14.Location = new System.Drawing.Point(41, 252);
+            this.pictureBox14.Location = new System.Drawing.Point(55, 310);
+            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox14.Size = new System.Drawing.Size(28, 25);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 37;
             this.pictureBox14.TabStop = false;
@@ -385,9 +1219,10 @@
             // pictureBox13
             // 
             this.pictureBox13.Image = global::Proyecto_Semillero.Properties.Resources.linea_de_tiempo;
-            this.pictureBox13.Location = new System.Drawing.Point(42, 205);
+            this.pictureBox13.Location = new System.Drawing.Point(56, 252);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox13.Size = new System.Drawing.Size(28, 25);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 36;
             this.pictureBox13.TabStop = false;
@@ -395,9 +1230,10 @@
             // pictureBox12
             // 
             this.pictureBox12.Image = global::Proyecto_Semillero.Properties.Resources.etiqueta;
-            this.pictureBox12.Location = new System.Drawing.Point(41, 150);
+            this.pictureBox12.Location = new System.Drawing.Point(55, 185);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox12.Size = new System.Drawing.Size(28, 25);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 35;
             this.pictureBox12.TabStop = false;
@@ -405,9 +1241,10 @@
             // pictureBox11
             // 
             this.pictureBox11.Image = global::Proyecto_Semillero.Properties.Resources.agregar_usuario1;
-            this.pictureBox11.Location = new System.Drawing.Point(42, 104);
+            this.pictureBox11.Location = new System.Drawing.Point(56, 128);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox11.Size = new System.Drawing.Size(28, 25);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 34;
             this.pictureBox11.TabStop = false;
@@ -415,92 +1252,97 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = global::Proyecto_Semillero.Properties.Resources.planta_de_semillero;
-            this.pictureBox10.Location = new System.Drawing.Point(42, 57);
+            this.pictureBox10.Location = new System.Drawing.Point(56, 70);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox10.Size = new System.Drawing.Size(28, 25);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 33;
             this.pictureBox10.TabStop = false;
             // 
-            // txtEnfoqueSe
+            // txtEnfoqueSem
             // 
-            this.txtEnfoqueSe.BorderRadius = 10;
-            this.txtEnfoqueSe.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEnfoqueSe.DefaultText = "";
-            this.txtEnfoqueSe.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEnfoqueSe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEnfoqueSe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEnfoqueSe.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEnfoqueSe.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEnfoqueSe.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtEnfoqueSe.ForeColor = System.Drawing.Color.Black;
-            this.txtEnfoqueSe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEnfoqueSe.Location = new System.Drawing.Point(175, 256);
-            this.txtEnfoqueSe.Name = "txtEnfoqueSe";
-            this.txtEnfoqueSe.PlaceholderText = "";
-            this.txtEnfoqueSe.SelectedText = "";
-            this.txtEnfoqueSe.Size = new System.Drawing.Size(90, 20);
-            this.txtEnfoqueSe.TabIndex = 32;
+            this.txtEnfoqueSem.BorderRadius = 10;
+            this.txtEnfoqueSem.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEnfoqueSem.DefaultText = "";
+            this.txtEnfoqueSem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEnfoqueSem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEnfoqueSem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEnfoqueSem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEnfoqueSem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEnfoqueSem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtEnfoqueSem.ForeColor = System.Drawing.Color.Black;
+            this.txtEnfoqueSem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEnfoqueSem.Location = new System.Drawing.Point(233, 315);
+            this.txtEnfoqueSem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEnfoqueSem.Name = "txtEnfoqueSem";
+            this.txtEnfoqueSem.PlaceholderText = "";
+            this.txtEnfoqueSem.SelectedText = "";
+            this.txtEnfoqueSem.Size = new System.Drawing.Size(120, 25);
+            this.txtEnfoqueSem.TabIndex = 32;
             // 
-            // txtLineaSe
+            // txtLineaSem
             // 
-            this.txtLineaSe.BorderRadius = 10;
-            this.txtLineaSe.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtLineaSe.DefaultText = "";
-            this.txtLineaSe.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtLineaSe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtLineaSe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLineaSe.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLineaSe.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLineaSe.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtLineaSe.ForeColor = System.Drawing.Color.Black;
-            this.txtLineaSe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLineaSe.Location = new System.Drawing.Point(175, 202);
-            this.txtLineaSe.Name = "txtLineaSe";
-            this.txtLineaSe.PlaceholderText = "";
-            this.txtLineaSe.SelectedText = "";
-            this.txtLineaSe.Size = new System.Drawing.Size(90, 20);
-            this.txtLineaSe.TabIndex = 31;
+            this.txtLineaSem.BorderRadius = 10;
+            this.txtLineaSem.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLineaSem.DefaultText = "";
+            this.txtLineaSem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtLineaSem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtLineaSem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLineaSem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLineaSem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLineaSem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtLineaSem.ForeColor = System.Drawing.Color.Black;
+            this.txtLineaSem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLineaSem.Location = new System.Drawing.Point(233, 249);
+            this.txtLineaSem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtLineaSem.Name = "txtLineaSem";
+            this.txtLineaSem.PlaceholderText = "";
+            this.txtLineaSem.SelectedText = "";
+            this.txtLineaSem.Size = new System.Drawing.Size(120, 25);
+            this.txtLineaSem.TabIndex = 31;
             // 
-            // txtNombreSe
+            // txtNombreSem
             // 
-            this.txtNombreSe.BorderRadius = 10;
-            this.txtNombreSe.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNombreSe.DefaultText = "";
-            this.txtNombreSe.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNombreSe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNombreSe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombreSe.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombreSe.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombreSe.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNombreSe.ForeColor = System.Drawing.Color.Black;
-            this.txtNombreSe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombreSe.Location = new System.Drawing.Point(175, 152);
-            this.txtNombreSe.Name = "txtNombreSe";
-            this.txtNombreSe.PlaceholderText = "";
-            this.txtNombreSe.SelectedText = "";
-            this.txtNombreSe.Size = new System.Drawing.Size(90, 20);
-            this.txtNombreSe.TabIndex = 30;
+            this.txtNombreSem.BorderRadius = 10;
+            this.txtNombreSem.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNombreSem.DefaultText = "";
+            this.txtNombreSem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNombreSem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNombreSem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNombreSem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNombreSem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNombreSem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNombreSem.ForeColor = System.Drawing.Color.Black;
+            this.txtNombreSem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNombreSem.Location = new System.Drawing.Point(233, 187);
+            this.txtNombreSem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNombreSem.Name = "txtNombreSem";
+            this.txtNombreSem.PlaceholderText = "";
+            this.txtNombreSem.SelectedText = "";
+            this.txtNombreSem.Size = new System.Drawing.Size(120, 25);
+            this.txtNombreSem.TabIndex = 30;
             // 
-            // txtIdUsuario1
+            // txtIdUsuarioSem
             // 
-            this.txtIdUsuario1.BorderRadius = 10;
-            this.txtIdUsuario1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIdUsuario1.DefaultText = "";
-            this.txtIdUsuario1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtIdUsuario1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtIdUsuario1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdUsuario1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdUsuario1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdUsuario1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtIdUsuario1.ForeColor = System.Drawing.Color.Black;
-            this.txtIdUsuario1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdUsuario1.Location = new System.Drawing.Point(175, 99);
-            this.txtIdUsuario1.Name = "txtIdUsuario1";
-            this.txtIdUsuario1.PlaceholderText = "";
-            this.txtIdUsuario1.SelectedText = "";
-            this.txtIdUsuario1.Size = new System.Drawing.Size(90, 20);
-            this.txtIdUsuario1.TabIndex = 29;
+            this.txtIdUsuarioSem.BorderRadius = 10;
+            this.txtIdUsuarioSem.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIdUsuarioSem.DefaultText = "";
+            this.txtIdUsuarioSem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtIdUsuarioSem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtIdUsuarioSem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdUsuarioSem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdUsuarioSem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdUsuarioSem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtIdUsuarioSem.ForeColor = System.Drawing.Color.Black;
+            this.txtIdUsuarioSem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdUsuarioSem.Location = new System.Drawing.Point(233, 122);
+            this.txtIdUsuarioSem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtIdUsuarioSem.Name = "txtIdUsuarioSem";
+            this.txtIdUsuarioSem.PlaceholderText = "";
+            this.txtIdUsuarioSem.SelectedText = "";
+            this.txtIdUsuarioSem.Size = new System.Drawing.Size(120, 25);
+            this.txtIdUsuarioSem.TabIndex = 29;
             // 
             // txtIdSemillero
             // 
@@ -515,65 +1357,70 @@
             this.txtIdSemillero.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtIdSemillero.ForeColor = System.Drawing.Color.Black;
             this.txtIdSemillero.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdSemillero.Location = new System.Drawing.Point(175, 53);
+            this.txtIdSemillero.Location = new System.Drawing.Point(233, 65);
+            this.txtIdSemillero.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIdSemillero.Name = "txtIdSemillero";
             this.txtIdSemillero.PlaceholderText = "";
             this.txtIdSemillero.SelectedText = "";
-            this.txtIdSemillero.Size = new System.Drawing.Size(90, 20);
+            this.txtIdSemillero.Size = new System.Drawing.Size(120, 25);
             this.txtIdSemillero.TabIndex = 28;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(74, 256);
+            this.label15.Location = new System.Drawing.Point(99, 315);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(92, 13);
+            this.label15.Size = new System.Drawing.Size(117, 16);
             this.label15.TabIndex = 27;
             this.label15.Text = "Enfoque Semillero";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(74, 205);
+            this.label14.Location = new System.Drawing.Point(99, 252);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(78, 13);
+            this.label14.Size = new System.Drawing.Size(100, 16);
             this.label14.TabIndex = 26;
             this.label14.Text = "Linea Semillero";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(63, 152);
+            this.label13.Location = new System.Drawing.Point(84, 187);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(89, 13);
+            this.label13.Size = new System.Drawing.Size(116, 16);
             this.label13.TabIndex = 25;
             this.label13.Text = "Nombre Semillero";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(80, 106);
+            this.label12.Location = new System.Drawing.Point(107, 130);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(55, 13);
+            this.label12.Size = new System.Drawing.Size(68, 16);
             this.label12.TabIndex = 24;
             this.label12.Text = "Id Usuario";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(80, 58);
+            this.label11.Location = new System.Drawing.Point(107, 71);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(61, 13);
+            this.label11.Size = new System.Drawing.Size(78, 16);
             this.label11.TabIndex = 23;
             this.label11.Text = "Id Semillero";
             // 
             // lblsemillero
             // 
             this.lblsemillero.AutoSize = true;
-            this.lblsemillero.Location = new System.Drawing.Point(145, 16);
-            this.lblsemillero.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblsemillero.Location = new System.Drawing.Point(193, 20);
             this.lblsemillero.Name = "lblsemillero";
-            this.lblsemillero.Size = new System.Drawing.Size(49, 13);
+            this.lblsemillero.Size = new System.Drawing.Size(64, 16);
             this.lblsemillero.TabIndex = 22;
             this.lblsemillero.Text = "Semillero";
             // 
@@ -611,11 +1458,11 @@
             this.tabUsuario.Controls.Add(this.label3);
             this.tabUsuario.Controls.Add(this.label2);
             this.tabUsuario.Controls.Add(this.label1);
-            this.tabUsuario.Location = new System.Drawing.Point(4, 22);
-            this.tabUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.tabUsuario.Location = new System.Drawing.Point(4, 25);
+            this.tabUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabUsuario.Name = "tabUsuario";
-            this.tabUsuario.Padding = new System.Windows.Forms.Padding(2);
-            this.tabUsuario.Size = new System.Drawing.Size(386, 381);
+            this.tabUsuario.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabUsuario.Size = new System.Drawing.Size(517, 509);
             this.tabUsuario.TabIndex = 0;
             this.tabUsuario.Text = "Usuario";
             this.tabUsuario.Click += new System.EventHandler(this.tabPage1_Click);
@@ -623,9 +1470,10 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = global::Proyecto_Semillero.Properties.Resources.usuario__1_;
-            this.pictureBox9.Location = new System.Drawing.Point(59, 288);
+            this.pictureBox9.Location = new System.Drawing.Point(79, 354);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox9.Size = new System.Drawing.Size(28, 25);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 37;
             this.pictureBox9.TabStop = false;
@@ -633,9 +1481,10 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::Proyecto_Semillero.Properties.Resources.simbolos_de_genero;
-            this.pictureBox8.Location = new System.Drawing.Point(59, 253);
+            this.pictureBox8.Location = new System.Drawing.Point(79, 311);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox8.Size = new System.Drawing.Size(28, 25);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 36;
             this.pictureBox8.TabStop = false;
@@ -643,9 +1492,10 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Proyecto_Semillero.Properties.Resources.control_parental;
-            this.pictureBox7.Location = new System.Drawing.Point(59, 217);
+            this.pictureBox7.Location = new System.Drawing.Point(79, 267);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox7.Size = new System.Drawing.Size(28, 25);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 35;
             this.pictureBox7.TabStop = false;
@@ -653,9 +1503,10 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::Proyecto_Semillero.Properties.Resources.correo;
-            this.pictureBox6.Location = new System.Drawing.Point(59, 186);
+            this.pictureBox6.Location = new System.Drawing.Point(79, 229);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox6.Size = new System.Drawing.Size(28, 25);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 34;
             this.pictureBox6.TabStop = false;
@@ -663,9 +1514,10 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Proyecto_Semillero.Properties.Resources.telefono_inteligente;
-            this.pictureBox5.Location = new System.Drawing.Point(59, 154);
+            this.pictureBox5.Location = new System.Drawing.Point(79, 190);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox5.Size = new System.Drawing.Size(28, 25);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 33;
             this.pictureBox5.TabStop = false;
@@ -673,9 +1525,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Proyecto_Semillero.Properties.Resources.empresario;
-            this.pictureBox4.Location = new System.Drawing.Point(59, 120);
+            this.pictureBox4.Location = new System.Drawing.Point(79, 148);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox4.Size = new System.Drawing.Size(28, 25);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 32;
             this.pictureBox4.TabStop = false;
@@ -683,9 +1536,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Proyecto_Semillero.Properties.Resources.agregar_usuario;
-            this.pictureBox3.Location = new System.Drawing.Point(37, 91);
+            this.pictureBox3.Location = new System.Drawing.Point(49, 112);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox3.Size = new System.Drawing.Size(28, 25);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 31;
             this.pictureBox3.TabStop = false;
@@ -693,9 +1547,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Proyecto_Semillero.Properties.Resources.contrasena__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(59, 64);
+            this.pictureBox2.Location = new System.Drawing.Point(79, 79);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox2.Size = new System.Drawing.Size(28, 25);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 30;
             this.pictureBox2.TabStop = false;
@@ -703,9 +1558,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Proyecto_Semillero.Properties.Resources.id_facial;
-            this.pictureBox1.Location = new System.Drawing.Point(59, 32);
+            this.pictureBox1.Location = new System.Drawing.Point(79, 39);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox1.Size = new System.Drawing.Size(28, 25);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
@@ -723,11 +1579,12 @@
             this.txtEdadUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtEdadUsuario.ForeColor = System.Drawing.Color.Black;
             this.txtEdadUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEdadUsuario.Location = new System.Drawing.Point(162, 219);
+            this.txtEdadUsuario.Location = new System.Drawing.Point(216, 270);
+            this.txtEdadUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEdadUsuario.Name = "txtEdadUsuario";
             this.txtEdadUsuario.PlaceholderText = "";
             this.txtEdadUsuario.SelectedText = "";
-            this.txtEdadUsuario.Size = new System.Drawing.Size(90, 20);
+            this.txtEdadUsuario.Size = new System.Drawing.Size(120, 25);
             this.txtEdadUsuario.TabIndex = 28;
             // 
             // txtCorreoUsuario
@@ -743,11 +1600,12 @@
             this.txtCorreoUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCorreoUsuario.ForeColor = System.Drawing.Color.Black;
             this.txtCorreoUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCorreoUsuario.Location = new System.Drawing.Point(165, 182);
+            this.txtCorreoUsuario.Location = new System.Drawing.Point(220, 224);
+            this.txtCorreoUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCorreoUsuario.Name = "txtCorreoUsuario";
             this.txtCorreoUsuario.PlaceholderText = "";
             this.txtCorreoUsuario.SelectedText = "";
-            this.txtCorreoUsuario.Size = new System.Drawing.Size(90, 20);
+            this.txtCorreoUsuario.Size = new System.Drawing.Size(120, 25);
             this.txtCorreoUsuario.TabIndex = 27;
             // 
             // txtTelefonoUsuario
@@ -763,11 +1621,12 @@
             this.txtTelefonoUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTelefonoUsuario.ForeColor = System.Drawing.Color.Black;
             this.txtTelefonoUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTelefonoUsuario.Location = new System.Drawing.Point(162, 150);
+            this.txtTelefonoUsuario.Location = new System.Drawing.Point(216, 185);
+            this.txtTelefonoUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTelefonoUsuario.Name = "txtTelefonoUsuario";
             this.txtTelefonoUsuario.PlaceholderText = "";
             this.txtTelefonoUsuario.SelectedText = "";
-            this.txtTelefonoUsuario.Size = new System.Drawing.Size(90, 20);
+            this.txtTelefonoUsuario.Size = new System.Drawing.Size(120, 25);
             this.txtTelefonoUsuario.TabIndex = 26;
             // 
             // txtNombre
@@ -783,11 +1642,12 @@
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNombre.ForeColor = System.Drawing.Color.Black;
             this.txtNombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombre.Location = new System.Drawing.Point(162, 93);
+            this.txtNombre.Location = new System.Drawing.Point(216, 114);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PlaceholderText = "";
             this.txtNombre.SelectedText = "";
-            this.txtNombre.Size = new System.Drawing.Size(90, 20);
+            this.txtNombre.Size = new System.Drawing.Size(120, 25);
             this.txtNombre.TabIndex = 25;
             // 
             // txtContraseña
@@ -803,11 +1663,12 @@
             this.txtContraseña.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtContraseña.ForeColor = System.Drawing.Color.Black;
             this.txtContraseña.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtContraseña.Location = new System.Drawing.Point(162, 61);
+            this.txtContraseña.Location = new System.Drawing.Point(216, 75);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PlaceholderText = "";
             this.txtContraseña.SelectedText = "";
-            this.txtContraseña.Size = new System.Drawing.Size(90, 20);
+            this.txtContraseña.Size = new System.Drawing.Size(120, 25);
             this.txtContraseña.TabIndex = 24;
             // 
             // txtIdUsuario
@@ -823,20 +1684,20 @@
             this.txtIdUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtIdUsuario.ForeColor = System.Drawing.Color.Black;
             this.txtIdUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdUsuario.Location = new System.Drawing.Point(162, 30);
+            this.txtIdUsuario.Location = new System.Drawing.Point(216, 37);
+            this.txtIdUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIdUsuario.Name = "txtIdUsuario";
             this.txtIdUsuario.PlaceholderText = "";
             this.txtIdUsuario.SelectedText = "";
-            this.txtIdUsuario.Size = new System.Drawing.Size(90, 20);
+            this.txtIdUsuario.Size = new System.Drawing.Size(120, 25);
             this.txtIdUsuario.TabIndex = 23;
-            this.txtIdUsuario.TextChanged += new System.EventHandler(this.txtIdUsuario_TextChanged);
             // 
             // btnModificarUsuario
             // 
-            this.btnModificarUsuario.Location = new System.Drawing.Point(225, 332);
-            this.btnModificarUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.btnModificarUsuario.Location = new System.Drawing.Point(300, 409);
+            this.btnModificarUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnModificarUsuario.Name = "btnModificarUsuario";
-            this.btnModificarUsuario.Size = new System.Drawing.Size(61, 25);
+            this.btnModificarUsuario.Size = new System.Drawing.Size(81, 31);
             this.btnModificarUsuario.TabIndex = 22;
             this.btnModificarUsuario.Text = "Modificar";
             this.btnModificarUsuario.UseVisualStyleBackColor = true;
@@ -845,10 +1706,9 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(159, 8);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(212, 10);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 13);
+            this.label10.Size = new System.Drawing.Size(64, 17);
             this.label10.TabIndex = 21;
             this.label10.Text = "Usuario";
             // 
@@ -859,19 +1719,18 @@
             "",
             "Activo",
             "Inactivo"});
-            this.cboEstado.Location = new System.Drawing.Point(162, 288);
-            this.cboEstado.Margin = new System.Windows.Forms.Padding(2);
+            this.cboEstado.Location = new System.Drawing.Point(216, 354);
+            this.cboEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboEstado.Name = "cboEstado";
-            this.cboEstado.Size = new System.Drawing.Size(92, 21);
+            this.cboEstado.Size = new System.Drawing.Size(121, 24);
             this.cboEstado.TabIndex = 20;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(90, 291);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(120, 358);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 13);
+            this.label9.Size = new System.Drawing.Size(50, 16);
             this.label9.TabIndex = 19;
             this.label9.Text = "Estado";
             // 
@@ -882,10 +1741,10 @@
             "",
             "Masculino",
             "Femenino"});
-            this.cboGeneroUsuario.Location = new System.Drawing.Point(162, 253);
-            this.cboGeneroUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.cboGeneroUsuario.Location = new System.Drawing.Point(216, 311);
+            this.cboGeneroUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboGeneroUsuario.Name = "cboGeneroUsuario";
-            this.cboGeneroUsuario.Size = new System.Drawing.Size(92, 21);
+            this.cboGeneroUsuario.Size = new System.Drawing.Size(121, 24);
             this.cboGeneroUsuario.TabIndex = 18;
             // 
             // cboRol
@@ -897,18 +1756,18 @@
             "Administrador",
             "Lider",
             "Investigador"});
-            this.cboRol.Location = new System.Drawing.Point(162, 120);
-            this.cboRol.Margin = new System.Windows.Forms.Padding(2);
+            this.cboRol.Location = new System.Drawing.Point(216, 148);
+            this.cboRol.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboRol.Name = "cboRol";
-            this.cboRol.Size = new System.Drawing.Size(92, 21);
+            this.cboRol.Size = new System.Drawing.Size(121, 24);
             this.cboRol.TabIndex = 17;
             // 
             // btnAgregarUsuario
             // 
-            this.btnAgregarUsuario.Location = new System.Drawing.Point(95, 332);
-            this.btnAgregarUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregarUsuario.Location = new System.Drawing.Point(127, 409);
+            this.btnAgregarUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregarUsuario.Name = "btnAgregarUsuario";
-            this.btnAgregarUsuario.Size = new System.Drawing.Size(56, 25);
+            this.btnAgregarUsuario.Size = new System.Drawing.Size(75, 31);
             this.btnAgregarUsuario.TabIndex = 16;
             this.btnAgregarUsuario.Text = "Agregar";
             this.btnAgregarUsuario.UseVisualStyleBackColor = true;
@@ -917,80 +1776,72 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(90, 256);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(120, 315);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 13);
+            this.label8.Size = new System.Drawing.Size(50, 16);
             this.label8.TabIndex = 15;
             this.label8.Text = "genero";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(90, 219);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(120, 270);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 13);
+            this.label7.Size = new System.Drawing.Size(40, 16);
             this.label7.TabIndex = 13;
             this.label7.Text = "Edad";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(90, 186);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(120, 229);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.Size = new System.Drawing.Size(46, 16);
             this.label6.TabIndex = 11;
             this.label6.Text = "correo";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(90, 154);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(120, 190);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.Size = new System.Drawing.Size(55, 16);
             this.label5.TabIndex = 9;
             this.label5.Text = "telefono";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(90, 123);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(120, 151);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(23, 13);
+            this.label4.Size = new System.Drawing.Size(28, 16);
             this.label4.TabIndex = 7;
             this.label4.Text = "Rol";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(68, 93);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(91, 114);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 13);
+            this.label3.Size = new System.Drawing.Size(106, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Nombre Usuario";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(90, 64);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(120, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.Size = new System.Drawing.Size(76, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Contraseña";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(90, 33);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(120, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.Size = new System.Drawing.Size(70, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "ID Usuario";
             // 
@@ -1003,868 +1854,44 @@
             this.tabAgregar.Controls.Add(this.tabReportes);
             this.tabAgregar.Controls.Add(this.tabPatroc);
             this.tabAgregar.Controls.Add(this.tabActividades);
-            this.tabAgregar.Location = new System.Drawing.Point(6, 11);
-            this.tabAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.tabAgregar.Location = new System.Drawing.Point(8, 14);
+            this.tabAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabAgregar.Name = "tabAgregar";
             this.tabAgregar.SelectedIndex = 0;
-            this.tabAgregar.Size = new System.Drawing.Size(394, 437);
+            this.tabAgregar.Size = new System.Drawing.Size(525, 538);
             this.tabAgregar.TabIndex = 0;
             // 
-            // txtIdEvento
-            // 
-            this.txtIdEvento.BorderRadius = 10;
-            this.txtIdEvento.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIdEvento.DefaultText = "";
-            this.txtIdEvento.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtIdEvento.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtIdEvento.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdEvento.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdEvento.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdEvento.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtIdEvento.ForeColor = System.Drawing.Color.Black;
-            this.txtIdEvento.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdEvento.Location = new System.Drawing.Point(164, 55);
-            this.txtIdEvento.Name = "txtIdEvento";
-            this.txtIdEvento.PlaceholderText = "";
-            this.txtIdEvento.SelectedText = "";
-            this.txtIdEvento.Size = new System.Drawing.Size(90, 20);
-            this.txtIdEvento.TabIndex = 29;
-            // 
-            // txtLugarEven
-            // 
-            this.txtLugarEven.BorderRadius = 10;
-            this.txtLugarEven.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtLugarEven.DefaultText = "";
-            this.txtLugarEven.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtLugarEven.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtLugarEven.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLugarEven.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLugarEven.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLugarEven.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtLugarEven.ForeColor = System.Drawing.Color.Black;
-            this.txtLugarEven.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLugarEven.Location = new System.Drawing.Point(164, 102);
-            this.txtLugarEven.Name = "txtLugarEven";
-            this.txtLugarEven.PlaceholderText = "";
-            this.txtLugarEven.SelectedText = "";
-            this.txtLugarEven.Size = new System.Drawing.Size(90, 20);
-            this.txtLugarEven.TabIndex = 30;
-            // 
-            // txtTipoEven
-            // 
-            this.txtTipoEven.BorderRadius = 10;
-            this.txtTipoEven.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTipoEven.DefaultText = "";
-            this.txtTipoEven.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTipoEven.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTipoEven.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTipoEven.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTipoEven.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTipoEven.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTipoEven.ForeColor = System.Drawing.Color.Black;
-            this.txtTipoEven.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTipoEven.Location = new System.Drawing.Point(164, 193);
-            this.txtTipoEven.Name = "txtTipoEven";
-            this.txtTipoEven.PlaceholderText = "";
-            this.txtTipoEven.SelectedText = "";
-            this.txtTipoEven.Size = new System.Drawing.Size(90, 20);
-            this.txtTipoEven.TabIndex = 31;
-            // 
-            // txtOrgEvento
-            // 
-            this.txtOrgEvento.BorderRadius = 10;
-            this.txtOrgEvento.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtOrgEvento.DefaultText = "";
-            this.txtOrgEvento.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtOrgEvento.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtOrgEvento.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtOrgEvento.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtOrgEvento.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOrgEvento.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtOrgEvento.ForeColor = System.Drawing.Color.Black;
-            this.txtOrgEvento.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOrgEvento.Location = new System.Drawing.Point(164, 282);
-            this.txtOrgEvento.Name = "txtOrgEvento";
-            this.txtOrgEvento.PlaceholderText = "";
-            this.txtOrgEvento.SelectedText = "";
-            this.txtOrgEvento.Size = new System.Drawing.Size(90, 20);
-            this.txtOrgEvento.TabIndex = 32;
-            // 
-            // txtNombreEven
-            // 
-            this.txtNombreEven.BorderRadius = 10;
-            this.txtNombreEven.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNombreEven.DefaultText = "";
-            this.txtNombreEven.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNombreEven.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNombreEven.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombreEven.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombreEven.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombreEven.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNombreEven.ForeColor = System.Drawing.Color.Black;
-            this.txtNombreEven.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombreEven.Location = new System.Drawing.Point(164, 148);
-            this.txtNombreEven.Name = "txtNombreEven";
-            this.txtNombreEven.PlaceholderText = "";
-            this.txtNombreEven.SelectedText = "";
-            this.txtNombreEven.Size = new System.Drawing.Size(90, 20);
-            this.txtNombreEven.TabIndex = 34;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(93, 57);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(53, 13);
-            this.label16.TabIndex = 35;
-            this.label16.Text = "Id Evento";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(75, 102);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(71, 13);
-            this.label17.TabIndex = 36;
-            this.label17.Text = "Lugar Evento";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(65, 151);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(81, 13);
-            this.label18.TabIndex = 37;
-            this.label18.Text = "Nombre Evento";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(81, 196);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(65, 13);
-            this.label19.TabIndex = 38;
-            this.label19.Text = "Tipo Evento";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(106, 246);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(40, 13);
-            this.label20.TabIndex = 39;
-            this.label20.Text = "Fecha ";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(82, 284);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(64, 13);
-            this.label21.TabIndex = 40;
-            this.label21.Text = "Organizador";
-            // 
-            // txtProyecto
-            // 
-            this.txtProyecto.BorderRadius = 10;
-            this.txtProyecto.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtProyecto.DefaultText = "";
-            this.txtProyecto.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtProyecto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtProyecto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtProyecto.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtProyecto.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProyecto.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtProyecto.ForeColor = System.Drawing.Color.Black;
-            this.txtProyecto.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProyecto.Location = new System.Drawing.Point(157, 47);
-            this.txtProyecto.Name = "txtProyecto";
-            this.txtProyecto.PlaceholderText = "";
-            this.txtProyecto.SelectedText = "";
-            this.txtProyecto.Size = new System.Drawing.Size(90, 20);
-            this.txtProyecto.TabIndex = 30;
-            // 
-            // txtIdSemillero1
-            // 
-            this.txtIdSemillero1.BorderRadius = 10;
-            this.txtIdSemillero1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIdSemillero1.DefaultText = "";
-            this.txtIdSemillero1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtIdSemillero1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtIdSemillero1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdSemillero1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdSemillero1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdSemillero1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtIdSemillero1.ForeColor = System.Drawing.Color.Black;
-            this.txtIdSemillero1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdSemillero1.Location = new System.Drawing.Point(157, 89);
-            this.txtIdSemillero1.Name = "txtIdSemillero1";
-            this.txtIdSemillero1.PlaceholderText = "";
-            this.txtIdSemillero1.SelectedText = "";
-            this.txtIdSemillero1.Size = new System.Drawing.Size(90, 20);
-            this.txtIdSemillero1.TabIndex = 31;
-            // 
-            // txtTitulo
-            // 
-            this.txtTitulo.BorderRadius = 10;
-            this.txtTitulo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTitulo.DefaultText = "";
-            this.txtTitulo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTitulo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTitulo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTitulo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTitulo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTitulo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTitulo.ForeColor = System.Drawing.Color.Black;
-            this.txtTitulo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTitulo.Location = new System.Drawing.Point(157, 130);
-            this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.PlaceholderText = "";
-            this.txtTitulo.SelectedText = "";
-            this.txtTitulo.Size = new System.Drawing.Size(90, 20);
-            this.txtTitulo.TabIndex = 32;
-            // 
-            // txtObjetivo
-            // 
-            this.txtObjetivo.BorderRadius = 10;
-            this.txtObjetivo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtObjetivo.DefaultText = "";
-            this.txtObjetivo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtObjetivo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtObjetivo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtObjetivo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtObjetivo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtObjetivo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtObjetivo.ForeColor = System.Drawing.Color.Black;
-            this.txtObjetivo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtObjetivo.Location = new System.Drawing.Point(157, 169);
-            this.txtObjetivo.Name = "txtObjetivo";
-            this.txtObjetivo.PlaceholderText = "";
-            this.txtObjetivo.SelectedText = "";
-            this.txtObjetivo.Size = new System.Drawing.Size(90, 20);
-            this.txtObjetivo.TabIndex = 33;
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.BorderRadius = 10;
-            this.txtDescripcion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDescripcion.DefaultText = "";
-            this.txtDescripcion.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDescripcion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDescripcion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDescripcion.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDescripcion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDescripcion.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtDescripcion.ForeColor = System.Drawing.Color.Black;
-            this.txtDescripcion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDescripcion.Location = new System.Drawing.Point(157, 210);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.PlaceholderText = "";
-            this.txtDescripcion.SelectedText = "";
-            this.txtDescripcion.Size = new System.Drawing.Size(90, 20);
-            this.txtDescripcion.TabIndex = 34;
-            // 
-            // txtfechaEvent
-            // 
-            this.txtfechaEvent.BorderRadius = 10;
-            this.txtfechaEvent.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtfechaEvent.DefaultText = "";
-            this.txtfechaEvent.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtfechaEvent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtfechaEvent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtfechaEvent.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtfechaEvent.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtfechaEvent.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtfechaEvent.ForeColor = System.Drawing.Color.Black;
-            this.txtfechaEvent.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtfechaEvent.Location = new System.Drawing.Point(164, 239);
-            this.txtfechaEvent.Name = "txtfechaEvent";
-            this.txtfechaEvent.PlaceholderText = "";
-            this.txtfechaEvent.SelectedText = "";
-            this.txtfechaEvent.Size = new System.Drawing.Size(90, 20);
-            this.txtfechaEvent.TabIndex = 33;
-            // 
-            // txtFechaInicio
-            // 
-            this.txtFechaInicio.BorderRadius = 10;
-            this.txtFechaInicio.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFechaInicio.DefaultText = "";
-            this.txtFechaInicio.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtFechaInicio.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtFechaInicio.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFechaInicio.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFechaInicio.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFechaInicio.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtFechaInicio.ForeColor = System.Drawing.Color.Black;
-            this.txtFechaInicio.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFechaInicio.Location = new System.Drawing.Point(157, 257);
-            this.txtFechaInicio.Name = "txtFechaInicio";
-            this.txtFechaInicio.PlaceholderText = "";
-            this.txtFechaInicio.SelectedText = "";
-            this.txtFechaInicio.Size = new System.Drawing.Size(90, 20);
-            this.txtFechaInicio.TabIndex = 35;
-            // 
-            // txtFechaFin
-            // 
-            this.txtFechaFin.BorderRadius = 10;
-            this.txtFechaFin.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFechaFin.DefaultText = "";
-            this.txtFechaFin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtFechaFin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtFechaFin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFechaFin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFechaFin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFechaFin.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtFechaFin.ForeColor = System.Drawing.Color.Black;
-            this.txtFechaFin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFechaFin.Location = new System.Drawing.Point(157, 305);
-            this.txtFechaFin.Name = "txtFechaFin";
-            this.txtFechaFin.PlaceholderText = "";
-            this.txtFechaFin.SelectedText = "";
-            this.txtFechaFin.Size = new System.Drawing.Size(90, 20);
-            this.txtFechaFin.TabIndex = 36;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(71, 50);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(61, 13);
-            this.label22.TabIndex = 37;
-            this.label22.Text = "Id Proyecto";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(76, 96);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(61, 13);
-            this.label23.TabIndex = 38;
-            this.label23.Text = "Id Semillero";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(104, 137);
-            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(33, 13);
-            this.label24.TabIndex = 39;
-            this.label24.Text = "Titulo";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(91, 176);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(46, 13);
-            this.label25.TabIndex = 40;
-            this.label25.Text = "Objetivo";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(74, 217);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(63, 13);
-            this.label26.TabIndex = 41;
-            this.label26.Text = "Descripción";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(57, 264);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(80, 13);
-            this.label27.TabIndex = 42;
-            this.label27.Text = "Fecha de Inicio";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(75, 312);
-            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(62, 13);
-            this.label28.TabIndex = 43;
-            this.label28.Text = "Fecha Final";
-            // 
-            // txtIdReporte
-            // 
-            this.txtIdReporte.BorderRadius = 10;
-            this.txtIdReporte.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIdReporte.DefaultText = "";
-            this.txtIdReporte.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtIdReporte.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtIdReporte.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdReporte.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdReporte.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdReporte.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtIdReporte.ForeColor = System.Drawing.Color.Black;
-            this.txtIdReporte.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdReporte.Location = new System.Drawing.Point(162, 55);
-            this.txtIdReporte.Name = "txtIdReporte";
-            this.txtIdReporte.PlaceholderText = "";
-            this.txtIdReporte.SelectedText = "";
-            this.txtIdReporte.Size = new System.Drawing.Size(90, 20);
-            this.txtIdReporte.TabIndex = 31;
-            // 
-            // txtFechaReporte
-            // 
-            this.txtFechaReporte.BorderRadius = 10;
-            this.txtFechaReporte.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFechaReporte.DefaultText = "";
-            this.txtFechaReporte.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtFechaReporte.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtFechaReporte.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFechaReporte.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFechaReporte.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFechaReporte.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtFechaReporte.ForeColor = System.Drawing.Color.Black;
-            this.txtFechaReporte.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFechaReporte.Location = new System.Drawing.Point(162, 111);
-            this.txtFechaReporte.Name = "txtFechaReporte";
-            this.txtFechaReporte.PlaceholderText = "";
-            this.txtFechaReporte.SelectedText = "";
-            this.txtFechaReporte.Size = new System.Drawing.Size(90, 20);
-            this.txtFechaReporte.TabIndex = 32;
-            // 
-            // txtHoraReporte
-            // 
-            this.txtHoraReporte.BorderRadius = 10;
-            this.txtHoraReporte.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtHoraReporte.DefaultText = "";
-            this.txtHoraReporte.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtHoraReporte.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtHoraReporte.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHoraReporte.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHoraReporte.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHoraReporte.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtHoraReporte.ForeColor = System.Drawing.Color.Black;
-            this.txtHoraReporte.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHoraReporte.Location = new System.Drawing.Point(162, 164);
-            this.txtHoraReporte.Name = "txtHoraReporte";
-            this.txtHoraReporte.PlaceholderText = "";
-            this.txtHoraReporte.SelectedText = "";
-            this.txtHoraReporte.Size = new System.Drawing.Size(90, 20);
-            this.txtHoraReporte.TabIndex = 33;
-            // 
-            // txtMotivo
-            // 
-            this.txtMotivo.BorderRadius = 10;
-            this.txtMotivo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMotivo.DefaultText = "";
-            this.txtMotivo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMotivo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMotivo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMotivo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMotivo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMotivo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtMotivo.ForeColor = System.Drawing.Color.Black;
-            this.txtMotivo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMotivo.Location = new System.Drawing.Point(162, 221);
-            this.txtMotivo.Name = "txtMotivo";
-            this.txtMotivo.PlaceholderText = "";
-            this.txtMotivo.SelectedText = "";
-            this.txtMotivo.Size = new System.Drawing.Size(90, 20);
-            this.txtMotivo.TabIndex = 34;
-            // 
-            // TxtIdUsuario2
-            // 
-            this.TxtIdUsuario2.BorderRadius = 10;
-            this.TxtIdUsuario2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TxtIdUsuario2.DefaultText = "";
-            this.TxtIdUsuario2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TxtIdUsuario2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TxtIdUsuario2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtIdUsuario2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtIdUsuario2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtIdUsuario2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TxtIdUsuario2.ForeColor = System.Drawing.Color.Black;
-            this.TxtIdUsuario2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtIdUsuario2.Location = new System.Drawing.Point(162, 278);
-            this.TxtIdUsuario2.Name = "TxtIdUsuario2";
-            this.TxtIdUsuario2.PlaceholderText = "";
-            this.TxtIdUsuario2.SelectedText = "";
-            this.TxtIdUsuario2.Size = new System.Drawing.Size(90, 20);
-            this.TxtIdUsuario2.TabIndex = 35;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(86, 55);
-            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(57, 13);
-            this.label29.TabIndex = 36;
-            this.label29.Text = "Id Reporte";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(65, 118);
-            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(78, 13);
-            this.label30.TabIndex = 37;
-            this.label30.Text = "Fecha Reporte";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(72, 171);
-            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(71, 13);
-            this.label31.TabIndex = 38;
-            this.label31.Text = "Hora Reporte";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(63, 228);
-            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(80, 13);
-            this.label32.TabIndex = 39;
-            this.label32.Text = "Motivo Reporte";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(88, 285);
-            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(55, 13);
-            this.label33.TabIndex = 40;
-            this.label33.Text = "Id Usuario";
-            // 
-            // txtIdpatro
-            // 
-            this.txtIdpatro.BorderRadius = 10;
-            this.txtIdpatro.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIdpatro.DefaultText = "";
-            this.txtIdpatro.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtIdpatro.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtIdpatro.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdpatro.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdpatro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdpatro.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtIdpatro.ForeColor = System.Drawing.Color.Black;
-            this.txtIdpatro.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdpatro.Location = new System.Drawing.Point(183, 56);
-            this.txtIdpatro.Name = "txtIdpatro";
-            this.txtIdpatro.PlaceholderText = "";
-            this.txtIdpatro.SelectedText = "";
-            this.txtIdpatro.Size = new System.Drawing.Size(90, 20);
-            this.txtIdpatro.TabIndex = 32;
-            // 
-            // txtNombrePatro
-            // 
-            this.txtNombrePatro.BorderRadius = 10;
-            this.txtNombrePatro.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNombrePatro.DefaultText = "";
-            this.txtNombrePatro.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNombrePatro.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNombrePatro.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombrePatro.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombrePatro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombrePatro.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNombrePatro.ForeColor = System.Drawing.Color.Black;
-            this.txtNombrePatro.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombrePatro.Location = new System.Drawing.Point(183, 110);
-            this.txtNombrePatro.Name = "txtNombrePatro";
-            this.txtNombrePatro.PlaceholderText = "";
-            this.txtNombrePatro.SelectedText = "";
-            this.txtNombrePatro.Size = new System.Drawing.Size(90, 20);
-            this.txtNombrePatro.TabIndex = 33;
-            // 
-            // txtTipoPatro
-            // 
-            this.txtTipoPatro.BorderRadius = 10;
-            this.txtTipoPatro.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTipoPatro.DefaultText = "";
-            this.txtTipoPatro.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTipoPatro.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTipoPatro.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTipoPatro.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTipoPatro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTipoPatro.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTipoPatro.ForeColor = System.Drawing.Color.Black;
-            this.txtTipoPatro.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTipoPatro.Location = new System.Drawing.Point(183, 166);
-            this.txtTipoPatro.Name = "txtTipoPatro";
-            this.txtTipoPatro.PlaceholderText = "";
-            this.txtTipoPatro.SelectedText = "";
-            this.txtTipoPatro.Size = new System.Drawing.Size(90, 20);
-            this.txtTipoPatro.TabIndex = 34;
-            // 
-            // txtTelefonoPatr
-            // 
-            this.txtTelefonoPatr.BorderRadius = 10;
-            this.txtTelefonoPatr.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTelefonoPatr.DefaultText = "";
-            this.txtTelefonoPatr.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTelefonoPatr.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTelefonoPatr.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTelefonoPatr.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTelefonoPatr.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTelefonoPatr.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTelefonoPatr.ForeColor = System.Drawing.Color.Black;
-            this.txtTelefonoPatr.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTelefonoPatr.Location = new System.Drawing.Point(183, 225);
-            this.txtTelefonoPatr.Name = "txtTelefonoPatr";
-            this.txtTelefonoPatr.PlaceholderText = "";
-            this.txtTelefonoPatr.SelectedText = "";
-            this.txtTelefonoPatr.Size = new System.Drawing.Size(90, 20);
-            this.txtTelefonoPatr.TabIndex = 35;
-            // 
-            // txtTelefonoPatro
-            // 
-            this.txtTelefonoPatro.BorderRadius = 10;
-            this.txtTelefonoPatro.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTelefonoPatro.DefaultText = "";
-            this.txtTelefonoPatro.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTelefonoPatro.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTelefonoPatro.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTelefonoPatro.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTelefonoPatro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTelefonoPatro.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTelefonoPatro.ForeColor = System.Drawing.Color.Black;
-            this.txtTelefonoPatro.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTelefonoPatro.Location = new System.Drawing.Point(183, 274);
-            this.txtTelefonoPatro.Name = "txtTelefonoPatro";
-            this.txtTelefonoPatro.PlaceholderText = "";
-            this.txtTelefonoPatro.SelectedText = "";
-            this.txtTelefonoPatro.Size = new System.Drawing.Size(90, 20);
-            this.txtTelefonoPatro.TabIndex = 36;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(80, 56);
-            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(79, 13);
-            this.label34.TabIndex = 37;
-            this.label34.Text = "Id Patrocinador";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(52, 117);
-            this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(107, 13);
-            this.label35.TabIndex = 38;
-            this.label35.Text = "Nombre Patrocinador";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(68, 173);
-            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(91, 13);
-            this.label36.TabIndex = 39;
-            this.label36.Text = "Tipo Patrocinador";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(47, 232);
-            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(112, 13);
-            this.label37.TabIndex = 40;
-            this.label37.Text = "Telefono Patrocinador";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(47, 281);
-            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(101, 13);
-            this.label38.TabIndex = 41;
-            this.label38.Text = "Correo Patrocinador";
-            // 
-            // btnAgregarSem
-            // 
-            this.btnAgregarSem.BorderRadius = 15;
-            this.btnAgregarSem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregarSem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregarSem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAgregarSem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAgregarSem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAgregarSem.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarSem.Location = new System.Drawing.Point(47, 302);
-            this.btnAgregarSem.Name = "btnAgregarSem";
-            this.btnAgregarSem.Size = new System.Drawing.Size(94, 35);
-            this.btnAgregarSem.TabIndex = 38;
-            this.btnAgregarSem.Text = "Agregar";
-            // 
-            // btnModidficarSem
-            // 
-            this.btnModidficarSem.BorderRadius = 15;
-            this.btnModidficarSem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnModidficarSem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnModidficarSem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnModidficarSem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnModidficarSem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnModidficarSem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnModidficarSem.ForeColor = System.Drawing.Color.White;
-            this.btnModidficarSem.Location = new System.Drawing.Point(237, 302);
-            this.btnModidficarSem.Name = "btnModidficarSem";
-            this.btnModidficarSem.Size = new System.Drawing.Size(94, 35);
-            this.btnModidficarSem.TabIndex = 39;
-            this.btnModidficarSem.Text = "Modificar";
-            // 
-            // btnModificarEvent
-            // 
-            this.btnModificarEvent.BorderRadius = 15;
-            this.btnModificarEvent.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnModificarEvent.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnModificarEvent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnModificarEvent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnModificarEvent.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnModificarEvent.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnModificarEvent.ForeColor = System.Drawing.Color.White;
-            this.btnModificarEvent.Location = new System.Drawing.Point(242, 325);
-            this.btnModificarEvent.Name = "btnModificarEvent";
-            this.btnModificarEvent.Size = new System.Drawing.Size(94, 35);
-            this.btnModificarEvent.TabIndex = 42;
-            this.btnModificarEvent.Text = "Modificar";
-            // 
-            // btnAgregarEvent
-            // 
-            this.btnAgregarEvent.BorderRadius = 15;
-            this.btnAgregarEvent.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregarEvent.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregarEvent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAgregarEvent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAgregarEvent.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAgregarEvent.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarEvent.Location = new System.Drawing.Point(52, 325);
-            this.btnAgregarEvent.Name = "btnAgregarEvent";
-            this.btnAgregarEvent.Size = new System.Drawing.Size(94, 35);
-            this.btnAgregarEvent.TabIndex = 41;
-            this.btnAgregarEvent.Text = "Agregar";
-            // 
-            // btnModificarProyec
-            // 
-            this.btnModificarProyec.BorderRadius = 15;
-            this.btnModificarProyec.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnModificarProyec.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnModificarProyec.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnModificarProyec.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnModificarProyec.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnModificarProyec.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnModificarProyec.ForeColor = System.Drawing.Color.White;
-            this.btnModificarProyec.Location = new System.Drawing.Point(233, 341);
-            this.btnModificarProyec.Name = "btnModificarProyec";
-            this.btnModificarProyec.Size = new System.Drawing.Size(94, 35);
-            this.btnModificarProyec.TabIndex = 45;
-            this.btnModificarProyec.Text = "Modificar";
-            // 
-            // btnAgregarProyec
-            // 
-            this.btnAgregarProyec.BorderRadius = 15;
-            this.btnAgregarProyec.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregarProyec.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregarProyec.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAgregarProyec.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAgregarProyec.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAgregarProyec.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarProyec.Location = new System.Drawing.Point(43, 341);
-            this.btnAgregarProyec.Name = "btnAgregarProyec";
-            this.btnAgregarProyec.Size = new System.Drawing.Size(94, 35);
-            this.btnAgregarProyec.TabIndex = 44;
-            this.btnAgregarProyec.Text = "Agregar";
-            // 
-            // btnModificarRep
-            // 
-            this.btnModificarRep.BorderRadius = 15;
-            this.btnModificarRep.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnModificarRep.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnModificarRep.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnModificarRep.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnModificarRep.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnModificarRep.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnModificarRep.ForeColor = System.Drawing.Color.White;
-            this.btnModificarRep.Location = new System.Drawing.Point(239, 338);
-            this.btnModificarRep.Name = "btnModificarRep";
-            this.btnModificarRep.Size = new System.Drawing.Size(94, 35);
-            this.btnModificarRep.TabIndex = 42;
-            this.btnModificarRep.Text = "Modificar";
-            // 
-            // btnAgregarReporte
-            // 
-            this.btnAgregarReporte.BorderRadius = 15;
-            this.btnAgregarReporte.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregarReporte.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregarReporte.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAgregarReporte.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAgregarReporte.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAgregarReporte.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarReporte.Location = new System.Drawing.Point(49, 338);
-            this.btnAgregarReporte.Name = "btnAgregarReporte";
-            this.btnAgregarReporte.Size = new System.Drawing.Size(94, 35);
-            this.btnAgregarReporte.TabIndex = 41;
-            this.btnAgregarReporte.Text = "Agregar";
-            // 
-            // btnModificarPatr
-            // 
-            this.btnModificarPatr.BorderRadius = 15;
-            this.btnModificarPatr.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnModificarPatr.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnModificarPatr.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnModificarPatr.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnModificarPatr.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnModificarPatr.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnModificarPatr.ForeColor = System.Drawing.Color.White;
-            this.btnModificarPatr.Location = new System.Drawing.Point(240, 338);
-            this.btnModificarPatr.Name = "btnModificarPatr";
-            this.btnModificarPatr.Size = new System.Drawing.Size(94, 35);
-            this.btnModificarPatr.TabIndex = 43;
-            this.btnModificarPatr.Text = "Modificar";
-            // 
-            // btnAgregarPatro
-            // 
-            this.btnAgregarPatro.BorderRadius = 15;
-            this.btnAgregarPatro.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregarPatro.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregarPatro.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAgregarPatro.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAgregarPatro.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAgregarPatro.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarPatro.Location = new System.Drawing.Point(50, 338);
-            this.btnAgregarPatro.Name = "btnAgregarPatro";
-            this.btnAgregarPatro.Size = new System.Drawing.Size(94, 35);
-            this.btnAgregarPatro.TabIndex = 42;
-            this.btnAgregarPatro.Text = "Agregar";
+            // txtFechaEven
+            // 
+            this.txtFechaEven.BorderRadius = 10;
+            this.txtFechaEven.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFechaEven.DefaultText = "AAAA/MM/DD";
+            this.txtFechaEven.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFechaEven.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFechaEven.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFechaEven.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFechaEven.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFechaEven.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtFechaEven.ForeColor = System.Drawing.Color.Black;
+            this.txtFechaEven.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFechaEven.Location = new System.Drawing.Point(219, 294);
+            this.txtFechaEven.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtFechaEven.Name = "txtFechaEven";
+            this.txtFechaEven.PlaceholderText = "";
+            this.txtFechaEven.SelectedText = "";
+            this.txtFechaEven.Size = new System.Drawing.Size(120, 25);
+            this.txtFechaEven.TabIndex = 43;
             // 
             // FormAgregar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Proyecto_Semillero.Properties.Resources._6600337_3298668;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(411, 493);
+            this.ClientSize = new System.Drawing.Size(548, 607);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.tabAgregar);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormAgregar";
             this.Text = "FormAgregar";
             this.Load += new System.EventHandler(this.FormAgregar_Load);
@@ -1947,16 +1974,16 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private Guna.UI2.WinForms.Guna2TextBox txtNombreSe;
-        private Guna.UI2.WinForms.Guna2TextBox txtIdUsuario1;
+        private Guna.UI2.WinForms.Guna2TextBox txtNombreSem;
+        private Guna.UI2.WinForms.Guna2TextBox txtIdUsuarioSem;
         private Guna.UI2.WinForms.Guna2TextBox txtIdSemillero;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2TextBox txtEnfoqueSe;
-        private Guna.UI2.WinForms.Guna2TextBox txtLineaSe;
+        private Guna.UI2.WinForms.Guna2TextBox txtEnfoqueSem;
+        private Guna.UI2.WinForms.Guna2TextBox txtLineaSem;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox12;
@@ -1987,7 +2014,6 @@
         private System.Windows.Forms.Label label22;
         private Guna.UI2.WinForms.Guna2TextBox txtFechaFin;
         private Guna.UI2.WinForms.Guna2TextBox txtFechaInicio;
-        private Guna.UI2.WinForms.Guna2TextBox txtfechaEvent;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;
@@ -2018,5 +2044,6 @@
         private Guna.UI2.WinForms.Guna2Button btnAgregarProyec;
         private Guna.UI2.WinForms.Guna2Button btnModificarEvent;
         private Guna.UI2.WinForms.Guna2Button btnAgregarEvent;
+        private Guna.UI2.WinForms.Guna2TextBox txtFechaEven;
     }
 }

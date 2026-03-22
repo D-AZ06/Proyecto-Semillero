@@ -85,7 +85,7 @@ namespace Proyecto_Semillero
         {
             Gestionar("Eventos");
             formularioActual = "Eventos";
-                ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
+            ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
         }
 
         private void btn_patrocinadores_Click(object sender, EventArgs e)
@@ -122,9 +122,9 @@ namespace Proyecto_Semillero
          private void btnconsultalp_Click_1(object sender, EventArgs e)
          {
             string columna = cboConsultarParametro.SelectedItem?.ToString();
-            string valor = TextBox1.Text;
+            string valor = txtParametro.Text;
 
-            if (string.IsNullOrEmpty(columna) || string.IsNullOrEmpty(valor))
+            if ((cboConsultarParametro.SelectedIndex == 0) || txtParametro.Text == "")
             {
                 MessageBox.Show("Seleccione un parámetro y escriba un valor.");
                 return;
