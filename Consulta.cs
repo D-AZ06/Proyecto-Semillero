@@ -65,7 +65,7 @@ namespace Proyecto_Semillero
                     }
                 }
             }
-            catch (Exception ex )
+            catch (Exception )
             {
                 MessageBox.Show("Usuario y/o Contraseña incorrecta");// usuario o contraseña incorrectos, se muestra un mensaje de error al usuario
                 // MessageBox.Show(ex.Message); // si ocurre un error al ejecutar la consulta a la base de datos, se muestra un mensaje de error
