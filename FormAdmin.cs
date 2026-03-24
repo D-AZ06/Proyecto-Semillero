@@ -72,6 +72,7 @@ namespace Proyecto_Semillero
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
             btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;
+            lbl_gestionar.Text = "Gestionar Reportes";
         }
 
         private void btn_gestionar_usuarios_Click(object sender, EventArgs e)
@@ -81,6 +82,7 @@ namespace Proyecto_Semillero
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
             btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;
+            lbl_gestionar.Text = "Gestionar Usuarios";
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -90,6 +92,7 @@ namespace Proyecto_Semillero
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
             btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;
+            lbl_gestionar.Text = "Gestionar Semilleros";
         }
 
         private void btn_proyecto_Click(object sender, EventArgs e)
@@ -99,6 +102,7 @@ namespace Proyecto_Semillero
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
             btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;
+            lbl_gestionar.Text = "Gestionar Proyectos";
         }
 
         private void btn_eventos_Click(object sender, EventArgs e)
@@ -108,6 +112,7 @@ namespace Proyecto_Semillero
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
             btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;
+            lbl_gestionar.Text = "Gestionar Eventos";
         }
 
         private void btn_patrocinadores_Click(object sender, EventArgs e)
@@ -117,6 +122,7 @@ namespace Proyecto_Semillero
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
             btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;
+            lbl_gestionar.Text = "Gestionar Patrocinadores";
         }
 
         private void btn_actividades_Click(object sender, EventArgs e)
@@ -126,6 +132,7 @@ namespace Proyecto_Semillero
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
             btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;
+            lbl_gestionar.Text = "Gestionar Actividades";
         }
 
 

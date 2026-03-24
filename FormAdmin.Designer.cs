@@ -407,7 +407,7 @@
             this.lbl_gestionar.BackColor = System.Drawing.Color.Transparent;
             this.lbl_gestionar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_gestionar.ForeColor = System.Drawing.Color.White;
-            this.lbl_gestionar.Location = new System.Drawing.Point(465, 14);
+            this.lbl_gestionar.Location = new System.Drawing.Point(438, 16);
             this.lbl_gestionar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_gestionar.Name = "lbl_gestionar";
             this.lbl_gestionar.Size = new System.Drawing.Size(76, 23);
