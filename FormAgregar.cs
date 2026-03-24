@@ -75,8 +75,10 @@ namespace Proyecto_Semillero
 
         }
 
-        private void btnAgregarUsuario_Click(object sender, EventArgs e)
+        private void btnAgregarUsuario_Click_1(object sender, EventArgs e)
         {
+
+        
             if (txtIdUsuario.Text.Trim() == "" ||
                 txtContraseña.Text.Trim() == "" ||
                 txtNombre.Text.Trim() == "" ||
@@ -425,5 +427,7 @@ namespace Proyecto_Semillero
                 }
             }
         }
+
+        
     }
 }

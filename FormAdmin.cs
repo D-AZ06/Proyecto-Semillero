@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,6 +43,8 @@ namespace Proyecto_Semillero
             Panel1.BackColor = Color.FromArgb(20, 255, 255, 255);
             Panel2.BackColor = Color.FromArgb(20, 255, 255, 255);
             Panel3.BackColor = Color.FromArgb(20, 255, 255, 255);
+
+            dataGridView1.ColumnHeadersVisible = true;
         }
 
         public void Gestionar(string tabla)
@@ -83,6 +86,11 @@ namespace Proyecto_Semillero
             btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;
             lbl_gestionar.Text = "Gestionar Usuarios";
+
+
+         
+
+
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -171,6 +179,11 @@ namespace Proyecto_Semillero
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
