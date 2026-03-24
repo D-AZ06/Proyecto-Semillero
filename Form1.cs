@@ -18,13 +18,15 @@ namespace Proyecto_Semillero
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             panel1.BackColor = Color.FromArgb(20, 255, 255, 255);
             RedondearPanel(panel1, 25);
-           
+            txtcontraseña.Focus();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -45,14 +47,11 @@ namespace Proyecto_Semillero
             panel.Region = new Region(path);
         }
 
-        private void guna2GroupBox1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btningresar_Click(object sender, EventArgs e)
         {
-            if (txtId.Text == "" || txtcontraseña.Text == "") // verificamos si los campos de usuario y contraseña estan vacios
+            if (txtcontraseña.Text == "" || txtId.Text == "") // verificamos si los campos de usuario y contraseña estan vacios
             {
                 MessageBox.Show("Es obligatorio ingresar toda la información del login"); // si los campos de usuario y contraseña estan vacios, se muestra un mensaje de error al usuario
             }

@@ -31,8 +31,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btningresar = new Guna.UI2.WinForms.Guna2Button();
-            this.txtId = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtcontraseña = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtId = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,8 +59,8 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.btningresar);
-            this.panel1.Controls.Add(this.txtId);
             this.panel1.Controls.Add(this.txtcontraseña);
+            this.panel1.Controls.Add(this.txtId);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label2);
@@ -88,28 +88,6 @@
             this.btningresar.Text = "Ingresar";
             this.btningresar.Click += new System.EventHandler(this.btningresar_Click);
             // 
-            // txtId
-            // 
-            this.txtId.BackColor = System.Drawing.Color.Transparent;
-            this.txtId.BorderColor = System.Drawing.Color.Transparent;
-            this.txtId.BorderRadius = 15;
-            this.txtId.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtId.DefaultText = "";
-            this.txtId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtId.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtId.Location = new System.Drawing.Point(98, 73);
-            this.txtId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtId.Name = "txtId";
-            this.txtId.PlaceholderText = "";
-            this.txtId.SelectedText = "";
-            this.txtId.Size = new System.Drawing.Size(120, 25);
-            this.txtId.TabIndex = 8;
-            // 
             // txtcontraseña
             // 
             this.txtcontraseña.BackColor = System.Drawing.Color.Transparent;
@@ -124,13 +102,35 @@
             this.txtcontraseña.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtcontraseña.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtcontraseña.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtcontraseña.Location = new System.Drawing.Point(98, 168);
+            this.txtcontraseña.Location = new System.Drawing.Point(103, 167);
             this.txtcontraseña.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtcontraseña.Name = "txtcontraseña";
             this.txtcontraseña.PlaceholderText = "";
             this.txtcontraseña.SelectedText = "";
             this.txtcontraseña.Size = new System.Drawing.Size(120, 25);
-            this.txtcontraseña.TabIndex = 7;
+            this.txtcontraseña.TabIndex = 8;
+            // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.Transparent;
+            this.txtId.BorderColor = System.Drawing.Color.Transparent;
+            this.txtId.BorderRadius = 15;
+            this.txtId.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtId.DefaultText = "";
+            this.txtId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtId.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtId.Location = new System.Drawing.Point(103, 74);
+            this.txtId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtId.Name = "txtId";
+            this.txtId.PlaceholderText = "";
+            this.txtId.SelectedText = "";
+            this.txtId.Size = new System.Drawing.Size(120, 25);
+            this.txtId.TabIndex = 7;
             // 
             // pictureBox3
             // 
@@ -239,8 +239,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private Guna.UI2.WinForms.Guna2TextBox txtId;
         private Guna.UI2.WinForms.Guna2TextBox txtcontraseña;
+        private Guna.UI2.WinForms.Guna2TextBox txtId;
         private Guna.UI2.WinForms.Guna2Button btningresar;
         private Guna.UI2.WinForms.Guna2Button btnsalir_programa;
         private System.Windows.Forms.Label lblGesSi;
