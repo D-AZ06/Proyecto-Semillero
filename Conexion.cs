@@ -19,7 +19,8 @@ namespace Proyecto_Semillero
 
             try // utilizamos un bloque try-catch para manejar cualquier error que pueda ocurrir al establecer la conexion
             {
-                conexion = new SqlConnection("Data Source=DESKTOP-N1N64BR\\SQLEXPRESS;Initial Catalog=BD-ProyectoSemillero;Integrated Security=True"); // establecemos la conexion a la base de datos utilizando la cadena de conexion
+                conexion = new SqlConnection("Data Source=DESKTOP-HPRJHVG\\SQLEXPRESS;Initial Catalog=BDProyectoSemillero;Integrated Security=True");
+                //conexion = new SqlConnection("Data Source=DESKTOP-N1N64BR\\SQLEXPRESS;Initial Catalog=BD-ProyectoSemillero;Integrated Security=True"); // establecemos la conexion a la base de datos utilizando la cadena de conexion
                 //conexion = new SqlConnection("Data Source=DESKTOP-N895SQ4\\SQLEXPRESS;Initial Catalog=BDProyectoSemillero;Integrated Security=True");
                 conexion.Open(); // abrimos la conexion a la base de datos
             }

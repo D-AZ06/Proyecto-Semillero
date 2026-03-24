@@ -63,6 +63,10 @@ namespace Proyecto_Semillero
             {
                 tabAgregar.SelectedTab = tabEventos;
             }
+            else {
+                MessageBox.Show("Selecciona primero una opción");
+            }
+
         }
 
 

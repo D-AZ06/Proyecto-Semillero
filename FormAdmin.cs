@@ -17,12 +17,24 @@ namespace Proyecto_Semillero
         Conexion conexion = new Conexion(); // creamos una instancia de la clase Conexion para establecer la conexion a la base de datos
         DataSet dataset = new DataSet(); // (conjunto de datos) creamos la variable dt con tipo DataTable para almacenar los resultados de las consultas a la base de datos
 
+
+        
         string formularioActual = ""; // variable para almacenar el nombre del formulario actual que se esta mostrando en el DataGridView
         ConsultarConParametro consultarConParametro = new ConsultarConParametro(); // creamos una instancia de la clase ConsultarConParametro para utilizar sus métodos de consulta con parámetros
+
+      
 
         public FormAdmin()
         {
             InitializeComponent();
+
+            if (formularioActual == "")
+            {
+                btnRegistrar.Enabled = false; // deshabilitamos el botón de consulta con parámetros si no se ha seleccionado un formulario para mostrar en el DataGridView
+                btnModificar.Enabled = false;
+            }
+
+           
         }
 
         private void FormAdmin_Load(object sender, EventArgs e)
@@ -58,6 +70,8 @@ namespace Proyecto_Semillero
             Gestionar("Reportes");
             formularioActual = "Reportes";
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
+            btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
+            btnModificar.Enabled = true;
         }
 
         private void btn_gestionar_usuarios_Click(object sender, EventArgs e)
@@ -65,6 +79,8 @@ namespace Proyecto_Semillero
             Gestionar("Usuario");
             formularioActual = "Usuario";
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
+            btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
+            btnModificar.Enabled = true;
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -72,6 +88,8 @@ namespace Proyecto_Semillero
             Gestionar("Semillero");
             formularioActual = "Semillero";
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
+            btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
+            btnModificar.Enabled = true;
         }
 
         private void btn_proyecto_Click(object sender, EventArgs e)
@@ -79,6 +97,8 @@ namespace Proyecto_Semillero
             Gestionar("Proyectos");
             formularioActual = "Proyectos";
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
+            btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
+            btnModificar.Enabled = true;
         }
 
         private void btn_eventos_Click(object sender, EventArgs e)
@@ -86,6 +106,8 @@ namespace Proyecto_Semillero
             Gestionar("Eventos");
             formularioActual = "Eventos";
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
+            btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
+            btnModificar.Enabled = true;
         }
 
         private void btn_patrocinadores_Click(object sender, EventArgs e)
@@ -93,6 +115,8 @@ namespace Proyecto_Semillero
             Gestionar("Patrocinadores");
             formularioActual = "Patrocinadores";
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
+            btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
+            btnModificar.Enabled = true;
         }
 
         private void btn_actividades_Click(object sender, EventArgs e)
@@ -100,6 +124,8 @@ namespace Proyecto_Semillero
             Gestionar("Actividad");
             formularioActual = "Actividad";
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
+            btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
+            btnModificar.Enabled = true;
         }
 
 
