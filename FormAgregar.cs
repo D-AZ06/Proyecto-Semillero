@@ -329,10 +329,42 @@ namespace Proyecto_Semillero
         private void btnAgregarReporte_Click(object sender, EventArgs e)
         {
             int idReporte = int.Parse(txtIdReporte.Text);
+            int idUsuario = int.Parse(txtIdUsuario2.Text);
             DateTime fechaReporte = DateTime.Parse(txtFechaReporte.Text);
             DateTime horaReporte = DateTime.Parse(txtHoraReporte.Text);
             string motivoReporte = (txtMotivo.Text);
 
+            if ((txtIdReporte.Text == "") || (txtIdUsuario2.Text == "") || (txtFechaReporte.Text == "") || (txtHoraReporte.Text == "") || (txtMotivo.Text == ""))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                SqlCommand insert;
+                try
+                {
+                    insert = new SqlCommand("INSERT INTO Reportes (idReporte, idUsuario, fechaReporte, horaReporte, motivoReporte) " +
+                        "VALUES (@idReporte, @idUsuario, @fechaReporte, @horaReporte, @motivoReporte)",
+                        conexion.Conectar()
+                    );
+                    insert.CommandType = CommandType.Text;
+                    insert.Parameters.AddWithValue("@idReporte", idReporte);
+                    insert.Parameters.AddWithValue("@idUsuario", idUsuario);
+                    insert.Parameters.AddWithValue("@fechaReporte", fechaReporte);
+                    insert.Parameters.AddWithValue("@horaReporte", horaReporte);
+                    insert.Parameters.AddWithValue("@motivoReporte", motivoReporte);
+                    insert.ExecuteNonQuery();
+                    MessageBox.Show("Reporte guardado correctamente");
+                    // cerrar conexión 
+                    conexion.cerrar();
+                    // cerrar formulario
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
         private void btnModificarUsuario_Click(object sender, EventArgs e)
@@ -350,6 +382,47 @@ namespace Proyecto_Semillero
             else
             {
                 txtIdSemillero3.Enabled = true;
+            }
+        }
+
+        private void btnAgregarPatro_Click(object sender, EventArgs e)
+        {
+            int idPatrocinador = int.Parse(txtIdpatro.Text);
+            string nombrePatrocinador = txtNombrePatro.Text;
+            string txtTipoPatrocinador = txtTipoPatro.Text;
+            long telefonoPatrocinador = long.Parse(txtTelefonoPatro.Text);
+            string correoPatrocinador = txtCorreoPatro.Text;
+
+            if ((txtIdpatro.Text == "") || (txtNombrePatro.Text == "") || (txtTipoPatro.Text == "") || (txtTelefonoPatro.Text == "") || (txtCorreoPatro.Text == ""))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                SqlCommand insert;
+                try
+                {
+                    insert = new SqlCommand("INSERT INTO Patrocinadores (idPatrocinador, nombrePatrocinador, tipoPatrocinador, telefonoPatrocinador, correoPatrocinador) " +
+                        "VALUES (@idPatrocinador, @nombrePatrocinador, @tipoPatrocinador, @telefonoPatrocinador, @correoPatrocinador)",
+                        conexion.Conectar()
+                    );
+                    insert.CommandType = CommandType.Text;
+                    insert.Parameters.AddWithValue("@idPatrocinador", idPatrocinador);
+                    insert.Parameters.AddWithValue("@nombrePatrocinador", nombrePatrocinador);
+                    insert.Parameters.AddWithValue("@tipoPatrocinador", txtTipoPatro);
+                    insert.Parameters.AddWithValue("@telefonoPatrocinador", telefonoPatrocinador);
+                    insert.Parameters.AddWithValue("@correoPatrocinador", correoPatrocinador);
+                    insert.ExecuteNonQuery();
+                    MessageBox.Show("Patrocinador guardado correctamente");
+                    // cerrar conexión 
+                    conexion.cerrar();
+                    // cerrar formulario
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
     }

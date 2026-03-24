@@ -125,17 +125,6 @@ namespace Proyecto_Semillero
             lbl_gestionar.Text = "Gestionar Patrocinadores";
         }
 
-        private void btn_actividades_Click(object sender, EventArgs e)
-        {
-            Gestionar("Actividad");
-            formularioActual = "Actividad";
-            ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
-            btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
-            btnModificar.Enabled = true;
-            lbl_gestionar.Text = "Gestionar Actividades";
-        }
-
-
         private void btbsalir_Click(object sender, EventArgs e)
         {
 
