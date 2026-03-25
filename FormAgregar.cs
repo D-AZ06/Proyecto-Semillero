@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using static TheArtOfDevHtmlRenderer.Adapters.RGraphicsPath;
 
 
 namespace Proyecto_Semillero
@@ -17,6 +18,9 @@ namespace Proyecto_Semillero
         Conexion conexion = new Conexion();
 
         public string tipo;
+
+        public bool modoEdicion = false;
+        public DataGridViewRow filaSeleccionada;
 
         public FormAgregar()
         {
@@ -63,10 +67,97 @@ namespace Proyecto_Semillero
             {
                 tabAgregar.SelectedTab = tabEventos;
             }
-            else {
+            else
+            {
                 MessageBox.Show("Selecciona primero una opción");
             }
 
+            if (modoEdicion && filaSeleccionada != null)
+            {
+                if (tipo == "Usuario")
+                {
+                    txtIdUsuario.Enabled = false;
+                    txtIdSemillero3.Enabled = false;
+                    txtIdUsuario.Text = filaSeleccionada.Cells["idUsuario"].Value.ToString();
+                    txtIdSemillero3.Text = filaSeleccionada.Cells["idSemillero"].Value.ToString();
+                    txtContraseña.Text = filaSeleccionada.Cells["contraseñaUsuario"].Value.ToString();
+                    txtNombre.Text = filaSeleccionada.Cells["nombresUsuario"].Value.ToString();
+                    cboRol.Text = filaSeleccionada.Cells["rolUsuario"].Value.ToString();
+                    txtTelefonoUsuario.Text = filaSeleccionada.Cells["telefonoUsuario"].Value.ToString();
+                    txtCorreoUsuario.Text = filaSeleccionada.Cells["correoUsuario"].Value.ToString();
+                    txtEdadUsuario.Text = filaSeleccionada.Cells["edadUsuario"].Value.ToString();
+                    cboGeneroUsuario.Text = filaSeleccionada.Cells["generoUsuario"].Value.ToString();
+                    cboEstado.Text = filaSeleccionada.Cells["estadoUsuario"].Value.ToString();
+
+                    btnAgregarUsuario.Text = "Modificar"; // Cambia texto del botón para indicar que se está en modo edición
+                }
+
+                else if (tipo == "Semillero")
+                {
+                    txtIdSemillero.Enabled = false;
+                    txtIdSemillero.Text = filaSeleccionada.Cells["idSemillero"].Value.ToString();
+                    txtNombreSem.Text = filaSeleccionada.Cells["nombreSemillero"].Value.ToString();
+                    txtLineaSem.Text = filaSeleccionada.Cells["lineaSemillero"].Value.ToString();
+                    txtEnfoqueSem.Text = filaSeleccionada.Cells["enfoqueSemillero"].Value.ToString();
+                    btnAgregarSem.Text = "Modificar";
+                }
+                else if (tipo == "Proyectos")
+                {
+                    txtProyecto.Enabled = false;
+                    txtIdSemillero1.Enabled = false;
+                    txtProyecto.Text = filaSeleccionada.Cells["idProyecto"].Value.ToString();
+                    txtIdSemillero1.Text = filaSeleccionada.Cells["idSemillero"].Value.ToString();
+                    txtTitulo.Text = filaSeleccionada.Cells["tituloProyecto"].Value.ToString();
+                    txtObjetivo.Text = filaSeleccionada.Cells["objetivoProyecto"].Value.ToString();
+                    txtDescripcion.Text = filaSeleccionada.Cells["descripcionProyecto"].Value.ToString();
+                    txtFechaInicio.Text = Convert.ToDateTime(filaSeleccionada.Cells["fechaInicioProyecto"].Value).ToString("yyyy-MM-dd");
+                    txtFechaFin.Text = Convert.ToDateTime(filaSeleccionada.Cells["fechaFinProyecto"].Value).ToString("yyyy-MM-dd");
+                    btnAgregarProyec.Text = "Modificar";
+
+                }
+                else if (tipo == "Reportes")
+                {
+                    txtIdReporte.Enabled = false;
+                    txtIdUsuario2.Enabled = false;
+                    txtIdReporte.Text = filaSeleccionada.Cells["idReporte"].Value.ToString();
+                    txtIdUsuario2.Text = filaSeleccionada.Cells["idUsuario"].Value.ToString();
+                    txtFechaReporte.Text = Convert.ToDateTime(filaSeleccionada.Cells["fechaReporte"].Value).ToString("yyyy-MM-dd");
+                    txtHoraReporte.Text = Convert.ToDateTime(filaSeleccionada.Cells["horaReporte"].Value).ToString("HH:mm:ss");
+                    txtMotivo.Text = filaSeleccionada.Cells["motivoReporte"].Value.ToString();
+                    btnAgregarReporte.Text = "Modificar";
+                }
+                else if (tipo == "Eventos")
+                {
+                    txtIdEvento.Enabled = false;
+                    txtIdEvento.Text = filaSeleccionada.Cells["idEvento"].Value.ToString();
+                    txtLugarEven.Text = filaSeleccionada.Cells["lugarEvento"].Value.ToString();
+                    txtNombreEven.Text = filaSeleccionada.Cells["nombreEvento"].Value.ToString();
+                    txtTipoEven.Text = filaSeleccionada.Cells["tipoEvento"].Value.ToString();
+                    txtFechaEven.Text = Convert.ToDateTime(filaSeleccionada.Cells["fechaEvento"].Value).ToString("yyyy-MM-dd");
+                    txtOrgEvento.Text = filaSeleccionada.Cells["organizadorEvento"].Value.ToString();
+                    btnAgregarEvent.Text = "Modificar";
+                }
+                else if (tipo == "Patrocinadores")
+                {
+                    txtIdpatro.Enabled = false;
+                    txtIdpatro.Text = filaSeleccionada.Cells["idPatrocinador"].Value.ToString();
+                    txtNombrePatro.Text = filaSeleccionada.Cells["nombrePatrocinador"].Value.ToString();
+                    txtTipoPatro.Text = filaSeleccionada.Cells["tipoPatrocinador"].Value.ToString();
+                    txtTelefonoPatro.Text = filaSeleccionada.Cells["telefonoPatrocinador"].Value.ToString();
+                    txtCorreoPatro.Text = filaSeleccionada.Cells["correoPatrocinador"].Value.ToString();
+                    btnAgregarPatro.Text = "Modificar";
+                }
+                else if (tipo == "Actividad")
+                {
+                    // Aquí deberías cargar los datos de la actividad en los campos correspondientes
+                    // Por ejemplo:
+                    // txtIdActividad.Text = filaSeleccionada.Cells["idActividad"].Value.ToString();
+                    // txtNombreActividad.Text = filaSeleccionada.Cells["nombreActividad"].Value.ToString();
+                    // txtDescripcionActividad.Text = filaSeleccionada.Cells["descripcionActividad"].Value.ToString();
+                    // txtFechaActividad.Text = Convert.ToDateTime(filaSeleccionada.Cells["fechaActividad"].Value).ToString("yyyy-MM-dd");
+                    // btnAgregarActividad.Text = "Modificar";
+                }
+            }
         }
 
 
@@ -77,119 +168,89 @@ namespace Proyecto_Semillero
 
         private void btnAgregarUsuario_Click_1(object sender, EventArgs e)
         {
-
-        
-            if (txtIdUsuario.Text.Trim() == "" ||
-                txtContraseña.Text.Trim() == "" ||
-                txtNombre.Text.Trim() == "" ||
-                cboRol.Text == "" ||
-                txtTelefonoUsuario.Text.Trim() == "" ||
-                txtCorreoUsuario.Text.Trim() == "" ||
-                txtEdadUsuario.Text.Trim() == "" ||
-                cboGeneroUsuario.Text == "" ||
-                cboEstado.Text == "")
+            if (txtIdUsuario.Text.Trim() == "" || txtContraseña.Text.Trim() == "" || txtNombre.Text.Trim() == "" || cboRol.Text == "" || txtTelefonoUsuario.Text.Trim() == "" ||  txtCorreoUsuario.Text.Trim() == "" || txtEdadUsuario.Text.Trim() == "" || cboGeneroUsuario.Text == "" ||  cboEstado.Text == "")
             {
                 MessageBox.Show("Complete todos los campos");
                 return;
             }
-
-            string rol = cboRol.Text;
-
-            int? idSemillero = null;
-
-            if (rol != "Administrador")
+            else
             {
-                if (txtIdSemillero3.Text.Trim() == "")
+                string idUsuario = txtIdUsuario.Text;
+                string idSemillero = txtIdSemillero3.Text;
+                string contraseña = txtContraseña.Text;
+                string nombre = txtNombre.Text;
+                string rol = cboRol.Text;
+                long telefono = long.Parse(txtTelefonoUsuario.Text);
+                string correo = txtCorreoUsuario.Text;
+                int edad = int.Parse(txtEdadUsuario.Text);
+                string genero = cboGeneroUsuario.Text;
+                string estado = cboEstado.Text;
+
+                if (modoEdicion == true)
                 {
-                    MessageBox.Show("Debe ingresar el ID del semillero");
-                    return;
-                }
-
-                if (!int.TryParse(txtIdSemillero3.Text, out int idSem))
-                {
-                    MessageBox.Show("ID Semillero inválido");
-                    return;
-                }
-
-                idSemillero = idSem;
-
-                if (rol != "Administrador")
-                {
-                    SqlCommand validar = new SqlCommand(
-                        "SELECT COUNT(*) FROM Semillero WHERE idSemillero = @idSemillero",
-                        conexion.Conectar()
-                    );
-
-                    validar.Parameters.AddWithValue("@idSemillero", idSemillero);
-
-                    int cantidad = (int)validar.ExecuteScalar();
-
-                    if (cantidad == 0)
+                    SqlCommand update;
+                    try
                     {
-                        MessageBox.Show("El ID del semillero no existe");
+                        update = new SqlCommand("UPDATE Usuario SET nombresUsuario=@nombre, contraseñaUsuario=@contraseña, idSemillero=@idSemillero, rolUsuario=@rol, telefonoUsuario=@telefono, correoUsuario=@correo, edadUsuario=@edad, generoUsuario=@genero, estadoUsuario=@estado WHERE idUsuario=@idUsuario",conexion.Conectar());
+                        update.Parameters.AddWithValue("@idUsuario", idUsuario);
+                        update.Parameters.AddWithValue("@idSemillero", idSemillero);
+                        update.Parameters.AddWithValue("@nombre", nombre);
+                        update.Parameters.AddWithValue("@contraseña", contraseña);
+                        update.Parameters.AddWithValue("@rol", rol);
+                        update.Parameters.AddWithValue("@telefono", telefono);
+                        update.Parameters.AddWithValue("@correo", correo);
+                        update.Parameters.AddWithValue("@edad", edad);
+                        update.Parameters.AddWithValue("@genero", genero);
+                        update.Parameters.AddWithValue("@estado", estado);
+
+                        update.ExecuteNonQuery();
+
+                        MessageBox.Show("Usuario modificado correctamente");
                         conexion.cerrar();
-                        return;
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+                else 
+                {
+                    try
+                    {
+                        SqlCommand insert = new SqlCommand(
+                            "INSERT INTO Usuario (idUsuario, idSemillero, contraseñaUsuario, nombresUsuario, rolUsuario, telefonoUsuario, correoUsuario, edadUsuario, generoUsuario, estadoUsuario) " +
+                            "VALUES (@idUsuario, @idSemillero, @contraseña, @nombre, @rol, @telefono, @correo, @edad, @genero, @estado)",
+                            conexion.Conectar()
+                        );
+
+                        insert.Parameters.AddWithValue("@idUsuario", idUsuario);
+                        insert.Parameters.AddWithValue("@idSemillero", (object)idSemillero ?? DBNull.Value);
+                        insert.Parameters.AddWithValue("@contraseña", contraseña);
+                        insert.Parameters.AddWithValue("@nombre", nombre);
+                        insert.Parameters.AddWithValue("@rol", rol);
+                        insert.Parameters.AddWithValue("@telefono", telefono);
+                        insert.Parameters.AddWithValue("@correo", correo);
+                        insert.Parameters.AddWithValue("@edad", edad);
+                        insert.Parameters.AddWithValue("@genero", genero);
+                        insert.Parameters.AddWithValue("@estado", estado);
+
+                        insert.ExecuteNonQuery();
+
+                        MessageBox.Show("Usuario guardado correctamente");
+                        conexion.cerrar();
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
             }
-
-            if (!int.TryParse(txtIdUsuario.Text, out int idUsuario))
-            {
-                MessageBox.Show("ID Usuario inválido");
-                return;
-            }
-
-            if (!long.TryParse(txtTelefonoUsuario.Text, out long telefono))
-            {
-                MessageBox.Show("Teléfono inválido");
-                return;
-            }
-
-            if (!int.TryParse(txtEdadUsuario.Text, out int edad))
-            {
-                MessageBox.Show("Edad inválida");
-                return;
-            }
-
-            string contraseña = txtContraseña.Text;
-            string nombre = txtNombre.Text;
-            string correo = txtCorreoUsuario.Text;
-            string genero = cboGeneroUsuario.Text;
-            string estado = cboEstado.Text;
-
-            try
-            {
-                SqlCommand insert = new SqlCommand(
-                    "INSERT INTO Usuario (idUsuario, idSemillero, contraseñaUsuario, nombresUsuario, rolUsuario, telefonoUsuario, correoUsuario, edadUsuario, generoUsuario, estadoUsuario) " +
-                    "VALUES (@idUsuario, @idSemillero, @contraseña, @nombre, @rol, @telefono, @correo, @edad, @genero, @estado)",
-                    conexion.Conectar()
-                );
-
-                insert.Parameters.AddWithValue("@idUsuario", idUsuario);
-                insert.Parameters.AddWithValue("@idSemillero", (object)idSemillero ?? DBNull.Value);
-                insert.Parameters.AddWithValue("@contraseña", contraseña);
-                insert.Parameters.AddWithValue("@nombre", nombre);
-                insert.Parameters.AddWithValue("@rol", rol);
-                insert.Parameters.AddWithValue("@telefono", telefono);
-                insert.Parameters.AddWithValue("@correo", correo);
-                insert.Parameters.AddWithValue("@edad", edad);
-                insert.Parameters.AddWithValue("@genero", genero);
-                insert.Parameters.AddWithValue("@estado", estado);
-
-                insert.ExecuteNonQuery();
-
-                MessageBox.Show("Usuario guardado correctamente");
-                conexion.cerrar();
-                this.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
+            
         }
-        
 
-       
+     
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -202,169 +263,271 @@ namespace Proyecto_Semillero
 
         private void btnAgregarSem_Click(object sender, EventArgs e)
         {
-            int idSemillero = int.Parse(txtIdSemillero.Text);
-          
-            string nombreSemillero = txtNombreSem.Text;
-            string lineaSemillero = txtLineaSem.Text;
-            string enfoqueSemillero = txtEnfoqueSem.Text;
-
             if ((txtIdSemillero.Text == "")  || (txtNombreSem.Text == "") || (txtLineaSem.Text == "") || (txtEnfoqueSem.Text == ""))
             {
                 MessageBox.Show("Por favor, complete todos los campos.");
             }
             else
             {
-                SqlCommand insert;
-                try
+                int idSemillero = int.Parse(txtIdSemillero.Text);
+                string nombreSemillero = txtNombreSem.Text;
+                string lineaSemillero = txtLineaSem.Text;
+                string enfoqueSemillero = txtEnfoqueSem.Text;
+
+                if (modoEdicion == true)
                 {
-                    insert = new SqlCommand("INSERT INTO Semillero (idSemillero,nombreSemillero, lineaSemillero, enfoqueSemillero) " +
-                        "VALUES (@idSemillero, @nombreSemillero, @lineaSemillero, @enfoqueSemillero)",
-                        conexion.Conectar()
-                    );
-                    insert.CommandType = CommandType.Text;
-                    insert.Parameters.AddWithValue("@idSemillero", idSemillero);
-                    insert.Parameters.AddWithValue("@nombreSemillero", nombreSemillero);
-                    insert.Parameters.AddWithValue("@lineaSemillero", lineaSemillero);
-                    insert.Parameters.AddWithValue("@enfoqueSemillero", enfoqueSemillero);
-                    insert.ExecuteNonQuery();
-                    MessageBox.Show("Semillero guardado correctamente");
-                    // cerrar conexión (como ya la tienes global)
-                    conexion.cerrar();
-                    // cerrar formulario
-                    this.Close();
+                    SqlCommand update;
+                    try
+                    {
+                        update = new SqlCommand("UPDATE Semillero SET nombreSemillero = @nombreSemillero, lineaSemillero = @lineaSemillero, enfoqueSemillero = @enfoqueSemillero WHERE idSemillero = @idSemillero",conexion.Conectar());
+                        update.Parameters.AddWithValue("@idSemillero", idSemillero);
+                        update.Parameters.AddWithValue("@nombreSemillero", nombreSemillero);
+                        update.Parameters.AddWithValue("@lineaSemillero", lineaSemillero);
+                        update.Parameters.AddWithValue("@enfoqueSemillero", enfoqueSemillero);
+
+                        update.ExecuteNonQuery();
+                        MessageBox.Show("Semillero modificado correctamente");
+                        conexion.cerrar();
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
-                catch (Exception ex)
+
+                else
                 {
-                    MessageBox.Show(ex.Message);
-                }
+                    SqlCommand insert;
+                    try
+                    {
+                        insert = new SqlCommand("INSERT INTO Semillero (idSemillero,nombreSemillero, lineaSemillero, enfoqueSemillero) " +
+                            "VALUES (@idSemillero, @nombreSemillero, @lineaSemillero, @enfoqueSemillero)",
+                            conexion.Conectar()
+                        );
+                        insert.CommandType = CommandType.Text;
+                        insert.Parameters.AddWithValue("@idSemillero", idSemillero);
+                        insert.Parameters.AddWithValue("@nombreSemillero", nombreSemillero);
+                        insert.Parameters.AddWithValue("@lineaSemillero", lineaSemillero);
+                        insert.Parameters.AddWithValue("@enfoqueSemillero", enfoqueSemillero);
+                        insert.ExecuteNonQuery();
+                        MessageBox.Show("Semillero guardado correctamente");
+                        // cerrar conexión (como ya la tienes global)
+                        conexion.cerrar();
+                        // cerrar formulario
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                } 
             }
         }
 
         private void btnAgregarEvent_Click(object sender, EventArgs e)
         {
-            int idEvento = int.Parse(txtIdEvento.Text);
-            string lugarEvento = txtLugarEven.Text;
-            string nombreEvento = txtNombreEven.Text;
-            string tipoEvento = txtTipoEven.Text;
-            DateTime fechaEvento = DateTime.Parse(txtFechaEven.Text);
-            string organizadorEvento = txtOrgEvento.Text;
-
             if ((txtIdEvento.Text == "") || (txtLugarEven.Text == "") || (txtNombreEven.Text == "") || (txtTipoEven.Text == "") || (txtFechaEven.Text == "") || (txtOrgEvento.Text == ""))
             {
                 MessageBox.Show("Por favor, complete todos los campos.");
             }
             else
             {
-                SqlCommand insert;
-                try
+                int idEvento = int.Parse(txtIdEvento.Text);
+                string lugarEvento = txtLugarEven.Text;
+                string nombreEvento = txtNombreEven.Text;
+                string tipoEvento = txtTipoEven.Text;
+                DateTime fechaEvento = DateTime.Parse(txtFechaEven.Text);
+                string organizadorEvento = txtOrgEvento.Text;
+
+                if (modoEdicion == true)
                 {
-                    insert = new SqlCommand("INSERT INTO Eventos (idEvento, lugarEvento, nombreEvento, tipoEvento, fechaEvento, organizadorEvento) " +
-                        "VALUES (@idEvento, @lugarEvento, @nombreEvento, @tipoEvento, @fechaEvento, @organizadorEvento)",
-                        conexion.Conectar()
-                    );
-                    insert.CommandType = CommandType.Text;
-                    insert.Parameters.AddWithValue("@idEvento", idEvento);
-                    insert.Parameters.AddWithValue("@lugarEvento", lugarEvento);
-                    insert.Parameters.AddWithValue("@nombreEvento", nombreEvento);
-                    insert.Parameters.AddWithValue("@tipoEvento", tipoEvento);
-                    insert.Parameters.AddWithValue("@fechaEvento", fechaEvento);
-                    insert.Parameters.AddWithValue("@organizadorEvento", organizadorEvento);
-                    insert.ExecuteNonQuery();
-                    MessageBox.Show("Evento guardado correctamente");
-                    // cerrar conexión (como ya la tienes global)
-                    conexion.cerrar();
-                    // cerrar formulario
-                    this.Close();
+                    SqlCommand update;
+                    try
+                    {
+                        update = new SqlCommand("UPDATE Eventos SET lugarEvento = @lugarEvento, nombreEvento = @nombreEvento, tipoEvento = @tipoEvento, fechaEvento = @fechaEvento, organizadorEvento = @organizadorEvento WHERE idEvento = @idEvento", conexion.Conectar());
+                        update.Parameters.AddWithValue("@idEvento", idEvento);
+                        update.Parameters.AddWithValue("@lugarEvento", lugarEvento);
+                        update.Parameters.AddWithValue("@nombreEvento", nombreEvento);
+                        update.Parameters.AddWithValue("@tipoEvento", tipoEvento);
+                        update.Parameters.AddWithValue("@fechaEvento", fechaEvento);
+                        update.Parameters.AddWithValue("@organizadorEvento", organizadorEvento);
+
+                        update.ExecuteNonQuery();
+                        MessageBox.Show("Semillero modificado correctamente");
+                        conexion.cerrar();
+                        this.Close();
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    SqlCommand insert;
+                    try
+                    {
+                        insert = new SqlCommand("INSERT INTO Eventos (idEvento, lugarEvento, nombreEvento, tipoEvento, fechaEvento, organizadorEvento) " +
+                            "VALUES (@idEvento, @lugarEvento, @nombreEvento, @tipoEvento, @fechaEvento, @organizadorEvento)",
+                            conexion.Conectar()
+                        );
+                        insert.CommandType = CommandType.Text;
+                        insert.Parameters.AddWithValue("@idEvento", idEvento);
+                        insert.Parameters.AddWithValue("@lugarEvento", lugarEvento);
+                        insert.Parameters.AddWithValue("@nombreEvento", nombreEvento);
+                        insert.Parameters.AddWithValue("@tipoEvento", tipoEvento);
+                        insert.Parameters.AddWithValue("@fechaEvento", fechaEvento);
+                        insert.Parameters.AddWithValue("@organizadorEvento", organizadorEvento);
+                        insert.ExecuteNonQuery();
+                        MessageBox.Show("Evento guardado correctamente");
+                        // cerrar conexión (como ya la tienes global)
+                        conexion.cerrar();
+                        // cerrar formulario
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
             }
         }
 
         private void btnAgregarProyec_Click(object sender, EventArgs e)
         {
-            int idProyecto = int.Parse(txtProyecto.Text);
-            int idSemillero = int.Parse(txtIdSemillero1.Text);
-            string tituloProyecto = txtTitulo.Text;
-            string objetivoProyecto = txtObjetivo.Text;
-            string descripcionProyecto = txtDescripcion.Text;
-            DateTime fechaInicioProyecto = DateTime.Parse(txtFechaInicio.Text);
-            DateTime fechaFinProyecto = DateTime.Parse(txtFechaFin.Text);
-
             if ((txtProyecto.Text == "") || (txtIdSemillero1.Text == "") || (txtTitulo.Text == "") || (txtObjetivo.Text == "") || (txtDescripcion.Text == "") || (txtFechaInicio.Text == "") || (txtFechaFin.Text == ""))
             {
                 MessageBox.Show("Por favor, complete todos los campos.");
             }
             else
             {
-                SqlCommand insert;
-                try
+                int idProyecto = int.Parse(txtProyecto.Text);
+                int idSemillero = int.Parse(txtIdSemillero1.Text);
+                string tituloProyecto = txtTitulo.Text;
+                string objetivoProyecto = txtObjetivo.Text;
+                string descripcionProyecto = txtDescripcion.Text;
+                DateTime fechaInicioProyecto = DateTime.Parse(txtFechaInicio.Text);
+                DateTime fechaFinProyecto = DateTime.Parse(txtFechaFin.Text);
+
+                if (modoEdicion == true)
                 {
-                    insert = new SqlCommand("INSERT INTO Proyectos (idProyecto, idSemillero, tituloProyecto, objetivoProyecto, descripcionProyecto, fechaInicioProyecto, fechaFinProyecto) " +
-                        "VALUES (@idProyecto, @idSemillero, @tituloProyecto, @objetivoProyecto, @descripcionProyecto, @fechaInicioProyecto, @fechaFinProyecto)",
-                        conexion.Conectar()
-                    );
-                    insert.CommandType = CommandType.Text;
-                    insert.Parameters.AddWithValue("@idProyecto", idProyecto);
-                    insert.Parameters.AddWithValue("@idSemillero", idSemillero);
-                    insert.Parameters.AddWithValue("@tituloProyecto", tituloProyecto);
-                    insert.Parameters.AddWithValue("@objetivoProyecto", objetivoProyecto);
-                    insert.Parameters.AddWithValue("@descripcionProyecto", descripcionProyecto);
-                    insert.Parameters.AddWithValue("@fechaInicioProyecto", fechaInicioProyecto);
-                    insert.Parameters.AddWithValue("@fechaFinProyecto", fechaFinProyecto);
-                    insert.ExecuteNonQuery();
-                    MessageBox.Show("Proyecto guardado correctamente");
-                    // cerrar conexión 
-                    conexion.cerrar();
-                    // cerrar formulario
-                    this.Close();
+                    SqlCommand update;
+                    try
+                    {
+                        update = new SqlCommand("UPDATE Proyectos SET idSemillero = @idSemillero, tituloProyecto = @tituloProyecto, objetivoProyecto = @objetivoProyecto, descripcionProyecto = @descripcionProyecto, fechaInicioProyecto = @fechaInicioProyecto, fechaFinProyecto = @fechaFinProyecto WHERE idProyecto = @idProyecto", conexion.Conectar());
+                        update.Parameters.AddWithValue("@idProyecto", idProyecto);
+                        update.Parameters.AddWithValue("@idSemillero", idSemillero);
+                        update.Parameters.AddWithValue("@tituloProyecto", tituloProyecto);
+                        update.Parameters.AddWithValue("@objetivoProyecto", objetivoProyecto);
+                        update.Parameters.AddWithValue("@descripcionProyecto", descripcionProyecto);
+                        update.Parameters.AddWithValue("@fechaInicioProyecto", fechaInicioProyecto);
+                        update.Parameters.AddWithValue("@fechaFinProyecto", fechaFinProyecto);
+                        update.ExecuteNonQuery();
+                        MessageBox.Show("Proyecto modificado correctamente");
+                        conexion.cerrar();
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
-                }
+                    SqlCommand insert;
+                    try
+                    {
+                        insert = new SqlCommand("INSERT INTO Proyectos (idProyecto, idSemillero, tituloProyecto, objetivoProyecto, descripcionProyecto, fechaInicioProyecto, fechaFinProyecto) " +
+                            "VALUES (@idProyecto, @idSemillero, @tituloProyecto, @objetivoProyecto, @descripcionProyecto, @fechaInicioProyecto, @fechaFinProyecto)",
+                            conexion.Conectar()
+                        );
+                        insert.CommandType = CommandType.Text;
+                        insert.Parameters.AddWithValue("@idProyecto", idProyecto);
+                        insert.Parameters.AddWithValue("@idSemillero", idSemillero);
+                        insert.Parameters.AddWithValue("@tituloProyecto", tituloProyecto);
+                        insert.Parameters.AddWithValue("@objetivoProyecto", objetivoProyecto);
+                        insert.Parameters.AddWithValue("@descripcionProyecto", descripcionProyecto);
+                        insert.Parameters.AddWithValue("@fechaInicioProyecto", fechaInicioProyecto);
+                        insert.Parameters.AddWithValue("@fechaFinProyecto", fechaFinProyecto);
+                        insert.ExecuteNonQuery();
+                        MessageBox.Show("Evento guardado correctamente");
+                        // cerrar conexión (como ya la tienes global)
+                        conexion.cerrar();
+                        // cerrar formulario
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }           
             }
         }
 
         private void btnAgregarReporte_Click(object sender, EventArgs e)
         {
-            int idReporte = int.Parse(txtIdReporte.Text);
-            int idUsuario = int.Parse(txtIdUsuario2.Text);
-            DateTime fechaReporte = DateTime.Parse(txtFechaReporte.Text);
-            DateTime horaReporte = DateTime.Parse(txtHoraReporte.Text);
-            string motivoReporte = (txtMotivo.Text);
-
             if ((txtIdReporte.Text == "") || (txtIdUsuario2.Text == "") || (txtFechaReporte.Text == "") || (txtHoraReporte.Text == "") || (txtMotivo.Text == ""))
             {
                 MessageBox.Show("Por favor, complete todos los campos.");
             }
             else
             {
-                SqlCommand insert;
-                try
+                int idReporte = int.Parse(txtIdReporte.Text);
+                int idUsuario = int.Parse(txtIdUsuario2.Text);
+                DateTime fechaReporte = DateTime.Parse(txtFechaReporte.Text);
+                DateTime horaReporte = DateTime.Parse(txtHoraReporte.Text);
+                string motivoReporte = (txtMotivo.Text);
+
+                if (modoEdicion == true)
                 {
-                    insert = new SqlCommand("INSERT INTO Reportes (idReporte, idUsuario, fechaReporte, horaReporte, motivoReporte) " +
-                        "VALUES (@idReporte, @idUsuario, @fechaReporte, @horaReporte, @motivoReporte)",
-                        conexion.Conectar()
-                    );
-                    insert.CommandType = CommandType.Text;
-                    insert.Parameters.AddWithValue("@idReporte", idReporte);
-                    insert.Parameters.AddWithValue("@idUsuario", idUsuario);
-                    insert.Parameters.AddWithValue("@fechaReporte", fechaReporte);
-                    insert.Parameters.AddWithValue("@horaReporte", horaReporte);
-                    insert.Parameters.AddWithValue("@motivoReporte", motivoReporte);
-                    insert.ExecuteNonQuery();
-                    MessageBox.Show("Reporte guardado correctamente");
-                    // cerrar conexión 
-                    conexion.cerrar();
-                    // cerrar formulario
-                    this.Close();
+                    SqlCommand update;
+                    try
+                    {
+                        update = new SqlCommand("UPDATE Reportes SET idUsuario = @idUsuario, fechaReporte = @fechaReporte, horaReporte = @horaReporte, motivoReporte = @motivoReporte WHERE idReporte = @idReporte", conexion.Conectar());
+                        update.Parameters.AddWithValue("@idReporte", idReporte);
+                        update.Parameters.AddWithValue("@idUsuario", idUsuario);
+                        update.Parameters.AddWithValue("@fechaReporte", fechaReporte);
+                        update.Parameters.AddWithValue("@horaReporte", horaReporte);
+                        update.Parameters.AddWithValue("@motivoReporte", motivoReporte);
+                        update.ExecuteNonQuery();
+                        MessageBox.Show("Reporte modificado correctamente");
+                        conexion.cerrar();
+                        this.Close();
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    SqlCommand insert;
+                    try
+                    {
+                        insert = new SqlCommand("INSERT INTO Reportes (idReporte, idUsuario, fechaReporte, horaReporte, motivoReporte) " +
+                            "VALUES (@idReporte, @idUsuario, @fechaReporte, @horaReporte, @motivoReporte)",
+                            conexion.Conectar()
+                        );
+                        insert.CommandType = CommandType.Text;
+                        insert.Parameters.AddWithValue("@idReporte", idReporte);
+                        insert.Parameters.AddWithValue("@idUsuario", idUsuario);
+                        insert.Parameters.AddWithValue("@fechaReporte", fechaReporte);
+                        insert.Parameters.AddWithValue("@horaReporte", horaReporte);
+                        insert.Parameters.AddWithValue("@motivoReporte", motivoReporte);
+                        insert.ExecuteNonQuery();
+                        MessageBox.Show("Reporte guardado correctamente");
+                        // cerrar conexión 
+                        conexion.cerrar();
+                        // cerrar formulario
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
             }
         }
@@ -389,45 +552,67 @@ namespace Proyecto_Semillero
 
         private void btnAgregarPatro_Click(object sender, EventArgs e)
         {
-            int idPatrocinador = int.Parse(txtIdpatro.Text);
-            string nombrePatrocinador = txtNombrePatro.Text;
-            string txtTipoPatrocinador = txtTipoPatro.Text;
-            long telefonoPatrocinador = long.Parse(txtTelefonoPatro.Text);
-            string correoPatrocinador = txtCorreoPatro.Text;
-
             if ((txtIdpatro.Text == "") || (txtNombrePatro.Text == "") || (txtTipoPatro.Text == "") || (txtTelefonoPatro.Text == "") || (txtCorreoPatro.Text == ""))
             {
                 MessageBox.Show("Por favor, complete todos los campos.");
             }
             else
             {
-                SqlCommand insert;
-                try
+                int idPatrocinador = int.Parse(txtIdpatro.Text);
+                string nombrePatrocinador = txtNombrePatro.Text;
+                string tipoPatrocinador = txtTipoPatro.Text;
+                long telefonoPatrocinador = long.Parse(txtTelefonoPatro.Text);
+                string correoPatrocinador = txtCorreoPatro.Text;
+
+                if (modoEdicion == true)
                 {
-                    insert = new SqlCommand("INSERT INTO Patrocinadores (idPatrocinador, nombrePatrocinador, tipoPatrocinador, telefonoPatrocinador, correoPatrocinador) " +
-                        "VALUES (@idPatrocinador, @nombrePatrocinador, @tipoPatrocinador, @telefonoPatrocinador, @correoPatrocinador)",
-                        conexion.Conectar()
-                    );
-                    insert.CommandType = CommandType.Text;
-                    insert.Parameters.AddWithValue("@idPatrocinador", idPatrocinador);
-                    insert.Parameters.AddWithValue("@nombrePatrocinador", nombrePatrocinador);
-                    insert.Parameters.AddWithValue("@tipoPatrocinador", txtTipoPatro);
-                    insert.Parameters.AddWithValue("@telefonoPatrocinador", telefonoPatrocinador);
-                    insert.Parameters.AddWithValue("@correoPatrocinador", correoPatrocinador);
-                    insert.ExecuteNonQuery();
-                    MessageBox.Show("Patrocinador guardado correctamente");
-                    // cerrar conexión 
-                    conexion.cerrar();
-                    // cerrar formulario
-                    this.Close();
+                    SqlCommand update;
+                    try
+                    {
+                        update = new SqlCommand("UPDATE Patrocinadores SET nombrePatrocinador = @nombrePatrocinador, tipoPatrocinador = @tipoPatrocinador, telefonoPatrocinador = @telefonoPatrocinador, correoPatrocinador = @correoPatrocinador WHERE idPatrocinador = @idPatrocinador", conexion.Conectar());
+                        update.Parameters.AddWithValue("@idPatrocinador", idPatrocinador);
+                        update.Parameters.AddWithValue("@nombrePatrocinador", nombrePatrocinador);
+                        update.Parameters.AddWithValue("@tipoPatrocinador", tipoPatrocinador);
+                        update.Parameters.AddWithValue("@telefonoPatrocinador", telefonoPatrocinador);
+                        update.Parameters.AddWithValue("@correoPatrocinador", correoPatrocinador);
+                        update.ExecuteNonQuery();
+                        MessageBox.Show("Patrocinador modificado correctamente");
+                        conexion.cerrar();
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    SqlCommand insert;
+                    try
+                    {
+                        insert = new SqlCommand("INSERT INTO Patrocinadores (idPatrocinador, nombrePatrocinador, tipoPatrocinador, telefonoPatrocinador, correoPatrocinador) " +
+                            "VALUES (@idPatrocinador, @nombrePatrocinador, @tipoPatrocinador, @telefonoPatrocinador, @correoPatrocinador)",
+                            conexion.Conectar()
+                        );
+                        insert.CommandType = CommandType.Text;
+                        insert.Parameters.AddWithValue("@idPatrocinador", idPatrocinador);
+                        insert.Parameters.AddWithValue("@nombrePatrocinador", nombrePatrocinador);
+                        insert.Parameters.AddWithValue("@tipoPatrocinador", tipoPatrocinador);
+                        insert.Parameters.AddWithValue("@telefonoPatrocinador", telefonoPatrocinador);
+                        insert.Parameters.AddWithValue("@correoPatrocinador", correoPatrocinador);
+                        insert.ExecuteNonQuery();
+                        MessageBox.Show("Patrocinador guardado correctamente");
+                        // cerrar conexión 
+                        conexion.cerrar();
+                        // cerrar formulario
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
             }
-        }
-
-        
+        }   
     }
 }

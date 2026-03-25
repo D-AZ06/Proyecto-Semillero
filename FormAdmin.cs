@@ -17,13 +17,9 @@ namespace Proyecto_Semillero
     {
         Conexion conexion = new Conexion(); // creamos una instancia de la clase Conexion para establecer la conexion a la base de datos
         DataSet dataset = new DataSet(); // (conjunto de datos) creamos la variable dt con tipo DataTable para almacenar los resultados de las consultas a la base de datos
-
-
-        
-        string formularioActual = ""; // variable para almacenar el nombre del formulario actual que se esta mostrando en el DataGridView
         ConsultarConParametro consultarConParametro = new ConsultarConParametro(); // creamos una instancia de la clase ConsultarConParametro para utilizar sus métodos de consulta con parámetros
 
-      
+        string formularioActual = ""; // variable para almacenar el nombre del formulario actual que se esta mostrando en el DataGridView
 
         public FormAdmin()
         {
@@ -33,9 +29,7 @@ namespace Proyecto_Semillero
             {
                 btnRegistrar.Enabled = false; // deshabilitamos el botón de consulta con parámetros si no se ha seleccionado un formulario para mostrar en el DataGridView
                 btnModificar.Enabled = false;
-            }
-
-           
+            }  
         }
 
         private void FormAdmin_Load(object sender, EventArgs e)
@@ -86,11 +80,6 @@ namespace Proyecto_Semillero
             btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;
             lbl_gestionar.Text = "Gestionar Usuarios";
-
-
-         
-
-
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -171,6 +160,7 @@ namespace Proyecto_Semillero
             FormAgregar frm = new FormAgregar();
             frm.tipo = formularioActual; // asignamos el valor del formulario actual a la propiedad tipo del formulario FormAgregar para que sepa qué tipo de registro se va a agregar
             frm.ShowDialog();
+            Gestionar(formularioActual);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -186,6 +176,24 @@ namespace Proyecto_Semillero
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Selecciona un registro");
+                return;
+            }
+
+            FormAgregar frm = new FormAgregar();
+
+            frm.tipo = formularioActual; // ya lo tienes
+            frm.modoEdicion = true; // 🔥 ACTIVAS MODO MODIFICAR
+            frm.filaSeleccionada = dataGridView1.CurrentRow; // 🔥 ENVÍAS LOS DATOS
+
+            frm.ShowDialog();
+            Gestionar(formularioActual);
         }
     }
 }
