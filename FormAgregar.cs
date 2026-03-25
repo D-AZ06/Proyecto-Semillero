@@ -168,85 +168,101 @@ namespace Proyecto_Semillero
 
         private void btnAgregarUsuario_Click_1(object sender, EventArgs e)
         {
-            if (txtIdUsuario.Text.Trim() == "" || txtContraseña.Text.Trim() == "" || txtNombre.Text.Trim() == "" || cboRol.Text == "" || txtTelefonoUsuario.Text.Trim() == "" ||  txtCorreoUsuario.Text.Trim() == "" || txtEdadUsuario.Text.Trim() == "" || cboGeneroUsuario.Text == "" ||  cboEstado.Text == "")
+           
+            if (txtIdUsuario.Text.Trim() == "" ||
+                txtContraseña.Text.Trim() == "" ||
+                txtNombre.Text.Trim() == "" ||
+                cboRol.Text == "" ||
+                txtTelefonoUsuario.Text.Trim() == "" ||
+                txtCorreoUsuario.Text.Trim() == "" ||
+                txtEdadUsuario.Text.Trim() == "" ||
+                cboGeneroUsuario.Text == "" ||
+                cboEstado.Text == "")
             {
                 MessageBox.Show("Complete todos los campos");
                 return;
             }
-            else
+
+            // Validamos que el ID del usuario sea un número entero
+            string rol = cboRol.Text;
+            int? idSemillero = null;// Inicializamos idSemillero como null, ya que no es obligatorio para el rol de Administrador el ? permite que la variable pueda ser null, lo cual es útil para manejar el caso en el que el usuario sea un Administrador y no tenga un semillero asociado.
+
+
+
+
+
+            if (rol != "Administrador")
             {
-                string idUsuario = txtIdUsuario.Text;
-                string idSemillero = txtIdSemillero3.Text;
-                string contraseña = txtContraseña.Text;
-                string nombre = txtNombre.Text;
-                string rol = cboRol.Text;
-                long telefono = long.Parse(txtTelefonoUsuario.Text);
-                string correo = txtCorreoUsuario.Text;
-                int edad = int.Parse(txtEdadUsuario.Text);
-                string genero = cboGeneroUsuario.Text;
-                string estado = cboEstado.Text;
-
-                if (modoEdicion == true)
+                if (txtIdSemillero3.Text.Trim() == "")
                 {
-                    SqlCommand update;
-                    try
-                    {
-                        update = new SqlCommand("UPDATE Usuario SET nombresUsuario=@nombre, contraseñaUsuario=@contraseña, idSemillero=@idSemillero, rolUsuario=@rol, telefonoUsuario=@telefono, correoUsuario=@correo, edadUsuario=@edad, generoUsuario=@genero, estadoUsuario=@estado WHERE idUsuario=@idUsuario",conexion.Conectar());
-                        update.Parameters.AddWithValue("@idUsuario", idUsuario);
-                        update.Parameters.AddWithValue("@idSemillero", idSemillero);
-                        update.Parameters.AddWithValue("@nombre", nombre);
-                        update.Parameters.AddWithValue("@contraseña", contraseña);
-                        update.Parameters.AddWithValue("@rol", rol);
-                        update.Parameters.AddWithValue("@telefono", telefono);
-                        update.Parameters.AddWithValue("@correo", correo);
-                        update.Parameters.AddWithValue("@edad", edad);
-                        update.Parameters.AddWithValue("@genero", genero);
-                        update.Parameters.AddWithValue("@estado", estado);
-
-                        update.ExecuteNonQuery();
-
-                        MessageBox.Show("Usuario modificado correctamente");
-                        conexion.cerrar();
-                        this.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message);
-                    }
+                    MessageBox.Show("Debe ingresar el ID del semillero");
+                    return;
                 }
-                else 
+
+                int idSem = int.Parse(txtIdSemillero3.Text);// Convertimos el texto del ID del semillero a un número entero para poder realizar la consulta a la base de datos y verificar si el semillero existe.
+
+                // Validamos que el ID del semillero exista en la base de datos
+                SqlCommand validar = new SqlCommand(
+                    "select count(*) from Semillero where idSemillero = @idSemillero",
+                    conexion.Conectar()
+                );
+
+                validar.Parameters.AddWithValue("@idSemillero", idSem);
+
+                int existe = (int)validar.ExecuteScalar();// Ejecutamos la consulta y obtenemos el resultado, que es el número de registros que coinciden con el ID del semillero ingresado. Si el resultado es 0,
+                                                          // significa que el semillero no existe en la base de datos, por lo que se muestra un mensaje de error al usuario y se cierra la conexión a la base de datos.
+
+                if (existe == 0)
                 {
-                    try
-                    {
-                        SqlCommand insert = new SqlCommand(
-                            "INSERT INTO Usuario (idUsuario, idSemillero, contraseñaUsuario, nombresUsuario, rolUsuario, telefonoUsuario, correoUsuario, edadUsuario, generoUsuario, estadoUsuario) " +
-                            "VALUES (@idUsuario, @idSemillero, @contraseña, @nombre, @rol, @telefono, @correo, @edad, @genero, @estado)",
-                            conexion.Conectar()
-                        );
-
-                        insert.Parameters.AddWithValue("@idUsuario", idUsuario);
-                        insert.Parameters.AddWithValue("@idSemillero", (object)idSemillero ?? DBNull.Value);
-                        insert.Parameters.AddWithValue("@contraseña", contraseña);
-                        insert.Parameters.AddWithValue("@nombre", nombre);
-                        insert.Parameters.AddWithValue("@rol", rol);
-                        insert.Parameters.AddWithValue("@telefono", telefono);
-                        insert.Parameters.AddWithValue("@correo", correo);
-                        insert.Parameters.AddWithValue("@edad", edad);
-                        insert.Parameters.AddWithValue("@genero", genero);
-                        insert.Parameters.AddWithValue("@estado", estado);
-
-                        insert.ExecuteNonQuery();
-
-                        MessageBox.Show("Usuario guardado correctamente");
-                        conexion.cerrar();
-                        this.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message);
-                    }
+                    MessageBox.Show("El semillero no existe");
+                    conexion.cerrar();
+                    return;
                 }
+
+                idSemillero = idSem;// Si el semillero existe, asignamos su ID a la variable idSemillero para que pueda ser utilizada posteriormente al insertar el nuevo usuario en la base de datos.
             }
+
+            string contraseña = txtContraseña.Text;
+            string nombre = txtNombre.Text;
+            string correo = txtCorreoUsuario.Text;
+            string genero = cboGeneroUsuario.Text;
+            string estado = cboEstado.Text;
+            int idUsuario = int.Parse(txtIdUsuario.Text);
+            long telefono = long.Parse(txtTelefonoUsuario.Text);
+            int edad = int.Parse(txtEdadUsuario.Text);
+          
+
+
+            try
+            {
+                SqlCommand insert = new SqlCommand(
+                    "INSERT INTO Usuario (idUsuario, idSemillero, contraseñaUsuario, nombresUsuario, rolUsuario, telefonoUsuario, correoUsuario, edadUsuario, generoUsuario, estadoUsuario) " +
+                    "VALUES (@idUsuario, @idSemillero, @contraseña, @nombre, @rol, @telefono, @correo, @edad, @genero, @estado)",
+                    conexion.Conectar()
+                );
+
+                insert.Parameters.AddWithValue("@idUsuario", idUsuario);
+                insert.Parameters.AddWithValue("@idSemillero", (object)idSemillero ?? DBNull.Value);
+                insert.Parameters.AddWithValue("@contraseña", contraseña);
+                insert.Parameters.AddWithValue("@nombre", nombre);
+                insert.Parameters.AddWithValue("@rol", rol);
+                insert.Parameters.AddWithValue("@telefono", telefono);
+                insert.Parameters.AddWithValue("@correo", correo);
+                insert.Parameters.AddWithValue("@edad", edad);
+                insert.Parameters.AddWithValue("@genero", genero);
+                insert.Parameters.AddWithValue("@estado", estado);
+
+                insert.ExecuteNonQuery();
+
+                MessageBox.Show("Usuario guardado correctamente");
+                conexion.cerrar();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        
             
         }
 
@@ -327,7 +343,12 @@ namespace Proyecto_Semillero
 
         private void btnAgregarEvent_Click(object sender, EventArgs e)
         {
-            if ((txtIdEvento.Text == "") || (txtLugarEven.Text == "") || (txtNombreEven.Text == "") || (txtTipoEven.Text == "") || (txtFechaEven.Text == "") || (txtOrgEvento.Text == ""))
+            if ((txtIdEvento.Text == "") || 
+                (txtLugarEven.Text == "") || 
+                (txtNombreEven.Text == "") || 
+                (txtTipoEven.Text == "") || 
+                (txtFechaEven.Text == "") || 
+                (txtOrgEvento.Text == ""))
             {
                 MessageBox.Show("Por favor, complete todos los campos.");
             }

@@ -51,7 +51,7 @@ namespace Proyecto_Semillero
                     {
                         if (Convert.ToString(idUsuario) == datarow["idUsuario"].ToString() && contraseñaUsuario == datarow["contraseñaUsuario"].ToString() && "Investigador" == datarow["rolUsuario"].ToString()) // verificamos si el id_usuario y el password_usuario ingresados por el usuario coinciden con los resultados de la consulta a la base de datos
                         {
-                            MessageBox.Show("Bienvenido Lider");
+                            MessageBox.Show("Bienvenido Investigador");
                             Form_invest rf = new Form_invest();
                             rf.Show();
                             Estado_conexion = true;
