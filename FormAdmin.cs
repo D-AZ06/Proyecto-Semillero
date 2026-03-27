@@ -64,6 +64,7 @@ namespace Proyecto_Semillero
 
         private void btn_gestionar_reportes_Click(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = null;
             Gestionar("Reportes");
             formularioActual = "Reportes";
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
@@ -74,6 +75,7 @@ namespace Proyecto_Semillero
 
         private void btn_gestionar_usuarios_Click(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = null;
             Gestionar("Usuario");
             formularioActual = "Usuario";
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
@@ -84,6 +86,7 @@ namespace Proyecto_Semillero
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = null;
             Gestionar("Semillero");
             formularioActual = "Semillero";
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
@@ -94,6 +97,7 @@ namespace Proyecto_Semillero
 
         private void btn_proyecto_Click(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = null;
             Gestionar("Proyectos");
             formularioActual = "Proyectos";
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
@@ -104,6 +108,7 @@ namespace Proyecto_Semillero
 
         private void btn_eventos_Click(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = null;
             Gestionar("Eventos");
             formularioActual = "Eventos";
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
@@ -114,6 +119,7 @@ namespace Proyecto_Semillero
 
         private void btn_patrocinadores_Click(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = null;
             Gestionar("Patrocinadores");
             formularioActual = "Patrocinadores";
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
@@ -140,14 +146,15 @@ namespace Proyecto_Semillero
         }
          private void btnconsultalp_Click_1(object sender, EventArgs e)
          {
-            string columna = cboConsultarParametro.SelectedItem?.ToString();
-            string valor = txtParametro.Text;
-
             if ((cboConsultarParametro.SelectedIndex == 0) || txtParametro.Text == "")
             {
                 MessageBox.Show("Seleccione un parámetro y escriba un valor.");
                 return;
             }
+            dataGridView1.DataSource = null;
+
+            string columna = cboConsultarParametro.SelectedItem?.ToString();
+            string valor = txtParametro.Text;
 
             DataTable resultados = ConsultarConParametro.ConsultarParametro(formularioActual, columna, valor, conexion);
 
