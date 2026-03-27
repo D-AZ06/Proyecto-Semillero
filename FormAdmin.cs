@@ -71,6 +71,7 @@ namespace Proyecto_Semillero
             btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;
             lbl_gestionar.Text = "Gestionar Reportes";
+            txtParametro.Clear(); // Limpiar el TextBox de parámetros al cambiar de formulario
         }
 
         private void btn_gestionar_usuarios_Click(object sender, EventArgs e)
@@ -82,6 +83,7 @@ namespace Proyecto_Semillero
             btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;
             lbl_gestionar.Text = "Gestionar Usuarios";
+            txtParametro.Clear();
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -93,6 +95,7 @@ namespace Proyecto_Semillero
             btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;
             lbl_gestionar.Text = "Gestionar Semilleros";
+            txtParametro.Clear();
         }
 
         private void btn_proyecto_Click(object sender, EventArgs e)
@@ -104,6 +107,7 @@ namespace Proyecto_Semillero
             btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;
             lbl_gestionar.Text = "Gestionar Proyectos";
+            txtParametro.Clear();
         }
 
         private void btn_eventos_Click(object sender, EventArgs e)
@@ -115,6 +119,7 @@ namespace Proyecto_Semillero
             btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;
             lbl_gestionar.Text = "Gestionar Eventos";
+            txtParametro.Clear();
         }
 
         private void btn_patrocinadores_Click(object sender, EventArgs e)
@@ -126,6 +131,7 @@ namespace Proyecto_Semillero
             btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;
             lbl_gestionar.Text = "Gestionar Patrocinadores";
+            txtParametro.Clear();
         }
 
         private void btbsalir_Click(object sender, EventArgs e)

@@ -56,6 +56,7 @@
             this.txtParametro = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnconsultalp = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
             this.Panel1.SuspendLayout();
             this.Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,7 +78,7 @@
             this.Panel1.Controls.Add(this.btn_gestionar_usuarios);
             this.Panel1.Controls.Add(this.label1);
             this.Panel1.Location = new System.Drawing.Point(17, 92);
-            this.Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(343, 699);
             this.Panel1.TabIndex = 0;
@@ -94,7 +95,7 @@
             this.btn_patrocinadores.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_patrocinadores.ForeColor = System.Drawing.Color.White;
             this.btn_patrocinadores.Location = new System.Drawing.Point(36, 542);
-            this.btn_patrocinadores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_patrocinadores.Margin = new System.Windows.Forms.Padding(4);
             this.btn_patrocinadores.Name = "btn_patrocinadores";
             this.btn_patrocinadores.Size = new System.Drawing.Size(256, 42);
             this.btn_patrocinadores.TabIndex = 9;
@@ -114,7 +115,7 @@
             this.btn_eventos.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_eventos.ForeColor = System.Drawing.Color.White;
             this.btn_eventos.Location = new System.Drawing.Point(36, 368);
-            this.btn_eventos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_eventos.Margin = new System.Windows.Forms.Padding(4);
             this.btn_eventos.Name = "btn_eventos";
             this.btn_eventos.Size = new System.Drawing.Size(256, 42);
             this.btn_eventos.TabIndex = 8;
@@ -134,7 +135,7 @@
             this.btn_proyecto.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_proyecto.ForeColor = System.Drawing.Color.White;
             this.btn_proyecto.Location = new System.Drawing.Point(36, 279);
-            this.btn_proyecto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_proyecto.Margin = new System.Windows.Forms.Padding(4);
             this.btn_proyecto.Name = "btn_proyecto";
             this.btn_proyecto.Size = new System.Drawing.Size(256, 42);
             this.btn_proyecto.TabIndex = 7;
@@ -166,7 +167,7 @@
             this.btn_gestionar_reportes.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_gestionar_reportes.ForeColor = System.Drawing.Color.White;
             this.btn_gestionar_reportes.Location = new System.Drawing.Point(36, 457);
-            this.btn_gestionar_reportes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_gestionar_reportes.Margin = new System.Windows.Forms.Padding(4);
             this.btn_gestionar_reportes.Name = "btn_gestionar_reportes";
             this.btn_gestionar_reportes.Size = new System.Drawing.Size(256, 42);
             this.btn_gestionar_reportes.TabIndex = 4;
@@ -185,7 +186,7 @@
             this.btn_semillero.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_semillero.ForeColor = System.Drawing.Color.White;
             this.btn_semillero.Location = new System.Drawing.Point(36, 192);
-            this.btn_semillero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_semillero.Margin = new System.Windows.Forms.Padding(4);
             this.btn_semillero.Name = "btn_semillero";
             this.btn_semillero.Size = new System.Drawing.Size(256, 42);
             this.btn_semillero.TabIndex = 3;
@@ -205,7 +206,7 @@
             this.btn_gestionar_usuarios.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_gestionar_usuarios.ForeColor = System.Drawing.Color.White;
             this.btn_gestionar_usuarios.Location = new System.Drawing.Point(40, 105);
-            this.btn_gestionar_usuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_gestionar_usuarios.Margin = new System.Windows.Forms.Padding(4);
             this.btn_gestionar_usuarios.Name = "btn_gestionar_usuarios";
             this.btn_gestionar_usuarios.Size = new System.Drawing.Size(256, 42);
             this.btn_gestionar_usuarios.TabIndex = 2;
@@ -232,7 +233,7 @@
             this.Panel2.Controls.Add(this.pictureBox1);
             this.Panel2.Controls.Add(this.btbsalir);
             this.Panel2.Location = new System.Drawing.Point(-3, -10);
-            this.Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.Panel2.Name = "Panel2";
             this.Panel2.Size = new System.Drawing.Size(1481, 90);
             this.Panel2.TabIndex = 1;
@@ -268,7 +269,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Proyecto_Semillero.Properties.Resources.Sin_título__5_;
             this.pictureBox1.Location = new System.Drawing.Point(655, 32);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(44, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -287,7 +288,7 @@
             this.btbsalir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btbsalir.ForeColor = System.Drawing.Color.White;
             this.btbsalir.Location = new System.Drawing.Point(1311, 31);
-            this.btbsalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btbsalir.Margin = new System.Windows.Forms.Padding(4);
             this.btbsalir.Name = "btbsalir";
             this.btbsalir.Size = new System.Drawing.Size(149, 32);
             this.btbsalir.TabIndex = 9;
@@ -296,12 +297,13 @@
             // 
             // Panel3
             // 
+            this.Panel3.Controls.Add(this.btnEliminar);
             this.Panel3.Controls.Add(this.dataGridView1);
             this.Panel3.Controls.Add(this.btnModificar);
             this.Panel3.Controls.Add(this.btnRegistrar);
             this.Panel3.Controls.Add(this.lbl_gestionar);
             this.Panel3.Location = new System.Drawing.Point(387, 186);
-            this.Panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel3.Margin = new System.Windows.Forms.Padding(4);
             this.Panel3.Name = "Panel3";
             this.Panel3.Size = new System.Drawing.Size(1071, 606);
             this.Panel3.TabIndex = 3;
@@ -333,12 +335,12 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGridView1.Location = new System.Drawing.Point(21, 47);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(869, 534);
+            this.dataGridView1.Size = new System.Drawing.Size(880, 534);
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -374,8 +376,8 @@
             this.btnModificar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(899, 113);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificar.Location = new System.Drawing.Point(921, 98);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(129, 42);
             this.btnModificar.TabIndex = 9;
@@ -392,8 +394,8 @@
             this.btnRegistrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(899, 52);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegistrar.Location = new System.Drawing.Point(921, 47);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(129, 42);
             this.btnRegistrar.TabIndex = 8;
@@ -406,7 +408,7 @@
             this.lbl_gestionar.BackColor = System.Drawing.Color.Transparent;
             this.lbl_gestionar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_gestionar.ForeColor = System.Drawing.Color.White;
-            this.lbl_gestionar.Location = new System.Drawing.Point(387, 20);
+            this.lbl_gestionar.Location = new System.Drawing.Point(387, 11);
             this.lbl_gestionar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_gestionar.Name = "lbl_gestionar";
             this.lbl_gestionar.Size = new System.Drawing.Size(76, 23);
@@ -417,7 +419,7 @@
             // 
             this.guna2Panel1.Controls.Add(this.groupBox1);
             this.guna2Panel1.Location = new System.Drawing.Point(387, 92);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1071, 86);
             this.guna2Panel1.TabIndex = 4;
@@ -432,9 +434,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(21, 4);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1029, 71);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
@@ -452,7 +454,7 @@
             this.cboConsultarParametro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cboConsultarParametro.ItemHeight = 30;
             this.cboConsultarParametro.Location = new System.Drawing.Point(195, 17);
-            this.cboConsultarParametro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboConsultarParametro.Margin = new System.Windows.Forms.Padding(4);
             this.cboConsultarParametro.Name = "cboConsultarParametro";
             this.cboConsultarParametro.Size = new System.Drawing.Size(329, 36);
             this.cboConsultarParametro.TabIndex = 9;
@@ -489,7 +491,7 @@
             this.btnconsultalp.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnconsultalp.ForeColor = System.Drawing.Color.White;
             this.btnconsultalp.Location = new System.Drawing.Point(820, 18);
-            this.btnconsultalp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnconsultalp.Margin = new System.Windows.Forms.Padding(4);
             this.btnconsultalp.Name = "btnconsultalp";
             this.btnconsultalp.Size = new System.Drawing.Size(199, 44);
             this.btnconsultalp.TabIndex = 7;
@@ -507,6 +509,24 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Selecciona la opcion";
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.BorderRadius = 15;
+            this.btnEliminar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEliminar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEliminar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEliminar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEliminar.FillColor = System.Drawing.Color.Red;
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(921, 148);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(129, 42);
+            this.btnEliminar.TabIndex = 11;
+            this.btnEliminar.Text = "Eliminar";
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -518,7 +538,7 @@
             this.Controls.Add(this.Panel3);
             this.Controls.Add(this.Panel2);
             this.Controls.Add(this.Panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAdmin";
             this.Text = "FormAdmin";
             this.Load += new System.EventHandler(this.FormAdmin_Load);
@@ -564,5 +584,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cboConsultarParametro;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2DataGridView dataGridView1;
+        private Guna.UI2.WinForms.Guna2Button btnEliminar;
     }
 }

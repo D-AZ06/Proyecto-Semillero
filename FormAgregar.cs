@@ -230,40 +230,65 @@ namespace Proyecto_Semillero
             int idUsuario = int.Parse(txtIdUsuario.Text);
             long telefono = long.Parse(txtTelefonoUsuario.Text);
             int edad = int.Parse(txtEdadUsuario.Text);
-          
 
-
-            try
+            if (modoEdicion == true)
             {
-                SqlCommand insert = new SqlCommand(
-                    "INSERT INTO Usuario (idUsuario, idSemillero, contraseñaUsuario, nombresUsuario, rolUsuario, telefonoUsuario, correoUsuario, edadUsuario, generoUsuario, estadoUsuario) " +
-                    "VALUES (@idUsuario, @idSemillero, @contraseña, @nombre, @rol, @telefono, @correo, @edad, @genero, @estado)",
-                    conexion.Conectar()
-                );
-
-                insert.Parameters.AddWithValue("@idUsuario", idUsuario);
-                insert.Parameters.AddWithValue("@idSemillero", (object)idSemillero ?? DBNull.Value);
-                insert.Parameters.AddWithValue("@contraseña", contraseña);
-                insert.Parameters.AddWithValue("@nombre", nombre);
-                insert.Parameters.AddWithValue("@rol", rol);
-                insert.Parameters.AddWithValue("@telefono", telefono);
-                insert.Parameters.AddWithValue("@correo", correo);
-                insert.Parameters.AddWithValue("@edad", edad);
-                insert.Parameters.AddWithValue("@genero", genero);
-                insert.Parameters.AddWithValue("@estado", estado);
-
-                insert.ExecuteNonQuery();
-
-                MessageBox.Show("Usuario guardado correctamente");
-                conexion.cerrar();
-                this.Close();
+                SqlCommand update;
+                try
+                {
+                    update = new SqlCommand("UPDATE Usuario SET idSemillero = @idSemillero, contraseñaUsuario = @contraseñaUsuario, nombresUsuario = @nombresUsuario, rolUsuario = @rolUsuario, telefonoUsuario = @telefonoUsuario, correoUsuario = @correoUsuario, edadUsuario = @edadUsuario, generoUsuario = @generoUsuario, estadoUsuario = @estadoUsuario WHERE idUsuario = @idUsuario", conexion.Conectar());
+                    update.Parameters.AddWithValue("@idUsuario", idUsuario);
+                    update.Parameters.AddWithValue("@idSemillero", (object)idSemillero ?? DBNull.Value); // Si idSemillero es null, se asigna DBNull.Value para evitar errores en la consulta SQL
+                    update.Parameters.AddWithValue("@contraseñaUsuario", contraseña);
+                    update.Parameters.AddWithValue("@nombresUsuario", nombre);
+                    update.Parameters.AddWithValue("@rolUsuario", rol);
+                    update.Parameters.AddWithValue("@telefonoUsuario", telefono);
+                    update.Parameters.AddWithValue("@correoUsuario", correo);
+                    update.Parameters.AddWithValue("@edadUsuario", edad);
+                    update.Parameters.AddWithValue("@generoUsuario", genero);
+                    update.Parameters.AddWithValue("@estadoUsuario", estado);
+                    update.ExecuteNonQuery();
+                    MessageBox.Show("Usuario modificado correctamente");
+                    conexion.cerrar();
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message);
+                try
+                {
+                    SqlCommand insert = new SqlCommand(
+                        "INSERT INTO Usuario (idUsuario, idSemillero, contraseñaUsuario, nombresUsuario, rolUsuario, telefonoUsuario, correoUsuario, edadUsuario, generoUsuario, estadoUsuario) " +
+                        "VALUES (@idUsuario, @idSemillero, @contraseña, @nombre, @rol, @telefono, @correo, @edad, @genero, @estado)",
+                        conexion.Conectar()
+                    );
+
+                    insert.Parameters.AddWithValue("@idUsuario", idUsuario);
+                    insert.Parameters.AddWithValue("@idSemillero", (object)idSemillero ?? DBNull.Value);
+                    insert.Parameters.AddWithValue("@contraseña", contraseña);
+                    insert.Parameters.AddWithValue("@nombre", nombre);
+                    insert.Parameters.AddWithValue("@rol", rol);
+                    insert.Parameters.AddWithValue("@telefono", telefono);
+                    insert.Parameters.AddWithValue("@correo", correo);
+                    insert.Parameters.AddWithValue("@edad", edad);
+                    insert.Parameters.AddWithValue("@genero", genero);
+                    insert.Parameters.AddWithValue("@estado", estado);
+
+                    insert.ExecuteNonQuery();
+
+                    MessageBox.Show("Usuario guardado correctamente");
+                    conexion.cerrar();
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
             }
-        
-            
         }
 
      
