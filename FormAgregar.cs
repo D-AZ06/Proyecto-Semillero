@@ -659,6 +659,29 @@ namespace Proyecto_Semillero
                     }
                 }
             }
-        }   
+        }
+
+        private void tabFases_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label44_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label45_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregarFas_Click(object sender, EventArgs e)
+        {
+            if ((txtIdFase1.Text == "") || (txtNombrePatro.Text == "") || (txtTipoPatro.Text == "") || (txtTelefonoPatro.Text == "") || (txtCorreoPatro.Text == ""))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+        }
     }
 }

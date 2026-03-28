@@ -29,7 +29,7 @@ namespace Proyecto_Semillero
             {
                 btnRegistrar.Enabled = false; // deshabilitamos el botón de consulta con parámetros si no se ha seleccionado un formulario para mostrar en el DataGridView
                 btnModificar.Enabled = false;
-            }  
+            }
         }
 
         private void FormAdmin_Load(object sender, EventArgs e)
@@ -133,7 +133,29 @@ namespace Proyecto_Semillero
             lbl_gestionar.Text = "Gestionar Patrocinadores";
             txtParametro.Clear();
         }
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            Gestionar("Fase");
+            formularioActual = "Fase";
+            ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
+            btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
+            btnModificar.Enabled = true;
+            lbl_gestionar.Text = "Gestionar Fases";
+            txtParametro.Clear();
+        }
 
+         private void btn_act_Click(object sender, EventArgs e)
+         {
+            dataGridView1.DataSource = null;
+            Gestionar("Actividad");
+            formularioActual = "Actividad";
+            ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
+            btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
+            btnModificar.Enabled = true;
+            lbl_gestionar.Text = "Gestionar Actividades";
+            txtParametro.Clear();
+         }
         private void btbsalir_Click(object sender, EventArgs e)
         {
 
@@ -143,15 +165,15 @@ namespace Proyecto_Semillero
                 salir.Show();//mostramos el formulario de inicio de sesión
                 this.Hide();//ocultamos el formulario actual (FormAdmin)
             }
-            
+
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
             guna2Panel1.BackColor = Color.FromArgb(20, 255, 255, 255);
         }
-         private void btnconsultalp_Click_1(object sender, EventArgs e)
-         {
+        private void btnconsultalp_Click_1(object sender, EventArgs e)
+        {
             if ((cboConsultarParametro.SelectedIndex == 0) || txtParametro.Text == "")
             {
                 MessageBox.Show("Seleccione un parámetro y escriba un valor.");
@@ -165,8 +187,8 @@ namespace Proyecto_Semillero
             DataTable resultados = ConsultarConParametro.ConsultarParametro(formularioActual, columna, valor, conexion);
 
             dataGridView1.DataSource = resultados;
-         }
-      
+        }
+
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
@@ -208,5 +230,8 @@ namespace Proyecto_Semillero
             frm.ShowDialog();
             Gestionar(formularioActual);
         }
+
+        
+
     }
 }
