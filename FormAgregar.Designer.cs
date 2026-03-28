@@ -136,31 +136,31 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabAgregar = new System.Windows.Forms.TabControl();
+            this.tabFases = new System.Windows.Forms.TabPage();
+            this.btnAgregarFas = new Guna.UI2.WinForms.Guna2Button();
+            this.label48 = new System.Windows.Forms.Label();
+            this.txtDuracion = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtNombreFas = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtProyecto1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.txtIdFase = new Guna.UI2.WinForms.Guna2TextBox();
             this.tabActividades = new System.Windows.Forms.TabPage();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
             this.btnAgregarAct = new Guna.UI2.WinForms.Guna2Button();
             this.txtIdAct = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtIdFase = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblactividades = new System.Windows.Forms.Label();
-            this.tabFases = new System.Windows.Forms.TabPage();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
             this.txtIdFase1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.txtProyecto1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtNombreFas = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtDuracion = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.btnAgregarFas = new Guna.UI2.WinForms.Guna2Button();
+            this.txtDuracionAct = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtFechaAct = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtNombreAct = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblactividades = new System.Windows.Forms.Label();
             this.tabPatroc.SuspendLayout();
             this.tabReportes.SuspendLayout();
             this.tabProyectos.SuspendLayout();
@@ -182,14 +182,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabAgregar.SuspendLayout();
-            this.tabActividades.SuspendLayout();
             this.tabFases.SuspendLayout();
+            this.tabActividades.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCerrar
             // 
             this.btnCerrar.Location = new System.Drawing.Point(334, 528);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(62, 23);
             this.btnCerrar.TabIndex = 1;
@@ -212,9 +212,9 @@
             this.tabPatroc.Controls.Add(this.txtIdpatro);
             this.tabPatroc.Controls.Add(this.lblpatroc);
             this.tabPatroc.Location = new System.Drawing.Point(4, 22);
-            this.tabPatroc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPatroc.Margin = new System.Windows.Forms.Padding(2);
             this.tabPatroc.Name = "tabPatroc";
-            this.tabPatroc.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPatroc.Padding = new System.Windows.Forms.Padding(2);
             this.tabPatroc.Size = new System.Drawing.Size(386, 487);
             this.tabPatroc.TabIndex = 5;
             this.tabPatroc.Text = "Patrocinadores";
@@ -416,9 +416,9 @@
             this.tabReportes.Controls.Add(this.txtIdReporte);
             this.tabReportes.Controls.Add(this.lblreporte);
             this.tabReportes.Location = new System.Drawing.Point(4, 22);
-            this.tabReportes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabReportes.Margin = new System.Windows.Forms.Padding(2);
             this.tabReportes.Name = "tabReportes";
-            this.tabReportes.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabReportes.Padding = new System.Windows.Forms.Padding(2);
             this.tabReportes.Size = new System.Drawing.Size(386, 487);
             this.tabReportes.TabIndex = 4;
             this.tabReportes.Text = "Reportes";
@@ -624,9 +624,9 @@
             this.tabProyectos.Controls.Add(this.txtProyecto);
             this.tabProyectos.Controls.Add(this.lblproyecto);
             this.tabProyectos.Location = new System.Drawing.Point(4, 22);
-            this.tabProyectos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabProyectos.Margin = new System.Windows.Forms.Padding(2);
             this.tabProyectos.Name = "tabProyectos";
-            this.tabProyectos.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabProyectos.Padding = new System.Windows.Forms.Padding(2);
             this.tabProyectos.Size = new System.Drawing.Size(386, 487);
             this.tabProyectos.TabIndex = 3;
             this.tabProyectos.Text = "Proyectos";
@@ -892,9 +892,9 @@
             this.tabEventos.Controls.Add(this.txtIdEvento);
             this.tabEventos.Controls.Add(this.lbleventos);
             this.tabEventos.Location = new System.Drawing.Point(4, 22);
-            this.tabEventos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabEventos.Margin = new System.Windows.Forms.Padding(2);
             this.tabEventos.Name = "tabEventos";
-            this.tabEventos.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabEventos.Padding = new System.Windows.Forms.Padding(2);
             this.tabEventos.Size = new System.Drawing.Size(386, 487);
             this.tabEventos.TabIndex = 2;
             this.tabEventos.Text = "Eventos";
@@ -1129,9 +1129,9 @@
             this.tabSemillero.Controls.Add(this.label11);
             this.tabSemillero.Controls.Add(this.lblsemillero);
             this.tabSemillero.Location = new System.Drawing.Point(4, 22);
-            this.tabSemillero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabSemillero.Margin = new System.Windows.Forms.Padding(2);
             this.tabSemillero.Name = "tabSemillero";
-            this.tabSemillero.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabSemillero.Padding = new System.Windows.Forms.Padding(2);
             this.tabSemillero.Size = new System.Drawing.Size(386, 487);
             this.tabSemillero.TabIndex = 1;
             this.tabSemillero.Text = "Semillero";
@@ -1360,9 +1360,9 @@
             this.tabUsuario.Controls.Add(this.label2);
             this.tabUsuario.Controls.Add(this.label1);
             this.tabUsuario.Location = new System.Drawing.Point(4, 22);
-            this.tabUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.tabUsuario.Name = "tabUsuario";
-            this.tabUsuario.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabUsuario.Padding = new System.Windows.Forms.Padding(2);
             this.tabUsuario.Size = new System.Drawing.Size(386, 487);
             this.tabUsuario.TabIndex = 0;
             this.tabUsuario.Text = "Usuario";
@@ -1660,7 +1660,7 @@
             "Activo",
             "Inactivo"});
             this.cboEstado.Location = new System.Drawing.Point(160, 382);
-            this.cboEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboEstado.Margin = new System.Windows.Forms.Padding(2);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(92, 21);
             this.cboEstado.TabIndex = 20;
@@ -1683,7 +1683,7 @@
             "Masculino",
             "Femenino"});
             this.cboGeneroUsuario.Location = new System.Drawing.Point(162, 334);
-            this.cboGeneroUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboGeneroUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.cboGeneroUsuario.Name = "cboGeneroUsuario";
             this.cboGeneroUsuario.Size = new System.Drawing.Size(92, 21);
             this.cboGeneroUsuario.TabIndex = 18;
@@ -1698,7 +1698,7 @@
             "Lider",
             "Investigador"});
             this.cboRol.Location = new System.Drawing.Point(162, 173);
-            this.cboRol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboRol.Margin = new System.Windows.Forms.Padding(2);
             this.cboRol.Name = "cboRol";
             this.cboRol.Size = new System.Drawing.Size(92, 21);
             this.cboRol.TabIndex = 17;
@@ -1795,164 +1795,11 @@
             this.tabAgregar.Controls.Add(this.tabReportes);
             this.tabAgregar.Controls.Add(this.tabPatroc);
             this.tabAgregar.Location = new System.Drawing.Point(6, 11);
-            this.tabAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.tabAgregar.Name = "tabAgregar";
             this.tabAgregar.SelectedIndex = 0;
             this.tabAgregar.Size = new System.Drawing.Size(394, 513);
             this.tabAgregar.TabIndex = 0;
-            // 
-            // tabActividades
-            // 
-            this.tabActividades.Controls.Add(this.label49);
-            this.tabActividades.Controls.Add(this.label43);
-            this.tabActividades.Controls.Add(this.label42);
-            this.tabActividades.Controls.Add(this.label41);
-            this.tabActividades.Controls.Add(this.label40);
-            this.tabActividades.Controls.Add(this.label39);
-            this.tabActividades.Controls.Add(this.btnAgregarAct);
-            this.tabActividades.Controls.Add(this.txtIdAct);
-            this.tabActividades.Controls.Add(this.txtIdFase);
-            this.tabActividades.Controls.Add(this.guna2TextBox3);
-            this.tabActividades.Controls.Add(this.guna2TextBox2);
-            this.tabActividades.Controls.Add(this.guna2TextBox1);
-            this.tabActividades.Controls.Add(this.lblactividades);
-            this.tabActividades.Location = new System.Drawing.Point(4, 22);
-            this.tabActividades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabActividades.Name = "tabActividades";
-            this.tabActividades.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabActividades.Size = new System.Drawing.Size(386, 487);
-            this.tabActividades.TabIndex = 6;
-            this.tabActividades.Text = "Actividades";
-            this.tabActividades.UseVisualStyleBackColor = true;
-            // 
-            // btnAgregarAct
-            // 
-            this.btnAgregarAct.BorderRadius = 15;
-            this.btnAgregarAct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregarAct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregarAct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAgregarAct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAgregarAct.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAgregarAct.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarAct.Location = new System.Drawing.Point(128, 345);
-            this.btnAgregarAct.Name = "btnAgregarAct";
-            this.btnAgregarAct.Size = new System.Drawing.Size(94, 35);
-            this.btnAgregarAct.TabIndex = 44;
-            this.btnAgregarAct.Text = "Agregar";
-            // 
-            // txtIdAct
-            // 
-            this.txtIdAct.BorderRadius = 10;
-            this.txtIdAct.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIdAct.DefaultText = "";
-            this.txtIdAct.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtIdAct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtIdAct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdAct.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdAct.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdAct.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtIdAct.ForeColor = System.Drawing.Color.Black;
-            this.txtIdAct.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdAct.Location = new System.Drawing.Point(179, 69);
-            this.txtIdAct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtIdAct.Name = "txtIdAct";
-            this.txtIdAct.PlaceholderText = "";
-            this.txtIdAct.SelectedText = "";
-            this.txtIdAct.Size = new System.Drawing.Size(90, 20);
-            this.txtIdAct.TabIndex = 37;
-            // 
-            // txtIdFase
-            // 
-            this.txtIdFase.BorderRadius = 10;
-            this.txtIdFase.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIdFase.DefaultText = "";
-            this.txtIdFase.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtIdFase.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtIdFase.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdFase.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdFase.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdFase.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtIdFase.ForeColor = System.Drawing.Color.Black;
-            this.txtIdFase.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdFase.Location = new System.Drawing.Point(179, 121);
-            this.txtIdFase.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtIdFase.Name = "txtIdFase";
-            this.txtIdFase.PlaceholderText = "";
-            this.txtIdFase.SelectedText = "";
-            this.txtIdFase.Size = new System.Drawing.Size(90, 20);
-            this.txtIdFase.TabIndex = 36;
-            // 
-            // guna2TextBox3
-            // 
-            this.guna2TextBox3.BorderRadius = 10;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox3.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(179, 186);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PlaceholderText = "";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(90, 20);
-            this.guna2TextBox3.TabIndex = 35;
-            // 
-            // guna2TextBox2
-            // 
-            this.guna2TextBox2.BorderRadius = 10;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "AA-MM-DD";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(179, 292);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(90, 20);
-            this.guna2TextBox2.TabIndex = 34;
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.BorderRadius = 10;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(179, 237);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(90, 20);
-            this.guna2TextBox1.TabIndex = 33;
-            // 
-            // lblactividades
-            // 
-            this.lblactividades.AutoSize = true;
-            this.lblactividades.Location = new System.Drawing.Point(143, 20);
-            this.lblactividades.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblactividades.Name = "lblactividades";
-            this.lblactividades.Size = new System.Drawing.Size(0, 13);
-            this.lblactividades.TabIndex = 22;
             // 
             // tabFases
             // 
@@ -1965,7 +1812,7 @@
             this.tabFases.Controls.Add(this.label46);
             this.tabFases.Controls.Add(this.label45);
             this.tabFases.Controls.Add(this.label44);
-            this.tabFases.Controls.Add(this.txtIdFase1);
+            this.tabFases.Controls.Add(this.txtIdFase);
             this.tabFases.Location = new System.Drawing.Point(4, 22);
             this.tabFases.Name = "tabFases";
             this.tabFases.Size = new System.Drawing.Size(386, 487);
@@ -1974,151 +1821,31 @@
             this.tabFases.UseVisualStyleBackColor = true;
             this.tabFases.Click += new System.EventHandler(this.tabFases_Click);
             // 
-            // label39
+            // btnAgregarFas
             // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(92, 69);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(63, 13);
-            this.label39.TabIndex = 45;
-            this.label39.Text = "Id Actividad";
+            this.btnAgregarFas.BorderRadius = 15;
+            this.btnAgregarFas.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAgregarFas.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAgregarFas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAgregarFas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAgregarFas.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAgregarFas.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarFas.Location = new System.Drawing.Point(124, 283);
+            this.btnAgregarFas.Name = "btnAgregarFas";
+            this.btnAgregarFas.Size = new System.Drawing.Size(94, 35);
+            this.btnAgregarFas.TabIndex = 54;
+            this.btnAgregarFas.Text = "Agregar";
+            this.btnAgregarFas.Click += new System.EventHandler(this.btnAgregarFas_Click);
             // 
-            // label40
+            // label48
             // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(113, 128);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(42, 13);
-            this.label40.TabIndex = 46;
-            this.label40.Text = "Id Fase";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(58, 193);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(97, 13);
-            this.label41.TabIndex = 47;
-            this.label41.Text = "Duración Actividad";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(64, 244);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(91, 13);
-            this.label42.TabIndex = 48;
-            this.label42.Text = "Nombre Actividad";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(71, 299);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(84, 13);
-            this.label43.TabIndex = 49;
-            this.label43.Text = "Fecha Actividad";
-            // 
-            // txtIdFase1
-            // 
-            this.txtIdFase1.BorderRadius = 10;
-            this.txtIdFase1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIdFase1.DefaultText = "";
-            this.txtIdFase1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtIdFase1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtIdFase1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdFase1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdFase1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdFase1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtIdFase1.ForeColor = System.Drawing.Color.Black;
-            this.txtIdFase1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdFase1.Location = new System.Drawing.Point(170, 79);
-            this.txtIdFase1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtIdFase1.Name = "txtIdFase1";
-            this.txtIdFase1.PlaceholderText = "";
-            this.txtIdFase1.SelectedText = "";
-            this.txtIdFase1.Size = new System.Drawing.Size(90, 20);
-            this.txtIdFase1.TabIndex = 38;
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(96, 79);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(42, 13);
-            this.label44.TabIndex = 46;
-            this.label44.Text = "Id Fase";
-            this.label44.Click += new System.EventHandler(this.label44_Click);
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(77, 127);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(61, 13);
-            this.label45.TabIndex = 47;
-            this.label45.Text = "Id Proyecto";
-            this.label45.Click += new System.EventHandler(this.label45_Click);
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(68, 179);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(70, 13);
-            this.label46.TabIndex = 48;
-            this.label46.Text = "Nombre Fase";
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(62, 233);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(76, 13);
-            this.label47.TabIndex = 49;
-            this.label47.Text = "Duración Fase";
-            // 
-            // txtProyecto1
-            // 
-            this.txtProyecto1.BorderRadius = 10;
-            this.txtProyecto1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtProyecto1.DefaultText = "";
-            this.txtProyecto1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtProyecto1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtProyecto1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtProyecto1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtProyecto1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProyecto1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtProyecto1.ForeColor = System.Drawing.Color.Black;
-            this.txtProyecto1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProyecto1.Location = new System.Drawing.Point(170, 127);
-            this.txtProyecto1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtProyecto1.Name = "txtProyecto1";
-            this.txtProyecto1.PlaceholderText = "";
-            this.txtProyecto1.SelectedText = "";
-            this.txtProyecto1.Size = new System.Drawing.Size(90, 20);
-            this.txtProyecto1.TabIndex = 50;
-            // 
-            // txtNombreFas
-            // 
-            this.txtNombreFas.BorderRadius = 10;
-            this.txtNombreFas.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNombreFas.DefaultText = "";
-            this.txtNombreFas.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNombreFas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNombreFas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombreFas.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombreFas.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombreFas.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNombreFas.ForeColor = System.Drawing.Color.Black;
-            this.txtNombreFas.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombreFas.Location = new System.Drawing.Point(170, 179);
-            this.txtNombreFas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNombreFas.Name = "txtNombreFas";
-            this.txtNombreFas.PlaceholderText = "";
-            this.txtNombreFas.SelectedText = "";
-            this.txtNombreFas.Size = new System.Drawing.Size(90, 20);
-            this.txtNombreFas.TabIndex = 51;
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(152, 27);
+            this.label48.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(35, 13);
+            this.label48.TabIndex = 53;
+            this.label48.Text = "Fases";
             // 
             // txtDuracion
             // 
@@ -2141,15 +1868,130 @@
             this.txtDuracion.Size = new System.Drawing.Size(90, 20);
             this.txtDuracion.TabIndex = 52;
             // 
-            // label48
+            // txtNombreFas
             // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(152, 27);
-            this.label48.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(35, 13);
-            this.label48.TabIndex = 53;
-            this.label48.Text = "Fases";
+            this.txtNombreFas.BorderRadius = 10;
+            this.txtNombreFas.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNombreFas.DefaultText = "";
+            this.txtNombreFas.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNombreFas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNombreFas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNombreFas.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNombreFas.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNombreFas.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNombreFas.ForeColor = System.Drawing.Color.Black;
+            this.txtNombreFas.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNombreFas.Location = new System.Drawing.Point(170, 179);
+            this.txtNombreFas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNombreFas.Name = "txtNombreFas";
+            this.txtNombreFas.PlaceholderText = "";
+            this.txtNombreFas.SelectedText = "";
+            this.txtNombreFas.Size = new System.Drawing.Size(90, 20);
+            this.txtNombreFas.TabIndex = 51;
+            // 
+            // txtProyecto1
+            // 
+            this.txtProyecto1.BorderRadius = 10;
+            this.txtProyecto1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtProyecto1.DefaultText = "";
+            this.txtProyecto1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtProyecto1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtProyecto1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtProyecto1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtProyecto1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtProyecto1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtProyecto1.ForeColor = System.Drawing.Color.Black;
+            this.txtProyecto1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtProyecto1.Location = new System.Drawing.Point(170, 127);
+            this.txtProyecto1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtProyecto1.Name = "txtProyecto1";
+            this.txtProyecto1.PlaceholderText = "";
+            this.txtProyecto1.SelectedText = "";
+            this.txtProyecto1.Size = new System.Drawing.Size(90, 20);
+            this.txtProyecto1.TabIndex = 50;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(62, 233);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(76, 13);
+            this.label47.TabIndex = 49;
+            this.label47.Text = "Duración Fase";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(68, 179);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(70, 13);
+            this.label46.TabIndex = 48;
+            this.label46.Text = "Nombre Fase";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(77, 127);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(61, 13);
+            this.label45.TabIndex = 47;
+            this.label45.Text = "Id Proyecto";
+            this.label45.Click += new System.EventHandler(this.label45_Click);
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(96, 79);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(42, 13);
+            this.label44.TabIndex = 46;
+            this.label44.Text = "Id Fase";
+            this.label44.Click += new System.EventHandler(this.label44_Click);
+            // 
+            // txtIdFase
+            // 
+            this.txtIdFase.BorderRadius = 10;
+            this.txtIdFase.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIdFase.DefaultText = "";
+            this.txtIdFase.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtIdFase.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtIdFase.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdFase.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdFase.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdFase.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtIdFase.ForeColor = System.Drawing.Color.Black;
+            this.txtIdFase.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdFase.Location = new System.Drawing.Point(170, 79);
+            this.txtIdFase.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtIdFase.Name = "txtIdFase";
+            this.txtIdFase.PlaceholderText = "";
+            this.txtIdFase.SelectedText = "";
+            this.txtIdFase.Size = new System.Drawing.Size(90, 20);
+            this.txtIdFase.TabIndex = 38;
+            // 
+            // tabActividades
+            // 
+            this.tabActividades.Controls.Add(this.label49);
+            this.tabActividades.Controls.Add(this.label43);
+            this.tabActividades.Controls.Add(this.label42);
+            this.tabActividades.Controls.Add(this.label41);
+            this.tabActividades.Controls.Add(this.label40);
+            this.tabActividades.Controls.Add(this.label39);
+            this.tabActividades.Controls.Add(this.btnAgregarAct);
+            this.tabActividades.Controls.Add(this.txtIdAct);
+            this.tabActividades.Controls.Add(this.txtIdFase1);
+            this.tabActividades.Controls.Add(this.txtDuracionAct);
+            this.tabActividades.Controls.Add(this.txtFechaAct);
+            this.tabActividades.Controls.Add(this.txtNombreAct);
+            this.tabActividades.Controls.Add(this.lblactividades);
+            this.tabActividades.Location = new System.Drawing.Point(4, 22);
+            this.tabActividades.Margin = new System.Windows.Forms.Padding(2);
+            this.tabActividades.Name = "tabActividades";
+            this.tabActividades.Padding = new System.Windows.Forms.Padding(2);
+            this.tabActividades.Size = new System.Drawing.Size(386, 487);
+            this.tabActividades.TabIndex = 6;
+            this.tabActividades.Text = "Actividades";
+            this.tabActividades.UseVisualStyleBackColor = true;
             // 
             // label49
             // 
@@ -2161,21 +2003,180 @@
             this.label49.TabIndex = 50;
             this.label49.Text = "Actividades";
             // 
-            // btnAgregarFas
+            // label43
             // 
-            this.btnAgregarFas.BorderRadius = 15;
-            this.btnAgregarFas.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregarFas.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregarFas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAgregarFas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAgregarFas.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAgregarFas.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarFas.Location = new System.Drawing.Point(124, 283);
-            this.btnAgregarFas.Name = "btnAgregarFas";
-            this.btnAgregarFas.Size = new System.Drawing.Size(94, 35);
-            this.btnAgregarFas.TabIndex = 54;
-            this.btnAgregarFas.Text = "Agregar";
-            this.btnAgregarFas.Click += new System.EventHandler(this.btnAgregarFas_Click);
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(71, 299);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(84, 13);
+            this.label43.TabIndex = 49;
+            this.label43.Text = "Fecha Actividad";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(64, 244);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(91, 13);
+            this.label42.TabIndex = 48;
+            this.label42.Text = "Nombre Actividad";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(58, 193);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(97, 13);
+            this.label41.TabIndex = 47;
+            this.label41.Text = "Duración Actividad";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(113, 128);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(42, 13);
+            this.label40.TabIndex = 46;
+            this.label40.Text = "Id Fase";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(92, 69);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(63, 13);
+            this.label39.TabIndex = 45;
+            this.label39.Text = "Id Actividad";
+            // 
+            // btnAgregarAct
+            // 
+            this.btnAgregarAct.BorderRadius = 15;
+            this.btnAgregarAct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAgregarAct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAgregarAct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAgregarAct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAgregarAct.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAgregarAct.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarAct.Location = new System.Drawing.Point(128, 345);
+            this.btnAgregarAct.Name = "btnAgregarAct";
+            this.btnAgregarAct.Size = new System.Drawing.Size(94, 35);
+            this.btnAgregarAct.TabIndex = 44;
+            this.btnAgregarAct.Text = "Agregar";
+            this.btnAgregarAct.Click += new System.EventHandler(this.btnAgregarAct_Click);
+            // 
+            // txtIdAct
+            // 
+            this.txtIdAct.BorderRadius = 10;
+            this.txtIdAct.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIdAct.DefaultText = "";
+            this.txtIdAct.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtIdAct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtIdAct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdAct.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdAct.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdAct.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtIdAct.ForeColor = System.Drawing.Color.Black;
+            this.txtIdAct.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdAct.Location = new System.Drawing.Point(179, 69);
+            this.txtIdAct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtIdAct.Name = "txtIdAct";
+            this.txtIdAct.PlaceholderText = "";
+            this.txtIdAct.SelectedText = "";
+            this.txtIdAct.Size = new System.Drawing.Size(90, 20);
+            this.txtIdAct.TabIndex = 37;
+            // 
+            // txtIdFase1
+            // 
+            this.txtIdFase1.BorderRadius = 10;
+            this.txtIdFase1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIdFase1.DefaultText = "";
+            this.txtIdFase1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtIdFase1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtIdFase1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdFase1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdFase1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdFase1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtIdFase1.ForeColor = System.Drawing.Color.Black;
+            this.txtIdFase1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdFase1.Location = new System.Drawing.Point(179, 121);
+            this.txtIdFase1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtIdFase1.Name = "txtIdFase1";
+            this.txtIdFase1.PlaceholderText = "";
+            this.txtIdFase1.SelectedText = "";
+            this.txtIdFase1.Size = new System.Drawing.Size(90, 20);
+            this.txtIdFase1.TabIndex = 36;
+            // 
+            // txtDuracionAct
+            // 
+            this.txtDuracionAct.BorderRadius = 10;
+            this.txtDuracionAct.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDuracionAct.DefaultText = "";
+            this.txtDuracionAct.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDuracionAct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDuracionAct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDuracionAct.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDuracionAct.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDuracionAct.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtDuracionAct.ForeColor = System.Drawing.Color.Black;
+            this.txtDuracionAct.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDuracionAct.Location = new System.Drawing.Point(179, 186);
+            this.txtDuracionAct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDuracionAct.Name = "txtDuracionAct";
+            this.txtDuracionAct.PlaceholderText = "";
+            this.txtDuracionAct.SelectedText = "";
+            this.txtDuracionAct.Size = new System.Drawing.Size(90, 20);
+            this.txtDuracionAct.TabIndex = 35;
+            // 
+            // txtFechaAct
+            // 
+            this.txtFechaAct.BorderRadius = 10;
+            this.txtFechaAct.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFechaAct.DefaultText = "AA-MM-DD";
+            this.txtFechaAct.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFechaAct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFechaAct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFechaAct.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFechaAct.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFechaAct.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtFechaAct.ForeColor = System.Drawing.Color.Black;
+            this.txtFechaAct.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFechaAct.Location = new System.Drawing.Point(179, 292);
+            this.txtFechaAct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtFechaAct.Name = "txtFechaAct";
+            this.txtFechaAct.PlaceholderText = "";
+            this.txtFechaAct.SelectedText = "";
+            this.txtFechaAct.Size = new System.Drawing.Size(90, 20);
+            this.txtFechaAct.TabIndex = 34;
+            // 
+            // txtNombreAct
+            // 
+            this.txtNombreAct.BorderRadius = 10;
+            this.txtNombreAct.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNombreAct.DefaultText = "";
+            this.txtNombreAct.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNombreAct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNombreAct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNombreAct.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNombreAct.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNombreAct.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNombreAct.ForeColor = System.Drawing.Color.Black;
+            this.txtNombreAct.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNombreAct.Location = new System.Drawing.Point(179, 237);
+            this.txtNombreAct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNombreAct.Name = "txtNombreAct";
+            this.txtNombreAct.PlaceholderText = "";
+            this.txtNombreAct.SelectedText = "";
+            this.txtNombreAct.Size = new System.Drawing.Size(90, 20);
+            this.txtNombreAct.TabIndex = 33;
+            // 
+            // lblactividades
+            // 
+            this.lblactividades.AutoSize = true;
+            this.lblactividades.Location = new System.Drawing.Point(143, 20);
+            this.lblactividades.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblactividades.Name = "lblactividades";
+            this.lblactividades.Size = new System.Drawing.Size(0, 13);
+            this.lblactividades.TabIndex = 22;
             // 
             // FormAgregar
             // 
@@ -2187,7 +2188,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.tabAgregar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormAgregar";
             this.Text = "FormAgregar";
             this.Load += new System.EventHandler(this.FormAgregar_Load);
@@ -2218,10 +2219,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabAgregar.ResumeLayout(false);
-            this.tabActividades.ResumeLayout(false);
-            this.tabActividades.PerformLayout();
             this.tabFases.ResumeLayout(false);
             this.tabFases.PerformLayout();
+            this.tabActividades.ResumeLayout(false);
+            this.tabActividades.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2338,10 +2339,10 @@
         private System.Windows.Forms.Label lblactividades;
         private Guna.UI2.WinForms.Guna2Button btnAgregarAct;
         private Guna.UI2.WinForms.Guna2TextBox txtIdAct;
-        private Guna.UI2.WinForms.Guna2TextBox txtIdFase;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtIdFase1;
+        private Guna.UI2.WinForms.Guna2TextBox txtDuracionAct;
+        private Guna.UI2.WinForms.Guna2TextBox txtFechaAct;
+        private Guna.UI2.WinForms.Guna2TextBox txtNombreAct;
         private Guna.UI2.WinForms.Guna2Button btnAgregarUsuario;
         private System.Windows.Forms.TabPage tabFases;
         private System.Windows.Forms.Label label43;
@@ -2350,7 +2351,7 @@
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label44;
-        private Guna.UI2.WinForms.Guna2TextBox txtIdFase1;
+        private Guna.UI2.WinForms.Guna2TextBox txtIdFase;
         private Guna.UI2.WinForms.Guna2TextBox txtDuracion;
         private Guna.UI2.WinForms.Guna2TextBox txtNombreFas;
         private Guna.UI2.WinForms.Guna2TextBox txtProyecto1;

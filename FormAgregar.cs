@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Lifetime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -47,6 +48,11 @@ namespace Proyecto_Semillero
             else if (tipo == "Proyectos")
             {
                 tabAgregar.SelectedTab = tabProyectos;
+            }
+
+            else if (tipo == "Fase")
+            {
+                tabAgregar.SelectedTab = tabFases;
             }
 
             else if (tipo == "Reportes")
@@ -149,14 +155,29 @@ namespace Proyecto_Semillero
                 }
                 else if (tipo == "Actividad")
                 {
-                    // Aquí deberías cargar los datos de la actividad en los campos correspondientes
-                    // Por ejemplo:
-                    // txtIdActividad.Text = filaSeleccionada.Cells["idActividad"].Value.ToString();
-                    // txtNombreActividad.Text = filaSeleccionada.Cells["nombreActividad"].Value.ToString();
-                    // txtDescripcionActividad.Text = filaSeleccionada.Cells["descripcionActividad"].Value.ToString();
-                    // txtFechaActividad.Text = Convert.ToDateTime(filaSeleccionada.Cells["fechaActividad"].Value).ToString("yyyy-MM-dd");
-                    // btnAgregarActividad.Text = "Modificar";
+                    txtIdAct.Enabled = false;
+                    txtIdFase1.Enabled = false;
+
+                    txtIdAct.Text = filaSeleccionada.Cells["idActividad"].Value.ToString();
+                    txtIdFase1.Text = filaSeleccionada.Cells["idFase"].Value.ToString();
+                    txtNombreAct.Text = filaSeleccionada.Cells["nombreActividad"].Value.ToString();
+                    txtDuracionAct.Text = filaSeleccionada.Cells["duracionActividad"].Value.ToString();
+                    txtFechaAct.Text = Convert.ToDateTime(filaSeleccionada.Cells["fechaActividad"].Value).ToString("yyyy-MM-dd");
+                    btnAgregarAct.Text = "Modificar";
                 }
+
+                else if ((tipo == "Fase"))
+                {
+                    txtIdFase.Enabled = false;
+                    txtProyecto1.Enabled = false;
+                    txtIdFase.Text = filaSeleccionada.Cells["idFase"].Value.ToString();
+                    txtProyecto1.Text = filaSeleccionada.Cells["idProyecto"].Value.ToString();
+                    txtNombreFas.Text = filaSeleccionada.Cells["nombreFase"].Value.ToString();
+                    txtDuracion.Text = filaSeleccionada.Cells["duracionFase"].Value.ToString();
+                    btnAgregarFas.Text = "Modificar";
+
+                }
+
             }
         }
 
@@ -168,7 +189,7 @@ namespace Proyecto_Semillero
 
         private void btnAgregarUsuario_Click_1(object sender, EventArgs e)
         {
-           
+
             if (txtIdUsuario.Text.Trim() == "" ||
                 txtContraseña.Text.Trim() == "" ||
                 txtNombre.Text.Trim() == "" ||
@@ -291,7 +312,7 @@ namespace Proyecto_Semillero
             }
         }
 
-     
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -304,7 +325,7 @@ namespace Proyecto_Semillero
 
         private void btnAgregarSem_Click(object sender, EventArgs e)
         {
-            if ((txtIdSemillero.Text == "")  || (txtNombreSem.Text == "") || (txtLineaSem.Text == "") || (txtEnfoqueSem.Text == ""))
+            if ((txtIdSemillero.Text == "") || (txtNombreSem.Text == "") || (txtLineaSem.Text == "") || (txtEnfoqueSem.Text == ""))
             {
                 MessageBox.Show("Por favor, complete todos los campos.");
             }
@@ -320,7 +341,7 @@ namespace Proyecto_Semillero
                     SqlCommand update;
                     try
                     {
-                        update = new SqlCommand("UPDATE Semillero SET nombreSemillero = @nombreSemillero, lineaSemillero = @lineaSemillero, enfoqueSemillero = @enfoqueSemillero WHERE idSemillero = @idSemillero",conexion.Conectar());
+                        update = new SqlCommand("UPDATE Semillero SET nombreSemillero = @nombreSemillero, lineaSemillero = @lineaSemillero, enfoqueSemillero = @enfoqueSemillero WHERE idSemillero = @idSemillero", conexion.Conectar());
                         update.Parameters.AddWithValue("@idSemillero", idSemillero);
                         update.Parameters.AddWithValue("@nombreSemillero", nombreSemillero);
                         update.Parameters.AddWithValue("@lineaSemillero", lineaSemillero);
@@ -362,17 +383,17 @@ namespace Proyecto_Semillero
                     {
                         MessageBox.Show(ex.Message);
                     }
-                } 
+                }
             }
         }
 
         private void btnAgregarEvent_Click(object sender, EventArgs e)
         {
-            if ((txtIdEvento.Text == "") || 
-                (txtLugarEven.Text == "") || 
-                (txtNombreEven.Text == "") || 
-                (txtTipoEven.Text == "") || 
-                (txtFechaEven.Text == "") || 
+            if ((txtIdEvento.Text == "") ||
+                (txtLugarEven.Text == "") ||
+                (txtNombreEven.Text == "") ||
+                (txtTipoEven.Text == "") ||
+                (txtFechaEven.Text == "") ||
                 (txtOrgEvento.Text == ""))
             {
                 MessageBox.Show("Por favor, complete todos los campos.");
@@ -457,6 +478,29 @@ namespace Proyecto_Semillero
                 DateTime fechaInicioProyecto = DateTime.Parse(txtFechaInicio.Text);
                 DateTime fechaFinProyecto = DateTime.Parse(txtFechaFin.Text);
 
+                int idSem = int.Parse(txtIdSemillero1.Text);
+
+                SqlCommand validar = new SqlCommand(
+                    "select count(*) from Semillero where idSemillero = @idSemillero",
+                    conexion.Conectar()
+                );
+
+                validar.Parameters.AddWithValue("@idSemillero", idSem);
+
+                int existe = (int)validar.ExecuteScalar();
+
+                if (existe == 0)
+                {
+                    MessageBox.Show("el Semillero no existe");
+                    conexion.cerrar();
+                    return;
+                }
+
+                idSemillero = idSem;
+
+
+
+
                 if (modoEdicion == true)
                 {
                     SqlCommand update;
@@ -508,7 +552,7 @@ namespace Proyecto_Semillero
                     {
                         MessageBox.Show(ex.Message);
                     }
-                }           
+                }
             }
         }
 
@@ -678,9 +722,175 @@ namespace Proyecto_Semillero
 
         private void btnAgregarFas_Click(object sender, EventArgs e)
         {
-            if ((txtIdFase1.Text == "") || (txtNombrePatro.Text == "") || (txtTipoPatro.Text == "") || (txtTelefonoPatro.Text == "") || (txtCorreoPatro.Text == ""))
+            if ((txtIdFase.Text == "") || (txtProyecto1.Text == "") || (txtNombreFas.Text == "") || (txtNombreFas.Text == ""))
             {
                 MessageBox.Show("Por favor, complete todos los campos.");
+            }
+
+            else
+            {
+                int idFase = int.Parse(txtIdFase.Text);
+                int idProyecto = int.Parse(txtProyecto1.Text);
+                string nombreFase = txtNombreFas.Text;
+                string duracionFase = txtDuracion.Text;
+
+                int idPro = int.Parse(txtProyecto1.Text);
+
+                SqlCommand validar = new SqlCommand(
+                    "select count(*) from Proyectos where idProyecto = @idProyecto",
+                    conexion.Conectar()
+                );
+
+                validar.Parameters.AddWithValue("@idProyecto", idPro);
+
+                int existe = (int)validar.ExecuteScalar();
+
+                if (existe == 0)
+                {
+                    MessageBox.Show("El proyecto no existe");
+                    conexion.cerrar();
+                    return;
+                }
+
+                idProyecto = idPro;
+
+                if (modoEdicion == true)
+                {
+                    SqlCommand update;
+                    try
+                    {
+                        update = new SqlCommand("UPDATE Fase SET idFase = @idFase, idProyecto = @idProyecto, nombreFase = @nombreFase, duracionFase = @duracionFase WHERE idFase = @idFase", conexion.Conectar());
+                        update.Parameters.AddWithValue("@idFase", idFase);
+                        update.Parameters.AddWithValue("@idProyecto", idProyecto);
+                        update.Parameters.AddWithValue("@nombreFase", nombreFase);
+                        update.Parameters.AddWithValue("@duracionFase", duracionFase);
+
+                        MessageBox.Show("Fase modificada correctamente");
+                        conexion.cerrar();
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        SqlCommand insert = new SqlCommand(
+                            "INSERT INTO Fase (idFase, idProyecto, nombreFase, duracionFase) " +
+                            "VALUES (@idFase, @idProyecto, @nombreFase, @duracionFase)",
+                            conexion.Conectar()
+                        );
+
+                        insert.Parameters.AddWithValue("@idFase", idFase);
+                        insert.Parameters.AddWithValue("@idProyecto", idProyecto);
+                        insert.Parameters.AddWithValue("@nombreFase", nombreFase);
+                        insert.Parameters.AddWithValue("@duracionFase", duracionFase);
+
+                        insert.ExecuteNonQuery();
+
+                        MessageBox.Show("Fase guardada correctamente");
+                        conexion.cerrar();
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+
+
+            }
+        }
+
+        private void btnAgregarAct_Click(object sender, EventArgs e)
+        {
+            if ((txtIdAct.Text == "") || (txtIdFase1.Text == "") || (txtDuracionAct.Text == "") || (txtNombreAct.Text == "") || (txtFechaAct.Text == "") )
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+
+            else
+            {
+                int idActividad = int.Parse(txtIdAct.Text);
+                int idFase = int.Parse(txtIdFase1.Text);
+                string duracionAct = txtDuracionAct.Text;
+                string nombreAct = txtNombreAct.Text;
+                DateTime fechaAct = DateTime.Parse(txtFechaAct.Text);
+
+                int idFas = int.Parse(txtIdFase1.Text);
+
+                SqlCommand validar = new SqlCommand(
+                    "select count(*) from Fase where idFase = @idFase",
+                    conexion.Conectar()
+                );
+
+                validar.Parameters.AddWithValue("@idFase", idFas);
+
+                int existe = (int)validar.ExecuteScalar();
+
+                if (existe == 0)
+                {
+                    MessageBox.Show("La Fase no existe");
+                    conexion.cerrar();
+                    return;
+                }
+
+                idFase = idFas;
+
+                if (modoEdicion == true)
+                {
+                    SqlCommand update;
+                    try
+                    {
+                        update = new SqlCommand("UPDATE Actividad SET idActividad = @idActividad, idFase = @idFase, nombreActividad = @nombreActividad, duracionActividad = @duracionActividad, fechaActividad = @fechaActividad WHERE idActividad = @idActividad", conexion.Conectar());
+                        update.Parameters.AddWithValue("@idActividad", idActividad);
+                        update.Parameters.AddWithValue("@idFase", idFase);
+                        update.Parameters.AddWithValue("@nombreActividad", nombreAct);
+                        update.Parameters.AddWithValue("@duracionActividad", duracionAct);
+                        update.Parameters.AddWithValue("@fechaActividad", fechaAct);
+
+                        update.ExecuteNonQuery();
+
+                        MessageBox.Show("Actividad modificada correctamente");
+                        conexion.cerrar();
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        SqlCommand insert = new SqlCommand(
+                            "INSERT INTO Actividad (idActividad, idFase, nombreActividad, duracionActividad, fechaActividad) " +
+                            "VALUES (@idActividad, @idFase, @nombreActividad, @duracionActividad, @fechaActividad)",
+                            conexion.Conectar()
+                        );
+
+                        insert.Parameters.AddWithValue("@idActividad", idActividad);
+                        insert.Parameters.AddWithValue("@idFase", idFase);
+                        insert.Parameters.AddWithValue("@nombreActividad", nombreAct);
+                        insert.Parameters.AddWithValue("@duracionActividad", duracionAct);
+                        insert.Parameters.AddWithValue("@fechaActividad", fechaAct);
+
+                        insert.ExecuteNonQuery();
+
+                        MessageBox.Show("Fase guardada correctamente");
+                        conexion.cerrar();
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+
             }
         }
     }
