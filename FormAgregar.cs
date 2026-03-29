@@ -175,9 +175,7 @@ namespace Proyecto_Semillero
                     txtNombreFas.Text = filaSeleccionada.Cells["nombreFase"].Value.ToString();
                     txtDuracion.Text = filaSeleccionada.Cells["duracionFase"].Value.ToString();
                     btnAgregarFas.Text = "Modificar";
-
                 }
-
             }
         }
 
@@ -207,10 +205,6 @@ namespace Proyecto_Semillero
             // Validamos que el ID del usuario sea un número entero
             string rol = cboRol.Text;
             int? idSemillero = null;// Inicializamos idSemillero como null, ya que no es obligatorio para el rol de Administrador el ? permite que la variable pueda ser null, lo cual es útil para manejar el caso en el que el usuario sea un Administrador y no tenga un semillero asociado.
-
-
-
-
 
             if (rol != "Administrador")
             {
@@ -271,6 +265,7 @@ namespace Proyecto_Semillero
                     update.ExecuteNonQuery();
                     MessageBox.Show("Usuario modificado correctamente");
                     conexion.cerrar();
+                    this.DialogResult = DialogResult.OK;
                     this.Close();
                 }
                 catch (Exception ex)
@@ -303,6 +298,7 @@ namespace Proyecto_Semillero
 
                     MessageBox.Show("Usuario guardado correctamente");
                     conexion.cerrar();
+                    this.DialogResult = DialogResult.OK;
                     this.Close();
                 }
                 catch (Exception ex)
@@ -350,6 +346,7 @@ namespace Proyecto_Semillero
                         update.ExecuteNonQuery();
                         MessageBox.Show("Semillero modificado correctamente");
                         conexion.cerrar();
+                        this.DialogResult = DialogResult.OK;
                         this.Close();
                     }
                     catch (Exception ex)
@@ -377,6 +374,7 @@ namespace Proyecto_Semillero
                         // cerrar conexión (como ya la tienes global)
                         conexion.cerrar();
                         // cerrar formulario
+                        this.DialogResult = DialogResult.OK;
                         this.Close();
                     }
                     catch (Exception ex)
@@ -423,6 +421,7 @@ namespace Proyecto_Semillero
                         update.ExecuteNonQuery();
                         MessageBox.Show("Semillero modificado correctamente");
                         conexion.cerrar();
+                        this.DialogResult = DialogResult.OK;
                         this.Close();
 
                     }
@@ -452,6 +451,7 @@ namespace Proyecto_Semillero
                         // cerrar conexión (como ya la tienes global)
                         conexion.cerrar();
                         // cerrar formulario
+                        this.DialogResult = DialogResult.OK;
                         this.Close();
                     }
                     catch (Exception ex)
@@ -517,6 +517,7 @@ namespace Proyecto_Semillero
                         update.ExecuteNonQuery();
                         MessageBox.Show("Proyecto modificado correctamente");
                         conexion.cerrar();
+                        this.DialogResult = DialogResult.OK;
                         this.Close();
                     }
                     catch (Exception ex)
@@ -546,6 +547,7 @@ namespace Proyecto_Semillero
                         // cerrar conexión (como ya la tienes global)
                         conexion.cerrar();
                         // cerrar formulario
+                        this.DialogResult = DialogResult.OK;
                         this.Close();
                     }
                     catch (Exception ex)
@@ -584,6 +586,7 @@ namespace Proyecto_Semillero
                         update.ExecuteNonQuery();
                         MessageBox.Show("Reporte modificado correctamente");
                         conexion.cerrar();
+                        this.DialogResult = DialogResult.OK;
                         this.Close();
 
                     }
@@ -612,6 +615,7 @@ namespace Proyecto_Semillero
                         // cerrar conexión 
                         conexion.cerrar();
                         // cerrar formulario
+                        this.DialogResult = DialogResult.OK;
                         this.Close();
                     }
                     catch (Exception ex)
@@ -668,6 +672,7 @@ namespace Proyecto_Semillero
                         update.ExecuteNonQuery();
                         MessageBox.Show("Patrocinador modificado correctamente");
                         conexion.cerrar();
+                        this.DialogResult = DialogResult.OK;
                         this.Close();
                     }
                     catch (Exception ex)
@@ -695,6 +700,7 @@ namespace Proyecto_Semillero
                         // cerrar conexión 
                         conexion.cerrar();
                         // cerrar formulario
+                        this.DialogResult = DialogResult.OK;
                         this.Close();
                     }
                     catch (Exception ex)
@@ -759,14 +765,15 @@ namespace Proyecto_Semillero
                     SqlCommand update;
                     try
                     {
-                        update = new SqlCommand("UPDATE Fase SET idFase = @idFase, idProyecto = @idProyecto, nombreFase = @nombreFase, duracionFase = @duracionFase WHERE idFase = @idFase", conexion.Conectar());
+                        update = new SqlCommand("UPDATE Fase SET idProyecto = @idProyecto, nombreFase = @nombreFase, duracionFase = @duracionFase WHERE idFase = @idFase", conexion.Conectar());
                         update.Parameters.AddWithValue("@idFase", idFase);
                         update.Parameters.AddWithValue("@idProyecto", idProyecto);
                         update.Parameters.AddWithValue("@nombreFase", nombreFase);
                         update.Parameters.AddWithValue("@duracionFase", duracionFase);
-
+                        update.ExecuteNonQuery();
                         MessageBox.Show("Fase modificada correctamente");
                         conexion.cerrar();
+                        this.DialogResult = DialogResult.OK;
                         this.Close();
                     }
                     catch (Exception ex)
@@ -793,6 +800,7 @@ namespace Proyecto_Semillero
 
                         MessageBox.Show("Fase guardada correctamente");
                         conexion.cerrar();
+                        this.DialogResult = DialogResult.OK;
                         this.Close();
                     }
                     catch (Exception ex)
@@ -833,7 +841,7 @@ namespace Proyecto_Semillero
 
                 if (existe == 0)
                 {
-                    MessageBox.Show("La Fase no existe");
+                    MessageBox.Show("La Actividad no existe");
                     conexion.cerrar();
                     return;
                 }
@@ -845,7 +853,7 @@ namespace Proyecto_Semillero
                     SqlCommand update;
                     try
                     {
-                        update = new SqlCommand("UPDATE Actividad SET idActividad = @idActividad, idFase = @idFase, nombreActividad = @nombreActividad, duracionActividad = @duracionActividad, fechaActividad = @fechaActividad WHERE idActividad = @idActividad", conexion.Conectar());
+                        update = new SqlCommand("UPDATE Actividad SET idFase = @idFase, nombreActividad = @nombreActividad, duracionActividad = @duracionActividad, fechaActividad = @fechaActividad WHERE idActividad = @idActividad", conexion.Conectar());
                         update.Parameters.AddWithValue("@idActividad", idActividad);
                         update.Parameters.AddWithValue("@idFase", idFase);
                         update.Parameters.AddWithValue("@nombreActividad", nombreAct);
@@ -856,6 +864,7 @@ namespace Proyecto_Semillero
 
                         MessageBox.Show("Actividad modificada correctamente");
                         conexion.cerrar();
+                        this.DialogResult = DialogResult.OK;
                         this.Close();
                     }
                     catch (Exception ex)
@@ -881,8 +890,9 @@ namespace Proyecto_Semillero
 
                         insert.ExecuteNonQuery();
 
-                        MessageBox.Show("Fase guardada correctamente");
+                        MessageBox.Show("Actividad guardada correctamente");
                         conexion.cerrar();
+                        this.DialogResult = DialogResult.OK;
                         this.Close();
                     }
                     catch (Exception ex)

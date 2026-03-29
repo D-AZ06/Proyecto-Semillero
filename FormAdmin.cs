@@ -29,6 +29,7 @@ namespace Proyecto_Semillero
             {
                 btnRegistrar.Enabled = false; // deshabilitamos el botón de consulta con parámetros si no se ha seleccionado un formulario para mostrar en el DataGridView
                 btnModificar.Enabled = false;
+                btnEliminar.Enabled = false;
             }
         }
 
@@ -70,6 +71,7 @@ namespace Proyecto_Semillero
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
             btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;
+            btnEliminar.Enabled = true;
             lbl_gestionar.Text = "Gestionar Reportes";
             txtParametro.Clear(); // Limpiar el TextBox de parámetros al cambiar de formulario
         }
@@ -82,6 +84,7 @@ namespace Proyecto_Semillero
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
             btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;
+            btnEliminar.Enabled = true;
             lbl_gestionar.Text = "Gestionar Usuarios";
             txtParametro.Clear();
         }
@@ -94,6 +97,7 @@ namespace Proyecto_Semillero
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
             btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;
+            btnEliminar.Enabled = true;
             lbl_gestionar.Text = "Gestionar Semilleros";
             txtParametro.Clear();
         }
@@ -106,6 +110,7 @@ namespace Proyecto_Semillero
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
             btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;
+            btnEliminar.Enabled = true;
             lbl_gestionar.Text = "Gestionar Proyectos";
             txtParametro.Clear();
         }
@@ -118,6 +123,7 @@ namespace Proyecto_Semillero
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
             btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;
+            btnEliminar.Enabled = true;
             lbl_gestionar.Text = "Gestionar Eventos";
             txtParametro.Clear();
         }
@@ -130,6 +136,7 @@ namespace Proyecto_Semillero
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
             btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;
+            btnEliminar.Enabled = true;
             lbl_gestionar.Text = "Gestionar Patrocinadores";
             txtParametro.Clear();
         }
@@ -141,6 +148,7 @@ namespace Proyecto_Semillero
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
             btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;
+            btnEliminar.Enabled = true;
             lbl_gestionar.Text = "Gestionar Fases";
             txtParametro.Clear();
         }
@@ -153,6 +161,7 @@ namespace Proyecto_Semillero
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
             btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;
+            btnEliminar.Enabled = true;
             lbl_gestionar.Text = "Gestionar Actividades";
             txtParametro.Clear();
          }
@@ -227,11 +236,51 @@ namespace Proyecto_Semillero
             frm.modoEdicion = true; // 🔥 ACTIVAS MODO MODIFICAR
             frm.filaSeleccionada = dataGridView1.CurrentRow; // 🔥 ENVÍAS LOS DATOS
 
-            frm.ShowDialog();
-            Gestionar(formularioActual);
+            if (frm.ShowDialog() == DialogResult.OK) // refresca solo si se modificó
+            {
+                Gestionar(formularioActual);
+            }
         }
 
-        
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Seleccione un registro primero.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                try
+                {
+                    // 🔑 Obtén el valor de la primera celda (ID)
+                    int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
 
+                    SqlCommand eliminar = new SqlCommand($"DELETE FROM {formularioActual} WHERE {dataGridView1.Columns[0].Name} = @Id", conexion.Conectar());
+
+                    eliminar.CommandType = CommandType.Text;
+                    eliminar.Parameters.AddWithValue("@Id", id);
+
+                    if (MessageBox.Show($"¿Desea eliminar el registro con ID = {id}?","Eliminar",MessageBoxButtons.YesNo,MessageBoxIcon.Question,MessageBoxDefaultButton.Button3) == DialogResult.Yes)
+                    {
+                        int filas = eliminar.ExecuteNonQuery();
+
+                        if (filas > 0)
+                        {
+                            MessageBox.Show("El registro ha sido eliminado correctamente.");
+                            Gestionar(formularioActual); // refresca el DataGridView
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se encontró el registro a eliminar.");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al eliminar: " + ex.Message);
+                }
+            }
+
+        }
     }
 }
