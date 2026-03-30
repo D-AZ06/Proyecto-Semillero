@@ -181,21 +181,8 @@ namespace Proyecto_Semillero
                     txtDuracion.Text = filaSeleccionada.Cells["duracionFase"].Value.ToString();
                     btnAgregarFas.Text = "Modificar";
                 }
-
-                else if (tipo == "Reuniones")
-                {
-                    txtIdReu.Enabled = false;
-                    txtIdUsuario3.Enabled = false;
-                    txtIdReu.Text = filaSeleccionada.Cells["idReunion"].Value.ToString();
-                    txtIdUsuario3.Text = filaSeleccionada.Cells["idUsuario"].Value.ToString();
-                    txtHoraReu.Text = Convert.ToDateTime(filaSeleccionada.Cells["horaReunion"].Value).ToString("HH:mm:ss");
-                    txtMotivoReu.Text = filaSeleccionada.Cells["motivoReunion"].Value.ToString();
-                    txtFechaReu.Text = Convert.ToDateTime(filaSeleccionada.Cells["fechaReunion"].Value).ToString("yyyy-MM-dd");
-                    btnAgregarReu.Text = "Modificar";
-                }
             }
         }
-        
 
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -222,7 +209,7 @@ namespace Proyecto_Semillero
 
             // Validamos que el ID del usuario sea un número entero
             string rol = cboRol.Text;
-            int? idSemillero = null; // Declaramos la variable idSemillero como nullable para poder asignarle un valor null en caso de que el rol sea "Administrador", ya que los administradores no están asociados a ningún semillero. Esto nos permitirá manejar correctamente la inserción o actualización del usuario en la base de datos, evitando errores relacionados con valores nulos en la columna idSemillero de la tabla Usuario.
+            int idSemillero;// Inicializamos idSemillero como null, ya que no es obligatorio para el rol de Administrador el ? permite que la variable pueda ser null, lo cual es útil para manejar el caso en el que el usuario sea un Administrador y no tenga un semillero asociado.
 
             if (rol != "Administrador")
             {
@@ -272,7 +259,7 @@ namespace Proyecto_Semillero
                 {
                     update = new SqlCommand("UPDATE Usuario SET idSemillero = @idSemillero, contraseñaUsuario = @contraseñaUsuario, nombresUsuario = @nombresUsuario, rolUsuario = @rolUsuario, telefonoUsuario = @telefonoUsuario, correoUsuario = @correoUsuario, edadUsuario = @edadUsuario, generoUsuario = @generoUsuario, estadoUsuario = @estadoUsuario WHERE idUsuario = @idUsuario", conexion.Conectar());
                     update.Parameters.AddWithValue("@idUsuario", idUsuario);
-                    update.Parameters.AddWithValue("@idSemillero", (object)idSemillero ?? DBNull.Value); // Si idSemillero es null, se asigna DBNull.Value para evitar errores al actualizar la base de datos
+                    update.Parameters.AddWithValue("@idSemillero", idSemillero); 
                     update.Parameters.AddWithValue("@contraseñaUsuario", contraseña);
                     update.Parameters.AddWithValue("@nombresUsuario", nombre);
                     update.Parameters.AddWithValue("@rolUsuario", rol);
@@ -303,7 +290,7 @@ namespace Proyecto_Semillero
                     );
 
                     insert.Parameters.AddWithValue("@idUsuario", idUsuario);
-                    insert.Parameters.AddWithValue("@idSemillero", (object)idSemillero ?? DBNull.Value);
+                    insert.Parameters.AddWithValue("@idSemillero", idSemillero);
                     insert.Parameters.AddWithValue("@contraseña", contraseña);
                     insert.Parameters.AddWithValue("@nombre", nombre);
                     insert.Parameters.AddWithValue("@rol", rol);
@@ -516,6 +503,8 @@ namespace Proyecto_Semillero
                 }
 
                 idSemillero = idSem;
+
+
 
 
                 if (modoEdicion == true)
@@ -807,8 +796,9 @@ namespace Proyecto_Semillero
                             "VALUES (@idFase, @idProyecto, @nombreFase, @duracionFase)",
                             conexion.Conectar()
                         );
+
                         insert.Parameters.AddWithValue("@idFase", idFase);
-                        insert.Parameters.AddWithValue("@id Proyecto", idProyecto);
+                        insert.Parameters.AddWithValue("@idProyecto", idProyecto);
                         insert.Parameters.AddWithValue("@nombreFase", nombreFase);
                         insert.Parameters.AddWithValue("@duracionFase", duracionFase);
 
@@ -897,6 +887,7 @@ namespace Proyecto_Semillero
                             "VALUES (@idActividad, @idFase, @nombreActividad, @duracionActividad, @fechaActividad)",
                             conexion.Conectar()
                         );
+
                         insert.Parameters.AddWithValue("@idActividad", idActividad);
                         insert.Parameters.AddWithValue("@idFase", idFase);
                         insert.Parameters.AddWithValue("@nombreActividad", nombreAct);

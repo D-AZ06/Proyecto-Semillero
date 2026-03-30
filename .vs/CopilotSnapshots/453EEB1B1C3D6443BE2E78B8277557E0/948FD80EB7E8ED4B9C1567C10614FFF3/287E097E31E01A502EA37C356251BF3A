@@ -181,21 +181,8 @@ namespace Proyecto_Semillero
                     txtDuracion.Text = filaSeleccionada.Cells["duracionFase"].Value.ToString();
                     btnAgregarFas.Text = "Modificar";
                 }
-
-                else if (tipo == "Reuniones")
-                {
-                    txtIdReu.Enabled = false;
-                    txtIdUsuario3.Enabled = false;
-                    txtIdReu.Text = filaSeleccionada.Cells["idReunion"].Value.ToString();
-                    txtIdUsuario3.Text = filaSeleccionada.Cells["idUsuario"].Value.ToString();
-                    txtHoraReu.Text = Convert.ToDateTime(filaSeleccionada.Cells["horaReunion"].Value).ToString("HH:mm:ss");
-                    txtMotivoReu.Text = filaSeleccionada.Cells["motivoReunion"].Value.ToString();
-                    txtFechaReu.Text = Convert.ToDateTime(filaSeleccionada.Cells["fechaReunion"].Value).ToString("yyyy-MM-dd");
-                    btnAgregarReu.Text = "Modificar";
-                }
             }
         }
-        
 
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -222,7 +209,7 @@ namespace Proyecto_Semillero
 
             // Validamos que el ID del usuario sea un número entero
             string rol = cboRol.Text;
-            int? idSemillero = null; // Declaramos la variable idSemillero como nullable para poder asignarle un valor null en caso de que el rol sea "Administrador", ya que los administradores no están asociados a ningún semillero. Esto nos permitirá manejar correctamente la inserción o actualización del usuario en la base de datos, evitando errores relacionados con valores nulos en la columna idSemillero de la tabla Usuario.
+            int? idSemillero = null; // allow null when role is Administrador
 
             if (rol != "Administrador")
             {
@@ -272,7 +259,8 @@ namespace Proyecto_Semillero
                 {
                     update = new SqlCommand("UPDATE Usuario SET idSemillero = @idSemillero, contraseñaUsuario = @contraseñaUsuario, nombresUsuario = @nombresUsuario, rolUsuario = @rolUsuario, telefonoUsuario = @telefonoUsuario, correoUsuario = @correoUsuario, edadUsuario = @edadUsuario, generoUsuario = @generoUsuario, estadoUsuario = @estadoUsuario WHERE idUsuario = @idUsuario", conexion.Conectar());
                     update.Parameters.AddWithValue("@idUsuario", idUsuario);
-                    update.Parameters.AddWithValue("@idSemillero", (object)idSemillero ?? DBNull.Value); // Si idSemillero es null, se asigna DBNull.Value para evitar errores al actualizar la base de datos
+                    // pass DBNull.Value when idSemillero is null
+                    update.Parameters.AddWithValue("@idSemillero", (object)idSemillero ?? DBNull.Value); 
                     update.Parameters.AddWithValue("@contraseñaUsuario", contraseña);
                     update.Parameters.AddWithValue("@nombresUsuario", nombre);
                     update.Parameters.AddWithValue("@rolUsuario", rol);
