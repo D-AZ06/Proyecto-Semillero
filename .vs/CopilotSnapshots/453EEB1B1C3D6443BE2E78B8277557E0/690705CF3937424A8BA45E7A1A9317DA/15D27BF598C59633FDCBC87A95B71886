@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static TheArtOfDevHtmlRenderer.Adapters.RGraphicsPath;
+using Microsoft.VisualBasic;
 
 
 namespace Proyecto_Semillero
@@ -73,7 +74,7 @@ namespace Proyecto_Semillero
             {
                 tabAgregar.SelectedTab = tabEventos;
             }
-            else if (tipo == "Reunion")
+            else if (tipo == "Reuniones")
             {
                 tabAgregar.SelectedTab = tabReunion;
             }
@@ -182,15 +183,14 @@ namespace Proyecto_Semillero
                     btnAgregarFas.Text = "Modificar";
                 }
 
-                else if (tipo == "Reunion")
+                else if (tipo == "Reuniones")
                 {
                     txtIdReu.Enabled = false;
                     txtIdUsuario3.Enabled = false;
                     txtIdReu.Text = filaSeleccionada.Cells["idReunion"].Value.ToString();
                     txtIdUsuario3.Text = filaSeleccionada.Cells["idUsuario"].Value.ToString();
-                    txtTipoReu.Text = filaSeleccionada.Cells["tipoReunion"].Value.ToString();
+                    txtHoraReu.Text = Convert.ToDateTime(filaSeleccionada.Cells["horaReunion"].Value).ToString("HH:mm:ss");
                     txtMotivoReu.Text = filaSeleccionada.Cells["motivoReunion"].Value.ToString();
-                    txtHoraReu.Text = filaSeleccionada.Cells["horaReunion"].Value.ToString();
                     txtFechaReu.Text = Convert.ToDateTime(filaSeleccionada.Cells["fechaReunion"].Value).ToString("yyyy-MM-dd");
                     btnAgregarReu.Text = "Modificar";
                 }
@@ -939,79 +939,23 @@ namespace Proyecto_Semillero
                 int idUsu = int.Parse(txtIdUsuario3.Text);
 
 
-
+                
                 SqlCommand validar = new SqlCommand(
-                    "SELECT COUNT(*) FROM Usuario WHERE idUsuario = @idUsuario AND rolUsuario = 'Lider'",
-                     conexion.Conectar()
-                 );
+                    "select count(*) from Usuario where idUsuario = @idUsuario",
+                    conexion.Conectar()
+                );
 
                 validar.Parameters.AddWithValue("@idUsuario", idUsuario);
                 int existe = (int)validar.ExecuteScalar();
 
                 if (existe == 0)
                 {
-                    MessageBox.Show("El Usuario no existe o no es un Lider.");
+                    MessageBox.Show("El Usuario no existe");
                     conexion.cerrar();
                     return;
                 }
 
                 idUsuario = idUsu;
-
-
-                if (modoEdicion == true)
-                {
-                    SqlCommand update;
-                    try
-                    {
-                        update = new SqlCommand("UPDATE Reunion SET idUsuario = @idUsuario, tipoReunion = @tipoReunion, motivoReunion = @motivoReunion, horaReunion = @horaReunion, fechaReunion = @fechaReunion WHERE idReunion = @idReunion", conexion.Conectar());
-                        update.Parameters.AddWithValue("@idReunion", idReu);
-                        update.Parameters.AddWithValue("@idUsuario", idUsuario);
-                        update.Parameters.AddWithValue("@tipoReunion", tipoReu);
-                        update.Parameters.AddWithValue("@motivoReunion", motivoReu);
-                        update.Parameters.AddWithValue("@horaReunion", horaReu);
-                        update.Parameters.AddWithValue("@fechaReunion", fechaReu);
-
-                        update.ExecuteNonQuery();
-
-                        MessageBox.Show("Reunión modificada correctamente");
-                        conexion.cerrar();
-                        this.DialogResult = DialogResult.OK;
-                        this.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                }
-                else
-                {
-                    try
-                    {
-                        SqlCommand insert = new SqlCommand(
-                            "INSERT INTO Reunion (idReunion, idUsuario, tipoReunion, motivoReunion, horaReunion, fechaReunion) " +
-                            "VALUES (@idReunion, @idUsuario, @tipoReunion, @motivoReunion, @horaReunion, @fechaReunion)",
-                            conexion.Conectar()
-                        );
-                        insert.Parameters.AddWithValue("@idReunion", idReu);
-                        insert.Parameters.AddWithValue("@idUsuario", idUsuario);
-                        insert.Parameters.AddWithValue("@tipoReunion", tipoReu);
-                        insert.Parameters.AddWithValue("@motivoReunion", motivoReu);
-                        insert.Parameters.AddWithValue("@horaReunion", horaReu);
-                        insert.Parameters.AddWithValue("@fechaReunion", fechaReu);
-
-                        insert.ExecuteNonQuery();
-
-                        MessageBox.Show("Reunión guardada correctamente");
-                        conexion.cerrar();
-                        this.DialogResult = DialogResult.OK;
-                        this.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message);
-                    }
-                }
-
             }
         }
     }

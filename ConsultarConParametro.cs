@@ -51,6 +51,11 @@ namespace Proyecto_Semillero
             {
                 cbo.Items.AddRange(new string[] {"","idReporte","idUsuario","fechaReporte","horaReporte","motivoReporte"});
             }
+
+            else if (tipo == "Reunion")
+            {
+                cbo.Items.AddRange(new string[] {"","idReunion","idUsuario", "tipoReunion","motivoReunion","horaReunion","fechaReunion"});
+            }
         }
 
         public static DataTable ConsultarParametro(string tabla, string columna, string valor, Conexion conexion)

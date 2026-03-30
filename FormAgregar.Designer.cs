@@ -162,19 +162,19 @@
             this.txtNombreAct = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblactividades = new System.Windows.Forms.Label();
             this.tabReunion = new System.Windows.Forms.TabPage();
-            this.txtMotivoReu = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtHoraReu = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTipoReu = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtIdUsuario3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtIdReu = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.txtFechaReu = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnAgregarReu = new Guna.UI2.WinForms.Guna2Button();
+            this.txtFechaReu = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.txtIdReu = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtIdUsuario3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTipoReu = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtHoraReu = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMotivoReu = new Guna.UI2.WinForms.Guna2TextBox();
             this.tabPatroc.SuspendLayout();
             this.tabReportes.SuspendLayout();
             this.tabProyectos.SuspendLayout();
@@ -204,7 +204,7 @@
             // btnCerrar
             // 
             this.btnCerrar.Location = new System.Drawing.Point(334, 528);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(62, 23);
             this.btnCerrar.TabIndex = 1;
@@ -227,9 +227,9 @@
             this.tabPatroc.Controls.Add(this.txtIdpatro);
             this.tabPatroc.Controls.Add(this.lblpatroc);
             this.tabPatroc.Location = new System.Drawing.Point(4, 22);
-            this.tabPatroc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPatroc.Margin = new System.Windows.Forms.Padding(2);
             this.tabPatroc.Name = "tabPatroc";
-            this.tabPatroc.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPatroc.Padding = new System.Windows.Forms.Padding(2);
             this.tabPatroc.Size = new System.Drawing.Size(386, 487);
             this.tabPatroc.TabIndex = 5;
             this.tabPatroc.Text = "Patrocinadores";
@@ -431,9 +431,9 @@
             this.tabReportes.Controls.Add(this.txtIdReporte);
             this.tabReportes.Controls.Add(this.lblreporte);
             this.tabReportes.Location = new System.Drawing.Point(4, 22);
-            this.tabReportes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabReportes.Margin = new System.Windows.Forms.Padding(2);
             this.tabReportes.Name = "tabReportes";
-            this.tabReportes.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabReportes.Padding = new System.Windows.Forms.Padding(2);
             this.tabReportes.Size = new System.Drawing.Size(386, 487);
             this.tabReportes.TabIndex = 4;
             this.tabReportes.Text = "Reportes";
@@ -448,7 +448,7 @@
             this.btnAgregarReporte.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnAgregarReporte.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAgregarReporte.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarReporte.Location = new System.Drawing.Point(49, 338);
+            this.btnAgregarReporte.Location = new System.Drawing.Point(130, 312);
             this.btnAgregarReporte.Name = "btnAgregarReporte";
             this.btnAgregarReporte.Size = new System.Drawing.Size(94, 35);
             this.btnAgregarReporte.TabIndex = 41;
@@ -639,9 +639,9 @@
             this.tabProyectos.Controls.Add(this.txtProyecto);
             this.tabProyectos.Controls.Add(this.lblproyecto);
             this.tabProyectos.Location = new System.Drawing.Point(4, 22);
-            this.tabProyectos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabProyectos.Margin = new System.Windows.Forms.Padding(2);
             this.tabProyectos.Name = "tabProyectos";
-            this.tabProyectos.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabProyectos.Padding = new System.Windows.Forms.Padding(2);
             this.tabProyectos.Size = new System.Drawing.Size(386, 487);
             this.tabProyectos.TabIndex = 3;
             this.tabProyectos.Text = "Proyectos";
@@ -907,9 +907,9 @@
             this.tabEventos.Controls.Add(this.txtIdEvento);
             this.tabEventos.Controls.Add(this.lbleventos);
             this.tabEventos.Location = new System.Drawing.Point(4, 22);
-            this.tabEventos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabEventos.Margin = new System.Windows.Forms.Padding(2);
             this.tabEventos.Name = "tabEventos";
-            this.tabEventos.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabEventos.Padding = new System.Windows.Forms.Padding(2);
             this.tabEventos.Size = new System.Drawing.Size(386, 487);
             this.tabEventos.TabIndex = 2;
             this.tabEventos.Text = "Eventos";
@@ -1144,9 +1144,9 @@
             this.tabSemillero.Controls.Add(this.label11);
             this.tabSemillero.Controls.Add(this.lblsemillero);
             this.tabSemillero.Location = new System.Drawing.Point(4, 22);
-            this.tabSemillero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabSemillero.Margin = new System.Windows.Forms.Padding(2);
             this.tabSemillero.Name = "tabSemillero";
-            this.tabSemillero.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabSemillero.Padding = new System.Windows.Forms.Padding(2);
             this.tabSemillero.Size = new System.Drawing.Size(386, 487);
             this.tabSemillero.TabIndex = 1;
             this.tabSemillero.Text = "Semillero";
@@ -1375,9 +1375,9 @@
             this.tabUsuario.Controls.Add(this.label2);
             this.tabUsuario.Controls.Add(this.label1);
             this.tabUsuario.Location = new System.Drawing.Point(4, 22);
-            this.tabUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.tabUsuario.Name = "tabUsuario";
-            this.tabUsuario.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabUsuario.Padding = new System.Windows.Forms.Padding(2);
             this.tabUsuario.Size = new System.Drawing.Size(386, 487);
             this.tabUsuario.TabIndex = 0;
             this.tabUsuario.Text = "Usuario";
@@ -1675,7 +1675,7 @@
             "Activo",
             "Inactivo"});
             this.cboEstado.Location = new System.Drawing.Point(160, 382);
-            this.cboEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboEstado.Margin = new System.Windows.Forms.Padding(2);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(92, 21);
             this.cboEstado.TabIndex = 20;
@@ -1698,7 +1698,7 @@
             "Masculino",
             "Femenino"});
             this.cboGeneroUsuario.Location = new System.Drawing.Point(162, 334);
-            this.cboGeneroUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboGeneroUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.cboGeneroUsuario.Name = "cboGeneroUsuario";
             this.cboGeneroUsuario.Size = new System.Drawing.Size(92, 21);
             this.cboGeneroUsuario.TabIndex = 18;
@@ -1713,7 +1713,7 @@
             "Lider",
             "Investigador"});
             this.cboRol.Location = new System.Drawing.Point(162, 173);
-            this.cboRol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboRol.Margin = new System.Windows.Forms.Padding(2);
             this.cboRol.Name = "cboRol";
             this.cboRol.Size = new System.Drawing.Size(92, 21);
             this.cboRol.TabIndex = 17;
@@ -1811,7 +1811,7 @@
             this.tabAgregar.Controls.Add(this.tabPatroc);
             this.tabAgregar.Controls.Add(this.tabReunion);
             this.tabAgregar.Location = new System.Drawing.Point(6, 11);
-            this.tabAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.tabAgregar.Name = "tabAgregar";
             this.tabAgregar.SelectedIndex = 0;
             this.tabAgregar.Size = new System.Drawing.Size(394, 513);
@@ -2001,9 +2001,9 @@
             this.tabActividades.Controls.Add(this.txtNombreAct);
             this.tabActividades.Controls.Add(this.lblactividades);
             this.tabActividades.Location = new System.Drawing.Point(4, 22);
-            this.tabActividades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabActividades.Margin = new System.Windows.Forms.Padding(2);
             this.tabActividades.Name = "tabActividades";
-            this.tabActividades.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabActividades.Padding = new System.Windows.Forms.Padding(2);
             this.tabActividades.Size = new System.Drawing.Size(386, 487);
             this.tabActividades.TabIndex = 6;
             this.tabActividades.Text = "Actividades";
@@ -2216,170 +2216,21 @@
             this.tabReunion.Text = "Reunión";
             this.tabReunion.UseVisualStyleBackColor = true;
             // 
-            // txtMotivoReu
+            // btnAgregarReu
             // 
-            this.txtMotivoReu.BorderRadius = 10;
-            this.txtMotivoReu.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMotivoReu.DefaultText = "";
-            this.txtMotivoReu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMotivoReu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMotivoReu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMotivoReu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMotivoReu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMotivoReu.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtMotivoReu.ForeColor = System.Drawing.Color.Black;
-            this.txtMotivoReu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMotivoReu.Location = new System.Drawing.Point(164, 231);
-            this.txtMotivoReu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtMotivoReu.Name = "txtMotivoReu";
-            this.txtMotivoReu.PlaceholderText = "";
-            this.txtMotivoReu.SelectedText = "";
-            this.txtMotivoReu.Size = new System.Drawing.Size(90, 20);
-            this.txtMotivoReu.TabIndex = 33;
-            // 
-            // txtHoraReu
-            // 
-            this.txtHoraReu.BorderRadius = 10;
-            this.txtHoraReu.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtHoraReu.DefaultText = "";
-            this.txtHoraReu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtHoraReu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtHoraReu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHoraReu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHoraReu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHoraReu.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtHoraReu.ForeColor = System.Drawing.Color.Black;
-            this.txtHoraReu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHoraReu.Location = new System.Drawing.Point(164, 296);
-            this.txtHoraReu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtHoraReu.Name = "txtHoraReu";
-            this.txtHoraReu.PlaceholderText = "";
-            this.txtHoraReu.SelectedText = "";
-            this.txtHoraReu.Size = new System.Drawing.Size(90, 20);
-            this.txtHoraReu.TabIndex = 34;
-            // 
-            // txtTipoReu
-            // 
-            this.txtTipoReu.BorderRadius = 10;
-            this.txtTipoReu.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTipoReu.DefaultText = "";
-            this.txtTipoReu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTipoReu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTipoReu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTipoReu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTipoReu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTipoReu.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTipoReu.ForeColor = System.Drawing.Color.Black;
-            this.txtTipoReu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTipoReu.Location = new System.Drawing.Point(164, 172);
-            this.txtTipoReu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtTipoReu.Name = "txtTipoReu";
-            this.txtTipoReu.PlaceholderText = "";
-            this.txtTipoReu.SelectedText = "";
-            this.txtTipoReu.Size = new System.Drawing.Size(90, 20);
-            this.txtTipoReu.TabIndex = 35;
-            // 
-            // txtIdUsuario3
-            // 
-            this.txtIdUsuario3.BorderRadius = 10;
-            this.txtIdUsuario3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIdUsuario3.DefaultText = "";
-            this.txtIdUsuario3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtIdUsuario3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtIdUsuario3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdUsuario3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdUsuario3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdUsuario3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtIdUsuario3.ForeColor = System.Drawing.Color.Black;
-            this.txtIdUsuario3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdUsuario3.Location = new System.Drawing.Point(164, 112);
-            this.txtIdUsuario3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtIdUsuario3.Name = "txtIdUsuario3";
-            this.txtIdUsuario3.PlaceholderText = "";
-            this.txtIdUsuario3.SelectedText = "";
-            this.txtIdUsuario3.Size = new System.Drawing.Size(90, 20);
-            this.txtIdUsuario3.TabIndex = 36;
-            // 
-            // txtIdReu
-            // 
-            this.txtIdReu.BorderRadius = 10;
-            this.txtIdReu.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIdReu.DefaultText = "";
-            this.txtIdReu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtIdReu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtIdReu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdReu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdReu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdReu.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtIdReu.ForeColor = System.Drawing.Color.Black;
-            this.txtIdReu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdReu.Location = new System.Drawing.Point(164, 58);
-            this.txtIdReu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtIdReu.Name = "txtIdReu";
-            this.txtIdReu.PlaceholderText = "";
-            this.txtIdReu.SelectedText = "";
-            this.txtIdReu.Size = new System.Drawing.Size(90, 20);
-            this.txtIdReu.TabIndex = 37;
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(66, 58);
-            this.label50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(59, 13);
-            this.label50.TabIndex = 38;
-            this.label50.Text = "Id Reunión";
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(70, 119);
-            this.label51.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(55, 13);
-            this.label51.TabIndex = 39;
-            this.label51.Text = "Id Usuario";
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(54, 172);
-            this.label52.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(71, 13);
-            this.label52.TabIndex = 40;
-            this.label52.Text = "Tipo Reunión";
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(43, 233);
-            this.label53.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(82, 13);
-            this.label53.TabIndex = 41;
-            this.label53.Text = "Motivo Reunión";
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(54, 299);
-            this.label54.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(73, 13);
-            this.label54.TabIndex = 42;
-            this.label54.Text = "Hora Reunión";
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(45, 356);
-            this.label55.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(80, 13);
-            this.label55.TabIndex = 43;
-            this.label55.Text = "Fecha Reunión";
+            this.btnAgregarReu.BorderRadius = 15;
+            this.btnAgregarReu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAgregarReu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAgregarReu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAgregarReu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAgregarReu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAgregarReu.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarReu.Location = new System.Drawing.Point(127, 393);
+            this.btnAgregarReu.Name = "btnAgregarReu";
+            this.btnAgregarReu.Size = new System.Drawing.Size(94, 35);
+            this.btnAgregarReu.TabIndex = 45;
+            this.btnAgregarReu.Text = "Agregar";
+            this.btnAgregarReu.Click += new System.EventHandler(this.txtAgregarReu_Click);
             // 
             // txtFechaReu
             // 
@@ -2402,21 +2253,170 @@
             this.txtFechaReu.Size = new System.Drawing.Size(90, 20);
             this.txtFechaReu.TabIndex = 44;
             // 
-            // btnAgregarReu
+            // label55
             // 
-            this.btnAgregarReu.BorderRadius = 15;
-            this.btnAgregarReu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregarReu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregarReu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAgregarReu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAgregarReu.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAgregarReu.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarReu.Location = new System.Drawing.Point(120, 403);
-            this.btnAgregarReu.Name = "btnAgregarReu";
-            this.btnAgregarReu.Size = new System.Drawing.Size(94, 35);
-            this.btnAgregarReu.TabIndex = 45;
-            this.btnAgregarReu.Text = "Agregar";
-            this.btnAgregarReu.Click += new System.EventHandler(this.txtAgregarReu_Click);
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(45, 356);
+            this.label55.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(80, 13);
+            this.label55.TabIndex = 43;
+            this.label55.Text = "Fecha Reunión";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(54, 299);
+            this.label54.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(73, 13);
+            this.label54.TabIndex = 42;
+            this.label54.Text = "Hora Reunión";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(43, 233);
+            this.label53.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(82, 13);
+            this.label53.TabIndex = 41;
+            this.label53.Text = "Motivo Reunión";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(54, 172);
+            this.label52.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(71, 13);
+            this.label52.TabIndex = 40;
+            this.label52.Text = "Tipo Reunión";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(70, 119);
+            this.label51.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(55, 13);
+            this.label51.TabIndex = 39;
+            this.label51.Text = "Id Usuario";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(66, 58);
+            this.label50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(59, 13);
+            this.label50.TabIndex = 38;
+            this.label50.Text = "Id Reunión";
+            // 
+            // txtIdReu
+            // 
+            this.txtIdReu.BorderRadius = 10;
+            this.txtIdReu.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIdReu.DefaultText = "";
+            this.txtIdReu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtIdReu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtIdReu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdReu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdReu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdReu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtIdReu.ForeColor = System.Drawing.Color.Black;
+            this.txtIdReu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdReu.Location = new System.Drawing.Point(164, 58);
+            this.txtIdReu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtIdReu.Name = "txtIdReu";
+            this.txtIdReu.PlaceholderText = "";
+            this.txtIdReu.SelectedText = "";
+            this.txtIdReu.Size = new System.Drawing.Size(90, 20);
+            this.txtIdReu.TabIndex = 37;
+            // 
+            // txtIdUsuario3
+            // 
+            this.txtIdUsuario3.BorderRadius = 10;
+            this.txtIdUsuario3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIdUsuario3.DefaultText = "";
+            this.txtIdUsuario3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtIdUsuario3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtIdUsuario3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdUsuario3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdUsuario3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdUsuario3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtIdUsuario3.ForeColor = System.Drawing.Color.Black;
+            this.txtIdUsuario3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdUsuario3.Location = new System.Drawing.Point(164, 112);
+            this.txtIdUsuario3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtIdUsuario3.Name = "txtIdUsuario3";
+            this.txtIdUsuario3.PlaceholderText = "";
+            this.txtIdUsuario3.SelectedText = "";
+            this.txtIdUsuario3.Size = new System.Drawing.Size(90, 20);
+            this.txtIdUsuario3.TabIndex = 36;
+            // 
+            // txtTipoReu
+            // 
+            this.txtTipoReu.BorderRadius = 10;
+            this.txtTipoReu.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTipoReu.DefaultText = "";
+            this.txtTipoReu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTipoReu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTipoReu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTipoReu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTipoReu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTipoReu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTipoReu.ForeColor = System.Drawing.Color.Black;
+            this.txtTipoReu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTipoReu.Location = new System.Drawing.Point(164, 172);
+            this.txtTipoReu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTipoReu.Name = "txtTipoReu";
+            this.txtTipoReu.PlaceholderText = "";
+            this.txtTipoReu.SelectedText = "";
+            this.txtTipoReu.Size = new System.Drawing.Size(90, 20);
+            this.txtTipoReu.TabIndex = 35;
+            // 
+            // txtHoraReu
+            // 
+            this.txtHoraReu.BorderRadius = 10;
+            this.txtHoraReu.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtHoraReu.DefaultText = "";
+            this.txtHoraReu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtHoraReu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtHoraReu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHoraReu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHoraReu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtHoraReu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtHoraReu.ForeColor = System.Drawing.Color.Black;
+            this.txtHoraReu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtHoraReu.Location = new System.Drawing.Point(164, 296);
+            this.txtHoraReu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtHoraReu.Name = "txtHoraReu";
+            this.txtHoraReu.PlaceholderText = "";
+            this.txtHoraReu.SelectedText = "";
+            this.txtHoraReu.Size = new System.Drawing.Size(90, 20);
+            this.txtHoraReu.TabIndex = 34;
+            // 
+            // txtMotivoReu
+            // 
+            this.txtMotivoReu.BorderRadius = 10;
+            this.txtMotivoReu.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMotivoReu.DefaultText = "";
+            this.txtMotivoReu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMotivoReu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMotivoReu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMotivoReu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMotivoReu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMotivoReu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMotivoReu.ForeColor = System.Drawing.Color.Black;
+            this.txtMotivoReu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMotivoReu.Location = new System.Drawing.Point(164, 231);
+            this.txtMotivoReu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMotivoReu.Name = "txtMotivoReu";
+            this.txtMotivoReu.PlaceholderText = "";
+            this.txtMotivoReu.SelectedText = "";
+            this.txtMotivoReu.Size = new System.Drawing.Size(90, 20);
+            this.txtMotivoReu.TabIndex = 33;
             // 
             // FormAgregar
             // 
@@ -2428,7 +2428,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.tabAgregar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormAgregar";
             this.Text = "FormAgregar";
             this.Load += new System.EventHandler(this.FormAgregar_Load);
