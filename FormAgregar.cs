@@ -235,7 +235,7 @@ namespace Proyecto_Semillero
 
             // Validamos que el ID del usuario sea un número entero
             string rol = cboRol.Text;
-            int? idSemillero = null; // Declaramos la variable idSemillero como nullable para poder asignarle un valor null en caso de que el rol sea "Administrador", ya que los administradores no están asociados a ningún semillero. Esto nos permitirá manejar correctamente la inserción o actualización del usuario en la base de datos, evitando errores relacionados con valores nulos en la columna idSemillero de la tabla Usuario.
+            int idSemillero = 0; // Declaramos la variable idSemillero como nullable para poder asignarle un valor null en caso de que el rol sea "Administrador", ya que los administradores no están asociados a ningún semillero. Esto nos permitirá manejar correctamente la inserción o actualización del usuario en la base de datos, evitando errores relacionados con valores nulos en la columna idSemillero de la tabla Usuario.
 
             if (rol != "Administrador")
             {
@@ -256,7 +256,7 @@ namespace Proyecto_Semillero
                 validar.Parameters.AddWithValue("@idSemillero", idSem);
 
                 int existe = (int)validar.ExecuteScalar();// Ejecutamos la consulta y obtenemos el resultado, que es el número de registros que coinciden con el ID del semillero ingresado. Si el resultado es 0,
-                                                          // significa que el semillero no existe en la base de datos, por lo que se muestra un mensaje de error al usuario y se cierra la conexión a la base de datos.
+                                                          // significa que el semillero no existe en la base de datos
 
                 if (existe == 0)
                 {
@@ -276,7 +276,7 @@ namespace Proyecto_Semillero
             int idUsuario = int.Parse(txtIdUsuario.Text);
             long telefono = long.Parse(txtTelefonoUsuario.Text);
             int edad = int.Parse(txtEdadUsuario.Text);
-          
+            
 
             if (modoEdicion == true)
             {
@@ -285,7 +285,14 @@ namespace Proyecto_Semillero
                 {
                     update = new SqlCommand("UPDATE Usuario SET idSemillero = @idSemillero, contraseñaUsuario = @contraseñaUsuario, nombresUsuario = @nombresUsuario, rolUsuario = @rolUsuario, telefonoUsuario = @telefonoUsuario, correoUsuario = @correoUsuario, edadUsuario = @edadUsuario, generoUsuario = @generoUsuario, estadoUsuario = @estadoUsuario WHERE idUsuario = @idUsuario", conexion.Conectar());
                     update.Parameters.AddWithValue("@idUsuario", idUsuario);
-                    update.Parameters.AddWithValue("@idSemillero", (object)idSemillero ?? DBNull.Value); // Si idSemillero es null, se asigna DBNull.Value para evitar errores al actualizar la base de datos
+                    if (rol == "Administrador") // Si el rol del usuario es "Administrador", no se asigna un ID de semillero, ya que los administradores no están asociados a ningún semillero. En este caso, se asigna un valor nulo a la columna idSemillero en la base de datos utilizando DBNull.Value, lo que indica que el usuario no tiene un semillero asociado. Esto permite manejar correctamente la inserción o actualización del usuario en la base de datos sin generar errores relacionados con valores nulos en la columna idSemillero.
+                    {
+                        update.Parameters.AddWithValue("@idSemillero", DBNull.Value);// Si el rol del usuario es "Administrador", asignamos un valor nulo a la columna idSemillero en la base de datos, ya que los administradores no están asociados a ningún semillero. Esto se hace utilizando DBNull.Value, que representa un valor nulo en la base de datos.
+                    }
+                    else
+                    {
+                        update.Parameters.AddWithValue("@idSemillero", idSemillero);
+                    }
                     update.Parameters.AddWithValue("@contraseñaUsuario", contraseña);
                     update.Parameters.AddWithValue("@nombresUsuario", nombre);
                     update.Parameters.AddWithValue("@rolUsuario", rol);
@@ -316,7 +323,14 @@ namespace Proyecto_Semillero
                     );
 
                     insert.Parameters.AddWithValue("@idUsuario", idUsuario);
-                    insert.Parameters.AddWithValue("@idSemillero", (object)idSemillero ?? DBNull.Value);
+                    if (rol == "Administrador")
+                    {
+                        insert.Parameters.AddWithValue("@idSemillero", DBNull.Value);
+                    }
+                    else
+                    {
+                        insert.Parameters.AddWithValue("@idSemillero", idSemillero);
+                    }
                     insert.Parameters.AddWithValue("@contraseña", contraseña);
                     insert.Parameters.AddWithValue("@nombre", nombre);
                     insert.Parameters.AddWithValue("@rol", rol);
