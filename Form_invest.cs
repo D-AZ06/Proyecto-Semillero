@@ -12,9 +12,11 @@ namespace Proyecto_Semillero
 {
     public partial class Form_invest : Form
     {
-        public Form_invest()
+        public int idSemillero; // creamos la variable idSemillero para almacenar el id del semillero al que pertenece el investigador
+        public Form_invest(int idSemillero)
         {
             InitializeComponent();
+            this.idSemillero = idSemillero;
         }
     }
 }

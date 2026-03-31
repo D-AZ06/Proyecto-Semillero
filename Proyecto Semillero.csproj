@@ -96,6 +96,9 @@
     <EmbeddedResource Include="FormAgregar.resx">
       <DependentUpon>FormAgregar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_lider.resx">
+      <DependentUpon>Form_lider.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -122,6 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <None Include="Resources\4220234.jpg" />
     <None Include="Resources\enfoque.png" />
     <None Include="Resources\linea-de-tiempo.png" />
     <None Include="Resources\etiqueta.png" />
