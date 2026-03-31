@@ -69,7 +69,7 @@ namespace Proyecto_Semillero
             Gestionar("Reportes");
             formularioActual = "Reportes";
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
-            btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
+            btnRegistrar.Enabled = false; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;
             btnEliminar.Enabled = true;
             lbl_gestionar.Text = "Gestionar Reportes";
@@ -168,8 +168,8 @@ namespace Proyecto_Semillero
         private void btn_reunion_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = null;
-            Gestionar("Reunion");
-            formularioActual = "Reunion";
+            Gestionar("Reuniones");
+            formularioActual = "Reuniones";
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
             btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
             btnModificar.Enabled = true;

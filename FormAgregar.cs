@@ -73,7 +73,7 @@ namespace Proyecto_Semillero
             {
                 tabAgregar.SelectedTab = tabEventos;
             }
-            else if (tipo == "Reunion")
+            else if (tipo == "Reuniones")
             {
                 tabAgregar.SelectedTab = tabReunion;
             }
@@ -167,7 +167,7 @@ namespace Proyecto_Semillero
                     txtIdFase1.Text = filaSeleccionada.Cells["idFase"].Value.ToString();
                     txtNombreAct.Text = filaSeleccionada.Cells["nombreActividad"].Value.ToString();
                     txtDuracionAct.Text = filaSeleccionada.Cells["duracionActividad"].Value.ToString();
-                    txtFechaAct.Text = Convert.ToDateTime(filaSeleccionada.Cells["fechaActividad"].Value).ToString("yyyy-MM-dd");
+                    txtFechaAct.Text = Convert.ToDateTime(filaSeleccionada.Cells["fechaEntregaActividad"].Value).ToString("yyyy-MM-dd");
                     btnAgregarAct.Text = "Modificar";
                 }
 
@@ -182,26 +182,38 @@ namespace Proyecto_Semillero
                     btnAgregarFas.Text = "Modificar";
                 }
 
-                else if (tipo == "Reunion")
+                else if (tipo == "Reuniones")
                 {
                     txtIdReu.Enabled = false;
                     txtIdUsuario3.Enabled = false;
                     txtIdReu.Text = filaSeleccionada.Cells["idReunion"].Value.ToString();
                     txtIdUsuario3.Text = filaSeleccionada.Cells["idUsuario"].Value.ToString();
                     txtTipoReu.Text = filaSeleccionada.Cells["tipoReunion"].Value.ToString();
-                    txtMotivoReu.Text = filaSeleccionada.Cells["motivoReunion"].Value.ToString();
                     txtHoraReu.Text = filaSeleccionada.Cells["horaReunion"].Value.ToString();
+                    txtMotivoReu.Text = filaSeleccionada.Cells["motivoReunion"].Value.ToString();
                     txtFechaReu.Text = Convert.ToDateTime(filaSeleccionada.Cells["fechaReunion"].Value).ToString("yyyy-MM-dd");
                     btnAgregarReu.Text = "Modificar";
                 }
             }
         }
-        
 
 
-        private void tabPage1_Click(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void cboRol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboRol.Text == "Administrador")
+            {
+                txtIdSemillero3.Enabled = false;
+                txtIdSemillero3.Text = "";
+            }
+            else
+            {
+                txtIdSemillero3.Enabled = true;
+            }
         }
 
         private void btnAgregarUsuario_Click_1(object sender, EventArgs e)
@@ -326,17 +338,6 @@ namespace Proyecto_Semillero
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
-        }
-
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void guna2DateTimePicker3_ValueChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnAgregarSem_Click(object sender, EventArgs e)
@@ -644,24 +645,6 @@ namespace Proyecto_Semillero
             }
         }
 
-        private void btnModificarUsuario_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cboRol_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cboRol.Text == "Administrador")
-            {
-                txtIdSemillero3.Enabled = false;
-                txtIdSemillero3.Text = "";
-            }
-            else
-            {
-                txtIdSemillero3.Enabled = true;
-            }
-        }
-
         private void btnAgregarPatro_Click(object sender, EventArgs e)
         {
             if ((txtIdpatro.Text == "") || (txtNombrePatro.Text == "") || (txtTipoPatro.Text == "") || (txtTelefonoPatro.Text == "") || (txtCorreoPatro.Text == ""))
@@ -729,21 +712,6 @@ namespace Proyecto_Semillero
             }
         }
 
-        private void tabFases_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label44_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label45_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAgregarFas_Click(object sender, EventArgs e)
         {
             if ((txtIdFase.Text == "") || (txtProyecto1.Text == "") || (txtNombreFas.Text == "") || (txtNombreFas.Text == ""))
@@ -809,7 +777,7 @@ namespace Proyecto_Semillero
                             conexion.Conectar()
                         );
                         insert.Parameters.AddWithValue("@idFase", idFase);
-                        insert.Parameters.AddWithValue("@id Proyecto", idProyecto);
+                        insert.Parameters.AddWithValue("@idProyecto", idProyecto);
                         insert.Parameters.AddWithValue("@nombreFase", nombreFase);
                         insert.Parameters.AddWithValue("@duracionFase", duracionFase);
 
@@ -870,12 +838,12 @@ namespace Proyecto_Semillero
                     SqlCommand update;
                     try
                     {
-                        update = new SqlCommand("UPDATE Actividad SET idFase = @idFase, nombreActividad = @nombreActividad, duracionActividad = @duracionActividad, fechaActividad = @fechaActividad WHERE idActividad = @idActividad", conexion.Conectar());
+                        update = new SqlCommand("UPDATE Actividad SET idFase = @idFase, nombreActividad = @nombreActividad, duracionActividad = @duracionActividad, fechaEntregaActividad = @fechaEntregaActividad WHERE idActividad = @idActividad", conexion.Conectar());
                         update.Parameters.AddWithValue("@idActividad", idActividad);
                         update.Parameters.AddWithValue("@idFase", idFase);
                         update.Parameters.AddWithValue("@nombreActividad", nombreAct);
                         update.Parameters.AddWithValue("@duracionActividad", duracionAct);
-                        update.Parameters.AddWithValue("@fechaActividad", fechaAct);
+                        update.Parameters.AddWithValue("@fechaEntregaActividad", fechaAct);
 
                         update.ExecuteNonQuery();
 
@@ -894,15 +862,15 @@ namespace Proyecto_Semillero
                     try
                     {
                         SqlCommand insert = new SqlCommand(
-                            "INSERT INTO Actividad (idActividad, idFase, nombreActividad, duracionActividad, fechaActividad) " +
-                            "VALUES (@idActividad, @idFase, @nombreActividad, @duracionActividad, @fechaActividad)",
+                            "INSERT INTO Actividad (idActividad, idFase, nombreActividad, duracionActividad, fechaEntregaActividad) " +
+                            "VALUES (@idActividad, @idFase, @nombreActividad, @duracionActividad, @fechaEntregaActividad)",
                             conexion.Conectar()
                         );
                         insert.Parameters.AddWithValue("@idActividad", idActividad);
                         insert.Parameters.AddWithValue("@idFase", idFase);
                         insert.Parameters.AddWithValue("@nombreActividad", nombreAct);
                         insert.Parameters.AddWithValue("@duracionActividad", duracionAct);
-                        insert.Parameters.AddWithValue("@fechaActividad", fechaAct);
+                        insert.Parameters.AddWithValue("@fechaEntregaActividad", fechaAct);
 
                         insert.ExecuteNonQuery();
 
@@ -963,12 +931,12 @@ namespace Proyecto_Semillero
                     SqlCommand update;
                     try
                     {
-                        update = new SqlCommand("UPDATE Reunion SET idUsuario = @idUsuario, tipoReunion = @tipoReunion, motivoReunion = @motivoReunion, horaReunion = @horaReunion, fechaReunion = @fechaReunion WHERE idReunion = @idReunion", conexion.Conectar());
+                        update = new SqlCommand("UPDATE Reuniones SET idUsuario = @idUsuario, tipoReunion = @tipoReunion, horaReunion = @horaReunion, motivoReunion = @motivoReunion, fechaReunion = @fechaReunion WHERE idReunion = @idReunion", conexion.Conectar());
                         update.Parameters.AddWithValue("@idReunion", idReu);
                         update.Parameters.AddWithValue("@idUsuario", idUsuario);
                         update.Parameters.AddWithValue("@tipoReunion", tipoReu);
-                        update.Parameters.AddWithValue("@motivoReunion", motivoReu);
                         update.Parameters.AddWithValue("@horaReunion", horaReu);
+                        update.Parameters.AddWithValue("@motivoReunion", motivoReu);
                         update.Parameters.AddWithValue("@fechaReunion", fechaReu);
 
                         update.ExecuteNonQuery();
@@ -988,15 +956,15 @@ namespace Proyecto_Semillero
                     try
                     {
                         SqlCommand insert = new SqlCommand(
-                            "INSERT INTO Reunion (idReunion, idUsuario, tipoReunion, motivoReunion, horaReunion, fechaReunion) " +
+                            "INSERT INTO Reuniones (idReunion, idUsuario, tipoReunion, horaReunion, motivoReunion, fechaReunion) " +
                             "VALUES (@idReunion, @idUsuario, @tipoReunion, @motivoReunion, @horaReunion, @fechaReunion)",
                             conexion.Conectar()
                         );
                         insert.Parameters.AddWithValue("@idReunion", idReu);
                         insert.Parameters.AddWithValue("@idUsuario", idUsuario);
                         insert.Parameters.AddWithValue("@tipoReunion", tipoReu);
-                        insert.Parameters.AddWithValue("@motivoReunion", motivoReu);
                         insert.Parameters.AddWithValue("@horaReunion", horaReu);
+                        insert.Parameters.AddWithValue("@motivoReunion", motivoReu);
                         insert.Parameters.AddWithValue("@fechaReunion", fechaReu);
 
                         insert.ExecuteNonQuery();
@@ -1013,6 +981,192 @@ namespace Proyecto_Semillero
                 }
 
             }
+        }
+
+        public void SoloNumeros(KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != '-' && e.KeyChar != ':')
+            {
+                e.Handled = true;
+            }
+        }
+
+        public void SoloLetras(KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtIdUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtIdSemillero3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloLetras(e);
+        }
+
+        private void txtTelefonoUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtEdadUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtIdSemillero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtLineaSem_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloLetras(e);
+        }
+
+        private void txtEnfoqueSem_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloLetras(e);
+        }
+
+        private void txtIdEvento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtTipoEven_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloLetras(e);
+        }
+
+        private void txtOrgEvento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloLetras(e);
+        }
+
+        private void txtProyecto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtIdSemillero1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtObjetivo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtIdFase_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtProyecto1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtIdAct_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtIdFase1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtIdReporte_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtIdUsuario2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtFechaEven_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtFechaInicio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtFechaFin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtFechaAct_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtFechaReporte_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtHoraReporte_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtIdpatro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtTipoPatro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloLetras(e);
+        }
+
+        private void txtTelefonoPatro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtIdReu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtIdUsuario3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtTipoReu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloLetras(e);
+        }
+
+        private void txtHoraReu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtFechaReu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
         }
     }
 }
