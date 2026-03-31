@@ -20,6 +20,14 @@ namespace Proyecto_Semillero
             InitializeComponent();
             this.idSemillero = idSemillero;
         }
+        private void Form_lider_Load(object sender, EventArgs e)
+        {
+            Panel1.BackColor = Color.FromArgb(80, 255, 255, 255);
+            Panel2.BackColor = Color.FromArgb(80, 255, 255, 255);
+            Panel3.BackColor = Color.FromArgb(80, 255, 255, 255);
+            Panel4.BackColor = Color.FromArgb(80, 255, 255, 255);
+        }
+
 
         private void btbsalir_Click(object sender, EventArgs e)
         {
@@ -34,7 +42,62 @@ namespace Proyecto_Semillero
         private void btn_gestionar_usuarios_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = null;
-            Consulta.GestionarUsuarios(idSemillero, dataGridView1);//llamamos al método GestionarUsuario de la clase Consulta, pasando el id del semillero y el DataGridView para mostrar los usuarios
+            Consulta.Gestionarlider("Usuario", idSemillero, dataGridView1);//llamamos al método GestionarUsuario de la clase Consulta, pasando el id del semillero y el DataGridView para mostrar los usuarios
+        }
+
+        private void btnconsultalp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSemillero_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            Consulta.Gestionarlider("Semillero", idSemillero, dataGridView1);
+        }
+
+        private void btn_proyecto_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            Consulta.Gestionarlider("Proyectos", idSemillero, dataGridView1);
+
+        }
+
+        private void btnFases_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            Consulta.Gestionarlider("Fase", idSemillero, dataGridView1);
+        }
+
+        private void btn_act_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            Consulta.Gestionarlider("Actividad", idSemillero, dataGridView1);
+
+        }
+
+        private void btn_eventos_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            Consulta.Gestionarlider("Eventos", idSemillero, dataGridView1);
+        }
+
+        private void btn_gestionar_reportes_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            Consulta.Gestionarlider("Reportes", idSemillero, dataGridView1);
+        }
+
+        private void btn_patrocinadores_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            Consulta.Gestionarlider("Patrocinadores", idSemillero, dataGridView1);
+        }
+
+        private void btn_reunion_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            Consulta.Gestionarlider("Reuniones", idSemillero, dataGridView1);
         }
     }
 }

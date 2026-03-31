@@ -85,27 +85,98 @@ namespace Proyecto_Semillero
         // -------------------------------------------------------------------------------------------------------------
 
 
-        public void GestionarUsuarios(int idSemillero, DataGridView dataGridView) // creamos el metodo GestionarUsuarios para mostrar en el datagrid los datos de los usuarios según al semillero que pertenezcan los investigadores y lideres
+        public void Gestionarlider(string tipo, int idSemillero, DataGridView dataGridView) // creamos el metodo GestionarUsuarios para mostrar en el datagrid los datos de los usuarios según al semillero que pertenezcan los investigadores y lideres
         {
             SqlCommand consulta; // creamos un objeto de tipo Sql
-            consulta = new SqlCommand("select * from Usuario where idSemillero = @idSemillero", conexion.Conectar()); // establecemos la consulta SQL para mostrar en el datagrid los datos de los usuarios según al semillero que pertenezcan los investigadores y lideres
-            consulta.CommandType = CommandType.Text;//establecemos el tipo de comando como texto
-            consulta.Parameters.Add("@idSemillero", SqlDbType.Int).Value = idSemillero; // agregamos el parametro idSemillero a la consulta SQL para mostrar en el datagrid los datos de los usuarios según al semillero que pertenezcan los investigadores y lideres
-            dataset.Clear();//limpiamos el DataSet para evitar que se acumulen los datos obtenidos de la consulta SQL
-            SqlDataAdapter da = new SqlDataAdapter(consulta);//creamos un objeto de tipo SqlDataAdapter para ejecutar la consulta SQL y almacenar los datos obtenidos en el DataSet
-            da.Fill(dataset, "Usuario");//llenamos el DataSet con los datos obtenidos de la consulta SQL
+            consulta = new SqlCommand();
+            if (tipo == "Usuario")
+            {
+                consulta = new SqlCommand(
+                    "select * from Usuario where idSemillero = @idSemillero",
+                    conexion.Conectar()
+                );
+            }
+            else if (tipo == "Semillero")
+            {
+                consulta = new SqlCommand(
+                    "select * from Semillero where idSemillero = @idSemillero",
+                    conexion.Conectar()
+                );
+            }
+            else if (tipo == "Proyectos")
+            {
+                consulta = new SqlCommand(
+                    "select * from Proyectos where idSemillero = @idSemillero",
+                    conexion.Conectar()
+                );
+            }
+            else if (tipo == "Fase")
+            {
+                consulta = new SqlCommand(
+                    "select * from Fase where idProyecto = (select idProyecto from Proyectos where idSemillero = @idSemillero)",
+                    conexion.Conectar()
+                );
+            }
+            else if (tipo == "Actividad")
+            {
+                consulta = new SqlCommand(
+                    "select * from Actividad where idFase = (select idFase from Fase where idProyecto = (select idProyecto from Proyectos where idSemillero = @idSemillero))",
+                    conexion.Conectar()
+                );
+            }
+            else if (tipo == "Eventos")
+            {
+                consulta = new SqlCommand(
+                    "select * from Eventos where idEvento = (select idEvento from ProyectosEventos where idProyecto =(select idProyecto from Proyectos where idSemillero = @idSemillero)) ",
+                    conexion.Conectar()
+                    );
+            }
+            else if (tipo == "Reportes")
+            {
+                consulta = new SqlCommand(
+                    "select * from Reportes where ",
+                    conexion.Conectar()
+                    );
+            }
+            else if (tipo == "Patrocinadores")
+            {
+                consulta = new SqlCommand(
+                    "select * from Patrocinadores where ",
+                    conexion.Conectar()
+                    );
+            }
+            else if (tipo == "Reuniones")
+            {
+                consulta = new SqlCommand(
+                    "select * from Reuniones where ",
+                    conexion.Conectar()
+                    );
+            }
+
+
+
+
+
+            consulta.CommandType = CommandType.Text;
+            consulta.Parameters.Add("@idSemillero", SqlDbType.Int).Value = idSemillero;
+
+            dataset.Clear();
+
+            SqlDataAdapter da = new SqlDataAdapter(consulta);
+            da.Fill(dataset, tipo); // llenamos el DataSet con los datos obtenidos de la consulta SQL, utilizando el nombre del tipo como nombre de la tabla en el DataSet
 
             try
             {
-                dataGridView.DataMember = "Usuario";//establecemos el miembro de datos del DataGridView para mostrar los datos de la tabla "Usuario" del DataSet
-                dataGridView.DataSource = dataset;//establecemos la fuente de datos del DataGridView como el DataSet para mostrar los datos obtenidos de la consulta SQL
+                dataGridView.DataSource = dataset;
+                dataGridView.DataMember = tipo;
             }
-
-            catch (Exception ex)//capturamos cualquier excepción que pueda ocurrir al mostrar los datos en el DataGridView y mostramos un mensaje de error
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);//mostramos el mensaje de error de la excepción
+                MessageBox.Show(ex.Message);
             }
 
         }
+
+      
     }
 }
