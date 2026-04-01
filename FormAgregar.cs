@@ -21,6 +21,11 @@ namespace Proyecto_Semillero
         public string tipo;
 
         public bool modoEdicion = false;
+
+        public bool lider = false;
+
+        public int idSemilleroLider;
+
         public DataGridViewRow filaSeleccionada;
 
         public FormAgregar()
@@ -194,6 +199,15 @@ namespace Proyecto_Semillero
                     txtFechaReu.Text = Convert.ToDateTime(filaSeleccionada.Cells["fechaReunion"].Value).ToString("yyyy-MM-dd");
                     btnAgregarReu.Text = "Modificar";
                 }
+            }
+
+            if (lider == true)
+            {
+                    txtIdSemillero3.Text = idSemilleroLider.ToString();
+                    txtIdSemillero3.ReadOnly = true;
+                    cboRol.Items.Remove("Administrador");
+                    txtIdSemillero1.Text = idSemilleroLider.ToString();
+                    txtIdSemillero1.ReadOnly = true;
             }
         }
 

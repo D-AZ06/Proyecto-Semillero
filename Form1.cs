@@ -57,8 +57,10 @@ namespace Proyecto_Semillero
             }
             else
             {
-                consulta.Iniciar_sesion(int.Parse(txtId.Text), txtcontraseña.Text); // si los campos de usuario y contraseña no estan vacios, se ejecuta el metodo Iniciar_sesion para verificar si el usuario y la contraseña ingresados por el usuario coinciden con los resultados de la consulta a la base de datos)
-                this.Hide(); // ocultamos el formulario Form1 al usuario
+                if (consulta.Iniciar_sesion(int.Parse(txtId.Text), txtcontraseña.Text) == true) // si el metodo Iniciar_sesion retorna true, se muestra un mensaje de bienvenida al usuario
+                {
+                    this.Hide(); // ocultamos el formulario Form1 al usuario
+                }
             }
         }
 

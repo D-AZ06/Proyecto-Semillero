@@ -27,49 +27,39 @@ namespace Proyecto_Semillero
             {
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(consulta);//creamos un objeto de tipo SqlDataAdapter para ejecutar la consulta SQL y almacenar los datos obtenidos en el DataSet
                 dataAdapter.Fill(dataset, "Usuario");//llenamos el DataSet con los datos obtenidos de la consulta SQL
+
+                if (dataset.Tables["Usuario"].Rows.Count == 0)
+                {
+                    MessageBox.Show("Usuario o contraseña incorrectos.");
+                    return false;
+                }
+
                 DataRow datarow;//creamos un objeto de tipo DataRow para almacenar una fila de datos del DataSet
                 datarow = dataset.Tables["Usuario"].Rows[0];//obtenemos la primera fila de datos del DataSet// creamos una variable dr con tipo DataRow para almacenar la primera fila de los resultados de la consulta a la base de datos
-                int idSemillero = datarow["idSemillero"] == DBNull.Value ? 0 : Convert.ToInt32(datarow["idSemillero"]);
-                // obtenemos el valor del campo idSemillero de la fila de datos obtenida de la consulta SQL y lo convertimos a un entero para almacenarlo en la variable semilleroId
-                if (Convert.ToString(idUsuario) == datarow["idUsuario"].ToString() && contraseñaUsuario == datarow["contraseñaUsuario"].ToString() && "Administrador" == datarow["rolUsuario"].ToString()) // verificamos si el id_usuario y el password_usuario ingresados por el usuario coinciden con los resultados de la consulta a la base de datos
+                int idSemillero = datarow["idSemillero"] == DBNull.Value ? 0 : Convert.ToInt32(datarow["idSemillero"]); // obtenemos el valor del campo idSemillero de la fila de datos obtenida de la consulta SQL y lo convertimos a un entero para almacenarlo en la variable semilleroId, si el valor es nulo se asigna 0
+                string rol = datarow["rolUsuario"].ToString(); // obtenemos el valor del campo rolUsuario de la fila de datos obtenida de la consulta SQL y lo convertimos a una cadena para almacenarlo en la variable rol
+
+                MessageBox.Show($"Bienvenido {rol}");
+
+                // Lógica de apertura de formularios según rol
+                if (rol == "Administrador")
                 {
-                    MessageBox.Show("Bienvenido Administrador"); // si el id_usuario y el password_usuario ingresados por el usuario coinciden con los resultados de la consulta a la base de datos, se muestra un mensaje de bienvenida al usuario
-                    FormAdmin frm = new FormAdmin(); // creamos una instancia del formulario FormAdmin para mostrarlo al usuario
-                    frm.Show(); // mostramos el formulario FormAdmin al usuario
-                    Estado_conexion = true; // si la consulta a la base de datos se ejecuto correctamente, se establece el estado de la conexion a true
+                    new FormAdmin().Show();
                 }
-                else
+                else if (rol == "Lider")
                 {
-                    if (Convert.ToString(idUsuario) == datarow["idUsuario"].ToString() && contraseñaUsuario == datarow["contraseñaUsuario"].ToString() && "Lider" == datarow["rolUsuario"].ToString()) // verificamos si el id_usuario y el password_usuario ingresados por el usuario coinciden con los resultados de la consulta a la base de datos
-                    {
-                        MessageBox.Show("Bienvenido Lider");
-                        Form_lider rfs = new Form_lider(idSemillero);
-                        rfs.Show();
-                        Estado_conexion = true;
-                    }
-
-                    else
-                    {
-                        if (Convert.ToString(idUsuario) == datarow["idUsuario"].ToString() && contraseñaUsuario == datarow["contraseñaUsuario"].ToString() && "Investigador" == datarow["rolUsuario"].ToString()) // verificamos si el id_usuario y el password_usuario ingresados por el usuario coinciden con los resultados de la consulta a la base de datos
-                        {
-                            MessageBox.Show("Bienvenido Investigador");
-                            Form_invest rf = new Form_invest(idSemillero);
-                            rf.Show();
-                            Estado_conexion = true;
-                        }
-
-                        else
-                        {
-                            MessageBox.Show("Usuario o contraseña incorrectos.");
-                        }
-
-                    }
+                    new Form_lider(idSemillero).Show();
                 }
+                else if (rol == "Investigador")
+                {
+                    new Form_invest(idSemillero).Show();
+                }
+
+                Estado_conexion = true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Usuario y/o Contraseña incorrecta");// usuario o contraseña incorrectos, se muestra un mensaje de error al usuario
-                // MessageBox.Show(ex.Message); // si ocurre un error al ejecutar la consulta a la base de datos, se muestra un mensaje de error
+                MessageBox.Show(ex.Message); // si ocurre un error al ejecutar la consulta a la base de datos, se muestra un mensaje de error
             }
             finally
             {
@@ -152,10 +142,6 @@ namespace Proyecto_Semillero
                     conexion.Conectar()
                     );
             }
-
-
-
-
 
             consulta.CommandType = CommandType.Text;
             consulta.Parameters.Add("@idSemillero", SqlDbType.Int).Value = idSemillero;
