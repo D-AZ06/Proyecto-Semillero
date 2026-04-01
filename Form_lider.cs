@@ -65,7 +65,19 @@ namespace Proyecto_Semillero
 
         private void btnconsultalp_Click(object sender, EventArgs e)
         {
+            if ((cboConsultarParametro.SelectedIndex == 0) || txtParametro.Text == "")
+            {
+                MessageBox.Show("Seleccione un parámetro y escriba un valor.");
+                return;
+            }
+            dataGridView1.DataSource = null;
 
+            string columna = cboConsultarParametro.SelectedItem?.ToString();
+            string valor = txtParametro.Text;
+
+            DataTable resultados = ConsultarConParametro.ConsultarParametroSegunSemillero(formularioActual, columna, valor, idSemillero, conexion);
+
+            dataGridView1.DataSource = resultados;
         }
 
         private void btnSemillero_Click(object sender, EventArgs e)

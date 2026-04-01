@@ -96,6 +96,9 @@
     <EmbeddedResource Include="FormAgregar.resx">
       <DependentUpon>FormAgregar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_invest.resx">
+      <DependentUpon>Form_invest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_lider.resx">
       <DependentUpon>Form_lider.cs</DependentUpon>
     </EmbeddedResource>
