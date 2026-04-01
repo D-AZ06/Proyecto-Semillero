@@ -103,42 +103,46 @@ namespace Proyecto_Semillero
             else if (tipo == "Fase")
             {
                 consulta = new SqlCommand(
-                    "select * from Fase where idProyecto = (select idProyecto from Proyectos where idSemillero = @idSemillero)",
+                    "select * from Fase where idProyecto in (select idProyecto from Proyectos where idSemillero = @idSemillero)",
                     conexion.Conectar()
                 );
             }
             else if (tipo == "Actividad")
             {
                 consulta = new SqlCommand(
-                    "select * from Actividad where idFase = (select idFase from Fase where idProyecto = (select idProyecto from Proyectos where idSemillero = @idSemillero))",
+                    "select * from Actividad where idFase in (select idFase from Fase where idProyecto in (select idProyecto from Proyectos where idSemillero = @idSemillero))",
                     conexion.Conectar()
                 );
             }
             else if (tipo == "Eventos")
             {
                 consulta = new SqlCommand(
-                    "select * from Eventos where idEvento = (select idEvento from ProyectosEventos where idProyecto =(select idProyecto from Proyectos where idSemillero = @idSemillero)) ",
+                    "select * from Eventos where idEvento in (select idEvento from ProyectosEventos where idProyecto in(select idProyecto from Proyectos where idSemillero = @idSemillero)) ",
                     conexion.Conectar()
                     );
             }
             else if (tipo == "Reportes")
             {
                 consulta = new SqlCommand(
-                    "select * from Reportes where ",
+                    "select * from Reportes where idUsuario in (select idUsuario from Usuario where idSemillero = @idSemillero)",
                     conexion.Conectar()
                     );
             }
             else if (tipo == "Patrocinadores")
             {
                 consulta = new SqlCommand(
-                    "select * from Patrocinadores where ",
-                    conexion.Conectar()
-                    );
+                  "select * from Patrocinadores where idPatrocinador in (" +
+                  "select idPatrocinador from EventoPatrocinadores where idEvento in (" +
+                  "select idEvento from ProyectosEventos where idProyecto in (" +
+                  "select idProyecto from Proyectos where idSemillero = @idSemillero)))",
+                  conexion.Conectar()
+                  );
             }
             else if (tipo == "Reuniones")
             {
                 consulta = new SqlCommand(
-                    "select * from Reuniones where ",
+                    "select * from Reuniones where idUsuario in (" +
+                    "select idUsuario from Usuario where idSemillero = @idSemillero)",
                     conexion.Conectar()
                     );
             }
