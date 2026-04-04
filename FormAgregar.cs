@@ -1196,5 +1196,10 @@ namespace Proyecto_Semillero
         {
             SoloNumeros(e);
         }
+
+        private void txtIdUsuario2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

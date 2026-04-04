@@ -128,6 +128,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <None Include="Resources\motivo.jpg" />
+    <None Include="Resources\reloj.png" />
+    <None Include="Resources\ads1.png" />
+    <None Include="Resources\fecha3.png" />
+    <None Include="Resources\fecha2.png" />
+    <None Include="Resources\fecha1.png" />
+    <None Include="Resources\detalles.png" />
+    <None Include="Resources\obejetivo.png" />
+    <None Include="Resources\nombre1.png" />
+    <None Include="Resources\id.png" />
+    <None Include="Resources\organiza.jpg" />
+    <None Include="Resources\fecha.png" />
+    <None Include="Resources\ads.png" />
+    <None Include="Resources\nombre.png" />
+    <None Include="Resources\mapa.png" />
+    <None Include="Resources\evento id.png" />
     <None Include="Resources\4220234.jpg" />
     <None Include="Resources\enfoque.png" />
     <None Include="Resources\linea-de-tiempo.png" />
