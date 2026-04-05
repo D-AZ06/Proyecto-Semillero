@@ -1048,6 +1048,39 @@ namespace Proyecto_Semillero
                 int idEvento = int.Parse(txtIdEvento_PE.Text);
                 int idProyecto = int.Parse(txtIdProyecto_PE.Text);
 
+                int idEven = int.Parse(txtIdEvento_PE.Text);
+                int idPro = int.Parse(txtIdProyecto_PE.Text);
+
+
+
+                SqlCommand validarEvento = new SqlCommand(
+                    "SELECT COUNT(*) FROM Eventos WHERE idEvento = @idEvento",
+                     conexion.Conectar()
+                 );
+
+                validarEvento.Parameters.AddWithValue("@idEvento", idEven);
+                int existeEvento = (int)validarEvento.ExecuteScalar();
+
+
+                SqlCommand validarProyecto = new SqlCommand(
+                    "SELECT COUNT(*) FROM Proyectos WHERE idProyecto = @idProyecto",
+                     conexion.Conectar()
+                 );
+
+                validarProyecto.Parameters.AddWithValue("@idProyecto", idPro);
+                int existeProyecto = (int)validarProyecto.ExecuteScalar();
+
+                if (existeEvento == 0 || existeProyecto == 0)
+                {
+                    MessageBox.Show("El Evento o el Proyecto no existen.");
+                    conexion.cerrar();
+                    return;
+                }
+
+                idEvento = idEven;
+                idProyecto = idPro;
+                
+
                 if (modoEdicion == true)
                 {
                     SqlCommand update;
@@ -1103,12 +1136,46 @@ namespace Proyecto_Semillero
                 int idPatrocinador = int.Parse(txtIdPatro_EP.Text);
                 int idEvento = int.Parse(txtIdEvento_EP.Text);
 
+                int idPatro = int.Parse(txtIdPatro_EP.Text);
+                int idEven = int.Parse(txtIdEvento_EP.Text);
+
+
+
+                SqlCommand validarPatro = new SqlCommand(
+                    "SELECT COUNT(*) FROM Patrocinadores WHERE idPatrocinador = @idPatrocinador",
+                     conexion.Conectar()
+                 );
+
+              
+                validarPatro.Parameters.AddWithValue("@idPatrocinador", idPatro);
+                int existePatro = (int)validarPatro.ExecuteScalar();
+
+
+                SqlCommand validarEvento = new SqlCommand(
+                    "SELECT COUNT(*) FROM Eventos WHERE idEvento = @idEvento",
+                     conexion.Conectar()
+                 );
+
+                validarEvento.Parameters.AddWithValue("@idEvento", idEven);
+                int existeEvento = (int)validarEvento.ExecuteScalar();
+
+                if (existePatro == 0 || existeEvento == 0)
+                {
+                    MessageBox.Show("El Patrocinador o el Evento no existen.");
+                    conexion.cerrar();
+                    return;
+                }
+
+                idEvento = idEven;
+                idPatrocinador = idPatro;
+
+
                 if (modoEdicion == true)
                 {
                     SqlCommand update;
                     try
                     {
-                        update = new SqlCommand("UPDATE EventosPatrocinadores SET idPatrocinador = @idPatrocinador, idEvento = @idEvento WHERE idPatrocinador = @idPatrocinador AND idEvento = @idEvento", conexion.Conectar());
+                        update = new SqlCommand("UPDATE EventoPatrocinadores SET idPatrocinador = @idPatrocinador, idEvento = @idEvento WHERE idPatrocinador = @idPatrocinador AND idEvento = @idEvento", conexion.Conectar());
                         update.Parameters.AddWithValue("@idPatrocinador", idPatrocinador);
                         update.Parameters.AddWithValue("@idEvento", idEvento);
                         update.ExecuteNonQuery();
@@ -1127,7 +1194,7 @@ namespace Proyecto_Semillero
                     try
                     {
                         SqlCommand insert = new SqlCommand(
-                            "INSERT INTO EventosPatrocinadores (idPatrocinador, idEvento) " +
+                            "INSERT INTO EventoPatrocinadores (idPatrocinador, idEvento) " +
                             "VALUES (@idPatrocinador, @idEvento)",
                             conexion.Conectar()
                         );
