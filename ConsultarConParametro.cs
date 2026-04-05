@@ -51,10 +51,17 @@ namespace Proyecto_Semillero
             {
                 cbo.Items.AddRange(new string[] { "", "idReporte", "idUsuario", "fechaReporte", "horaReporte", "motivoReporte" });
             }
-
             else if (tipo == "Reunion")
             {
                 cbo.Items.AddRange(new string[] { "", "idReunion", "idUsuario", "tipoReunion", "motivoReunion", "horaReunion", "fechaReunion" });
+            }
+            else if (tipo == "ProyectosEventos")
+            {
+                cbo.Items.AddRange(new string[] { "", "idEvento", "idProyecto"});
+            }
+             else if (tipo == "EventoPatrocinadores")
+            {
+                cbo.Items.AddRange(new string[] { "", "idPatrocinador", "idEvento"});
             }
         }
 
@@ -151,6 +158,25 @@ namespace Proyecto_Semillero
                 consulta = new SqlCommand(
                     $"select * from Reuniones where {columna} LIKE '%' + @valor + '%' AND idUsuario in (" +
                     "select idUsuario from Usuario where idSemillero = @idSemillero)",
+                    conexion.Conectar()
+                    );
+            }
+
+            else if (tabla == "ProyectosEventos")
+            {
+                consulta = new SqlCommand(
+                    $"select * from ProyectosEventos where {columna} LIKE '%' + @valor + '%' AND idProyecto in (" +
+                    "select idProyecto from Proyectos where idSemillero = @idSemillero)",
+                    conexion.Conectar()
+                    );
+            }
+
+            else if (tabla == "EventoPatrocinadores")
+            {
+                consulta = new SqlCommand(
+                    $"select * from EventoPatrocinadores where {columna} LIKE '%' + @valor + '%' AND idEvento in (" +
+                    "select idEvento from ProyectosEventos where idProyecto in (" +
+                    "select idProyecto from Proyectos where idSemillero = @idSemillero))",
                     conexion.Conectar()
                     );
             }

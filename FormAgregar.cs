@@ -82,6 +82,14 @@ namespace Proyecto_Semillero
             {
                 tabAgregar.SelectedTab = tabReunion;
             }
+            else if (tipo == "ProyectosEventos")
+            {
+                tabAgregar.SelectedTab = tabProyectosEventos;
+            }
+            else if (tipo == "EventoPatrocinadores")
+            {
+                tabAgregar.SelectedTab = tabEventoPatrocinadores;
+            }
 
             else
             {
@@ -199,15 +207,33 @@ namespace Proyecto_Semillero
                     txtFechaReu.Text = Convert.ToDateTime(filaSeleccionada.Cells["fechaReunion"].Value).ToString("yyyy-MM-dd");
                     btnAgregarReu.Text = "Modificar";
                 }
+
+                else if (tipo == "ProyectosEventos")
+                { 
+                    txtIdEvento_PE.Enabled = false;
+                    txtIdProyecto_PE.Enabled = false;
+                    txtIdEvento_PE.Text = filaSeleccionada.Cells["idEvento"].Value.ToString();
+                    txtIdProyecto_PE.Text = filaSeleccionada.Cells["idProyecto"].Value.ToString();
+                    btnAgregarProyectosEventos.Text = "Modificar";
+                }
+
+                else if (tipo == "EventoPatrocinadores")
+                {
+                    txtIdPatro_EP.Enabled = false;
+                    txtIdEvento_EP.Enabled = false;
+                    txtIdPatro_EP.Text = filaSeleccionada.Cells["idPatrocinador"].Value.ToString();
+                    txtIdEvento_EP.Text = filaSeleccionada.Cells["idEvento"].Value.ToString();
+                    btnAgregarEventoPatro.Text = "Modificar";
+                }
             }
 
             if (lider == true)
             {
-                    txtIdSemillero3.Text = idSemilleroLider.ToString();
-                    txtIdSemillero3.ReadOnly = true;
-                    cboRol.Items.Remove("Administrador");
-                    txtIdSemillero1.Text = idSemilleroLider.ToString();
-                    txtIdSemillero1.ReadOnly = true;
+                txtIdSemillero3.Text = idSemilleroLider.ToString();
+                txtIdSemillero3.ReadOnly = true;
+                cboRol.Items.Remove("Administrador");
+                txtIdSemillero1.Text = idSemilleroLider.ToString();
+                txtIdSemillero1.ReadOnly = true;
             }
         }
 
@@ -1011,6 +1037,115 @@ namespace Proyecto_Semillero
             }
         }
 
+        private void btnAgregarEventoProyecto_Click(object sender, EventArgs e)
+        {
+            if (txtIdProyecto_PE.Text == "" || txtIdEvento_PE.Text == "")
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                int idEvento = int.Parse(txtIdEvento_PE.Text);
+                int idProyecto = int.Parse(txtIdProyecto_PE.Text);
+
+                if (modoEdicion == true)
+                {
+                    SqlCommand update;
+                    try
+                    {
+                        update = new SqlCommand("UPDATE ProyectosEventos SET idEvento = @idEvento, idProyecto = @idProyecto WHERE idEvento = @idEvento AND idProyecto = @idProyecto", conexion.Conectar());
+                        update.Parameters.AddWithValue("@idEvento", idEvento);
+                        update.Parameters.AddWithValue("@idProyecto", idProyecto);
+                        update.ExecuteNonQuery();
+                        MessageBox.Show("Evento del Proyecto modificado correctamente");
+                        conexion.cerrar();
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        SqlCommand insert = new SqlCommand(
+                            "INSERT INTO ProyectosEventos (idEvento, idProyecto) " +
+                            "VALUES (@idEvento, @idProyecto)",
+                            conexion.Conectar()
+                        );
+                        insert.Parameters.AddWithValue("@idEvento", idEvento);
+                        insert.Parameters.AddWithValue("@idProyecto", idProyecto);
+                        insert.ExecuteNonQuery();
+                        MessageBox.Show("Proyecto asignado a evento correctamente");
+                        conexion.cerrar();
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void btnAgregarEventoPatro_Click(object sender, EventArgs e)
+        {
+            if (txtIdEvento_EP.Text == "" || txtIdPatro_EP.Text == "")
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                int idPatrocinador = int.Parse(txtIdPatro_EP.Text);
+                int idEvento = int.Parse(txtIdEvento_EP.Text);
+
+                if (modoEdicion == true)
+                {
+                    SqlCommand update;
+                    try
+                    {
+                        update = new SqlCommand("UPDATE EventosPatrocinadores SET idPatrocinador = @idPatrocinador, idEvento = @idEvento WHERE idPatrocinador = @idPatrocinador AND idEvento = @idEvento", conexion.Conectar());
+                        update.Parameters.AddWithValue("@idPatrocinador", idPatrocinador);
+                        update.Parameters.AddWithValue("@idEvento", idEvento);
+                        update.ExecuteNonQuery();
+                        MessageBox.Show("Evento del Patrocinador modificado correctamente");
+                        conexion.cerrar();
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        SqlCommand insert = new SqlCommand(
+                            "INSERT INTO EventosPatrocinadores (idPatrocinador, idEvento) " +
+                            "VALUES (@idPatrocinador, @idEvento)",
+                            conexion.Conectar()
+                        );
+                        insert.Parameters.AddWithValue("@idPatrocinador", idPatrocinador);
+                        insert.Parameters.AddWithValue("@idEvento", idEvento);
+                        insert.ExecuteNonQuery();
+                        MessageBox.Show("Patrocinador asignado a evento correctamente");
+                        conexion.cerrar();
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+            }
+        }
         public void SoloNumeros(KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != '-' && e.KeyChar != ':')
@@ -1200,6 +1335,26 @@ namespace Proyecto_Semillero
         private void txtIdUsuario2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtIdEvento_PE_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtIdProyecto_PE_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtIdPatro_EP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtIdEvento_EP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
         }
     }
 }

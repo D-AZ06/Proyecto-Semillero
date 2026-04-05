@@ -184,6 +184,32 @@ namespace Proyecto_Semillero
             txtParametro.Clear(); // limpiamos el TextBox de consulta con parámetros al seleccionar un formulario para mostrar en el DataGridView
         }
 
+        private void btnProyectosEventos_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            formularioActual = "ProyectosEventos";
+            Consulta.Gestionarlider("ProyectosEventos", idSemillero, dataGridView1);
+            ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
+            lbl_gestionar.Text = "Gestionar Proyectos y Eventos";
+            btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
+            btnModificar.Enabled = true;
+            btnEliminar.Enabled = true;
+            txtParametro.Clear(); // limpiamos el TextBox de consulta con parámetros al seleccionar un formulario para mostrar en el DataGridView
+        }
+
+        private void btnEventoPatrocinadores_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            formularioActual = "EventoPatrocinadores";
+            Consulta.Gestionarlider("EventoPatrocinadores", idSemillero, dataGridView1);
+            ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
+            lbl_gestionar.Text = "Gestionar Eventos y Patrocinadores";
+            btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
+            btnModificar.Enabled = true;
+            btnEliminar.Enabled = true;
+            txtParametro.Clear(); // limpiamos el TextBox de consulta con parámetros al seleccionar un formulario para mostrar en el DataGridView
+        }
+
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             FormAgregar frm = new FormAgregar();
@@ -254,5 +280,6 @@ namespace Proyecto_Semillero
                 }
             }
         }
+
     }
 }

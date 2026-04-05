@@ -146,6 +146,23 @@ namespace Proyecto_Semillero
                     conexion.Conectar()
                     );
             }
+            else if (tipo == "ProyectosEventos")
+            {
+                consulta = new SqlCommand(
+                    "select * from ProyectosEventos where idProyecto in (" +
+                    "select idProyecto from Proyectos where idSemillero = @idSemillero)",
+                    conexion.Conectar()
+                    );
+            }
+            else if (tipo == "EventoPatrocinadores")
+            {
+                consulta = new SqlCommand(
+                    "select * from EventoPatrocinadores where idEvento in (" +
+                    "select idEvento from ProyectosEventos where idProyecto in (" +
+                    "select idProyecto from Proyectos where idSemillero = @idSemillero))",
+                    conexion.Conectar()
+                    );
+            }
 
             consulta.CommandType = CommandType.Text;
             consulta.Parameters.Add("@idSemillero", SqlDbType.Int).Value = idSemillero;

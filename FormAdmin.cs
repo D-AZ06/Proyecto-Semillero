@@ -177,6 +177,31 @@ namespace Proyecto_Semillero
             lbl_gestionar.Text = "Gestionar Reuniones";
             txtParametro.Clear();
         }
+        private void btnProyectosEventos_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            Gestionar("ProyectosEventos");
+            formularioActual = "ProyectosEventos";
+            ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
+            btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = true;
+            lbl_gestionar.Text = "Gestionar Proyectos y Eventos";
+            txtParametro.Clear();
+        }
+
+        private void btnEventoPatrocinadores_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            Gestionar("EventoPatrocinadores");
+            formularioActual = "EventoPatrocinadores";
+            ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro);
+            btnRegistrar.Enabled = true; // habilitamos el botón de consulta con parámetros si se ha seleccionado un formulario para mostrar en el DataGridView
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = true;
+            lbl_gestionar.Text = "Gestionar Eventos y Patrocinadores";
+            txtParametro.Clear();
+        }
         private void btbsalir_Click(object sender, EventArgs e)
         {
 
@@ -295,5 +320,6 @@ namespace Proyecto_Semillero
 
         }
 
+        
     } 
 }

@@ -71,5 +71,13 @@ namespace Proyecto_Semillero
                 Application.Exit();
             }
         }
+
+        private void txtId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != '-' && e.KeyChar != ':')
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

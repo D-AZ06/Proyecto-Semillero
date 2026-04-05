@@ -50,7 +50,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Proyecto_Semillero.Properties.Resources.Sin_título__5_;
             this.pictureBox1.Location = new System.Drawing.Point(480, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(187, 133);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -67,7 +67,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(369, 188);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(404, 338);
             this.panel1.TabIndex = 1;
@@ -84,7 +84,7 @@
             this.btningresar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btningresar.ForeColor = System.Drawing.Color.White;
             this.btningresar.Location = new System.Drawing.Point(132, 277);
-            this.btningresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btningresar.Margin = new System.Windows.Forms.Padding(4);
             this.btningresar.Name = "btningresar";
             this.btningresar.Size = new System.Drawing.Size(144, 36);
             this.btningresar.TabIndex = 9;
@@ -135,13 +135,14 @@
             this.txtId.SelectedText = "";
             this.txtId.Size = new System.Drawing.Size(160, 31);
             this.txtId.TabIndex = 7;
+            this.txtId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtId_KeyPress);
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::Proyecto_Semillero.Properties.Resources.contrasena;
             this.pictureBox3.Location = new System.Drawing.Point(79, 207);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(31, 30);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -153,7 +154,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Proyecto_Semillero.Properties.Resources.usuario;
             this.pictureBox2.Location = new System.Drawing.Point(79, 91);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(31, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -197,7 +198,7 @@
             this.btnsalir_programa.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnsalir_programa.ForeColor = System.Drawing.Color.White;
             this.btnsalir_programa.Location = new System.Drawing.Point(16, 15);
-            this.btnsalir_programa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnsalir_programa.Margin = new System.Windows.Forms.Padding(4);
             this.btnsalir_programa.Name = "btnsalir_programa";
             this.btnsalir_programa.Size = new System.Drawing.Size(144, 36);
             this.btnsalir_programa.TabIndex = 10;
@@ -228,8 +229,9 @@
             this.Controls.Add(this.btnsalir_programa);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

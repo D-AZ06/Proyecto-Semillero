@@ -419,5 +419,15 @@ namespace Proyecto_Semillero.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2026_04_01_at_12_14_14_PM {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2026-04-01 at 12.14.14 PM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
