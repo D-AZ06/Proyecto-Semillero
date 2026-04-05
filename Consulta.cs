@@ -18,7 +18,7 @@ namespace Proyecto_Semillero
         public Boolean Iniciar_sesion(int idUsuario, string contraseñaUsuario)
         {
             SqlCommand consulta;//creamos un objeto de tipo SqlCommand para ejecutar la consulta SQL
-            consulta = new SqlCommand("select idUsuario, contraseñaUsuario, rolUsuario, idSemillero from Usuario where idUsuario = @idUsuario and contraseñaUsuario = @contraseñaUsuario", conexion.Conectar());//establecemos la consulta SQL para verificar el usuario y la contraseña
+            consulta = new SqlCommand("select idUsuario, contraseñaUsuario, rolUsuario, idSemillero, estadoUsuario from Usuario where idUsuario = @idUsuario and contraseñaUsuario = @contraseñaUsuario", conexion.Conectar());//establecemos la consulta SQL para verificar el usuario y la contraseña
             consulta.CommandType = CommandType.Text;//establecemos el tipo de comando como texto
             consulta.Parameters.AddWithValue("@idUsuario", idUsuario);//agregamos el parametro idusuario a la consulta SQL
             consulta.Parameters.AddWithValue("@contraseñaUsuario", contraseñaUsuario);//agregamos el parametro passwordusuario a la consulta SQL
@@ -26,6 +26,7 @@ namespace Proyecto_Semillero
             try
             {
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(consulta);//creamos un objeto de tipo SqlDataAdapter para ejecutar la consulta SQL y almacenar los datos obtenidos en el DataSet
+                if (dataset.Tables.Contains("Usuario")) dataset.Tables["Usuario"].Clear(); // si el DataSet ya contiene una tabla con el nombre "Usuario", se limpia esa tabla para evitar que se acumulen los datos de consultas anteriores
                 dataAdapter.Fill(dataset, "Usuario");//llenamos el DataSet con los datos obtenidos de la consulta SQL
 
                 if (dataset.Tables["Usuario"].Rows.Count == 0)
@@ -38,6 +39,14 @@ namespace Proyecto_Semillero
                 datarow = dataset.Tables["Usuario"].Rows[0];//obtenemos la primera fila de datos del DataSet// creamos una variable dr con tipo DataRow para almacenar la primera fila de los resultados de la consulta a la base de datos
                 int idSemillero = datarow["idSemillero"] == DBNull.Value ? 0 : Convert.ToInt32(datarow["idSemillero"]); // obtenemos el valor del campo idSemillero de la fila de datos obtenida de la consulta SQL y lo convertimos a un entero para almacenarlo en la variable semilleroId, si el valor es nulo se asigna 0
                 string rol = datarow["rolUsuario"].ToString(); // obtenemos el valor del campo rolUsuario de la fila de datos obtenida de la consulta SQL y lo convertimos a una cadena para almacenarlo en la variable rol
+
+                string estado = datarow["estadoUsuario"].ToString(); // obtenemos el valor del campo estadoUsuario de la fila de datos obtenida de la consulta SQL y lo convertimos a una cadena para almacenarlo en la variable estado
+
+                if (estado == "Inactivo")
+                {
+                    MessageBox.Show("El usuario se encuentra inactivo. Por favor, contacte al administrador.");
+                    return false;
+                }
 
                 MessageBox.Show($"Bienvenido {rol}");
 

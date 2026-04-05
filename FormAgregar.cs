@@ -616,7 +616,7 @@ namespace Proyecto_Semillero
                         insert.Parameters.AddWithValue("@fechaInicioProyecto", fechaInicioProyecto);
                         insert.Parameters.AddWithValue("@fechaFinProyecto", fechaFinProyecto);
                         insert.ExecuteNonQuery();
-                        MessageBox.Show("Evento guardado correctamente");
+                        MessageBox.Show("Proyecto guardado correctamente");
                         // cerrar conexión (como ya la tienes global)
                         conexion.cerrar();
                         // cerrar formulario
@@ -800,6 +800,27 @@ namespace Proyecto_Semillero
 
                 idProyecto = idPro;
 
+                if (lider == true)
+                {
+                    // Validar que el proyecto pertenece al semillero del líder
+                    SqlCommand validarSemillero = new SqlCommand(
+                        "SELECT COUNT(*) FROM Proyectos WHERE idProyecto = @idProyecto AND idSemillero = @idSemillero",
+                        conexion.Conectar()
+                    );
+
+                    validarSemillero.Parameters.AddWithValue("@idProyecto", idProyecto);
+                    validarSemillero.Parameters.AddWithValue("@idSemillero", idSemilleroLider);
+
+                    int pertenece = (int)validarSemillero.ExecuteScalar();
+
+                    if (pertenece == 0)
+                    {
+                        MessageBox.Show("El proyecto no corresponde al semillero del líder.");
+                        conexion.cerrar();
+                        return;
+                    }
+                }
+
                 if (modoEdicion == true)
                 {
                     SqlCommand update;
@@ -880,12 +901,32 @@ namespace Proyecto_Semillero
 
                 if (existe == 0)
                 {
-                    MessageBox.Show("La Actividad no existe");
+                    MessageBox.Show("La fase no existe");
                     conexion.cerrar();
                     return;
                 }
 
                 idFase = idFas;
+
+                if (lider == true)
+                {
+                    // Validar que la fase pertenece al proyecto del semillero del líder
+                    SqlCommand validarSemillero = new SqlCommand(
+                        "SELECT COUNT(*) FROM Fase, Proyectos WHERE Fase.idProyecto = Proyectos.idProyecto AND Fase.idFase = @idFase AND Proyectos.idSemillero = @idSemilleroLider",
+                        conexion.Conectar()
+                    );
+                    validarSemillero.Parameters.AddWithValue("@idFase", idFase);
+                    validarSemillero.Parameters.AddWithValue("@idSemillero", idSemilleroLider);
+
+                    int pertenece = (int)validarSemillero.ExecuteScalar();
+
+                    if (pertenece == 0)
+                    {
+                        MessageBox.Show("La fase no corresponde al semillero del líder.");
+                        conexion.cerrar();
+                        return;
+                    }
+                }
 
                 if (modoEdicion == true)
                 {
@@ -960,8 +1001,6 @@ namespace Proyecto_Semillero
 
                 int idUsu = int.Parse(txtIdUsuario3.Text);
 
-
-
                 SqlCommand validar = new SqlCommand(
                     "SELECT COUNT(*) FROM Usuario WHERE idUsuario = @idUsuario AND rolUsuario = 'Lider'",
                      conexion.Conectar()
@@ -979,6 +1018,26 @@ namespace Proyecto_Semillero
 
                 idUsuario = idUsu;
 
+                if (lider == true)
+                {
+                    SqlCommand validarSemillero = new SqlCommand(
+                        "SELECT COUNT(*) FROM Usuario " +
+                        "WHERE idUsuario = @idUsuario AND idSemillero = @idSemillero",
+                        conexion.Conectar()
+                    );
+
+                    validarSemillero.Parameters.AddWithValue("@idUsuario", idUsuario);
+                    validarSemillero.Parameters.AddWithValue("@idSemillero", idSemilleroLider);
+
+                    int pertenece = (int)validarSemillero.ExecuteScalar();
+
+                    if (pertenece == 0)
+                    {
+                        MessageBox.Show("El usuario de la reunión no corresponde al semillero del líder.");
+                        conexion.cerrar();
+                        return;
+                    }
+                }
 
                 if (modoEdicion == true)
                 {
@@ -1079,7 +1138,28 @@ namespace Proyecto_Semillero
 
                 idEvento = idEven;
                 idProyecto = idPro;
-                
+
+                if (lider == true)
+                {
+                    SqlCommand validarSemillero = new SqlCommand(
+                        "SELECT COUNT(*) FROM Proyectos " +
+                        "WHERE idProyecto = @idProyecto AND idSemillero = @idSemillero",
+                        conexion.Conectar()
+                    );
+
+                    validarSemillero.Parameters.AddWithValue("@idProyecto", idProyecto);
+                    validarSemillero.Parameters.AddWithValue("@idSemillero", idSemilleroLider);
+
+                    int pertenece = (int)validarSemillero.ExecuteScalar();
+
+                    if (pertenece == 0)
+                    {
+                        MessageBox.Show("El proyecto no corresponde al semillero del líder.");
+                        conexion.cerrar();
+                        return;
+                    }
+                }
+
 
                 if (modoEdicion == true)
                 {
@@ -1168,6 +1248,31 @@ namespace Proyecto_Semillero
 
                 idEvento = idEven;
                 idPatrocinador = idPatro;
+
+                if (lider == true)
+                {
+                    SqlCommand validarSemillero = new SqlCommand(
+                        "SELECT COUNT(*) " +
+                        "FROM Eventos, ProyectosEventos, Proyectos " +
+                        "WHERE Eventos.idEvento = ProyectosEventos.idEvento " +
+                        "AND ProyectosEventos.idProyecto = Proyectos.idProyecto " +
+                        "AND Eventos.idEvento = @idEvento " +
+                        "AND Proyectos.idSemillero = @idSemillero",
+                        conexion.Conectar()
+                    );
+
+                    validarSemillero.Parameters.AddWithValue("@idEvento", idEvento);
+                    validarSemillero.Parameters.AddWithValue("@idSemillero", idSemilleroLider);
+
+                    int pertenece = (int)validarSemillero.ExecuteScalar();
+
+                    if (pertenece == 0)
+                    {
+                        MessageBox.Show("El evento no corresponde al semillero del líder.");
+                        conexion.cerrar();
+                        return;
+                    }
+                }
 
 
                 if (modoEdicion == true)
