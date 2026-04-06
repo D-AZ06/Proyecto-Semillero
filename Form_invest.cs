@@ -26,10 +26,10 @@ namespace Proyecto_Semillero
 
         private void Form_invest_Load(object sender, EventArgs e)
         {
-            Panel1.BackColor = Color.FromArgb(80, 255, 255, 255);
-            Panel2.BackColor = Color.FromArgb(80, 255, 255, 255);
-            Panel3.BackColor = Color.FromArgb(80, 255, 255, 255);
-            Panel4.BackColor = Color.FromArgb(80, 255, 255, 255);
+            Panel1.BackColor = Color.FromArgb(95, 20, 60, 50);
+            Panel2.BackColor = Color.FromArgb(95, 20, 60, 50);
+            Panel3.BackColor = Color.FromArgb(95, 20, 60, 50);
+            Panel4.BackColor = Color.FromArgb(95, 20, 60, 50);
         }
         private void btbsalir_Click(object sender, EventArgs e)
         {

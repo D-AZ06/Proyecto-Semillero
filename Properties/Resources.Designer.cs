@@ -263,6 +263,16 @@ namespace Proyecto_Semillero.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fondo_Admin {
+            get {
+                object obj = ResourceManager.GetObject("fondo-Admin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap id {
             get {
                 object obj = ResourceManager.GetObject("id", resourceCulture);
@@ -386,6 +396,16 @@ namespace Proyecto_Semillero.Properties {
         internal static System.Drawing.Bitmap Sin_título__5_ {
             get {
                 object obj = ResourceManager.GetObject("Sin título (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sin_título__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Sin título (6)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

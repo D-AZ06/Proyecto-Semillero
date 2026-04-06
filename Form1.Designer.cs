@@ -217,6 +217,7 @@
             this.BackgroundImage = global::Proyecto_Semillero.Properties.Resources._592593667718;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(880, 562);
+            this.ControlBox = false;
             this.Controls.Add(this.Panel1);
             this.Controls.Add(this.lblGesSi);
             this.Controls.Add(this.btnsalir_programa);

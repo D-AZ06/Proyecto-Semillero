@@ -27,10 +27,10 @@ namespace Proyecto_Semillero
         }
         private void Form_lider_Load(object sender, EventArgs e)
         {
-            Panel1.BackColor = Color.FromArgb(80, 255, 255, 255);
-            Panel2.BackColor = Color.FromArgb(80, 255, 255, 255);
-            Panel3.BackColor = Color.FromArgb(80, 255, 255, 255);
-            Panel4.BackColor = Color.FromArgb(80, 255, 255, 255);
+            Panel1.BackColor = Color.FromArgb(100, 15, 40, 70);
+            Panel2.BackColor = Color.FromArgb(100, 15, 40, 70);
+            Panel3.BackColor = Color.FromArgb(100, 15, 40, 70);
+            Panel4.BackColor = Color.FromArgb(100, 15, 40, 70);
 
            
 
