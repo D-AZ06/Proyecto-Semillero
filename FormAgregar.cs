@@ -24,6 +24,8 @@ namespace Proyecto_Semillero
 
         public bool lider = false;
 
+        public string rolActual;
+
         public int idSemilleroLider;
 
         public DataGridViewRow filaSeleccionada;
@@ -39,6 +41,11 @@ namespace Proyecto_Semillero
             tabAgregar.ItemSize = new Size(0, 1);
             tabAgregar.SizeMode = TabSizeMode.Fixed;
             tabAgregar.BackColor = Color.FromArgb(200, Color.White);
+
+            if (rolActual == "Lider")
+            {
+                cboRol.Enabled = false;
+            }
 
 
             if (tipo == "Usuario")
@@ -114,6 +121,8 @@ namespace Proyecto_Semillero
                     cboEstado.Text = filaSeleccionada.Cells["estadoUsuario"].Value.ToString();
 
                     btnAgregarUsuario.Text = "Modificar"; // Cambia texto del botón para indicar que se está en modo edición
+
+                    
                 }
 
                 else if (tipo == "Semillero")
@@ -276,7 +285,7 @@ namespace Proyecto_Semillero
             // Validamos que el ID del usuario sea un número entero
             string rol = cboRol.Text;
             int idSemillero = 0; // Declaramos la variable idSemillero como nullable para poder asignarle un valor null en caso de que el rol sea "Administrador", ya que los administradores no están asociados a ningún semillero. Esto nos permitirá manejar correctamente la inserción o actualización del usuario en la base de datos, evitando errores relacionados con valores nulos en la columna idSemillero de la tabla Usuario.
-
+            
             if (rol != "Administrador")
             {
                 if (txtIdSemillero3.Text.Trim() == "")
@@ -288,17 +297,17 @@ namespace Proyecto_Semillero
                 int idSem = int.Parse(txtIdSemillero3.Text);// Convertimos el texto del ID del semillero a un número entero para poder realizar la consulta a la base de datos y verificar si el semillero existe.
 
                 // Validamos que el ID del semillero exista en la base de datos
-                SqlCommand validar = new SqlCommand(
+                SqlCommand validarSemillero = new SqlCommand(
                     "select count(*) from Semillero where idSemillero = @idSemillero",
                     conexion.Conectar()
                 );
 
-                validar.Parameters.AddWithValue("@idSemillero", idSem);
+                validarSemillero.Parameters.AddWithValue("@idSemillero", idSem);
 
-                int existe = (int)validar.ExecuteScalar();// Ejecutamos la consulta y obtenemos el resultado, que es el número de registros que coinciden con el ID del semillero ingresado. Si el resultado es 0,
+                int existeSemillero = (int)validarSemillero.ExecuteScalar();// Ejecutamos la consulta y obtenemos el resultado, que es el número de registros que coinciden con el ID del semillero ingresado. Si el resultado es 0,
                                                           // significa que el semillero no existe en la base de datos
 
-                if (existe == 0)
+                if (existeSemillero == 0)
                 {
                     MessageBox.Show("El semillero no existe");
                     conexion.cerrar();
@@ -316,7 +325,24 @@ namespace Proyecto_Semillero
             int idUsuario = int.Parse(txtIdUsuario.Text);
             long telefono = long.Parse(txtTelefonoUsuario.Text);
             int edad = int.Parse(txtEdadUsuario.Text);
-            
+
+            SqlCommand validarLider = new SqlCommand(
+                  "select count(*) from Usuario where idSemillero = @idSemillero and rolUsuario = 'Lider'",
+                  conexion.Conectar()
+                        );
+
+            validarLider.Parameters.AddWithValue("@idSemillero", idSemillero);
+
+            int cantidadLideres = (int)validarLider.ExecuteScalar();
+
+            if (cantidadLideres == 0 && rol != "Lider")
+            {
+                MessageBox.Show("Debe registrar primero un líder para este semillero");
+                conexion.cerrar();
+                return;
+            }
+
+
 
             if (modoEdicion == true)
             {

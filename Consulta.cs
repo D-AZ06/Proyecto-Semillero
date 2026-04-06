@@ -79,11 +79,10 @@ namespace Proyecto_Semillero
 
 
 
-        // -------------------------------------------------------------------------------------------------------------
-        // Metodos para mostrar en el datagrid los datos según al semillero que pertenezcan los investigadores y lideres
-        // -------------------------------------------------------------------------------------------------------------
 
-
+        // -------------------------------------------------------------------------------------------------------------
+        // Metodo para mostrar en el datagrid los datos según al semillero que pertenezcan los investigadores y lideres
+        // -------------------------------------------------------------------------------------------------------------
         public void Gestionarlider(string tipo, int idSemillero, DataGridView dataGridView) // creamos el metodo GestionarUsuarios para mostrar en el datagrid los datos de los usuarios según al semillero que pertenezcan los investigadores y lideres
         {
             SqlCommand consulta; // creamos un objeto de tipo Sql

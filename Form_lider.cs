@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Guna.UI2.Native.WinApi;
 
 namespace Proyecto_Semillero
 {
@@ -31,11 +32,14 @@ namespace Proyecto_Semillero
             Panel3.BackColor = Color.FromArgb(80, 255, 255, 255);
             Panel4.BackColor = Color.FromArgb(80, 255, 255, 255);
 
+           
+
             if (formularioActual == "")
             {
                 btnRegistrar.Enabled = false; // deshabilitamos el botón de consulta con parámetros si no se ha seleccionado un formulario para mostrar en el DataGridView
                 btnModificar.Enabled = false;
                 btnEliminar.Enabled = false;
+
             }
         }
 
@@ -229,6 +233,7 @@ namespace Proyecto_Semillero
             }
 
             FormAgregar frm = new FormAgregar();
+            frm.rolActual = "Lider"; 
 
             frm.tipo = formularioActual; // ya lo tienes
             frm.modoEdicion = true; // ACTIVAS MODO MODIFICAR
