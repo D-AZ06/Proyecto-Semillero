@@ -85,6 +85,7 @@
     <Compile Include="Form_lider.Designer.cs">
       <DependentUpon>Form_lider.cs</DependentUpon>
     </Compile>
+    <Compile Include="GenerarID.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

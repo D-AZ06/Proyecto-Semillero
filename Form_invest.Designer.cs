@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label4 = new System.Windows.Forms.Label();
             this.Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblGesSi = new System.Windows.Forms.Label();
@@ -74,9 +74,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(14, 24);
+            this.label4.Location = new System.Drawing.Point(19, 30);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(171, 24);
+            this.label4.Size = new System.Drawing.Size(228, 31);
             this.label4.TabIndex = 11;
             this.label4.Text = "Form Investigador";
             // 
@@ -86,9 +87,10 @@
             this.Panel2.Controls.Add(this.lblGesSi);
             this.Panel2.Controls.Add(this.pictureBox1);
             this.Panel2.Controls.Add(this.btbsalir);
-            this.Panel2.Location = new System.Drawing.Point(-4, 0);
+            this.Panel2.Location = new System.Drawing.Point(-5, 0);
+            this.Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(1114, 73);
+            this.Panel2.Size = new System.Drawing.Size(1485, 90);
             this.Panel2.TabIndex = 3;
             // 
             // lblGesSi
@@ -97,9 +99,10 @@
             this.lblGesSi.BackColor = System.Drawing.Color.Transparent;
             this.lblGesSi.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGesSi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblGesSi.Location = new System.Drawing.Point(532, 24);
+            this.lblGesSi.Location = new System.Drawing.Point(709, 30);
+            this.lblGesSi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGesSi.Name = "lblGesSi";
-            this.lblGesSi.Size = new System.Drawing.Size(84, 33);
+            this.lblGesSi.Size = new System.Drawing.Size(107, 43);
             this.lblGesSi.TabIndex = 9;
             this.lblGesSi.Text = "GesSi";
             // 
@@ -107,9 +110,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Proyecto_Semillero.Properties.Resources.Sin_título__6_;
-            this.pictureBox1.Location = new System.Drawing.Point(487, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(649, 28);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(47, 41);
+            this.pictureBox1.Size = new System.Drawing.Size(63, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -125,9 +129,10 @@
             this.btbsalir.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btbsalir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btbsalir.ForeColor = System.Drawing.Color.White;
-            this.btbsalir.Location = new System.Drawing.Point(983, 25);
+            this.btbsalir.Location = new System.Drawing.Point(1311, 31);
+            this.btbsalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btbsalir.Name = "btbsalir";
-            this.btbsalir.Size = new System.Drawing.Size(112, 26);
+            this.btbsalir.Size = new System.Drawing.Size(149, 32);
             this.btbsalir.TabIndex = 9;
             this.btbsalir.Text = "◀️ Salir";
             this.btbsalir.Click += new System.EventHandler(this.btbsalir_Click);
@@ -148,9 +153,10 @@
             this.Panel1.Controls.Add(this.btnSemillero);
             this.Panel1.Controls.Add(this.btn_gestionar_usuarios);
             this.Panel1.Controls.Add(this.label1);
-            this.Panel1.Location = new System.Drawing.Point(10, 80);
+            this.Panel1.Location = new System.Drawing.Point(13, 98);
+            this.Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(257, 691);
+            this.Panel1.Size = new System.Drawing.Size(343, 850);
             this.Panel1.TabIndex = 4;
             // 
             // btnEventoPatrocinadores
@@ -161,12 +167,13 @@
             this.btnEventoPatrocinadores.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnEventoPatrocinadores.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnEventoPatrocinadores.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEventoPatrocinadores.FillColor = System.Drawing.Color.SpringGreen;
+            this.btnEventoPatrocinadores.FillColor = System.Drawing.Color.Indigo;
             this.btnEventoPatrocinadores.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEventoPatrocinadores.ForeColor = System.Drawing.Color.White;
-            this.btnEventoPatrocinadores.Location = new System.Drawing.Point(30, 608);
+            this.btnEventoPatrocinadores.Location = new System.Drawing.Point(40, 748);
+            this.btnEventoPatrocinadores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEventoPatrocinadores.Name = "btnEventoPatrocinadores";
-            this.btnEventoPatrocinadores.Size = new System.Drawing.Size(192, 60);
+            this.btnEventoPatrocinadores.Size = new System.Drawing.Size(256, 74);
             this.btnEventoPatrocinadores.TabIndex = 16;
             this.btnEventoPatrocinadores.Text = "🎉 Eventos y 🤝 Patrocinadores";
             this.btnEventoPatrocinadores.Click += new System.EventHandler(this.btnEventoPatrocinadores_Click);
@@ -182,9 +189,10 @@
             this.btnProyectosEventos.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnProyectosEventos.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProyectosEventos.ForeColor = System.Drawing.Color.White;
-            this.btnProyectosEventos.Location = new System.Drawing.Point(30, 533);
+            this.btnProyectosEventos.Location = new System.Drawing.Point(40, 656);
+            this.btnProyectosEventos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnProyectosEventos.Name = "btnProyectosEventos";
-            this.btnProyectosEventos.Size = new System.Drawing.Size(192, 60);
+            this.btnProyectosEventos.Size = new System.Drawing.Size(256, 74);
             this.btnProyectosEventos.TabIndex = 15;
             this.btnProyectosEventos.Text = "📁 Proyectos y 🎉 Eventos";
             this.btnProyectosEventos.Click += new System.EventHandler(this.btnProyectosEventos_Click);
@@ -200,9 +208,10 @@
             this.btn_reunion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(18)))), ((int)(((byte)(78)))));
             this.btn_reunion.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_reunion.ForeColor = System.Drawing.Color.White;
-            this.btn_reunion.Location = new System.Drawing.Point(30, 482);
+            this.btn_reunion.Location = new System.Drawing.Point(40, 593);
+            this.btn_reunion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_reunion.Name = "btn_reunion";
-            this.btn_reunion.Size = new System.Drawing.Size(192, 34);
+            this.btn_reunion.Size = new System.Drawing.Size(256, 42);
             this.btn_reunion.TabIndex = 12;
             this.btn_reunion.Text = "🤝 Reuniones";
             this.btn_reunion.Click += new System.EventHandler(this.btn_reunion_Click);
@@ -219,9 +228,10 @@
             this.btn_act.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(184)))), ((int)(((byte)(166)))));
             this.btn_act.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_act.ForeColor = System.Drawing.Color.White;
-            this.btn_act.Location = new System.Drawing.Point(30, 281);
+            this.btn_act.Location = new System.Drawing.Point(40, 346);
+            this.btn_act.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_act.Name = "btn_act";
-            this.btn_act.Size = new System.Drawing.Size(192, 34);
+            this.btn_act.Size = new System.Drawing.Size(256, 42);
             this.btn_act.TabIndex = 11;
             this.btn_act.Text = "📝 Actividades";
             this.btn_act.Click += new System.EventHandler(this.btn_act_Click);
@@ -238,9 +248,10 @@
             this.btnFases.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(102)))), ((int)(((byte)(241)))));
             this.btnFases.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFases.ForeColor = System.Drawing.Color.White;
-            this.btnFases.Location = new System.Drawing.Point(30, 232);
+            this.btnFases.Location = new System.Drawing.Point(40, 286);
+            this.btnFases.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFases.Name = "btnFases";
-            this.btnFases.Size = new System.Drawing.Size(192, 34);
+            this.btnFases.Size = new System.Drawing.Size(256, 42);
             this.btnFases.TabIndex = 10;
             this.btnFases.Text = "📌 Fases";
             this.btnFases.Click += new System.EventHandler(this.btnFases_Click);
@@ -256,9 +267,10 @@
             this.btn_patrocinadores.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(158)))), ((int)(((byte)(11)))));
             this.btn_patrocinadores.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_patrocinadores.ForeColor = System.Drawing.Color.White;
-            this.btn_patrocinadores.Location = new System.Drawing.Point(30, 432);
+            this.btn_patrocinadores.Location = new System.Drawing.Point(40, 532);
+            this.btn_patrocinadores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_patrocinadores.Name = "btn_patrocinadores";
-            this.btn_patrocinadores.Size = new System.Drawing.Size(192, 34);
+            this.btn_patrocinadores.Size = new System.Drawing.Size(256, 42);
             this.btn_patrocinadores.TabIndex = 9;
             this.btn_patrocinadores.Text = "🤝 Patrocinadores";
             this.btn_patrocinadores.Click += new System.EventHandler(this.btn_patrocinadores_Click);
@@ -275,9 +287,10 @@
             this.btn_eventos.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(92)))), ((int)(((byte)(246)))));
             this.btn_eventos.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_eventos.ForeColor = System.Drawing.Color.White;
-            this.btn_eventos.Location = new System.Drawing.Point(30, 333);
+            this.btn_eventos.Location = new System.Drawing.Point(40, 410);
+            this.btn_eventos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_eventos.Name = "btn_eventos";
-            this.btn_eventos.Size = new System.Drawing.Size(192, 34);
+            this.btn_eventos.Size = new System.Drawing.Size(256, 42);
             this.btn_eventos.TabIndex = 8;
             this.btn_eventos.Text = "🎉 Eventos";
             this.btn_eventos.Click += new System.EventHandler(this.btn_eventos_Click);
@@ -294,9 +307,10 @@
             this.btn_proyecto.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(182)))), ((int)(((byte)(212)))));
             this.btn_proyecto.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_proyecto.ForeColor = System.Drawing.Color.White;
-            this.btn_proyecto.Location = new System.Drawing.Point(30, 182);
+            this.btn_proyecto.Location = new System.Drawing.Point(40, 224);
+            this.btn_proyecto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_proyecto.Name = "btn_proyecto";
-            this.btn_proyecto.Size = new System.Drawing.Size(192, 34);
+            this.btn_proyecto.Size = new System.Drawing.Size(256, 42);
             this.btn_proyecto.TabIndex = 7;
             this.btn_proyecto.Text = "📁 Proyectos";
             this.btn_proyecto.Click += new System.EventHandler(this.btn_proyecto_Click);
@@ -307,9 +321,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(34, 42);
+            this.label2.Location = new System.Drawing.Point(45, 52);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(189, 19);
+            this.label2.Size = new System.Drawing.Size(235, 23);
             this.label2.TabIndex = 6;
             this.label2.Text = "¿Qué desea consultar hoy?";
             // 
@@ -324,9 +339,10 @@
             this.btn_gestionar_reportes.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(114)))), ((int)(((byte)(128)))));
             this.btn_gestionar_reportes.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_gestionar_reportes.ForeColor = System.Drawing.Color.White;
-            this.btn_gestionar_reportes.Location = new System.Drawing.Point(30, 383);
+            this.btn_gestionar_reportes.Location = new System.Drawing.Point(40, 471);
+            this.btn_gestionar_reportes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_gestionar_reportes.Name = "btn_gestionar_reportes";
-            this.btn_gestionar_reportes.Size = new System.Drawing.Size(192, 34);
+            this.btn_gestionar_reportes.Size = new System.Drawing.Size(256, 42);
             this.btn_gestionar_reportes.TabIndex = 4;
             this.btn_gestionar_reportes.Text = "📄 Reportes";
             this.btn_gestionar_reportes.Click += new System.EventHandler(this.btn_gestionar_reportes_Click);
@@ -342,9 +358,10 @@
             this.btnSemillero.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(197)))), ((int)(((byte)(94)))));
             this.btnSemillero.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSemillero.ForeColor = System.Drawing.Color.White;
-            this.btnSemillero.Location = new System.Drawing.Point(30, 134);
+            this.btnSemillero.Location = new System.Drawing.Point(40, 165);
+            this.btnSemillero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSemillero.Name = "btnSemillero";
-            this.btnSemillero.Size = new System.Drawing.Size(192, 34);
+            this.btnSemillero.Size = new System.Drawing.Size(256, 42);
             this.btnSemillero.TabIndex = 3;
             this.btnSemillero.Text = "🌱 Semillero";
             this.btnSemillero.Click += new System.EventHandler(this.btnSemillero_Click);
@@ -361,9 +378,10 @@
             this.btn_gestionar_usuarios.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
             this.btn_gestionar_usuarios.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_gestionar_usuarios.ForeColor = System.Drawing.Color.White;
-            this.btn_gestionar_usuarios.Location = new System.Drawing.Point(30, 85);
+            this.btn_gestionar_usuarios.Location = new System.Drawing.Point(40, 105);
+            this.btn_gestionar_usuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_gestionar_usuarios.Name = "btn_gestionar_usuarios";
-            this.btn_gestionar_usuarios.Size = new System.Drawing.Size(192, 34);
+            this.btn_gestionar_usuarios.Size = new System.Drawing.Size(256, 42);
             this.btn_gestionar_usuarios.TabIndex = 2;
             this.btn_gestionar_usuarios.Text = "👤 Usuarios ";
             this.btn_gestionar_usuarios.Click += new System.EventHandler(this.btn_gestionar_usuarios_Click);
@@ -374,18 +392,20 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(14, 17);
+            this.label1.Location = new System.Drawing.Point(19, 21);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 24);
+            this.label1.Size = new System.Drawing.Size(292, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Bienvenido Investigador";
             // 
             // Panel4
             // 
             this.Panel4.Controls.Add(this.groupBox1);
-            this.Panel4.Location = new System.Drawing.Point(287, 80);
+            this.Panel4.Location = new System.Drawing.Point(383, 98);
+            this.Panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panel4.Name = "Panel4";
-            this.Panel4.Size = new System.Drawing.Size(803, 70);
+            this.Panel4.Size = new System.Drawing.Size(1071, 86);
             this.Panel4.TabIndex = 6;
             // 
             // groupBox1
@@ -396,9 +416,11 @@
             this.groupBox1.Controls.Add(this.btnconsultalp);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(16, 3);
+            this.groupBox1.Location = new System.Drawing.Point(21, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(772, 58);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1029, 71);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Consultar por parametros";
@@ -414,9 +436,10 @@
             this.cboConsultarParametro.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cboConsultarParametro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cboConsultarParametro.ItemHeight = 30;
-            this.cboConsultarParametro.Location = new System.Drawing.Point(147, 15);
+            this.cboConsultarParametro.Location = new System.Drawing.Point(196, 18);
+            this.cboConsultarParametro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboConsultarParametro.Name = "cboConsultarParametro";
-            this.cboConsultarParametro.Size = new System.Drawing.Size(248, 36);
+            this.cboConsultarParametro.Size = new System.Drawing.Size(329, 36);
             this.cboConsultarParametro.TabIndex = 9;
             this.cboConsultarParametro.Click += new System.EventHandler(this.cboConsultarParametro_Click);
             // 
@@ -433,12 +456,12 @@
             this.txtParametro.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtParametro.ForeColor = System.Drawing.Color.Black;
             this.txtParametro.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtParametro.Location = new System.Drawing.Point(400, 15);
-            this.txtParametro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtParametro.Location = new System.Drawing.Point(533, 18);
+            this.txtParametro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtParametro.Name = "txtParametro";
             this.txtParametro.PlaceholderText = "";
             this.txtParametro.SelectedText = "";
-            this.txtParametro.Size = new System.Drawing.Size(209, 36);
+            this.txtParametro.Size = new System.Drawing.Size(279, 44);
             this.txtParametro.TabIndex = 8;
             // 
             // btnconsultalp
@@ -450,9 +473,10 @@
             this.btnconsultalp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnconsultalp.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnconsultalp.ForeColor = System.Drawing.Color.White;
-            this.btnconsultalp.Location = new System.Drawing.Point(615, 15);
+            this.btnconsultalp.Location = new System.Drawing.Point(820, 18);
+            this.btnconsultalp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnconsultalp.Name = "btnconsultalp";
-            this.btnconsultalp.Size = new System.Drawing.Size(149, 36);
+            this.btnconsultalp.Size = new System.Drawing.Size(199, 44);
             this.btnconsultalp.TabIndex = 7;
             this.btnconsultalp.Text = "🔎 Consultar Parametro";
             this.btnconsultalp.Click += new System.EventHandler(this.btnconsultalp_Click);
@@ -461,9 +485,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 25);
+            this.label3.Location = new System.Drawing.Point(8, 31);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 15);
+            this.label3.Size = new System.Drawing.Size(165, 18);
             this.label3.TabIndex = 0;
             this.label3.Text = "Selecciona la opcion";
             // 
@@ -472,33 +497,34 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridView1.Location = new System.Drawing.Point(16, 38);
+            this.dataGridView1.Location = new System.Drawing.Point(21, 47);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(764, 553);
+            this.dataGridView1.Size = new System.Drawing.Size(1019, 681);
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -528,9 +554,10 @@
             this.lbl_consultar.BackColor = System.Drawing.Color.Transparent;
             this.lbl_consultar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_consultar.ForeColor = System.Drawing.Color.White;
-            this.lbl_consultar.Location = new System.Drawing.Point(290, 9);
+            this.lbl_consultar.Location = new System.Drawing.Point(387, 11);
+            this.lbl_consultar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_consultar.Name = "lbl_consultar";
-            this.lbl_consultar.Size = new System.Drawing.Size(74, 19);
+            this.lbl_consultar.Size = new System.Drawing.Size(92, 23);
             this.lbl_consultar.TabIndex = 7;
             this.lbl_consultar.Text = "Consultar";
             // 
@@ -538,24 +565,25 @@
             // 
             this.Panel3.Controls.Add(this.dataGridView1);
             this.Panel3.Controls.Add(this.lbl_consultar);
-            this.Panel3.Location = new System.Drawing.Point(287, 156);
+            this.Panel3.Location = new System.Drawing.Point(383, 192);
+            this.Panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panel3.Name = "Panel3";
-            this.Panel3.Size = new System.Drawing.Size(803, 615);
+            this.Panel3.Size = new System.Drawing.Size(1071, 757);
             this.Panel3.TabIndex = 7;
             // 
             // Form_invest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Proyecto_Semillero.Properties.Resources.WhatsApp_Image_2026_04_01_at_12_14_14_PM;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1104, 795);
+            this.ClientSize = new System.Drawing.Size(1472, 978);
             this.ControlBox = false;
             this.Controls.Add(this.Panel3);
             this.Controls.Add(this.Panel4);
             this.Controls.Add(this.Panel1);
             this.Controls.Add(this.Panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form_invest";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_invest";

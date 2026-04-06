@@ -95,6 +95,55 @@ namespace Proyecto_Semillero
                 MessageBox.Show("Selecciona primero una opción");
             }
 
+            if (modoEdicion == false) // Si no estamos en modo edición, generamos un nuevo ID para el registro que se va a crear utilizando el método generadorID de la clase GenerarID. Este método toma como parámetros el nombre de la tabla, el nombre de la columna que representa el ID, un número inicial para generar el ID y la conexión a la base de datos. El ID generado se asigna al campo correspondiente en el formulario y se establece como de solo lectura para evitar que el usuario lo modifique, ya que los IDs deben ser únicos y generados automáticamente para garantizar la integridad de los datos en la base de datos.
+            {
+                if (tipo == "Usuario")
+                {
+                    txtIdUsuario.Text = GenerarID.generadorID("Usuario", "idUsuario", 10, conexion).ToString();
+                    txtIdUsuario.ReadOnly = true;
+                }
+                else if (tipo == "Semillero")
+                {
+                    txtIdSemillero.Text = GenerarID.generadorID("Semillero", "idSemillero", 20, conexion).ToString();
+                    txtIdSemillero.ReadOnly = true;
+                }
+                else if (tipo == "Proyectos")
+                {
+                    txtProyecto.Text = GenerarID.generadorID("Proyectos", "idProyecto", 30, conexion).ToString();
+                    txtProyecto.ReadOnly = true;
+                }
+                else if (tipo == "Reportes")
+                {
+                    txtIdReporte.Text = GenerarID.generadorID("Reportes", "idReporte", 70, conexion).ToString();
+                    txtIdReporte.ReadOnly = true;
+                }
+                else if (tipo == "Eventos")
+                {
+                    txtIdEvento.Text = GenerarID.generadorID("Eventos", "idEvento", 60, conexion).ToString();
+                    txtIdEvento.ReadOnly = true;
+                }
+                else if (tipo == "Patrocinadores")
+                {
+                    txtIdpatro.Text = GenerarID.generadorID("Patrocinadores", "idPatrocinador", 80, conexion).ToString();
+                    txtIdpatro.ReadOnly = true;
+                }
+                else if (tipo == "Actividad")
+                {
+                    txtIdAct.Text = GenerarID.generadorID("Actividad", "idActividad", 50, conexion).ToString();
+                    txtIdAct.ReadOnly = true;
+                }
+                else if ((tipo == "Fase"))
+                {
+                    txtIdFase.Text = GenerarID.generadorID("Fase", "idFase", 40, conexion).ToString();
+                    txtIdFase.ReadOnly = true;
+                }
+                else if (tipo == "Reuniones")
+                {
+                    txtIdReu.Text = GenerarID.generadorID("Reuniones", "idReunion", 90, conexion).ToString();
+                    txtIdReu.ReadOnly = true;
+                }
+            }
+
             if (modoEdicion && filaSeleccionada != null)
             {
                 if (tipo == "Usuario")
@@ -374,20 +423,23 @@ namespace Proyecto_Semillero
             long telefono = long.Parse(txtTelefonoUsuario.Text);
             int edad = int.Parse(txtEdadUsuario.Text);
 
-            SqlCommand validarLider = new SqlCommand(
-                  "select count(*) from Usuario where idSemillero = @idSemillero and rolUsuario = 'Lider'",
-                  conexion.Conectar()
-                        ); // Validación que no permite ingresar investigadores a semilleros sin líderes
-
-            validarLider.Parameters.AddWithValue("@idSemillero", idSemillero);
-
-            int cantidadLideres = (int)validarLider.ExecuteScalar();
-
-            if (cantidadLideres == 0 && rol != "Lider")
+            if (rol != "Administrador") // Si el rol del usuario no es "Administrador", se realiza una validación adicional para verificar que exista al menos un líder registrado para el semillero al que se va a asociar el nuevo usuario. Esto se hace mediante una consulta a la base de datos que cuenta cuántos usuarios con el rol de "Lider" están asociados al mismo semillero. Si no hay ningún líder registrado para ese semillero y el nuevo usuario no tiene el rol de "Lider", se muestra un mensaje de error indicando que primero se debe registrar un líder para ese semillero, y se detiene la ejecución del método, evitando que se intente guardar un usuario sin un líder asociado.
             {
-                MessageBox.Show("Debe registrar primero un líder para este semillero");
-                conexion.cerrar();
-                return;
+                SqlCommand validarLider = new SqlCommand(
+                    "select count(*) from Usuario where idSemillero = @idSemillero and rolUsuario = 'Lider'",
+                    conexion.Conectar() // Establecemos la conexión a la base de datos utilizando el método Conectar de la clase Conexion para ejecutar la consulta que valida si existe al menos un líder registrado para el semillero al que se va a asociar el nuevo usuario.
+                );
+
+                validarLider.Parameters.AddWithValue("@idSemillero", idSemillero); // Agregamos el parámetro @idSemillero a la consulta SQL para filtrar los usuarios por el ID del semillero al que se va a asociar el nuevo usuario. Esto nos permitirá contar cuántos usuarios con el rol de "Lider" están asociados a ese semillero específico.
+
+                int cantidadLideres = (int)validarLider.ExecuteScalar(); // Ejecutamos la consulta y obtenemos el resultado, que es el número de usuarios con el rol de "Lider" que están asociados al mismo semillero. Si el resultado es 0, significa que no hay ningún líder registrado para ese semillero.
+
+                if (cantidadLideres == 0 && rol != "Lider") // Si no hay ningún líder registrado para el semillero y el nuevo usuario no tiene el rol de "Lider", se muestra un mensaje de error indicando que primero se debe registrar un líder para ese semillero, y se detiene la ejecución del método, evitando que se intente guardar un usuario sin un líder asociado.
+                {
+                    MessageBox.Show("Debe registrar primero un líder para este semillero");
+                    conexion.cerrar();
+                    return;
+                }
             }
 
             if (modoEdicion == false && !ValidarIdUnico("Usuario", "idUsuario", idUsuario)) // Validamos que el ID del usuario sea único en la base de datos utilizando el método ValidarIdUnico. Si el ID ya existe, se muestra un mensaje de error y se detiene la ejecución del método, evitando que se intente guardar un usuario con un ID duplicado.
