@@ -24,8 +24,6 @@ namespace Proyecto_Semillero
 
         public bool lider = false;
 
-        public string rolActual;
-
         public int idSemilleroLider;
 
         public DataGridViewRow filaSeleccionada;
@@ -41,12 +39,6 @@ namespace Proyecto_Semillero
             tabAgregar.ItemSize = new Size(0, 1);
             tabAgregar.SizeMode = TabSizeMode.Fixed;
             tabAgregar.BackColor = Color.FromArgb(200, Color.White);
-
-            if (rolActual == "Lider")
-            {
-                cboRol.Enabled = false;
-            }
-
 
             if (tipo == "Usuario")
             {
@@ -236,7 +228,7 @@ namespace Proyecto_Semillero
                 }
             }
 
-            if (lider == true)
+            if (lider == true && modoEdicion == false) // permite al lider solo registrar cosas de su semillero
             {
                 txtIdSemillero3.Text = idSemilleroLider.ToString();
                 txtIdSemillero3.ReadOnly = true;
@@ -244,8 +236,12 @@ namespace Proyecto_Semillero
                 txtIdSemillero1.Text = idSemilleroLider.ToString();
                 txtIdSemillero1.ReadOnly = true;
             }
-        }
 
+            if (lider == true && modoEdicion == true) // permite al lider solo modificar cosas de su semillero
+            {
+                cboRol.Enabled = false;
+            }
+        }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -262,6 +258,58 @@ namespace Proyecto_Semillero
             else
             {
                 txtIdSemillero3.Enabled = true;
+            }
+        }
+
+        public bool ValidarFecha(Guna.UI2.WinForms.Guna2TextBox txt) // Este método se encarga de validar que la fecha ingresada en el campo txtFechaEven tenga un formato correcto (yyyy-MM-dd) y que no sea una fecha anterior a la fecha actual. Si la fecha es válida, el método devuelve true; de lo contrario, muestra un mensaje de error y devuelve false.
+        {
+            DateTime fechaIngresada;
+
+            if (DateTime.TryParseExact(txt.Text, "yyyy-MM-dd",
+                System.Globalization.CultureInfo.InvariantCulture,
+                System.Globalization.DateTimeStyles.None,
+                out fechaIngresada))
+            {
+                if (fechaIngresada < DateTime.Today)
+                {
+                    MessageBox.Show("No se permiten fechas anteriores a hoy.");
+                    txt.Focus();
+                    return false;
+                }
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Formato inválido. Use yyyy-MM-dd.");
+                txt.Focus();
+                return false;
+            }
+        }
+
+        public bool ValidarIdUnico(string nombreTabla, string campoId, int id) // metodo para validar que no registre con ID repetido
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand(
+                    "SELECT COUNT(*) FROM " + nombreTabla + " WHERE " + campoId + " = @id",
+                    conexion.Conectar()
+                );
+                cmd.Parameters.AddWithValue("@id", id);
+
+                int count = (int)cmd.ExecuteScalar();
+                conexion.cerrar();
+
+                if (count > 0)
+                {
+                    MessageBox.Show("El ID " + id + " ya existe en la tabla " + nombreTabla + ". Ingrese un ID diferente.");
+                    return false;
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al validar ID: " + ex.Message);
+                return false;
             }
         }
 
@@ -329,7 +377,7 @@ namespace Proyecto_Semillero
             SqlCommand validarLider = new SqlCommand(
                   "select count(*) from Usuario where idSemillero = @idSemillero and rolUsuario = 'Lider'",
                   conexion.Conectar()
-                        );
+                        ); // Validación que no permite ingresar investigadores a semilleros sin líderes
 
             validarLider.Parameters.AddWithValue("@idSemillero", idSemillero);
 
@@ -342,11 +390,12 @@ namespace Proyecto_Semillero
                 return;
             }
 
-
+            if (modoEdicion == false && !ValidarIdUnico("Usuario", "idUsuario", idUsuario)) // Validamos que el ID del usuario sea único en la base de datos utilizando el método ValidarIdUnico. Si el ID ya existe, se muestra un mensaje de error y se detiene la ejecución del método, evitando que se intente guardar un usuario con un ID duplicado.
+                return;
 
             if (modoEdicion == true)
             {
-                SqlCommand update;
+                SqlCommand update;  
                 try
                 {
                     update = new SqlCommand("UPDATE Usuario SET idSemillero = @idSemillero, contraseñaUsuario = @contraseñaUsuario, nombresUsuario = @nombresUsuario, rolUsuario = @rolUsuario, telefonoUsuario = @telefonoUsuario, correoUsuario = @correoUsuario, edadUsuario = @edadUsuario, generoUsuario = @generoUsuario, estadoUsuario = @estadoUsuario WHERE idUsuario = @idUsuario", conexion.Conectar());
@@ -433,6 +482,9 @@ namespace Proyecto_Semillero
                 string lineaSemillero = txtLineaSem.Text;
                 string enfoqueSemillero = txtEnfoqueSem.Text;
 
+                if (modoEdicion == false && !ValidarIdUnico("Semillero", "idSemillero", idSemillero)) // Validamos que el ID del semillero sea único en la base de datos utilizando el método ValidarIdUnico. Si el ID ya existe, se muestra un mensaje de error y se detiene la ejecución del método, evitando que se intente guardar un semillero con un ID duplicado.
+                    return;
+
                 if (modoEdicion == true)
                 {
                     SqlCommand update;
@@ -499,12 +551,18 @@ namespace Proyecto_Semillero
             }
             else
             {
+                if (!ValidarFecha(txtFechaEven)) // Validamos la fecha del evento utilizando el método ValidarFecha. Si la fecha no es válida, se muestra un mensaje de error y se detiene la ejecución del método, evitando que se intente guardar un evento con una fecha incorrecta.
+                    return;
+
                 int idEvento = int.Parse(txtIdEvento.Text);
                 string lugarEvento = txtLugarEven.Text;
                 string nombreEvento = txtNombreEven.Text;
                 string tipoEvento = txtTipoEven.Text;
                 DateTime fechaEvento = DateTime.Parse(txtFechaEven.Text);
                 string organizadorEvento = txtOrgEvento.Text;
+
+                if (modoEdicion == false && !ValidarIdUnico("Eventos", "idEvento", idEvento)) // Validamos que el ID del evento sea único en la base de datos utilizando el método ValidarIdUnico. Si el ID ya existe, se muestra un mensaje de error y se detiene la ejecución del método, evitando que se intente guardar un evento con un ID duplicado.
+                    return;
 
                 if (modoEdicion == true)
                 {
@@ -571,6 +629,9 @@ namespace Proyecto_Semillero
             }
             else
             {
+                if (!ValidarFecha(txtFechaInicio) || !ValidarFecha(txtFechaFin)) // Validamos las fechas de inicio y fin del proyecto utilizando el método ValidarFecha. Si alguna de las fechas no es válida, se muestra un mensaje de error y se detiene la ejecución del método, evitando que se intente guardar un proyecto con fechas incorrectas.
+                    return;
+
                 int idProyecto = int.Parse(txtProyecto.Text);
                 int idSemillero = int.Parse(txtIdSemillero1.Text);
                 string tituloProyecto = txtTitulo.Text;
@@ -599,6 +660,8 @@ namespace Proyecto_Semillero
 
                 idSemillero = idSem;
 
+                if (modoEdicion == false && !ValidarIdUnico("Proyectos", "idProyecto", idProyecto)) // Validamos que el ID del proyecto sea único en la base de datos utilizando el método ValidarIdUnico. Si el ID ya existe, se muestra un mensaje de error y se detiene la ejecución del método, evitando que se intente guardar un proyecto con un ID duplicado.
+                    return;
 
                 if (modoEdicion == true)
                 {
@@ -665,11 +728,17 @@ namespace Proyecto_Semillero
             }
             else
             {
+                if (!ValidarFecha(txtFechaReporte)) // Validamos la fecha del reporte utilizando el método ValidarFecha. Si la fecha no es válida, se muestra un mensaje de error y se detiene la ejecución del método, evitando que se intente guardar un reporte con una fecha incorrecta.
+                    return;
+
                 int idReporte = int.Parse(txtIdReporte.Text);
                 int idUsuario = int.Parse(txtIdUsuario2.Text);
                 DateTime fechaReporte = DateTime.Parse(txtFechaReporte.Text);
                 DateTime horaReporte = DateTime.Parse(txtHoraReporte.Text);
                 string motivoReporte = (txtMotivo.Text);
+
+                if (modoEdicion == false && !ValidarIdUnico("Reportes", "idReporte", idReporte)) // Validamos que el ID del reporte sea único en la base de datos utilizando el método ValidarIdUnico. Si el ID ya existe, se muestra un mensaje de error y se detiene la ejecución del método, evitando que se intente guardar un reporte con un ID duplicado.
+                    return;
 
                 if (modoEdicion == true)
                 {
@@ -738,6 +807,9 @@ namespace Proyecto_Semillero
                 string tipoPatrocinador = txtTipoPatro.Text;
                 long telefonoPatrocinador = long.Parse(txtTelefonoPatro.Text);
                 string correoPatrocinador = txtCorreoPatro.Text;
+
+                if (modoEdicion == false && !ValidarIdUnico("Patrocinadores", "idPatrocinador", idPatrocinador)) // Validamos que el ID del patrocinador sea único en la base de datos utilizando el método ValidarIdUnico. Si el ID ya existe, se muestra un mensaje de error y se detiene la ejecución del método, evitando que se intente guardar un patrocinador con un ID duplicado.
+                    return;
 
                 if (modoEdicion == true)
                 {
@@ -847,6 +919,9 @@ namespace Proyecto_Semillero
                     }
                 }
 
+                if (modoEdicion == false && !ValidarIdUnico("Fase", "idFase", idFase)) // Validamos que el ID de la fase sea único en la base de datos utilizando el método ValidarIdUnico. Si el ID ya existe, se muestra un mensaje de error y se detiene la ejecución del método, evitando que se intente guardar una fase con un ID duplicado.
+                    return;
+
                 if (modoEdicion == true)
                 {
                     SqlCommand update;
@@ -908,6 +983,9 @@ namespace Proyecto_Semillero
 
             else
             {
+                if (!ValidarFecha(txtFechaAct)) // Validamos la fecha de la actividad utilizando el método ValidarFecha. Si la fecha no es válida, se muestra un mensaje de error y se detiene la ejecución del método, evitando que se intente guardar una actividad con una fecha incorrecta.
+                    return;
+
                 int idActividad = int.Parse(txtIdAct.Text);
                 int idFase = int.Parse(txtIdFase1.Text);
                 string duracionAct = txtDuracionAct.Text;
@@ -953,6 +1031,9 @@ namespace Proyecto_Semillero
                         return;
                     }
                 }
+
+                if (modoEdicion == false && !ValidarIdUnico("Actividad", "idActividad", idActividad)) // Validamos que el ID de la actividad sea único en la base de datos utilizando el método ValidarIdUnico. Si el ID ya existe, se muestra un mensaje de error y se detiene la ejecución del método, evitando que se intente guardar una actividad con un ID duplicado.
+                    return;
 
                 if (modoEdicion == true)
                 {
@@ -1018,6 +1099,9 @@ namespace Proyecto_Semillero
 
             else
             {
+                if (!ValidarFecha(txtFechaReu)) // Validamos la fecha de la reunión utilizando el método ValidarFecha. Si la fecha no es válida, se muestra un mensaje de error y se detiene la ejecución del método, evitando que se intente guardar una reunión con una fecha incorrecta.
+                    return;
+
                 int idReu = int.Parse(txtIdReu.Text);
                 int idUsuario = int.Parse(txtIdUsuario3.Text);
                 string tipoReu = txtTipoReu.Text;
@@ -1064,6 +1148,9 @@ namespace Proyecto_Semillero
                         return;
                     }
                 }
+
+                if (modoEdicion == false && !ValidarIdUnico("Reuniones", "idReunion", idReu)) // Validamos que el ID de la reunión sea único en la base de datos utilizando el método ValidarIdUnico. Si el ID ya existe, se muestra un mensaje de error y se detiene la ejecución del método, evitando que se intente guardar una reunión con un ID duplicado.
+                    return;
 
                 if (modoEdicion == true)
                 {

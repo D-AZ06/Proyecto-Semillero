@@ -56,9 +56,12 @@ namespace Proyecto_Semillero
             DataTable resultados = ConsultarConParametro.ConsultarParametroSegunSemillero(formularioActual, columna, valor, idSemillero, conexion);
 
             dataGridView1.DataSource = resultados;
+
             if (formularioActual == "Usuario")
             {
                 dataGridView1.Columns["contraseñaUsuario"].Visible = false;
+                dataGridView1.Columns["telefonoUsuario"].Visible = false; // ocultamos la columna telefono usuario del DataGridView
+                dataGridView1.Columns["correoUsuario"].Visible = false; // ocultamos la columna correo usuario del DataGridView
             }
         }
 
@@ -68,8 +71,11 @@ namespace Proyecto_Semillero
             formularioActual = "Usuario"; // asignamos el nombre del formulario que se esta mostrando actualmente en el DataGridView a la variable formularioActual
             Consulta.Gestionarlider("Usuario", idSemillero, dataGridView1);//llamamos al método GestionarUsuario de la clase Consulta, pasando el id del semillero y el DataGridView para mostrar los usuarios
             dataGridView1.Columns["contraseñaUsuario"].Visible = false; // ocultamos la columna contrasema usuario del DataGridView
+            dataGridView1.Columns["telefonoUsuario"].Visible = false; // ocultamos la columna telefono usuario del DataGridView
+            dataGridView1.Columns["correoUsuario"].Visible = false; // ocultamos la columna correo usuario del DataGridView
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro); // cargamos los parámetros de consulta para el formulario que se esta mostrando actualmente en el DataGridView en el ComboBox cboParametro
             lbl_consultar.Text = "Consultar Usuarios";
+            txtParametro.Text = ""; // limpiamos el TextBox txtParametro para que el usuario pueda escribir un nuevo valor de consulta
         }
 
         private void btnSemillero_Click(object sender, EventArgs e)
@@ -79,6 +85,7 @@ namespace Proyecto_Semillero
             Consulta.Gestionarlider("Semillero", idSemillero, dataGridView1);//llamamos al método GestionarUsuario de la clase Consulta, pasando el id del semillero y el DataGridView para mostrar los semilleros
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro); // cargamos los parámetros de consulta para el formulario que se esta mostrando actualmente en el DataGridView en el ComboBox cboParametro
             lbl_consultar.Text = "Consultar Semilleros";
+            txtParametro.Text = ""; // limpiamos el TextBox txtParametro para que el usuario pueda escribir un nuevo valor de consulta
         }
 
         private void btn_proyecto_Click(object sender, EventArgs e)
@@ -88,6 +95,7 @@ namespace Proyecto_Semillero
             Consulta.Gestionarlider("Proyectos", idSemillero, dataGridView1);//llamamos al método GestionarUsuario de la clase Consulta, pasando el id del semillero y el DataGridView para mostrar los proyectos
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro); // cargamos los parámetros de consulta para el formulario que se esta mostrando actualmente en el DataGridView en el ComboBox cboParametro
             lbl_consultar.Text = "Consultar Proyectos";
+            txtParametro.Text = ""; // limpiamos el TextBox txtParametro para que el usuario pueda escribir un nuevo valor de consulta
         }
 
         private void btnFases_Click(object sender, EventArgs e)
@@ -97,6 +105,7 @@ namespace Proyecto_Semillero
             Consulta.Gestionarlider("Fase", idSemillero, dataGridView1);//llamamos al método GestionarUsuario de la clase Consulta, pasando el id del semillero y el DataGridView para mostrar los proyectos
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro); // cargamos los parámetros de consulta para el formulario que se esta mostrando actualmente en el DataGridView en el ComboBox cboParametro
             lbl_consultar.Text = "Consultar Fases";
+            txtParametro.Text = ""; // limpiamos el TextBox txtParametro para que el usuario pueda escribir un nuevo valor de consulta
         }
 
         private void btn_act_Click(object sender, EventArgs e)
@@ -106,6 +115,7 @@ namespace Proyecto_Semillero
             Consulta.Gestionarlider("Actividad", idSemillero, dataGridView1);//llamamos al método GestionarUsuario de la clase Consulta, pasando el id del semillero y el DataGridView para mostrar los proyectos
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro); // cargamos los parámetros de consulta para el formulario que se esta mostrando actualmente en el DataGridView en el ComboBox cboParametro
             lbl_consultar.Text = "Consultar Actividad";
+            txtParametro.Text = ""; // limpiamos el TextBox txtParametro para que el usuario pueda escribir un nuevo valor de consulta
         }
 
         private void btn_eventos_Click(object sender, EventArgs e)
@@ -115,6 +125,7 @@ namespace Proyecto_Semillero
             Consulta.Gestionarlider("Eventos", idSemillero, dataGridView1);//llamamos al método GestionarUsuario de la clase Consulta, pasando el id del semillero y el DataGridView para mostrar los proyectos
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro); // cargamos los parámetros de consulta para el formulario que se esta mostrando actualmente en el DataGridView en el ComboBox cboParametro
             lbl_consultar.Text = "Consultar Eventos";
+            txtParametro.Text = ""; // limpiamos el TextBox txtParametro para que el usuario pueda escribir un nuevo valor de consulta
         }
 
         private void btn_gestionar_reportes_Click(object sender, EventArgs e)
@@ -124,6 +135,7 @@ namespace Proyecto_Semillero
             Consulta.Gestionarlider("Reportes", idSemillero, dataGridView1);//llamamos al método GestionarUsuario de la clase Consulta, pasando el id del semillero y el DataGridView para mostrar los proyectos
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro); // cargamos los parámetros de consulta para el formulario que se esta mostrando actualmente en el DataGridView en el ComboBox cboParametro
             lbl_consultar.Text = "Consultar Reportes";
+            txtParametro.Text = ""; // limpiamos el TextBox txtParametro para que el usuario pueda escribir un nuevo valor de consulta
         }
 
         private void btn_patrocinadores_Click(object sender, EventArgs e)
@@ -133,6 +145,7 @@ namespace Proyecto_Semillero
             Consulta.Gestionarlider("Patrocinadores", idSemillero, dataGridView1);//llamamos al método GestionarUsuario de la clase Consulta, pasando el id del semillero y el DataGridView para mostrar los proyectos
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro); // cargamos los parámetros de consulta para el formulario que se esta mostrando actualmente en el DataGridView en el ComboBox cboParametro
             lbl_consultar.Text = "Consultar Patrocinadores";
+            txtParametro.Text = ""; // limpiamos el TextBox txtParametro para que el usuario pueda escribir un nuevo valor de consulta
         }
 
         private void btn_reunion_Click(object sender, EventArgs e)
@@ -142,6 +155,7 @@ namespace Proyecto_Semillero
             Consulta.Gestionarlider("Reuniones", idSemillero, dataGridView1);//llamamos al método GestionarUsuario de la clase Consulta, pasando el id del semillero y el DataGridView para mostrar los proyectos
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro); // cargamos los parámetros de consulta para el formulario que se esta mostrando actualmente en el DataGridView en el ComboBox cboParametro
             lbl_consultar.Text = "Consultar Reuniones";
+            txtParametro.Text = ""; // limpiamos el TextBox txtParametro para que el usuario pueda escribir un nuevo valor de consulta
         }
 
         private void btnProyectosEventos_Click(object sender, EventArgs e)
@@ -151,6 +165,7 @@ namespace Proyecto_Semillero
             Consulta.Gestionarlider("ProyectosEventos", idSemillero, dataGridView1);//llamamos al método GestionarUsuario de la clase Consulta, pasando el id del semillero y el DataGridView para mostrar los proyectos
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro); // cargamos los parámetros de consulta para el formulario que se esta mostrando actualmente en el DataGridView en el ComboBox cboParametro
             lbl_consultar.Text = "Consultar Proyectos y Eventos";
+            txtParametro.Text = ""; // limpiamos el TextBox txtParametro para que el usuario pueda escribir un nuevo valor de consulta
         }
 
         private void btnEventoPatrocinadores_Click(object sender, EventArgs e)
@@ -160,6 +175,7 @@ namespace Proyecto_Semillero
             Consulta.Gestionarlider("EventoPatrocinadores", idSemillero, dataGridView1);//llamamos al método GestionarUsuario de la clase Consulta, pasando el id del semillero y el DataGridView para mostrar los proyectos
             ConsultarConParametro.CargarParametros(formularioActual, cboConsultarParametro); // cargamos los parámetros de consulta para el formulario que se esta mostrando actualmente en el DataGridView en el ComboBox cboParametro
             lbl_consultar.Text = "Consultar Evento y Patrocinadores";
+            txtParametro.Text = ""; // limpiamos el TextBox txtParametro para que el usuario pueda escribir un nuevo valor de consulta
         }
 
         private void cboConsultarParametro_Click(object sender, EventArgs e)
@@ -167,6 +183,8 @@ namespace Proyecto_Semillero
             if (formularioActual == "Usuario")
             {
                 cboConsultarParametro.Items.Remove("contraseñaUsuario"); // eliminamos el parámetro contraseñaUsuario del ComboBox cboParametro, ya que no es un parámetro de consulta para los usuarios
+                cboConsultarParametro.Items.Remove("telefonoUsuario"); // eliminamos el parámetro telefonoUsuario del ComboBox cboParametro, ya que no es un parámetro de consulta para los usuarios
+                cboConsultarParametro.Items.Remove("correoUsuario"); // eliminamos el parámetro correoUsuario del ComboBox cboParametro, ya que no es un parámetro de consulta para los usuarios
             }
         }
     }

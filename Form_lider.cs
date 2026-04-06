@@ -233,8 +233,7 @@ namespace Proyecto_Semillero
             }
 
             FormAgregar frm = new FormAgregar();
-            frm.rolActual = "Lider"; 
-
+            frm.lider = true; // asignamos el valor true a la propiedad lider del formulario FormAgregar para que sepa que el usuario es un lider y pueda mostrar u ocultar campos según el tipo de usuario
             frm.tipo = formularioActual; // ya lo tienes
             frm.modoEdicion = true; // ACTIVAS MODO MODIFICAR
             frm.filaSeleccionada = dataGridView1.CurrentRow; // ENVÍAS LOS DATOS
