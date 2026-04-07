@@ -280,7 +280,7 @@ namespace Proyecto_Semillero
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
-        {
+        {       
             if (dataGridView1.CurrentRow == null)
             {
                 MessageBox.Show("Seleccione un registro primero.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -289,7 +289,6 @@ namespace Proyecto_Semillero
             {
                 try
                 {
-                    // 🔑 Obtén el valor de la primera celda (ID)
                     int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
 
                     SqlCommand eliminar = new SqlCommand($"DELETE FROM {formularioActual} WHERE {dataGridView1.Columns[0].Name} = @Id", conexion.Conectar());
@@ -320,6 +319,5 @@ namespace Proyecto_Semillero
 
         }
 
-        
-    } 
-}
+    }
+} 

@@ -378,6 +378,24 @@ namespace Proyecto_Semillero
                 MessageBox.Show("Complete todos los campos");
                 return;
             }
+            
+            if (txtTelefonoUsuario.Text.Length != 10 || !txtTelefonoUsuario.Text.All(char.IsDigit))//
+            {
+                MessageBox.Show("Teléfono inválido, debe contener 10 dígitos numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string correo = txtCorreoUsuario.Text;
+
+            int arroba = correo.IndexOf("@");
+            int punto = correo.LastIndexOf(".");
+
+            if (arroba <= 0 || punto <= arroba + 1 || punto == correo.Length - 1)
+            {
+                MessageBox.Show("Correo inválido, formato valido: nombre@correo.com", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
 
             // Validamos que el ID del usuario sea un número entero
             string rol = cboRol.Text;
@@ -406,7 +424,7 @@ namespace Proyecto_Semillero
 
                 if (existeSemillero == 0)
                 {
-                    MessageBox.Show("El semillero no existe");
+                    MessageBox.Show("El semillero no existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     conexion.cerrar();
                     return;
                 }
@@ -416,7 +434,6 @@ namespace Proyecto_Semillero
 
             string contraseña = txtContraseña.Text;
             string nombre = txtNombre.Text;
-            string correo = txtCorreoUsuario.Text;
             string genero = cboGeneroUsuario.Text;
             string estado = cboEstado.Text;
             int idUsuario = int.Parse(txtIdUsuario.Text);
