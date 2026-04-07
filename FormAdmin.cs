@@ -280,7 +280,8 @@ namespace Proyecto_Semillero
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
-        {       
+        {
+            // Verificar si hay una fila seleccionada en el DataGridView antes de intentar eliminar
             if (dataGridView1.CurrentRow == null)
             {
                 MessageBox.Show("Seleccione un registro primero.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -288,21 +289,21 @@ namespace Proyecto_Semillero
             else
             {
                 try
-                {
-                    int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                {// Obtener el ID del registro a eliminar desde la primera celda de la fila seleccionada
+                    int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);// Asumimos que la primera columna del DataGridView contiene el ID del registro
 
-                    SqlCommand eliminar = new SqlCommand($"DELETE FROM {formularioActual} WHERE {dataGridView1.Columns[0].Name} = @Id", conexion.Conectar());
+                    SqlCommand eliminar = new SqlCommand($"DELETE FROM {formularioActual} WHERE {dataGridView1.Columns[0].Name} = @Id", conexion.Conectar());// Creamos un comando SQL para eliminar el registro seleccionado de la tabla correspondiente al formulario actual, utilizando un parámetro para evitar inyecciones SQL
+                    eliminar.CommandType = CommandType.Text;// Establecemos el tipo de comando como texto
+                    eliminar.Parameters.AddWithValue("@Id", id);// Agregamos el valor del ID como parámetro al comando SQL
 
-                    eliminar.CommandType = CommandType.Text;
-                    eliminar.Parameters.AddWithValue("@Id", id);
-
+                    // Mostrar un mensaje de confirmación antes de eliminar el registro
                     if (MessageBox.Show($"¿Desea eliminar el registro con ID = {id}?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button3) == DialogResult.Yes)
                     {
-                        int filas = eliminar.ExecuteNonQuery();
+                        int filas = eliminar.ExecuteNonQuery();// Ejecutamos el comando SQL para eliminar el registro y obtenemos el número de filas afectadas
 
-                        if (filas > 0)
+                        if (filas > 0)// Si se eliminó al menos una fila, mostramos un mensaje de éxito y refrescamos el DataGridView
                         {
-                            MessageBox.Show("El registro ha sido eliminado correctamente.");
+                            MessageBox.Show("El registro ha sido eliminado correctamente.");// Mostramos un mensaje de éxito al usuario
                             Gestionar(formularioActual); // refresca el DataGridView
                         }
                         else

@@ -40,6 +40,7 @@ namespace Proyecto_Semillero
             tabAgregar.SizeMode = TabSizeMode.Fixed;
             tabAgregar.BackColor = Color.FromArgb(200, Color.White);
 
+            // Dependiendo del valor de la variable "tipo", se selecciona la pestaña correspondiente en el control tabAgregar para mostrar el formulario adecuado para agregar o modificar registros relacionados con ese tipo específico. Esto permite que el mismo formulario pueda ser utilizado para diferentes tipos de registros, mostrando solo los campos y controles relevantes para cada tipo, lo que mejora la usabilidad y organización del formulario.
             if (tipo == "Usuario")
             {
                 tabAgregar.SelectedTab = tabUsuario;
@@ -144,7 +145,7 @@ namespace Proyecto_Semillero
                 }
             }
 
-            if (modoEdicion && filaSeleccionada != null)
+            if (modoEdicion && filaSeleccionada != null)// Si estamos en modo edición y se ha seleccionado una fila de datos para modificar, se cargan los datos de esa fila en los campos correspondientes del formulario para que el usuario pueda ver y editar la información existente. Esto permite que el mismo formulario sea utilizado tanto para agregar nuevos registros como para modificar registros existentes, mejorando la eficiencia y usabilidad del sistema.
             {
                 if (tipo == "Usuario")
                 {
@@ -299,7 +300,7 @@ namespace Proyecto_Semillero
 
         private void cboRol_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboRol.Text == "Administrador")
+            if (cboRol.Text == "Administrador")// Si el rol seleccionado en el combo box cboRol es "Administrador", se deshabilita el campo txtIdSemillero3 y se borra su contenido, ya que los administradores no están asociados a ningún semillero. Esto garantiza que los usuarios con el rol de administrador no puedan ingresar un ID de semillero, lo que es coherente con la lógica del sistema y evita errores relacionados con la asociación de administradores a semilleros.
             {
                 txtIdSemillero3.Enabled = false;
                 txtIdSemillero3.Text = "";
@@ -339,21 +340,22 @@ namespace Proyecto_Semillero
         {
             try
             {
+                //aqui se hace la consulta a la base de datos para verificar si el ID ya existe en la tabla correspondiente.
                 SqlCommand cmd = new SqlCommand(
                     "SELECT COUNT(*) FROM " + nombreTabla + " WHERE " + campoId + " = @id",
                     conexion.Conectar()
                 );
-                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@id", id);// Agregamos el parámetro @id a la consulta SQL para filtrar los registros por el ID que se desea validar. Esto nos permitirá contar cuántos registros en la tabla correspondiente tienen el mismo ID que se está intentando registrar.
 
                 int count = (int)cmd.ExecuteScalar();
                 conexion.cerrar();
 
-                if (count > 0)
+                if (count > 0)// Si el resultado de la consulta es mayor que 0, significa que ya existe un registro con el mismo ID en la tabla correspondiente. En este caso, se muestra un mensaje de error indicando que el ID ya existe y se devuelve false para indicar que la validación ha fallado, evitando que se intente guardar un registro con un ID duplicado en la base de datos.
                 {
-                    MessageBox.Show("El ID " + id + " ya existe en la tabla " + nombreTabla + ". Ingrese un ID diferente.");
+                    MessageBox.Show("El ID " + id + " ya existe en la tabla " + nombreTabla + ". Ingrese un ID diferente.");// Se muestra un mensaje de error indicando que el ID ya existe en la tabla correspondiente y se solicita al usuario que ingrese un ID diferente para evitar duplicados en la base de datos.
                     return false;
                 }
-                return true;
+                return true;// Si el resultado de la consulta es 0, significa que no existe ningún registro con el mismo ID en la tabla correspondiente. En este caso, se devuelve true para indicar que la validación ha sido exitosa y se puede proceder a guardar el nuevo registro con el ID ingresado.
             }
             catch (Exception ex)
             {
@@ -364,7 +366,7 @@ namespace Proyecto_Semillero
 
         private void btnAgregarUsuario_Click_1(object sender, EventArgs e)
         {
-
+            //se valida que los campos esten completos
             if (txtIdUsuario.Text.Trim() == "" ||
                 txtContraseña.Text.Trim() == "" ||
                 txtNombre.Text.Trim() == "" ||
@@ -379,7 +381,8 @@ namespace Proyecto_Semillero
                 return;
             }
             
-            if (txtTelefonoUsuario.Text.Length != 10 || !txtTelefonoUsuario.Text.All(char.IsDigit))//
+            
+            if (txtTelefonoUsuario.Text.Length != 10 || !txtTelefonoUsuario.Text.All(char.IsDigit))
             {
                 MessageBox.Show("Teléfono inválido, debe contener 10 dígitos numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -399,8 +402,9 @@ namespace Proyecto_Semillero
 
             // Validamos que el ID del usuario sea un número entero
             string rol = cboRol.Text;
-            int idSemillero = 0; // Declaramos la variable idSemillero como nullable para poder asignarle un valor null en caso de que el rol sea "Administrador", ya que los administradores no están asociados a ningún semillero. Esto nos permitirá manejar correctamente la inserción o actualización del usuario en la base de datos, evitando errores relacionados con valores nulos en la columna idSemillero de la tabla Usuario.
-            
+            int idSemillero = 0; // inicializamos la variable idSemillero en 0 para que pueda ser utilizada posteriormente en el código, incluso si el rol del usuario es "Administrador" y no se requiere un ID de semillero. Esto nos permite evitar errores relacionados con variables no inicializadas y garantiza que el código funcione correctamente independientemente del rol seleccionado para el nuevo usuario.
+
+            //si el rol del usuario no es "Administrador", se realiza una validación adicional para verificar que se haya ingresado un ID de semillero en el campo txtIdSemillero3. Si el campo está vacío, se muestra un mensaje de error indicando que se debe ingresar el ID del semillero, y se detiene la ejecución del método, evitando que se intente guardar un usuario sin un ID de semillero asociado. Esto garantiza que los usuarios que no son administradores estén correctamente asociados a un semillero en la base de datos.
             if (rol != "Administrador")
             {
                 if (txtIdSemillero3.Text.Trim() == "")
@@ -500,6 +504,7 @@ namespace Proyecto_Semillero
             {
                 try
                 {
+                    // Si el rol del usuario es "Administrador", no se asigna un ID de semillero, ya que los administradores no están asociados a ningún semillero. En este caso, se asigna un valor nulo a la columna idSemillero en la base de datos utilizando DBNull.Value, lo que indica que el usuario no tiene un semillero asociado. Esto permite manejar correctamente la inserción del nuevo usuario en la base de datos sin generar errores relacionados con valores nulos en la columna idSemillero.
                     SqlCommand insert = new SqlCommand(
                         "INSERT INTO Usuario (idUsuario, idSemillero, contraseñaUsuario, nombresUsuario, rolUsuario, telefonoUsuario, correoUsuario, edadUsuario, generoUsuario, estadoUsuario) " +
                         "VALUES (@idUsuario, @idSemillero, @contraseña, @nombre, @rol, @telefono, @correo, @edad, @genero, @estado)",
@@ -676,7 +681,7 @@ namespace Proyecto_Semillero
                         insert.Parameters.AddWithValue("@organizadorEvento", organizadorEvento);
                         insert.ExecuteNonQuery();
                         MessageBox.Show("Evento guardado correctamente");
-                        // cerrar conexión (como ya la tienes global)
+                        // cerrar conexión 
                         conexion.cerrar();
                         // cerrar formulario
                         this.DialogResult = DialogResult.OK;

@@ -85,6 +85,7 @@ namespace Proyecto_Semillero
         // -------------------------------------------------------------------------------------------------------------
         public void Gestionarlider(string tipo, int idSemillero, DataGridView dataGridView) // creamos el metodo GestionarUsuarios para mostrar en el datagrid los datos de los usuarios según al semillero que pertenezcan los investigadores y lideres
         {
+            // dependiendo del tipo de datos que se quiera mostrar en el datagrid, se ejecuta una consulta SQL diferente para obtener los datos correspondientes a ese tipo, filtrados por el idSemillero para mostrar solo los datos relacionados con ese semillero específico
             SqlCommand consulta; // creamos un objeto de tipo Sql
             consulta = new SqlCommand();
             if (tipo == "Usuario")
@@ -172,8 +173,8 @@ namespace Proyecto_Semillero
                     );
             }
 
-            consulta.CommandType = CommandType.Text;
-            consulta.Parameters.Add("@idSemillero", SqlDbType.Int).Value = idSemillero;
+            consulta.CommandType = CommandType.Text;// establecemos el tipo de comando como texto
+            consulta.Parameters.Add("@idSemillero", SqlDbType.Int).Value = idSemillero;// agregamos el parametro idSemillero a la consulta SQL para filtrar los datos por el semillero específico
 
             dataset.Clear();
 
@@ -181,7 +182,7 @@ namespace Proyecto_Semillero
             da.Fill(dataset, tipo); // llenamos el DataSet con los datos obtenidos de la consulta SQL, utilizando el nombre del tipo como nombre de la tabla en el DataSet
 
             try
-            {
+            {// asignamos el DataSet como fuente de datos del DataGridView y especificamos el nombre de la tabla a mostrar en el DataGridView utilizando el nombre del tipo
                 dataGridView.DataSource = dataset;
                 dataGridView.DataMember = tipo;
             }
