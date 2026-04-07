@@ -317,9 +317,9 @@ namespace Proyecto_Semillero
             if (DateTime.TryParseExact(txt.Text, "yyyy-MM-dd",
                 System.Globalization.CultureInfo.InvariantCulture,
                 System.Globalization.DateTimeStyles.None,
-                out fechaIngresada))
+                out fechaIngresada)) // Intentamos convertir el texto ingresado en el campo txtFechaEven a un objeto DateTime utilizando el formato "yyyy-MM-dd". Si la conversión es exitosa, se almacena la fecha resultante en la variable fechaIngresada y se continúa con la validación de la fecha. Si la conversión falla, se muestra un mensaje de error indicando que el formato es inválido y se devuelve false.
             {
-                if (fechaIngresada < DateTime.Today)
+                if (fechaIngresada < DateTime.Today) // Si la fecha ingresada es anterior a la fecha actual (DateTime.Today), se muestra un mensaje de error indicando que no se permiten fechas anteriores a hoy, se establece el foco en el campo txtFechaEven para que el usuario pueda corregir la fecha, y se devuelve false para indicar que la validación ha fallado. Esto garantiza que solo se puedan ingresar fechas válidas y futuras en el campo correspondiente.
                 {
                     MessageBox.Show("No se permiten fechas anteriores a hoy.");
                     txt.Focus();
@@ -1502,7 +1502,7 @@ namespace Proyecto_Semillero
         }
         public void SoloNumeros(KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != '-' && e.KeyChar != ':')
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -1511,6 +1511,14 @@ namespace Proyecto_Semillero
         public void SoloLetras(KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        public void SoloFechas(KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != '-' && e.KeyChar != ':')
             {
                 e.Handled = true;
             }
@@ -1618,32 +1626,32 @@ namespace Proyecto_Semillero
 
         private void txtFechaEven_KeyPress(object sender, KeyPressEventArgs e)
         {
-            SoloNumeros(e);
+            SoloFechas(e);
         }
 
         private void txtFechaInicio_KeyPress(object sender, KeyPressEventArgs e)
         {
-            SoloNumeros(e);
+            SoloFechas(e);
         }
 
         private void txtFechaFin_KeyPress(object sender, KeyPressEventArgs e)
         {
-            SoloNumeros(e);
+            SoloFechas(e);
         }
 
         private void txtFechaAct_KeyPress(object sender, KeyPressEventArgs e)
         {
-            SoloNumeros(e);
+            SoloFechas(e);
         }
 
         private void txtFechaReporte_KeyPress(object sender, KeyPressEventArgs e)
         {
-            SoloNumeros(e);
+            SoloFechas(e);
         }
 
         private void txtHoraReporte_KeyPress(object sender, KeyPressEventArgs e)
         {
-            SoloNumeros(e);
+            SoloFechas(e);
         }
 
         private void txtIdpatro_KeyPress(object sender, KeyPressEventArgs e)
@@ -1678,12 +1686,12 @@ namespace Proyecto_Semillero
 
         private void txtHoraReu_KeyPress(object sender, KeyPressEventArgs e)
         {
-            SoloNumeros(e);
+            SoloFechas(e);
         }
 
         private void txtFechaReu_KeyPress(object sender, KeyPressEventArgs e)
         {
-            SoloNumeros(e);
+            SoloFechas(e);
         }
 
         private void txtIdUsuario2_TextChanged(object sender, EventArgs e)

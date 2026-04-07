@@ -4,42 +4,48 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Proyecto_Semillero
 {
     internal class GenerarID
     {
-        public static int generadorID(string tabla, string columnaId, int prefijo, Conexion conexion) // Metodo para generar un ID consecutivo con prefijo específico
+        public static int generadorID(string tabla, string columnaId, int prefijo, Conexion conexion) // Metodo para generar un ID único basado en el último ID de la tabla, con un prefijo específico
         {
-            int ultimoID = 0; // Variable para almacenar el último ID obtenido de la base de datos
-
-            SqlCommand cmd = new SqlCommand(
-                $"SELECT MAX({columnaId}) FROM {tabla}",
-                conexion.Conectar()
-            ); // Consulta SQL para obtener el máximo ID de la tabla especificada
-
-            object resultado = cmd.ExecuteScalar(); // Ejecuta la consulta y obtiene el resultado (máximo ID)
-            conexion.cerrar(); // Cierra la conexión a la base de datos
-
-            if (resultado != DBNull.Value) // Verifica si el resultado no es nulo
+            try
             {
-                ultimoID = Convert.ToInt32(resultado); // Convierte el resultado a entero y lo asigna a la variable ultimoID
+                // Esta consulta obtiene el valor máximo de la columna ID en la tabla especificada, lo que representa el último ID generado
+                SqlCommand cmd = new SqlCommand(
+                    $"SELECT MAX({columnaId}) FROM {tabla}",
+                    conexion.Conectar()
+                );
+
+                object resultado = cmd.ExecuteScalar(); // Ejecuta la consulta y obtiene el resultado (el último ID)
+                conexion.cerrar(); // Cierra la conexión a la base de datos
+
+                string prefijoTexto = prefijo.ToString(); // Convierte el prefijo a texto para colocar con el nuevo ID
+
+
+                if (resultado == DBNull.Value || resultado == null) // Si no hay registros en la tabla, se inicia el ID con el prefijo seguido de "1"
+                {
+                    return Convert.ToInt32(prefijoTexto + "1");
+                }
+
+                int ultimoID = Convert.ToInt32(resultado); // Convierte el resultado a un entero para manipularlo y generar el nuevo ID
+                string idTexto = ultimoID.ToString(); // Convierte el último ID a texto para extraer el consecutivo
+
+                string consecutivoTexto = idTexto.Substring(prefijoTexto.Length); // Extrae la parte del ID que representa el número consecutivo, eliminando el prefijo
+                int consecutivo = Convert.ToInt32(consecutivoTexto) + 1; // Incrementa el número consecutivo para generar el nuevo ID
+
+                string nuevoID = prefijoTexto + consecutivo.ToString(); // Combina el prefijo con el nuevo número consecutivo para formar el nuevo ID completo
+                return Convert.ToInt32(nuevoID); // Devuelve el nuevo ID generado como un entero, listo para ser utilizado en la inserción de un nuevo registro en la base de datos
             }
 
-            if (ultimoID == 0) // Si no hay registros en la tabla, se inicia el ID con el prefijo seguido de "1"
+            catch (Exception ex) 
             {
-                return Convert.ToInt32(prefijo.ToString() + "1"); // Ejemplo: Si el prefijo es 10, el primer ID generado será 101
+                MessageBox.Show("Error al generar el ID: " + ex.Message); // Muestra un mensaje de error si ocurre una excepción durante la generación del ID
+                return 0; // Devuelve 0 en caso de error, lo que indica que no se pudo generar un ID válido
             }
-
-            string idTexto = ultimoID.ToString(); // Convierte el último ID a texto para manipularlo
-            string prefijoTexto = prefijo.ToString();  // Convierte el prefijo a texto para compararlo con el ID obtenido
-
-            string consecutivoTexto = idTexto.Substring(prefijoTexto.Length); // Extrae la parte del ID que corresponde al número consecutivo, eliminando el prefijo. Por ejemplo, si el último ID es "1010" y el prefijo es "10", se extrae "10"
-            int consecutivo = Convert.ToInt32(consecutivoTexto) + 1;  // Convierte el número consecutivo a entero, le suma 1 para obtener el siguiente número en la secuencia. En el ejemplo, "10" se convierte a 10 y se incrementa a 11
-
-            string nuevoID = prefijoTexto + consecutivo.ToString(); // Combina el prefijo con el nuevo número consecutivo para formar el nuevo ID. En el ejemplo, se combina "10" con "11" para obtener "1011"
-
-            return Convert.ToInt32(nuevoID); // Convierte el nuevo ID a entero y lo devuelve como resultado del método. En el ejemplo, "1011" se convierte a 1011
         }
     }
 }
