@@ -1090,7 +1090,7 @@ namespace Proyecto_Semillero
                 {
                     // Validar que la fase pertenece al proyecto del semillero del líder
                     SqlCommand validarSemillero = new SqlCommand(
-                        "SELECT COUNT(*) FROM Fase, Proyectos WHERE Fase.idProyecto = Proyectos.idProyecto AND Fase.idFase = @idFase AND Proyectos.idSemillero = @idSemilleroLider",
+                        "SELECT COUNT(*) FROM Fase, Proyectos WHERE Fase.idProyecto = Proyectos.idProyecto AND Fase.idFase = @idFase AND Proyectos.idSemillero = @idSemillero",
                         conexion.Conectar()
                     );
                     validarSemillero.Parameters.AddWithValue("@idFase", idFase);
@@ -1256,9 +1256,9 @@ namespace Proyecto_Semillero
                     try
                     {
                         SqlCommand insert = new SqlCommand(
-                            "INSERT INTO Reuniones (idReunion, idUsuario, tipoReunion, horaReunion, motivoReunion, fechaReunion) " +
-                            "VALUES (@idReunion, @idUsuario, @tipoReunion, @motivoReunion, @horaReunion, @fechaReunion)",
-                            conexion.Conectar()
+                        "INSERT INTO Reuniones (idReunion, idUsuario, tipoReunion, horaReunion, motivoReunion, fechaReunion) " +
+                        "VALUES (@idReunion, @idUsuario, @tipoReunion, @horaReunion, @motivoReunion, @fechaReunion)", // ← corregido
+                        conexion.Conectar()
                         );
                         insert.Parameters.AddWithValue("@idReunion", idReu);
                         insert.Parameters.AddWithValue("@idUsuario", idUsuario);

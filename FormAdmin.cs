@@ -270,8 +270,8 @@ namespace Proyecto_Semillero
             FormAgregar frm = new FormAgregar();
 
             frm.tipo = formularioActual; // ya lo tienes
-            frm.modoEdicion = true; // 🔥 ACTIVAS MODO MODIFICAR
-            frm.filaSeleccionada = dataGridView1.CurrentRow; // 🔥 ENVÍAS LOS DATOS
+            frm.modoEdicion = true; // Activa el modo de modificar
+            frm.filaSeleccionada = dataGridView1.CurrentRow; // Manda los datos 
 
             if (frm.ShowDialog() == DialogResult.OK) // refresca solo si se modificó
             {
