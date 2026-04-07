@@ -490,7 +490,7 @@ namespace Proyecto_Semillero
                     update.Parameters.AddWithValue("@generoUsuario", genero);
                     update.Parameters.AddWithValue("@estadoUsuario", estado);
                     update.ExecuteNonQuery();
-                    MessageBox.Show("Usuario modificado correctamente");
+                    MessageBox.Show($"Usuario modificado correctamente. Al correo suministrado {correo} le va a notificar la confirmación de la modificación de información de la cuenta del {rol}");
                     conexion.cerrar();
                     this.DialogResult = DialogResult.OK;
                     this.Close();
@@ -531,7 +531,7 @@ namespace Proyecto_Semillero
 
                     insert.ExecuteNonQuery();
 
-                    MessageBox.Show("Usuario guardado correctamente");
+                    MessageBox.Show($"Usuario guardado correctamente. Al correo suministrado {correo} le va a notificar la confirmación de la creación de la cuenta del {rol}");
                     conexion.cerrar();
                     this.DialogResult = DialogResult.OK;
                     this.Close();
@@ -652,7 +652,7 @@ namespace Proyecto_Semillero
                         update.Parameters.AddWithValue("@organizadorEvento", organizadorEvento);
 
                         update.ExecuteNonQuery();
-                        MessageBox.Show("Semillero modificado correctamente");
+                        MessageBox.Show("Evento modificado correctamente. Se les notificará por medio del correo la modificación de la información del evento a todos los líderes e Investigadores que hacen parte del semillero del evento");
                         conexion.cerrar();
                         this.DialogResult = DialogResult.OK;
                         this.Close();
@@ -680,7 +680,7 @@ namespace Proyecto_Semillero
                         insert.Parameters.AddWithValue("@fechaEvento", fechaEvento);
                         insert.Parameters.AddWithValue("@organizadorEvento", organizadorEvento);
                         insert.ExecuteNonQuery();
-                        MessageBox.Show("Evento guardado correctamente");
+                        MessageBox.Show("Evento guardado correctamente. Se les notificará por medio del correo la creación del evento a todos los líderes e Investigadores que hacen parte del semillero del evento");
                         // cerrar conexión 
                         conexion.cerrar();
                         // cerrar formulario
@@ -1241,7 +1241,7 @@ namespace Proyecto_Semillero
 
                         update.ExecuteNonQuery();
 
-                        MessageBox.Show("Reunión modificada correctamente");
+                        MessageBox.Show("Reunión modificada correctamente. Se les notificará por medio del correo la modificación de la información del reunión a todos los líderes e Investigadores que hacen parte del semillero de la reunión");
                         conexion.cerrar();
                         this.DialogResult = DialogResult.OK;
                         this.Close();
@@ -1269,7 +1269,7 @@ namespace Proyecto_Semillero
 
                         insert.ExecuteNonQuery();
 
-                        MessageBox.Show("Reunión guardada correctamente");
+                        MessageBox.Show("Reunión guardada correctamente. Se les notificará por medio del correo la creación de la reunión a todos los líderes e Investigadores que hacen parte del semillero de la reunión");
                         conexion.cerrar();
                         this.DialogResult = DialogResult.OK;
                         this.Close();
