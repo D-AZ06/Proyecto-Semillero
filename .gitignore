@@ -1,18 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Proyecto_Semillero
-{
-    class _
-    {
-        .vs/
-bin/
-obj/
+﻿.vs/
+[Bb]in/
+[Oo]bj/
+packages/
 *.user
 *.suo
-*.cache
-    }
-}

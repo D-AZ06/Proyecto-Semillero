@@ -13,7 +13,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Proyecto_Semillero
 {
-    public partial class FormAdmin : Form
+    public partial class FormAdministrador : Form
     {
         Conexion conexion = new Conexion(); // creamos una instancia de la clase Conexion para establecer la conexion a la base de datos
         DataSet dataset = new DataSet(); // (conjunto de datos) creamos la variable dt con tipo DataTable para almacenar los resultados de las consultas a la base de datos
@@ -21,7 +21,7 @@ namespace Proyecto_Semillero
 
         string formularioActual = ""; // variable para almacenar el nombre del formulario actual que se esta mostrando en el DataGridView
 
-        public FormAdmin()
+        public FormAdministrador()
         {
             InitializeComponent();
 

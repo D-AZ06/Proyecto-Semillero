@@ -53,7 +53,7 @@ namespace Proyecto_Semillero
                 // Lógica de apertura de formularios según rol
                 if (rol == "Administrador")
                 {
-                    new FormAdmin().Show();
+                    new FormAdministrador().Show();
                 }
                 else if (rol == "Lider")
                 {
